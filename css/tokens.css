@@ -1,0 +1,5 @@
+/* Tokens de diseño: única fuente de colores, tipografía y espaciado */
+:root{--teal:#0E7C7B;--navy:#0F2A3D;--coral:#FF6B6B;--yellow:#FFC94D;--cream:#FFF9F0;--ink:#172B35;--surface:#fff;--muted:#4f6470;--line:#EADFD0;--tint:#D8EEEA;
+--r:20px;--sh:0 10px 28px rgba(15,42,61,.12);--fs:1;--f-d:"Fraunces",Georgia,serif;--f-b:"Nunito",ui-rounded,system-ui,sans-serif;--top:64px}
+:root[data-theme=dark]{--cream:#102329;--surface:#173237;--ink:#FFF7EA;--muted:#C8D6D4;--line:#30524F;--tint:#1d4545}
+@media (prefers-color-scheme:dark){:root[data-theme=auto]{--cream:#102329;--surface:#173237;--ink:#FFF7EA;--muted:#C8D6D4;--line:#30524F;--tint:#1d4545}}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HISdata Wiki · Estadística sanitaria: codificar, validar y comprender</title>
+<meta name="description" content="HISdata Wiki: fichas de conocimiento de estadística sanitaria (población, muestreo, variables, tablas de frecuencias, gráficos y medidas de posición).">
+<meta name="keywords" content="estadística sanitaria, muestreo, tablas de frecuencias, histograma, mediana, cuartiles, datos clínicos">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="HISdata Wiki">
+<meta name="theme-color" content="#0F2A3D" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#102329" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://TU-DOMINIO/hisdata-wiki/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="HISdata Wiki · Codificar, validar y comprender la información sanitaria">
+<meta property="og:description" content="Fichas de conocimiento de estadística sanitaria con etiquetas, buscador y lector de voz.">
+<meta property="og:url" content="https://TU-DOMINIO/hisdata-wiki/">
+<meta property="og:image" content="https://TU-DOMINIO/hisdata-wiki/assets/og.png">
+<meta property="og:image:alt" content="HISdata Wiki, estadística sanitaria">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HISdata Wiki">
+<meta name="twitter:description" content="Codificar, validar y comprender la información sanitaria.">
+<meta name="twitter:image" content="https://TU-DOMINIO/hisdata-wiki/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/widgets.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HISdata Wiki","inLanguage":"es","description":"Codificar, validar y comprender la información sanitaria.","potentialAction":{"@type":"SearchAction","target":"https://TU-DOMINIO/hisdata-wiki/#/buscar?q={q}","query-input":"required name=q"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="top" role="banner">
+  <div class="top__in">
+    <button class="btn btn--icon" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú de fichas"><span aria-hidden="true">☰</span></button>
+    <a class="brand" href="#/" aria-label="HISdata Wiki, ir al inicio"><span class="brand__mark" aria-hidden="true">H</span><span class="brand__t">HIS<b>data</b> Wiki</span></a>
+    <form class="search" id="search-form" role="search" aria-label="Buscar en la wiki">
+      <label class="sr" for="q">Buscar fichas, etiquetas o términos</label>
+      <input id="q" type="search" placeholder="Buscar… (ej. mediana, #muestreo)" autocomplete="off" enterkeyhint="search">
+      <button class="btn btn--icon" type="submit" aria-label="Buscar"><span aria-hidden="true">🔎</span></button>
+    </form>
+    <div class="tools" role="group" aria-label="Preferencias de lectura">
+      <button class="btn btn--icon" id="font-down" aria-label="Reducir tamaño de texto">A−</button>
+      <button class="btn btn--icon" id="font-up" aria-label="Aumentar tamaño de texto">A+</button>
+      <button class="btn btn--icon" id="theme-btn" aria-label="Cambiar tema: automático" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+    </div>
+  </div>
+</header>
+<div class="shell">
+  <nav id="menu" class="menu" aria-label="Índice de fichas" hidden></nav>
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"><noscript><p class="note">Esta wiki necesita JavaScript para mostrar las fichas.</p></noscript></main>
+</div>
+<aside class="reader" id="reader" aria-label="Lector de voz" hidden>
+  <button class="btn" id="rd-sec">Leer sección</button>
+  <button class="btn" id="rd-sel">Leer selección</button>
+  <button class="btn" id="rd-all">Leer ficha</button>
+  <button class="btn" id="rd-tap" aria-pressed="false">Leer al pulsar</button>
+  <button class="btn" id="rd-pause" aria-pressed="false">Pausa</button>
+  <button class="btn" id="rd-stop">Detener</button>
+  <label class="rd-rate">Velocidad <input id="rd-rate" type="range" min="0.6" max="1.6" step="0.1" value="1"></label>
+</aside>
+<footer class="foot" role="contentinfo"><p>HISdata Wiki · Codificar, validar y comprender la información sanitaria.</p><p class="muted">Contenido: sesiones 0 y 1 de estadística y manual UAX227 UF1.</p></footer>
+<div class="sr" id="live" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="js/config.js"></script>
+<script src="js/data/entries.js"></script>
+<script src="js/data/meta.js"></script>
+<script src="js/data/quizzes.js"></script>
+<script src="js/data/visuals.js"></script>
+<script src="js/data/glossary.js"></script>
+<script src="js/core/utils.js"></script>
+<script src="js/core/a11y.js"></script>
+<script src="js/core/seo.js"></script>
+<script src="js/features/search.js"></script>
+<script src="js/features/prefs.js"></script>
+<script src="js/features/menu.js"></script>
+<script src="js/features/quiz.js"></script>
+<script src="js/features/reader.js"></script>
+<script src="js/views/widgets.js"></script>
+<script src="js/views/render.js"></script>
+<script src="js/views/views.js"></script>
+<script src="js/core/router.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
