@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es" data-page="sis/aplicaciones-hce">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplicaciones y historia clínica electrónica · HISdata Wiki</title>
+<meta name="description" content="Aplicaciones estatales y autonómicas de registro clínico, características, ventajas y desventajas de la HCE, interoperabilidad, seguridad y estándares.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="hce, historia clínica electrónica, selene, hcis, gacela care, jimena, diraya, jara, interoperabilidad, trazabilidad, cie-10-es, snomed ct, hl7 fhir">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Aplicaciones y historia clínica electrónica · HISdata Wiki">
+<meta property="og:description" content="Aplicaciones estatales y autonómicas de registro clínico, características, ventajas y desventajas de la HCE, interoperabilidad, seguridad y estándares.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Aplicaciones y historia clínica electrónica", "description": "Aplicaciones estatales y autonómicas de registro clínico, características, ventajas y desventajas de la HCE, interoperabilidad, seguridad y estándares.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["hce", "historia clínica electrónica", "selene", "hcis", "gacela care", "jimena", "diraya", "jara"], "headline": "Aplicaciones y historia clínica electrónica"}</script>
+</head>
+<body data-block="sis">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html" aria-current="page"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/sistemas-informacion.html">Módulo B · Sistemas de información</a></li><li><span aria-current="page">Aplicaciones y historia clínica electrónica</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">B4</span>Módulo B · Sistemas de información sanitaria</p><h1>Aplicaciones y historia clínica <span class="grad">electrónica</span></h1><p class="lead">Para registrar y explotar los datos asistenciales se usan aplicaciones informáticas. La historia clínica electrónica (HCE) es su núcleo.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🩺</span><strong class="vtile__big">AP</strong><span class="vtile__txt">Atención primaria</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🏨</span><strong class="vtile__big">AE</strong><span class="vtile__txt">Atención especializada</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">💻</span><strong class="vtile__big">HCE</strong><span class="vtile__txt">Historia clínica electrónica</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🗺️</span><strong class="vtile__big">Autonómicas</strong><span class="vtile__txt">Diraya, Jimena, Jara…</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#aplicaciones">Aplicaciones de registro y explotación</a></li><li><a href="#hce">La historia clínica electrónica (HCE)</a></li><li><a href="#interoperabilidad">Interoperabilidad Ampliación</a></li><li><a href="#seguridad">Seguridad y trazabilidad Ampliación</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
+<p>1. Hay aplicaciones <b>estatales</b> (Selene, HCIS, Gacela Care) y <b>autonómicas</b> (Jimena, Diraya, Jara) para registrar datos clínicos.</p>
+<p>2. La <b>HCE</b> es una base de datos centrada en el paciente: los datos <b>se añaden, no se borran</b>.</p>
+<p>3. Aporta orden y rapidez, pero exige formación, soporte técnico, interoperabilidad y mucha seguridad.</p></div>
+
+<h2 id="aplicaciones">Aplicaciones de registro y explotación <a class="anchor" href="#aplicaciones" aria-label="Enlace a la sección: Aplicaciones de registro y explotación">#</a></h2>
+<p>Una aplicación de este tipo permite <b>registrar</b> los datos clínico-asistenciales y luego <b>explotarlos</b> (consultarlos, sacar listados y estadísticas).</p>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 260" role="img" aria-labelledby="apl-t apl-d">
+<title id="apl-t">Aplicaciones estatales y autonómicas</title>
+<desc id="apl-d">Dos grupos. Aplicaciones estatales: Selene, HCIS y Gacela Care. Aplicaciones autonómicas: Jimena, Diraya, que se usa en Andalucía, y Jara, que se usa en Extremadura.</desc>
+<rect class="b-solid" x="150" y="10" width="180" height="40" rx="10"/><text class="c w" x="240" y="36">Aplicaciones HCE</text>
+<path class="ln" d="M240 50V68M120 68H360M120 68V90M360 68V90"/>
+<rect class="b-blue" x="20" y="90" width="200" height="40" rx="10"/><text class="c" x="120" y="116">Estatales</text>
+<rect class="b-green" x="260" y="90" width="200" height="40" rx="10"/><text class="c" x="360" y="116">Autonómicas</text>
+<rect class="b-blue" x="20" y="146" width="200" height="34" rx="8"/><text class="c" x="120" y="168">Selene</text>
+<rect class="b-blue" x="20" y="188" width="200" height="34" rx="8"/><text class="c" x="120" y="210">HCIS</text>
+<rect class="b-blue" x="20" y="230" width="200" height="26" rx="8"/><text class="c" x="120" y="249">Gacela Care</text>
+<rect class="b-green" x="260" y="146" width="200" height="34" rx="8"/><text class="c" x="360" y="168">Jimena</text>
+<rect class="b-green" x="260" y="188" width="200" height="34" rx="8"/><text class="c" x="360" y="210">Diraya (Andalucía)</text>
+<rect class="b-green" x="260" y="230" width="200" height="26" rx="8"/><text class="c" x="360" y="249">Jara (Extremadura)</text>
+</svg>
+<figcaption><b>Fig. 1</b> Aplicaciones estatales y autonómicas citadas en el temario.</figcaption></figure>
+<div class="callout callout--note" data-icon="ℹ️"><p class="callout__title">Qué debes quedarte</p><p>Basta con reconocer los nombres y saber que unas son de ámbito estatal y otras autonómicas. <span class="badge-ampl">Ampliación</span> Cada servicio de salud autonómico usa su propia aplicación, por eso la <b>interoperabilidad</b> (más abajo) es tan importante.</p></div>
+
+<h2 id="hce">La historia clínica electrónica (HCE) <a class="anchor" href="#hce" aria-label="Enlace a la sección: La historia clínica electrónica (HCE)">#</a></h2>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">HCE en una frase</p><p>Es la historia clínica en soporte informático: una <b>base de datos relacional centrada en el paciente</b> y organizada por <b>problemas</b>.</p></div>
+
+<h3 id="caracteristicas">Características <a class="anchor" href="#caracteristicas" aria-label="Enlace a la sección: Características">#</a></h3>
+<ul class="cards">
+<li class="card card--accent c-blue"><h3 id="centrada-en-el-paciente">Centrada en el paciente <a class="anchor" href="#centrada-en-el-paciente" aria-label="Enlace a la sección: Centrada en el paciente">#</a></h3><p>Base de datos relacional organizada por problemas de salud.</p></li>
+<li class="card card--accent c-blue"><h3 id="empieza-por-lo-administrativo">Empieza por lo administrativo <a class="anchor" href="#empieza-por-lo-administrativo" aria-label="Enlace a la sección: Empieza por lo administrativo">#</a></h3><p>Incorpora inicialmente los datos administrativos del paciente.</p></li>
+<li class="card card--accent c-blue"><h3 id="misma-estructura-que-el-papel">Misma estructura que el papel <a class="anchor" href="#misma-estructura-que-el-papel" aria-label="Enlace a la sección: Misma estructura que el papel">#</a></h3><p>Sigue las pautas estructurales de la HC en papel.</p></li>
+<li class="card card--accent c-blue"><h3 id="texto-libre-firmado">Texto libre firmado <a class="anchor" href="#texto-libre-firmado" aria-label="Enlace a la sección: Texto libre firmado">#</a></h3><p>Permite anotaciones libres, con nombre, especialidad, fecha y hora del profesional.</p></li>
+<li class="card card--accent c-blue"><h3 id="peticiones">Peticiones <a class="anchor" href="#peticiones" aria-label="Enlace a la sección: Peticiones">#</a></h3><p>Facilita pedir pruebas (laboratorio, radiología) y registra quién pide y quién consulta.</p></li>
+<li class="card card--accent c-blue"><h3 id="solo-lo-reciente-o-relevante">Solo lo reciente o relevante <a class="anchor" href="#solo-lo-reciente-o-relevante" aria-label="Enlace a la sección: Solo lo reciente o relevante">#</a></h3><p>En historias extensas permite ver solo los datos recientes o relevantes.</p></li>
+<li class="card card--accent c-orange"><h3 id="no-se-borra-se-anade">No se borra, se añade <a class="anchor" href="#no-se-borra-se-anade" aria-label="Enlace a la sección: No se borra, se añade">#</a></h3><p>Los datos no pueden borrarse, pero sí añadirse.</p></li>
+<li class="card card--accent c-orange"><h3 id="se-cierra-con-el-tiempo">Se «cierra» con el tiempo <a class="anchor" href="#se-cierra-con-el-tiempo" aria-label="Enlace a la sección: Se «cierra» con el tiempo">#</a></h3><p>Pasado cierto tiempo no se puede modificar nada de lo registrado.</p></li>
+<li class="card card--accent c-teal"><h3 id="mismas-normas-de-conservacion">Mismas normas de conservación <a class="anchor" href="#mismas-normas-de-conservacion" aria-label="Enlace a la sección: Mismas normas de conservación">#</a></h3><p>Se conserva con las mismas normas que la HC tradicional.</p></li>
+</ul>
+<div class="callout callout--example" data-icon="🩺"><p class="callout__title">Ejemplo: corregir un error</p><p>Un médico anotó «alergia a penicilina» por equivocación. No puede borrar la nota: <b>añade una anotación nueva</b> que la corrige, con su nombre, fecha y hora. Así queda constancia de todo lo ocurrido.</p></div>
+
+<h3 id="ventajas-desventajas">Ventajas y desventajas <a class="anchor" href="#ventajas-desventajas" aria-label="Enlace a la sección: Ventajas y desventajas">#</a></h3>
+<p>Filtra y abre cada tarjeta. Dentro de cada una hay una idea para sacar partido o mitigar el problema.</p>
+<div class="widget" data-widget="sis-hce-balance"><div class="widget__head"><h3 class="widget__title" id="balance-de-la-hce">Balance de la HCE <a class="anchor" href="#balance-de-la-hce" aria-label="Enlace a la sección: Balance de la HCE">#</a></h3><p class="widget__sub">Ventajas y desventajas, con ideas de mejora.</p></div>
+<noscript><p class="noscript-note">Ventajas: orden y uniformidad; fin de la letra ilegible; acceso rápido y simultáneo; facilita explotar datos. Desventajas: rigidez por exceso de estructura; más tiempo de registro; complejidad; costes altos; dependencia técnica y de la red; desconfianza sobre la confidencialidad.</p></noscript></div>
+
+<h2 id="interoperabilidad">Interoperabilidad <span class="badge-ampl">Ampliación</span> <a class="anchor" href="#interoperabilidad" aria-label="Enlace a la sección: Interoperabilidad Ampliación">#</a></h2>
+<p><b>Interoperabilidad</b> es la capacidad de que sistemas distintos <b>se intercambien datos y los entiendan igual</b>.</p>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Caso típico</p><p>El laboratorio usa un programa y el hospital, otro. Si no están integrados, alguien debe teclear los resultados a mano: hay <b>demoras y errores</b>. Con interoperabilidad, el resultado llega solo a la historia del paciente.</p></div>
+<ol class="flow">
+<li><b>Técnica</b>Que los sistemas se conecten y envíen mensajes.</li>
+<li><b>Semántica</b>Que «diabetes» signifique lo mismo en todos (códigos comunes).</li>
+<li><b>Organizativa</b>Que haya acuerdos y normas para compartir datos.</li>
+</ol>
+
+<h3 id="estandares">Estándares útiles <a class="anchor" href="#estandares" aria-label="Enlace a la sección: Estándares útiles">#</a></h3>
+<div class="table-wrap"><table class="table"><caption>Tres estándares que conviene reconocer</caption>
+<thead><tr><th scope="col">Estándar</th><th scope="col">Para qué sirve</th><th scope="col">Ejemplo</th></tr></thead><tbody>
+<tr><th scope="row">CIE-10-ES</th><td>Clasificar y codificar diagnósticos y procedimientos (versión española de la CIE-10).</td><td>Codificar un infarto agudo de miocardio al dar el alta.</td></tr>
+<tr><th scope="row">SNOMED CT</th><td>Terminología clínica muy detallada para registrar hallazgos, diagnósticos y procedimientos.</td><td>Registrar «tos seca» con un código reconocido por todos los sistemas.</td></tr>
+<tr><th scope="row">HL7 FHIR</th><td>Norma para intercambiar datos sanitarios entre aplicaciones.</td><td>Enviar el resultado de una analítica del laboratorio a la historia del paciente.</td></tr>
+</tbody></table></div>
+<p class="sis-note">Verifica la versión vigente de cada estándar y de la clasificación que use tu servicio de salud.</p>
+
+<h2 id="seguridad">Seguridad y trazabilidad <span class="badge-ampl">Ampliación</span> <a class="anchor" href="#seguridad" aria-label="Enlace a la sección: Seguridad y trazabilidad Ampliación">#</a></h2>
+<p>La HCE guarda datos muy sensibles. Para protegerlos se combinan varias medidas:</p>
+<ul class="cards">
+<li class="card card--accent c-red"><h3 id="identificacion">Identificación <a class="anchor" href="#identificacion" aria-label="Enlace a la sección: Identificación">#</a></h3><p>Cada profesional entra con su usuario y credenciales personales.</p></li>
+<li class="card card--accent c-red"><h3 id="perfiles-de-acceso">Perfiles de acceso <a class="anchor" href="#perfiles-de-acceso" aria-label="Enlace a la sección: Perfiles de acceso">#</a></h3><p>Cada perfil ve solo lo necesario para su trabajo.</p></li>
+<li class="card card--accent c-red"><h3 id="registro-de-accesos">Registro de accesos <a class="anchor" href="#registro-de-accesos" aria-label="Enlace a la sección: Registro de accesos">#</a></h3><p>Queda anotado quién consulta o modifica qué y cuándo (trazabilidad).</p></li>
+<li class="card card--accent c-red"><h3 id="copias-de-seguridad">Copias de seguridad <a class="anchor" href="#copias-de-seguridad" aria-label="Enlace a la sección: Copias de seguridad">#</a></h3><p>Se guardan copias para recuperar los datos si algo falla.</p></li>
+</ul>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">Ejemplo de fallo</p><p>Si los permisos están mal configurados, una persona sin relación con el paciente podría abrir su historia. Por eso se revisan los perfiles y se auditan los accesos. Más en <a href="aspectos-legales.html">Aspectos legales</a>.</p></div>
+
+<h2 id="resumen">Resumen <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen">#</a></h2>
+<ul>
+<li>Aplicaciones estatales: Selene, HCIS, Gacela Care. Autonómicas: Jimena, Diraya (Andalucía), Jara (Extremadura).</li>
+<li>La HCE es una base de datos relacional centrada en el paciente y organizada por problemas.</li>
+<li>Los datos no se borran, se añaden; pasado un tiempo no se modifican.</li>
+<li>Ventajas: orden, legibilidad, acceso simultáneo, explotación de datos. Desventajas: rigidez, tiempo, complejidad, costes, dependencia técnica y desconfianza.</li>
+<li>Interoperabilidad y seguridad (con trazabilidad) son claves para que funcione bien.</li>
+</ul>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">5 preguntas</p></div>
+<script type="application/json">{"questions":[
+{"q":"¿Cuál es una aplicación de ámbito autonómico?","options":["Selene","HCIS","Gacela Care","Diraya"],"answer":3,"why":"Jimena, Diraya y Jara son autonómicas; Selene, HCIS y Gacela Care son estatales."},
+{"q":"En una HCE, ¿qué ocurre con un dato registrado por error?","options":["Se borra","Se corrige añadiendo una anotación nueva","Se oculta al paciente","Se sustituye sin dejar rastro"],"answer":1,"why":"Los datos no se borran, se añaden, con nombre, fecha y hora del profesional."},
+{"q":"La HCE está organizada principalmente…","options":["Por fecha de nacimiento","Por problemas y centrada en el paciente","Por precio de las pruebas","Por centro de salud"],"answer":1,"why":"Es una base de datos relacional centrada en el paciente y organizada por problemas."},
+{"q":"Los resultados de laboratorio tardan en llegar porque los datos no se integran solos. ¿Qué falla?","options":["La interoperabilidad","La ortografía","El diseño del edificio","La facturación"],"answer":0,"why":"Los sistemas no se intercambian datos automáticamente: falta interoperabilidad."},
+{"q":"¿Qué es una desventaja de la HCE?","options":["Acceso simultáneo","Texto legible","Dependencia de soporte técnico y de la red","Mejor orden"],"answer":2,"why":"Si falla la red o el soporte técnico, el acceso a la historia puede interrumpirse."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/elementos-sis.html" rel="prev"><small>← Anterior</small><strong>Elementos de un SIS</strong></a><a class="next" href="../sis/calidad-datos.html" rel="next"><small>Siguiente →</small><strong>Calidad de los datos sanitarios</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#aplicaciones">Aplicaciones de registro y explotación</a></li><li><a href="#hce">La historia clínica electrónica (HCE)</a></li><li><a href="#interoperabilidad">Interoperabilidad Ampliación</a></li><li><a href="#seguridad">Seguridad y trazabilidad Ampliación</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/sis-hce-balance.js" defer></script>
+</body>
+</html>

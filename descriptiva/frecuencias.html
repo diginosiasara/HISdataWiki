@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es" data-page="descriptiva/frecuencias">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frecuencias absolutas, relativas y acumuladas · HISdata Wiki</title>
+<meta name="description" content="Las cuatro frecuencias de una variable discreta, sus fórmulas y las comprobaciones, con el ejemplo de las visitas a consulta.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="frecuencias, discretas, tablas, estadística descriptiva">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Frecuencias absolutas, relativas y acumuladas · HISdata Wiki">
+<meta property="og:description" content="Las cuatro frecuencias de una variable discreta, sus fórmulas y las comprobaciones, con el ejemplo de las visitas a consulta.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Frecuencias absolutas, relativas y acumuladas", "description": "Las cuatro frecuencias de una variable discreta, sus fórmulas y las comprobaciones, con el ejemplo de las visitas a consulta.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["frecuencias", "discretas", "tablas", "estadística descriptiva"], "headline": "Frecuencias absolutas, relativas y acumuladas"}</script>
+</head>
+<body data-block="descriptiva">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html" aria-current="page"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../descriptiva/index.html">Fundamentos · Estadística descriptiva</a></li><li><span aria-current="page">Frecuencias absolutas, relativas y acumuladas</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">D8</span>Fundamentos · Estadística descriptiva</p><h1>Frecuencias absolutas, relativas y <span class="grad">acumuladas</span></h1><p class="lead">Las cuatro frecuencias de una variable discreta, sus fórmulas y las comprobaciones, con el ejemplo de las visitas a consulta.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 11 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">💡</span><strong class="vtile__big">Frecuencia absoluta</strong><span class="vtile__txt">Número de veces que se repite un valor.</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">Frecuencia relativa</strong><span class="vtile__txt">Proporción: se calcula dividiendo la absoluta entre n.</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📌</span><strong class="vtile__big">Absoluta acumulada</strong><span class="vtile__txt">A cada frecuencia se le suma la anterior.</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🎯</span><strong class="vtile__big">Relativa acumulada</strong><span class="vtile__txt">Lo mismo con las relativas.</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#practica">En la práctica: ejemplos y datos</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">La idea en una frase</p><p>Frecuencia absoluta (fᵢ): Número de veces que se repite un valor. Su suma es el total de datos n.</p></div>
+
+<h2 id="esencial">Lo esencial: qué necesitas saber <a class="anchor" href="#esencial" aria-label="Enlace a la sección: Lo esencial: qué necesitas saber">#</a></h2>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Frecuencia absoluta (fᵢ)</p><p>Número de veces que se repite un valor. Su suma es el total de datos n.</p></div>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Frecuencia relativa (hᵢ)</p><p>Proporción: se calcula dividiendo la absoluta entre n. Siempre es ≤ 1 y su suma es 1. Multiplicada por 100 da el porcentaje.</p></div>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Absoluta acumulada (Fᵢ)</p><p>A cada frecuencia se le suma la anterior. La primera coincide con la absoluta y la última es n.</p></div>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Relativa acumulada (Hᵢ)</p><p>Lo mismo con las relativas. La última es 1.</p></div>
+<div class="formula-grid"><figure class="formula formula--txt"><p class="formula__t" aria-label="hᵢ = fᵢ / n">hᵢ = fᵢ / n</p><figcaption>Fórmula</figcaption></figure><figure class="formula formula--txt"><p class="formula__t" aria-label="Σ fᵢ = n">Σ fᵢ = n</p><figcaption>Fórmula</figcaption></figure><figure class="formula formula--txt"><p class="formula__t" aria-label="Σ hᵢ = 1">Σ hᵢ = 1</p><figcaption>Fórmula</figcaption></figure><figure class="formula formula--txt"><p class="formula__t" aria-label="Fₖ = f₁ + f₂ + … + fₖ">Fₖ = f₁ + f₂ + … + fₖ</p><figcaption>Fórmula</figcaption></figure></div>
+<p>Lectura: el 27 % de la muestra no fue ninguna vez a consulta; el 30 % fue dos veces. Es una variable discreta (no se puede ir 2,5 veces).</p>
+<p>Una tabla de frecuencias muestra de forma ordenada un conjunto de datos estadísticos y asigna a cada uno su frecuencia. Las cuatro frecuencias (fᵢ, hᵢ, Fᵢ y Hᵢ) aparecen como columnas de la tabla.</p>
+<div class="formula-grid"><figure class="formula formula--txt"><p class="formula__t" aria-label="F₁ = f₁;  F₂ = f₁ + f₂;  Fᵢ = f₁ + f₂ + … + fᵢ">F₁ = f₁;  F₂ = f₁ + f₂;  Fᵢ = f₁ + f₂ + … + fᵢ</p><figcaption>Fórmula</figcaption></figure><figure class="formula formula--txt"><p class="formula__t" aria-label="H₁ = h₁;  H₂ = h₁ + h₂;  Hᵢ = h₁ + h₂ + … + hᵢ">H₁ = h₁;  H₂ = h₁ + h₂;  Hᵢ = h₁ + h₂ + … + hᵢ</p><figcaption>Fórmula</figcaption></figure></div>
+
+<h2 id="practica">En la práctica: ejemplos y datos <a class="anchor" href="#practica" aria-label="Enlace a la sección: En la práctica: ejemplos y datos">#</a></h2>
+<div class="widget" data-widget="calculadora" data-mode="frec"><div class="widget__head"><h3 class="widget__title" id="tabla-de-frecuencias-con-tus-datos">Tabla de frecuencias con tus datos <a class="anchor" href="#tabla-de-frecuencias-con-tus-datos" aria-label="Enlace a la sección: Tabla de frecuencias con tus datos">#</a></h3><p class="widget__sub">Prueba con tus propios datos.</p></div><noscript><p class="noscript-note">Este elemento interactivo necesita JavaScript.</p></noscript></div>
+<div class="callout callout--tip" data-icon="✅"><p class="callout__title">Antes de entregar, comprueba.</p><ul class="checklist"><li><label for="ck1"><input type="checkbox" id="ck1"> <span><b>Σ fᵢ = n</b> <small>3 + 4 + 3 = 10 pacientes</small></span></label></li><li><label for="ck2"><input type="checkbox" id="ck2"> <span><b>Σ hᵢ = 1</b> <small>0,3 + 0,4 + 0,3 = 1</small></span></label></li><li><label for="ck3"><input type="checkbox" id="ck3"> <span><b>Última Fᵢ = n</b> <small>La última absoluta acumulada es 10</small></span></label></li><li><label for="ck4"><input type="checkbox" id="ck4"> <span><b>Última Hᵢ = 1</b> <small>La última relativa acumulada es 1</small></span></label></li></ul></div>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Visitas a consulta en un año (n = 30)</p><p>Se cuenta cuántas veces aparece cada valor (0, 1, 2, 3, 4) y se completa la tabla. Se redondea la frecuencia relativa cuando no es exacta.</p></div>
+<div class="table-wrap"><table class="table"><caption>Visitas a consulta</caption><thead><tr><th scope="col">Visitas (xᵢ)</th><th scope="col">fᵢ</th><th scope="col">hᵢ</th><th scope="col">Fᵢ</th><th scope="col">Hᵢ</th></tr></thead><tbody><tr><th scope="row">0</th><td>8</td><td>0,27</td><td>8</td><td>0,27</td></tr><tr><th scope="row">1</th><td>4</td><td>0,13</td><td>12</td><td>0,40</td></tr><tr><th scope="row">2</th><td>9</td><td>0,30</td><td>21</td><td>0,70</td></tr><tr><th scope="row">3</th><td>6</td><td>0,20</td><td>27</td><td>0,90</td></tr><tr><th scope="row">4</th><td>3</td><td>0,10</td><td>30</td><td>1,00</td></tr><tr class="is-total"><th scope="row">Total</th><td>30</td><td>1,00</td><td></td><td></td></tr></tbody></table></div>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Datos de partida</p><p>{0, 3, 2, 0, 2, 1, 4, 0, 3, 0, 1, 2, 4, 0, 3, 2, 0, 1, 3, 2, 2, 2, 3, 4, 0, 2, 3, 2, 1, 0}: número de consultas de 30 personas durante el último año.</p></div>
+
+<h2 id="ojo">Ojo: ten en cuenta <a class="anchor" href="#ojo" aria-label="Enlace a la sección: Ojo: ten en cuenta">#</a></h2>
+<div class="callout callout--warn" data-icon="👁"><p class="callout__title">Ojo · examen · Trucos de comprobación</p><p>Si la última frecuencia acumulada no coincide con n, o las relativas no suman 1, hay un error de cálculo. Con 50 individuos, la última acumulada sería 50. La notación (fᵢ, Fᵢ, hᵢ, Hᵢ) no se va a preguntar, pero conviene reconocerla.</p></div>
+
+<h2 id="demostracion">Pasa a la demostración <a class="anchor" href="#demostracion" aria-label="Enlace a la sección: Pasa a la demostración">#</a></h2>
+<ul class="cards"><li class="card"><span class="card__ico" aria-hidden="true">🔬</span><p class="card__h"><a href="../practicas/farmacos.html">Práctica: eficacia de fármacos</a></p><p>Frecuencias convertidas en probabilidades</p></li><li class="card"><span class="card__ico" aria-hidden="true">🔬</span><p class="card__h"><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></p><p>Las mismas cuentas en Excel</p></li></ul>
+
+<h2 id="quiz">Comprueba lo aprendido <a class="anchor" href="#quiz" aria-label="Enlace a la sección: Comprueba lo aprendido">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="mini-quiz-4-preguntas">Mini quiz · 4 preguntas <a class="anchor" href="#mini-quiz-4-preguntas" aria-label="Enlace a la sección: Mini quiz · 4 preguntas">#</a></h3></div><script type="application/json">{"questions":[{"q":"Si fᵢ = 3 y n = 10, hᵢ vale…","options":["0,13","0,3","3"],"answer":1,"why":"3 / 10 = 0,3."},{"q":"¿Cuál es Fᵢ de 1 visita en el ejemplo (8, 4, 9, 6, 3)?","options":["4","12","8"],"answer":1,"why":"8 + 4 = 12."},{"q":"La suma de las frecuencias relativas es…","options":["n","0","1"],"answer":2,"why":"Σhᵢ = 1."},{"q":"¿Por qué son discretas las visitas a consulta?","options":["Solo toman valores enteros","Son cualidades","Admiten decimales"],"answer":0,"why":"No se puede ir 2,5 veces."}]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../descriptiva/doble-entrada.html" rel="prev"><small>← Anterior</small><strong>Tablas de doble entrada</strong></a><a class="next" href="../descriptiva/intervalos.html" rel="next"><small>Siguiente →</small><strong>Datos agrupados en intervalos</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#practica">En la práctica: ejemplos y datos</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/calculadora.js" defer></script>
+</body>
+</html>

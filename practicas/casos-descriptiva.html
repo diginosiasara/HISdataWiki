@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es" data-page="practicas/casos-descriptiva">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos prácticos de estadística descriptiva · HISdata Wiki</title>
+<meta name="description" content="Cuatro casos resueltos: muestreo en artrosis, infecciones nosocomiales, colesterol y estandarización de la diabetes.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="casos practicos, muestreo, tabla de contingencia, colesterol, cuartiles, diabetes">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Casos prácticos de estadística descriptiva · HISdata Wiki">
+<meta property="og:description" content="Cuatro casos resueltos: muestreo en artrosis, infecciones nosocomiales, colesterol y estandarización de la diabetes.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Casos prácticos de estadística descriptiva", "description": "Cuatro casos resueltos: muestreo en artrosis, infecciones nosocomiales, colesterol y estandarización de la diabetes.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["casos practicos", "muestreo", "tabla de contingencia", "colesterol", "cuartiles", "diabetes"], "headline": "Casos prácticos de estadística descriptiva"}</script>
+</head>
+<body data-block="casos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html" aria-current="page"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../practicas/index.html">Prácticas</a></li><li><span aria-current="page">Casos prácticos de estadística descriptiva</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow">Práctica · Estadística descriptiva</p><h1>Casos prácticos de estadística <span class="grad">descriptiva</span></h1><p class="lead">Lee el enunciado, intenta resolverlo y despliega la solución.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🦴</span><strong class="vtile__big">Artrosis</strong><span class="vtile__txt">Población, muestra y muestreo</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🦠</span><strong class="vtile__big">Infecciones</strong><span class="vtile__txt">Tabla de contingencia</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">🩸</span><strong class="vtile__big">Colesterol</strong><span class="vtile__txt">Intervalos y gráficos</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🍬</span><strong class="vtile__big">Diabetes</strong><span class="vtile__txt">Cuartiles y percentiles</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#caso-1">¿Qué muestra seleccionamos?</a></li><li><a href="#caso-2">Comparando tasas de infección nosocomial</a></li><li><a href="#caso-3">Analizando el colesterol de la población</a></li><li><a href="#caso-4">Estandarizando la diabetes</a></li></ol></details>
+<h2 id="caso-1">¿Qué muestra seleccionamos? <a class="anchor" href="#caso-1" aria-label="Enlace a la sección: ¿Qué muestra seleccionamos?">#</a></h2>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Enunciado</p><p>En el hospital se quiere realizar un estudio sobre artrosis, ya que se va a experimentar con una técnica para la mejora de la rehabilitación de los pacientes. Se presupone que la técnica está dirigida a pacientes con más de 50 años con el fin de mejorar su calidad de vida. Además, solo hay 50 pacientes que cumplen las características para el estudio. Define cuál es la población, la muestra y los individuos, así como el tipo de muestreo que utilizarías.</p></div>
+<details class="fold solution"><summary>Ver la solución</summary><p>La población es el conjunto de personas mayores de 50 años, ya que es a la que va destinada la técnica. La muestra es el conjunto de 50 pacientes que podemos analizar y los individuos son cada uno de esos 50 pacientes. El tipo de muestreo es no aleatorio, ya que se analizan los 50 pacientes que tenemos. Si fuera aleatorio deberíamos escoger una muestra de esos 50 pacientes, con lo que el estudio podría perder poder estadístico.</p><p>Teoría relacionada: <a href="../descriptiva/muestreo.html">Tipos de muestreo</a>.</p></details>
+<h2 id="caso-2">Comparando tasas de infección nosocomial <a class="anchor" href="#caso-2" aria-label="Enlace a la sección: Comparando tasas de infección nosocomial">#</a></h2>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Enunciado</p><p>Estudio sobre la incidencia de infecciones nosocomiales en pacientes ingresados por afección respiratoria. De los 2.700 pacientes ingresados en el último mes, 1.432 lo hicieron por una afección respiratoria. De esos, 583 tuvieron una infección nosocomial. Del resto de pacientes ingresados por otra causa, 314 tuvieron una afección nosocomial. Realiza la tabla de contingencia relativa a estos datos.</p></div>
+<details class="fold solution"><summary>Ver la solución</summary><p>Se rellena por diferencias: no afección respiratoria = 2.700 − 1.432 = 1.268; sin infección en respiratoria = 1.432 − 583 = 849; sin infección en el resto = 1.268 − 314 = 954; total con infección = 897; total sin infección = 1.803.</p><p>Teoría relacionada: <a href="../descriptiva/doble-entrada.html">Tablas de doble entrada</a>.</p></details>
+<h2 id="caso-3">Analizando el colesterol de la población <a class="anchor" href="#caso-3" aria-label="Enlace a la sección: Analizando el colesterol de la población">#</a></h2>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Enunciado</p><p>Estudio del nivel de colesterol (mg/dL) en la población; se han tomado los datos de 25 pacientes: {190, 202, 185, 210, 198, 205, 192, 200, 188, 215, 195, 207, 183, 203, 211, 189, 197, 204, 206, 193, 208, 187, 199, 212, 194}. a) Realiza una tabla de frecuencias que permita analizar estos datos. b) Diseña un histograma sobre los datos obtenidos.</p></div>
+<details class="fold solution"><summary>Ver la solución</summary><p>Rango: R = 215 − 183 = 32. Número de intervalos: k = 1 + 3,332 · log 25 = 5,65 → 5. Amplitud: I = 32 / 5 = 6,4 → 7. La tabla y el histograma resultantes son los siguientes.</p><p>Teoría relacionada: <a href="../descriptiva/colesterol.html">Ejercicio guiado: colesterol</a>.</p></details>
+<h2 id="caso-4">Estandarizando la diabetes <a class="anchor" href="#caso-4" aria-label="Enlace a la sección: Estandarizando la diabetes">#</a></h2>
+<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Enunciado</p><p>Niveles de glucosa en sangre en ayunas (mg/dL) de 25 pacientes con riesgo de diabetes: {92, 105, 110, 92, 99, 95, 92, 108, 110, 92, 97, 103, 92, 94, 100, 105, 112, 103, 99, 90, 93, 105, 105, 100, 96}. Se pide: a) media, mediana y moda; b) cuartiles (Q1, Q2, Q3) y rango intercuartílico (IQR); c) rango; d) desviación típica y varianza.</p></div>
+<details class="fold solution"><summary>Ver la solución</summary><p>a) La media es 99,56 mg/dL; la mediana, 99 mg/dL; la moda, 92 mg/dL (se repite 5 veces). b) Q1 = 93, Q2 = 99 y Q3 = 105 mg/dL; IQR = 12. c) El rango es 22 mg/dL. d) La varianza es 44,92 mg²/dL² y la desviación típica 6,70 mg/dL (la dispersión se estudia en la sesión 2). Puedes comprobar los apartados a), b) y c) con la calculadora.</p><p>Teoría relacionada: <a href="../descriptiva/cuartiles-percentiles.html">Cuartiles y percentiles</a>.</p></details>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../practicas/glucosa.html" rel="prev"><small>← Anterior</small><strong>Glucosa: intervalo de confianza con t</strong></a><a class="next" href="../practicas/casos-sis.html" rel="next"><small>Siguiente →</small><strong>Casos prácticos del SIS</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#caso-1">¿Qué muestra seleccionamos?</a></li><li><a href="#caso-2">Comparando tasas de infección nosocomial</a></li><li><a href="#caso-3">Analizando el colesterol de la población</a></li><li><a href="#caso-4">Estandarizando la diabetes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+
+</body>
+</html>

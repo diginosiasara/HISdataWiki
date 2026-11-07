@@ -1,0 +1,27 @@
+/* HISdata Wiki · widgets-prob.css — estilos de los widgets del Módulo A */
+.dado__face{font-size:5rem;line-height:1;text-align:center;margin:var(--sp-3) 0;color:var(--accent-ink)}
+.laplace__grid{display:flex;flex-wrap:wrap;gap:4px;padding:var(--sp-3);background:var(--surface-2);border-radius:var(--r);min-height:60px}
+.laplace__dot{width:14px;height:14px;border-radius:4px;background:var(--line-strong)}
+.laplace__dot.is-fav{background:var(--accent)}
+.stackbar{display:flex;height:48px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line-strong);margin:var(--sp-4) 0}
+.stackbar__a,.stackbar__b{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:var(--fs-sm);transition:width .25s;white-space:nowrap;overflow:hidden}
+.stackbar__a{background:var(--c-violet);color:#fff}.stackbar__b{background:var(--c-yellow);color:#111}
+:root[data-theme="dark"] .stackbar__a{color:#111}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stackbar__a{color:#111}}
+.picto{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;max-width:460px;margin:var(--sp-3) 0}
+.picto__i{aspect-ratio:1;border-radius:50%;background:var(--line-strong);display:grid;place-items:center;font-size:.8rem;color:#fff}
+.picto__i.is-on{background:var(--c-green)}.picto__i.is-off{background:var(--c-red)}
+.ztable{border-collapse:collapse;font-size:var(--fs-sm);width:100%}
+.ztable th,.ztable td{border:1px solid var(--line);padding:.3rem .4rem;text-align:center;font-variant-numeric:tabular-nums}
+.ztable td button{all:unset;display:block;cursor:pointer;width:100%;min-height:28px;border-radius:4px}
+.ztable td button:hover,.ztable td button:focus-visible{background:var(--accent-soft);outline:2px solid var(--accent)}
+.ztable td.is-sel{background:var(--accent-ink);color:var(--on-ink)}
+.ztable td.is-sel button{color:var(--on-ink)}
+.zlist{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+.zlist th,.zlist td{padding:.35rem .6rem;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.zlist th:first-child,.zlist td:first-child{text-align:left}
+.zlist tr.is-out td{background:var(--c-orange-soft);font-weight:700}
+.venn-box{display:grid;gap:var(--sp-3)}
+.venn-box svg{width:100%;max-width:440px;height:auto;margin:0 auto;display:block}
+.venn__zone{cursor:pointer;transition:opacity .15s}
+.venn__zone:focus-visible{outline:3px solid var(--focus)}
+.table-wrap.is-scroll{max-height:360px;overflow:auto}

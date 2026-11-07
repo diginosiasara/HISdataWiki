@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es" data-page="practicas/casos-sis">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos prácticos del SIS · HISdata Wiki</title>
+<meta name="description" content="Seis casos prácticos de sistemas de información sanitaria con ayuda y propuesta de solución: historia clínica, elementos del SIS, HCE y calidad de datos.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="casos prácticos, ejercicios, sis, historia clínica, calidad de datos, hce, errores">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Casos prácticos del SIS · HISdata Wiki">
+<meta property="og:description" content="Seis casos prácticos de sistemas de información sanitaria con ayuda y propuesta de solución: historia clínica, elementos del SIS, HCE y calidad de datos.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Casos prácticos del SIS", "description": "Seis casos prácticos de sistemas de información sanitaria con ayuda y propuesta de solución: historia clínica, elementos del SIS, HCE y calidad de datos.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["casos prácticos", "ejercicios", "sis", "historia clínica", "calidad de datos", "hce", "errores"], "headline": "Casos prácticos del SIS"}</script>
+</head>
+<body data-block="casos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html" aria-current="page"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../practicas/index.html">Prácticas</a></li><li><span aria-current="page">Casos prácticos del SIS</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">P10</span>Prácticas · Sistemas de información sanitaria</p><h1>Casos prácticos del <span class="grad">SIS</span></h1><p class="lead">Seis casos para aplicar el Módulo B. Intenta resolverlos antes de abrir la propuesta de solución.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 20 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🧪</span><strong class="vtile__big">Casos</strong><span class="vtile__txt">Situaciones reales de un SIS</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🔍</span><strong class="vtile__big">Detecta</strong><span class="vtile__txt">Errores y problemas de calidad</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">🛠️</span><strong class="vtile__big">Propón</strong><span class="vtile__txt">Mejoras concretas</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">✅</span><strong class="vtile__big">Comprueba</strong><span class="vtile__txt">Con la autoevaluación</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#e1">E1 · Revisando y actualizando las historias clínicas</a></li><li><a href="#e2">E2 · Evaluando la implantación de un SIS</a></li><li><a href="#e3">E3 · Implantación de la HCE</a></li><li><a href="#e4">E4 · Dando calidad a los informes</a></li><li><a href="#e5">E5 · Resolución de problemas en la historia clínica</a></li><li><a href="#e6">E6 · Arreglando el desastre del hospital</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
+<p>1. Seis casos: contenido de la HC, elementos del SIS, implantación de la HCE y tres de calidad de datos.</p>
+<p>2. Cada caso tiene un <b>enunciado</b>, una <b>ayuda</b> y una <b>propuesta de solución</b> plegada.</p>
+<p>3. Los casos con fichas de pacientes son clínicos de ejemplo: las alertas son <b>para revisar con el facultativo</b>, no un dictamen.</p></div>
+<div class="callout callout--note" data-icon="📚"><p class="callout__title">Antes de empezar</p><p>Repasa <a href="../sis/historia-clinica.html">La historia clínica</a>, <a href="../sis/elementos-sis.html">Elementos de un SIS</a>, <a href="../sis/aplicaciones-hce.html">Aplicaciones y HCE</a> y <a href="../sis/calidad-datos.html">Calidad de los datos</a>.</p></div>
+
+<h2 id="e1">E1 · Revisando y actualizando las historias clínicas <a class="anchor" href="#e1" aria-label="Enlace a la sección: E1 · Revisando y actualizando las historias clínicas">#</a></h2>
+<p>El equipo administrativo de un hospital revisa historias clínicas. En una de ellas encuentra estos documentos: <b>informe de alta clínica</b>, <b>factura del hospital</b>, <b>anamnesis y exploración física</b>, <b>informe de urgencia</b>, <b>documento de consentimiento informado</b> e <b>informe financiero de gastos hospitalarios</b>.</p>
+<p><b>Pregunta:</b> indica cuáles deben estar en la historia clínica y cuáles no.</p>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Pregúntate: ¿habla de la atención sanitaria del paciente (clínico) o del dinero (administrativo)? Consulta el contenido mínimo en <a href="../sis/historia-clinica.html#contenido-minimo">La historia clínica</a>.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<div class="table-wrap"><table class="table"><caption>Solución del caso E1</caption><thead><tr><th scope="col">Documento</th><th scope="col">¿En la HC?</th><th scope="col">Motivo</th></tr></thead><tbody>
+<tr><th scope="row">Informe de alta clínica</th><td>Sí</td><td>Apartado o del contenido mínimo.</td></tr>
+<tr><th scope="row">Anamnesis y exploración física</th><td>Sí</td><td>Apartado d.</td></tr>
+<tr><th scope="row">Informe de urgencia</th><td>Sí</td><td>Apartado c.</td></tr>
+<tr><th scope="row">Consentimiento informado</th><td>Sí</td><td>Apartado i.</td></tr>
+<tr><th scope="row">Factura del hospital</th><td><b>No</b></td><td>Es un documento administrativo-económico.</td></tr>
+<tr><th scope="row">Informe financiero de gastos</th><td><b>No</b></td><td>Es información de gestión económica, no asistencial.</td></tr>
+</tbody></table></div></details>
+
+<h2 id="e2">E2 · Evaluando la implantación de un SIS <a class="anchor" href="#e2" aria-label="Enlace a la sección: E2 · Evaluando la implantación de un SIS">#</a></h2>
+<p>Se detectan tres problemas:</p>
+<ol>
+<li>El registro de <b>procedimientos quirúrgicos</b> contiene códigos erróneos.</li>
+<li>No se recogen los datos necesarios para calcular <b>indicadores de calidad asistencial</b>.</li>
+<li>Los directores tienen <b>acceso limitado</b> a las estadísticas de costes hospitalarios.</li>
+</ol>
+<p><b>Pregunta:</b> identifica el elemento del SIS afectado en cada caso y propón una solución.</p>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Los cuatro elementos son: fuentes de datos, procedimientos, indicadores y usuarios. Piensa dónde se rompe la cadena en cada problema.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<div class="table-wrap"><table class="table"><caption>Solución del caso E2</caption><thead><tr><th scope="col">Problema</th><th scope="col">Elemento</th><th scope="col">Solución propuesta</th></tr></thead><tbody>
+<tr><th scope="row">Códigos erróneos en procedimientos quirúrgicos</th><td>Procedimientos</td><td>Formar a quien codifica, usar validación automática de códigos y auditar muestras.</td></tr>
+<tr><th scope="row">No se recogen datos para indicadores de calidad</th><td>Fuentes de datos (y su relación con los indicadores)</td><td>Definir qué datos exige cada indicador y añadir esos campos a la HCE.</td></tr>
+<tr><th scope="row">Directores con acceso limitado a costes</th><td>Usuarios</td><td>Revisar permisos y ofrecer cuadros de mando de costes a los perfiles directivos.</td></tr>
+</tbody></table></div></details>
+
+<h2 id="e3">E3 · Implantación de la HCE <a class="anchor" href="#e3" aria-label="Enlace a la sección: E3 · Implantación de la HCE">#</a></h2>
+<p>Un hospital que trabajaba en papel implanta la historia clínica electrónica y surgen estos problemas:</p>
+<ol type="a">
+<li>Profesionales con <b>formación insuficiente</b>.</li>
+<li><b>Accesos no autorizados</b> por permisos mal configurados.</li>
+<li><b>Demoras</b> en registrar los resultados de laboratorio porque los datos no se integran automáticamente.</li>
+</ol>
+<p><b>Preguntas:</b> ¿cuál se relaciona con confidencialidad y seguridad? ¿Cuál con la capacitación del personal? ¿Cuál afecta a la interoperabilidad?</p>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Fíjate en la causa que describe cada punto: permisos, formación o integración entre sistemas.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<ul>
+<li><b>Confidencialidad y seguridad:</b> b) los accesos no autorizados. Solución: revisar perfiles, aplicar el mínimo acceso necesario y auditar accesos.</li>
+<li><b>Capacitación del personal:</b> a) formación insuficiente. Solución: formación práctica, guías rápidas y apoyo de «superusuarios».</li>
+<li><b>Interoperabilidad:</b> c) el laboratorio no se integra. Solución: integrar el sistema de laboratorio con la HCE mediante estándares de intercambio.</li>
+</ul></details>
+
+<h2 id="e4">E4 · Dando calidad a los informes <a class="anchor" href="#e4" aria-label="Enlace a la sección: E4 · Dando calidad a los informes">#</a></h2>
+<p>En el informe de <b>Juan Pérez</b> figuran: nacimiento <b>32/13/1985</b>; peso <b>450 kg</b>; altura <b>1,75 m</b>; diagnóstico principal <b>hipertensión arterial (HTA)</b>; ingreso <b>15/06/2023</b>; alta <b>12/06/2023</b>.</p>
+<p><b>Pregunta:</b> identifica y clasifica los problemas de calidad y propón una solución.</p>
+<p>Prueba primero con la ficha interactiva (incluye también el caso E5, más abajo).</p>
+<div class="widget widget--wide" data-widget="sis-registro-errores"><div class="widget__head"><h3 class="widget__title" id="fichas-de-pacientes-marca-los-campos-erroneos">Fichas de pacientes: marca los campos erróneos <a class="anchor" href="#fichas-de-pacientes-marca-los-campos-erroneos" aria-label="Enlace a la sección: Fichas de pacientes: marca los campos erróneos">#</a></h3><p class="widget__sub">Fichas de E4 (Juan Pérez) y E5 (Ana López). Los datos son inventados.</p></div>
+<noscript><p class="noscript-note">Sin JavaScript, abre las propuestas de solución de E4 y E5.</p></noscript></div>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Comprueba si cada fecha existe, si cada valor es plausible y si las fechas son coherentes entre sí.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<div class="table-wrap"><table class="table"><caption>Solución del caso E4</caption><thead><tr><th scope="col">Problema</th><th scope="col">Dimensión</th><th scope="col">Solución</th></tr></thead><tbody>
+<tr><th scope="row">Nacimiento 32/13/1985: ni el día 32 ni el mes 13 existen</th><td>Precisión</td><td>Validar el formato de fecha y recuperar la real de la fuente original.</td></tr>
+<tr><th scope="row">Peso 450 kg: implausible</th><td>Precisión</td><td>Regla de rango plausible con aviso y repetir la medición.</td></tr>
+<tr><th scope="row">Alta (12/06) anterior al ingreso (15/06)</th><td>Consistencia</td><td>Regla «alta ≥ ingreso» y revisión del documento original.</td></tr>
+</tbody></table></div><p>La altura (1,75 m) y el diagnóstico de HTA no presentan problemas evidentes.</p></details>
+
+<h2 id="e5">E5 · Resolución de problemas en la historia clínica <a class="anchor" href="#e5" aria-label="Enlace a la sección: E5 · Resolución de problemas en la historia clínica">#</a></h2>
+<p>La historia de <b>Ana López</b> muestra: nacimiento <b>15/15/1990</b>; peso <b>15 kg</b>; altura <b>3,25 m</b>; diagnóstico <b>hipertensión arterial severa</b>; ingreso <b>05/10/2023</b>; alta <b>06/10/2023</b>; medicación <b>ibuprofeno 400 mg cada 6 horas</b>.</p>
+<p><b>Preguntas:</b> 1) ¿Es correcta la información? 2) Si hay errores, indica cuáles y qué solución propones.</p>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Revisa fechas, plausibilidad de peso y talla, y coherencia entre el peso y la altura. Sobre la medicación: no eres quien decide; piensa qué harías al detectar algo dudoso.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<ol>
+<li><b>No</b>, la información no es correcta.</li>
+<li>Errores: fecha de nacimiento <b>15/15/1990</b> (mes inexistente); <b>15 kg</b> y <b>3,25 m</b> son incoherentes con una persona adulta (probables errores de tecleo o de otro paciente).</li>
+<li>Solución: validación en origen, reglas de plausibilidad y corregir con la fuente original.</li>
+<li><b>Alerta de medicación a revisar con el facultativo:</b> el ibuprofeno es un antiinflamatorio que puede interaccionar con la hipertensión. El SIS debe <b>avisar</b>; la decisión clínica corresponde al médico responsable. Aquí no se dictamina nada.</li>
+</ol></details>
+
+<h2 id="e6">E6 · Arreglando el desastre del hospital <a class="anchor" href="#e6" aria-label="Enlace a la sección: E6 · Arreglando el desastre del hospital">#</a></h2>
+<p>Un hospital con HCE integra datos de <b>fuentes externas</b> (bases de datos nacionales e internacionales) para decidir mejor y colaborar en investigación científica. Empiezan a notar <b>errores en los registros</b> y <b>falta de consistencia entre fuentes</b>.</p>
+<p><b>Pregunta:</b> ¿qué acciones establecerías para subsanar los errores?</p>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Ayuda</p><p>Piensa en tres momentos: <i>antes</i> (prevenir), <i>durante</i> (validar) y <i>después</i> (auditar y mejorar). Revisa el <a href="../sis/calidad-datos.html#mejora">ciclo de mejora</a>.</p></div>
+<details class="fold solution"><summary>Propuesta de solución</summary>
+<ol>
+<li><b>Diagnosticar:</b> medir los errores por dimensión de calidad y por fuente.</li>
+<li><b>Prevenir:</b> validación en origen, rangos plausibles y campos obligatorios.</li>
+<li><b>Armonizar:</b> usar codificaciones y estándares comunes (CIE-10-ES, SNOMED CT) para integrar fuentes.</li>
+<li><b>Auditar:</b> revisar muestras periódicamente y comprobar la consistencia entre fuentes.</li>
+<li><b>Formar:</b> capacitar al personal y dar retroalimentación.</li>
+<li><b>Gobernar:</b> definir responsables de calidad, procedimientos y una política de mejora continua (normas ISO).</li>
+</ol></details>
+
+<h2 id="resumen">Resumen <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen">#</a></h2>
+<ul>
+<li>La HC solo contiene documentos asistenciales; facturas e informes financieros no entran.</li>
+<li>Cada problema del SIS se ubica en un elemento: fuentes, procedimientos, indicadores o usuarios.</li>
+<li>En la HCE hay tres frentes: seguridad, formación e interoperabilidad.</li>
+<li>Los errores de calidad se detectan con validación, plausibilidad y consistencia.</li>
+<li>Las alertas clínicas se revisan con el facultativo; el SIS no dictamina.</li>
+</ul>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">4 preguntas</p></div>
+<script type="application/json">{"questions":[
+{"q":"Una fecha de nacimiento 15/15/1990 es un error de…","options":["Precisión","Accesibilidad","Relevancia","Ninguno"],"answer":0,"why":"No existe el mes 15, así que el dato no refleja la realidad."},
+{"q":"Un alta anterior al ingreso es un problema de…","options":["Consistencia","Accesibilidad","Interoperabilidad","Formación"],"answer":0,"why":"Dos datos del mismo registro se contradicen."},
+{"q":"Permisos mal configurados que permiten accesos no autorizados afectan a…","options":["Confidencialidad y seguridad","Indicadores","Costes","Listas de espera"],"answer":0,"why":"Se vulnera el principio de acceso solo a quien lo necesita."},
+{"q":"Ante una posible interacción medicamentosa, el SIS debe…","options":["Cambiar el tratamiento solo","Borrar la prescripción","Avisar para revisarla con el facultativo","Ignorarla"],"answer":2,"why":"La decisión clínica corresponde al profesional responsable."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../practicas/casos-descriptiva.html" rel="prev"><small>← Anterior</small><strong>Casos prácticos de estadística descriptiva</strong></a><span></span></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#e1">E1 · Revisando y actualizando las historias clínicas</a></li><li><a href="#e2">E2 · Evaluando la implantación de un SIS</a></li><li><a href="#e3">E3 · Implantación de la HCE</a></li><li><a href="#e4">E4 · Dando calidad a los informes</a></li><li><a href="#e5">E5 · Resolución de problemas en la historia clínica</a></li><li><a href="#e6">E6 · Arreglando el desastre del hospital</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/sis-registro-errores.js" defer></script>
+</body>
+</html>

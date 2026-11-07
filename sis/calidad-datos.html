@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es" data-page="sis/calidad-datos">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calidad de los datos sanitarios · HISdata Wiki</title>
+<meta name="description" content="Por qué importa la calidad del dato, las 6 dimensiones (precisión, integridad, consistencia, actualización, relevancia, accesibilidad), normas ISO/UNE y ENAC.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="calidad de datos, precisión, integridad, consistencia, actualización, relevancia, accesibilidad, iso, une, une-en, enac, aenor, certificación">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Calidad de los datos sanitarios · HISdata Wiki">
+<meta property="og:description" content="Por qué importa la calidad del dato, las 6 dimensiones (precisión, integridad, consistencia, actualización, relevancia, accesibilidad), normas ISO/UNE y ENAC.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Calidad de los datos sanitarios", "description": "Por qué importa la calidad del dato, las 6 dimensiones (precisión, integridad, consistencia, actualización, relevancia, accesibilidad), normas ISO/UNE y ENAC.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["calidad de datos", "precisión", "integridad", "consistencia", "actualización", "relevancia", "accesibilidad", "iso"], "headline": "Calidad de los datos sanitarios"}</script>
+</head>
+<body data-block="sis">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html" aria-current="page"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/sistemas-informacion.html">Módulo B · Sistemas de información</a></li><li><span aria-current="page">Calidad de los datos sanitarios</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">B5</span>Módulo B · Sistemas de información sanitaria</p><h1>Calidad de los datos <span class="grad">sanitarios</span></h1><p class="lead">Un dato incorrecto puede acabar en una mala decisión clínica. Aquí ves cómo se mide la calidad del dato y qué normas la respaldan.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 12 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🎯</span><strong class="vtile__big">Precisión</strong><span class="vtile__txt">El dato es correcto</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🧱</span><strong class="vtile__big">Integridad</strong><span class="vtile__txt">Está completo</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">🔄</span><strong class="vtile__big">Consistencia</strong><span class="vtile__txt">No se contradice</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">⏰</span><strong class="vtile__big">Actualización</strong><span class="vtile__txt">Es reciente</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#por-que-importa">¿Por qué es relevante?</a></li><li><a href="#dimensiones">Las 6 dimensiones de la calidad del dato</a></li><li><a href="#normas">Normas de calidad: ISO, UNE y UNE-EN</a></li><li><a href="#acreditacion-certificacion">ENAC y entidades certificadoras</a></li><li><a href="#mejora">Ciclo de mejora y buenas prácticas Ampliación</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
+<p>1. La calidad del dato protege al paciente y sostiene las decisiones, la normativa, los recursos y la investigación.</p>
+<p>2. Se evalúa con <b>6 dimensiones</b>: precisión, integridad, consistencia, actualización, relevancia y accesibilidad.</p>
+<p>3. Las normas <b>ISO, UNE y UNE-EN</b> definen requisitos; <b>ENAC</b> acredita y las <b>entidades certificadoras</b> certifican.</p></div>
+
+<h2 id="por-que-importa">¿Por qué es relevante? <a class="anchor" href="#por-que-importa" aria-label="Enlace a la sección: ¿Por qué es relevante?">#</a></h2>
+<p>Cada peldaño se apoya en el anterior: sin calidad de datos, todo lo que viene después se tambalea.</p>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 300" role="img" aria-labelledby="fl-t fl-d">
+<title id="fl-t">Por qué importa la calidad de los datos</title>
+<desc id="fl-d">Escalera ascendente con cinco escalones: seguridad del paciente, toma de decisiones informada, cumplimiento normativo, optimización de recursos e investigación científica. Una flecha sube de izquierda a derecha.</desc>
+<rect class="b-red" x="10" y="230" width="88" height="60" rx="8"/><text class="c s" x="54" y="256">Seguridad</text><text class="c s" x="54" y="274">paciente</text>
+<rect class="b-orange" x="102" y="185" width="88" height="105" rx="8"/><text class="c s" x="146" y="236">Decisiones</text><text class="c s" x="146" y="254">informadas</text>
+<rect class="b-yellow" x="194" y="140" width="88" height="150" rx="8"/><text class="c s" x="238" y="212">Cumplir</text><text class="c s" x="238" y="230">la norma</text>
+<rect class="b-green" x="286" y="95" width="88" height="195" rx="8"/><text class="c s" x="330" y="188">Optimizar</text><text class="c s" x="330" y="206">recursos</text>
+<rect class="b-violet" x="378" y="50" width="92" height="240" rx="8"/><text class="c s" x="424" y="164">Investigación</text><text class="c s" x="424" y="182">científica</text>
+<path class="ar" d="M20 215L420 30"/><path class="mk" d="M436 24l-22 -2 6 18z"/>
+</svg>
+<figcaption><b>Fig. 1</b> Seguridad del paciente → decisiones informadas → cumplimiento normativo → optimización de recursos → investigación científica.</figcaption></figure>
+<ol class="flow">
+<li><b>Seguridad del paciente</b>Un peso mal anotado cambia la dosis.</li>
+<li><b>Decisiones informadas</b>Datos fiables, decisiones acertadas.</li>
+<li><b>Cumplimiento normativo</b>Registros correctos que se pueden auditar.</li>
+<li><b>Optimización de recursos</b>Estadísticas que reflejan la realidad.</li>
+<li><b>Investigación científica</b>Estudios basados en datos de confianza.</li>
+</ol>
+
+<h2 id="dimensiones">Las 6 dimensiones de la calidad del dato <a class="anchor" href="#dimensiones" aria-label="Enlace a la sección: Las 6 dimensiones de la calidad del dato">#</a></h2>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 270" role="img" aria-labelledby="dim-t dim-d">
+<title id="dim-t">Las seis dimensiones de calidad del dato</title>
+<desc id="dim-d">Seis casillas alrededor de la calidad del dato: precisión, integridad, consistencia, actualización, relevancia y accesibilidad.</desc>
+<rect class="b-blue" x="10" y="10" width="140" height="50" rx="10"/><text class="c" x="80" y="40">Precisión</text>
+<rect class="b-green" x="170" y="10" width="140" height="50" rx="10"/><text class="c" x="240" y="40">Integridad</text>
+<rect class="b-orange" x="330" y="10" width="140" height="50" rx="10"/><text class="c" x="400" y="40">Consistencia</text>
+<rect class="b-solid" x="140" y="100" width="200" height="60" rx="14"/><text class="c w" x="240" y="136">Calidad del dato</text>
+<rect class="b-violet" x="10" y="200" width="140" height="50" rx="10"/><text class="c" x="80" y="230">Actualización</text>
+<rect class="b-teal" x="170" y="200" width="140" height="50" rx="10"/><text class="c" x="240" y="230">Relevancia</text>
+<rect class="b-yellow" x="330" y="200" width="140" height="50" rx="10"/><text class="c" x="400" y="230">Accesibilidad</text>
+<path class="ln" d="M80 60V80H190V100M240 60V100M400 60V80H290V100M80 200V180H190V160M240 200V160M400 200V180H290V160"/>
+</svg>
+<figcaption><b>Fig. 2</b> Seis dimensiones para evaluar un dato.</figcaption></figure>
+<div class="table-wrap"><table class="table"><caption>Dimensiones, qué exigen y ejemplo clínico</caption>
+<thead><tr><th scope="col">Dimensión</th><th scope="col">Qué exige</th><th scope="col">Ejemplo</th></tr></thead><tbody>
+<tr><th scope="row">Precisión</th><td>Reflejar la realidad clínica o administrativa.</td><td>Si se opera un infarto agudo de miocardio, el procedimiento figura con su nombre y código correcto (CIE-10-ES, SNOMED CT u otro).</td></tr>
+<tr><th scope="row">Integridad</th><td>Que toda la información relevante esté registrada y disponible.</td><td>Todas las intervenciones y visitas al hospital de un paciente aparecen en su historial.</td></tr>
+<tr><th scope="row">Consistencia</th><td>Sin contradicciones entre fuentes o registros.</td><td>Una misma intervención no tiene fechas distintas en documentos diferentes.</td></tr>
+<tr><th scope="row">Actualización</th><td>Reflejar el estado del paciente en ese momento.</td><td>El cambio de medicación se registra cuando ocurre.</td></tr>
+<tr><th scope="row">Relevancia</th><td>Datos apropiados y útiles para el fin concreto.</td><td>Las alergias están bien recogidas antes de anestesiar.</td></tr>
+<tr><th scope="row">Accesibilidad</th><td>Disponibles para profesionales autorizados cuando los necesitan, respetando la privacidad.</td><td>El INE recoge datos anonimizados de nacimientos para investigación.</td></tr>
+</tbody></table></div>
+
+<div class="widget widget--wide" data-widget="sis-calidad"><div class="widget__head"><h3 class="widget__title" id="practica-las-6-dimensiones">Practica las 6 dimensiones <a class="anchor" href="#practica-las-6-dimensiones" aria-label="Enlace a la sección: Practica las 6 dimensiones">#</a></h3><p class="widget__sub">Explora cada una y juega a descubrir cuál falla en cada caso.</p></div>
+<noscript><p class="noscript-note">Sin JavaScript, consulta la tabla anterior: precisión, integridad, consistencia, actualización, relevancia y accesibilidad con sus ejemplos.</p></noscript></div>
+
+<h2 id="normas">Normas de calidad: ISO, UNE y UNE-EN <a class="anchor" href="#normas" aria-label="Enlace a la sección: Normas de calidad: ISO, UNE y UNE-EN">#</a></h2>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 250" role="img" aria-labelledby="nor-t nor-d">
+<title id="nor-t">Ámbito de las normas ISO, UNE-EN y UNE</title>
+<desc id="nor-d">Tres círculos concéntricos. El mayor es ISO, de aplicación internacional. Dentro, UNE-EN, que integra estándares europeos en España. En el centro, UNE, de aplicación en todo el territorio español.</desc>
+<ellipse class="b-blue" cx="240" cy="125" rx="225" ry="118"/><text class="c" x="240" y="30">ISO · internacional</text>
+<ellipse class="b-green" cx="240" cy="145" rx="160" ry="80"/><text class="c" x="240" y="100">UNE-EN · estándares europeos</text>
+<ellipse class="b-orange" cx="240" cy="160" rx="95" ry="42"/><text class="c" x="240" y="165">UNE · España</text>
+</svg>
+<figcaption><b>Fig. 3</b> Tres niveles de normas.</figcaption></figure>
+<ul class="cards">
+<li class="card card--accent c-blue"><h3 id="iso">ISO <a class="anchor" href="#iso" aria-label="Enlace a la sección: ISO">#</a></h3><p>Organización Internacional de Normalización. Reglas, directrices o características para que productos, servicios o sistemas sean de calidad, seguros y eficaces. <b>Aplicación internacional.</b></p></li>
+<li class="card card--accent c-orange"><h3 id="une">UNE <a class="anchor" href="#une" aria-label="Enlace a la sección: UNE">#</a></h3><p>«Una Norma Española». Documentos que especifican requisitos, directrices o características de productos, servicios, sistemas o procesos. <b>Aplicación en todo el territorio español.</b></p></li>
+<li class="card card--accent c-green"><h3 id="une-en">UNE-EN <a class="anchor" href="#une-en" aria-label="Enlace a la sección: UNE-EN">#</a></h3><p>Integra estándares europeos en el sistema normativo español. Asegura requisitos europeos y facilita la <b>libre circulación</b> de mercancías y servicios. Derivan de documentos en inglés.</p></li>
+</ul>
+<p><span class="badge-ampl">Ampliación</span> Ejemplos conocidos: <b>ISO 9001</b> (sistemas de gestión de la calidad), <b>ISO/IEC 27001</b> (seguridad de la información) e <b>ISO 8000</b> (calidad de los datos). Muchas se adoptan en España como <b>UNE-EN ISO</b>. Verifica la edición vigente.</p>
+
+<h2 id="acreditacion-certificacion">ENAC y entidades certificadoras <a class="anchor" href="#acreditacion-certificacion" aria-label="Enlace a la sección: ENAC y entidades certificadoras">#</a></h2>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 230" role="img" aria-labelledby="enac-t enac-d">
+<title id="enac-t">Quién acredita y quién certifica</title>
+<desc id="enac-d">ENAC acredita a las entidades de evaluación de la conformidad. Estas, como las entidades certificadoras, certifican que una organización cumple una norma. Al final, la organización certificada obtiene su certificado.</desc>
+<rect class="b-violet" x="10" y="75" width="130" height="70" rx="12"/><text class="c" x="75" y="105">ENAC</text><text class="c s" x="75" y="126">acredita</text>
+<rect class="b-blue" x="180" y="75" width="130" height="70" rx="12"/><text class="c" x="245" y="102">Entidad</text><text class="c" x="245" y="122">certificadora</text>
+<rect class="b-green" x="350" y="75" width="120" height="70" rx="12"/><text class="c" x="410" y="102">Organización</text><text class="c s" x="410" y="124">recibe certificado</text>
+<path class="ar" d="M142 110H176M312 110H346"/><path class="mk" d="M178 110l-10-6v12zM348 110l-10-6v12z"/>
+<text class="c s" x="160" y="68">garantiza competencia</text><text class="c s" x="330" y="68">audita la norma</text>
+</svg>
+<figcaption><b>Fig. 4</b> ENAC acredita a quienes certifican; estos certifican a las organizaciones.</figcaption></figure>
+<div class="callout callout--def" data-icon="🏛️"><p class="callout__title">ENAC (Entidad Nacional de Acreditación)</p><p>Acredita a los organismos que evalúan la conformidad: laboratorios de ensayo y calibración, organismos de certificación, inspección… Asegura su <b>competencia técnica</b> y que operan conforme a normativas internacionales.</p></div>
+<div class="callout callout--def" data-icon="📜"><p class="callout__title">Entidades certificadoras</p><p>Certifican que un producto, servicio, proceso, sistema de gestión o persona cumple los requisitos de una norma, y emiten un <b>certificado</b>. Destacan:</p>
+<div class="chip-row"><span class="pill">AENOR</span><span class="pill">Bureau Veritas</span><span class="pill">Applus</span><span class="pill">OCA Global</span><span class="pill">SGS</span><span class="pill">TÜV Rheinland</span></div></div>
+<p class="sis-note"><span class="badge-ampl">Ampliación</span> Truco: la norma dice <i>qué</i> hay que cumplir; la certificadora comprueba que se cumple; ENAC comprueba que la certificadora es competente.</p>
+
+<h2 id="mejora">Ciclo de mejora y buenas prácticas <span class="badge-ampl">Ampliación</span> <a class="anchor" href="#mejora" aria-label="Enlace a la sección: Ciclo de mejora y buenas prácticas Ampliación">#</a></h2>
+<p>La calidad no se consigue una vez: se mantiene con un ciclo continuo.</p>
+<ol class="flow">
+<li><b>Planificar</b>Definir qué datos y qué reglas de calidad se exigen.</li>
+<li><b>Hacer</b>Registrar siguiendo los procedimientos y la formación.</li>
+<li><b>Verificar</b>Medir errores, auditar y revisar.</li>
+<li><b>Actuar</b>Corregir causas, formar y volver a empezar.</li>
+</ol>
+<ul class="cards">
+<li class="card card--accent c-green"><h3 id="validacion-en-origen">Validación en origen <a class="anchor" href="#validacion-en-origen" aria-label="Enlace a la sección: Validación en origen">#</a></h3><p>El sistema avisa al escribir el dato: fecha imposible, formato incorrecto, campo obligatorio vacío.</p></li>
+<li class="card card--accent c-orange"><h3 id="reglas-de-plausibilidad">Reglas de plausibilidad <a class="anchor" href="#reglas-de-plausibilidad" aria-label="Enlace a la sección: Reglas de plausibilidad">#</a></h3><p>Rangos razonables: un peso de 450 kg o una altura de 3,25 m provocan una alerta.</p></li>
+<li class="card card--accent c-blue"><h3 id="auditorias">Auditorías <a class="anchor" href="#auditorias" aria-label="Enlace a la sección: Auditorías">#</a></h3><p>Revisar muestras de historias y registros para detectar errores frecuentes.</p></li>
+<li class="card card--accent c-violet"><h3 id="formacion-y-retroalimentacion">Formación y retroalimentación <a class="anchor" href="#formacion-y-retroalimentacion" aria-label="Enlace a la sección: Formación y retroalimentación">#</a></h3><p>Explicar los errores a quien los comete, con ejemplos reales.</p></li>
+</ul>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Mejor prevenir</p><p>Corregir un dato en origen cuesta segundos. Corregirlo después, cuando ya ha pasado a estadísticas, cuesta mucho más.</p></div>
+<p>Practica con fichas de pacientes en <a href="../practicas/casos-sis.html">Casos prácticos del SIS</a>.</p>
+
+<h2 id="resumen">Resumen <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen">#</a></h2>
+<ul>
+<li>La calidad del dato sostiene la seguridad, las decisiones, el cumplimiento normativo, los recursos y la investigación.</li>
+<li>Seis dimensiones: precisión, integridad, consistencia, actualización, relevancia y accesibilidad.</li>
+<li>ISO es internacional; UNE, español; UNE-EN integra estándares europeos.</li>
+<li>ENAC acredita; las entidades certificadoras (AENOR, Bureau Veritas, Applus, OCA Global, SGS, TÜV Rheinland) certifican.</li>
+<li>La mejora es un ciclo: validar en origen, auditar, formar y repetir.</li>
+</ul>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">5 preguntas</p></div>
+<script type="application/json">{"questions":[
+{"q":"Un paciente tiene dos fechas distintas para la misma operación en documentos diferentes. Falla la…","options":["Precisión","Consistencia","Accesibilidad","Relevancia"],"answer":1,"why":"Hay contradicción entre registros: es un problema de consistencia."},
+{"q":"El cambio de medicación se anota tres días tarde. Falla la…","options":["Actualización","Integridad","Precisión","Accesibilidad"],"answer":0,"why":"El dato no refleja el estado actual del paciente."},
+{"q":"Las alergias no figuran antes de una anestesia. Falla principalmente la…","options":["Consistencia","Accesibilidad","Relevancia","Actualización"],"answer":2,"why":"Falta un dato apropiado y útil para ese fin concreto."},
+{"q":"UNE-EN se caracteriza por…","options":["Ser solo de ámbito autonómico","Integrar estándares europeos en el sistema normativo español","Acreditar laboratorios","Ser una entidad certificadora"],"answer":1,"why":"Facilita además la libre circulación de mercancías y servicios en el mercado común."},
+{"q":"¿Qué entidad acredita a los organismos que evalúan la conformidad?","options":["ENAC","AENOR","SGS","INE"],"answer":0,"why":"ENAC acredita su competencia técnica; AENOR y SGS son entidades certificadoras."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/aplicaciones-hce.html" rel="prev"><small>← Anterior</small><strong>Aplicaciones y historia clínica electrónica</strong></a><a class="next" href="../sis/aspectos-legales.html" rel="next"><small>Siguiente →</small><strong>Aspectos legales de los SIS</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#por-que-importa">¿Por qué es relevante?</a></li><li><a href="#dimensiones">Las 6 dimensiones de la calidad del dato</a></li><li><a href="#normas">Normas de calidad: ISO, UNE y UNE-EN</a></li><li><a href="#acreditacion-certificacion">ENAC y entidades certificadoras</a></li><li><a href="#mejora">Ciclo de mejora y buenas prácticas Ampliación</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/sis-calidad.js" defer></script>
+</body>
+</html>

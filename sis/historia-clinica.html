@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es" data-page="sis/historia-clinica">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La historia clínica · HISdata Wiki</title>
+<meta name="description" content="Definición, contenido mínimo (a–o), funciones y características de la historia clínica, y diferencias entre la de papel y la electrónica.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="historia clínica, contenido mínimo, funciones, características, hc papel, hce, documento médico-legal">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="La historia clínica · HISdata Wiki">
+<meta property="og:description" content="Definición, contenido mínimo (a–o), funciones y características de la historia clínica, y diferencias entre la de papel y la electrónica.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "La historia clínica", "description": "Definición, contenido mínimo (a–o), funciones y características de la historia clínica, y diferencias entre la de papel y la electrónica.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["historia clínica", "contenido mínimo", "funciones", "características", "hc papel", "hce", "documento médico-legal"], "headline": "La historia clínica"}</script>
+</head>
+<body data-block="sis">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html" aria-current="page"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/sistemas-informacion.html">Módulo B · Sistemas de información</a></li><li><span aria-current="page">La historia clínica</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">B2</span>Módulo B · Sistemas de información sanitaria</p><h1>La historia <span class="grad">clínica</span></h1><p class="lead">La historia clínica es el documento central del sistema: ahí se escribe todo lo que le pasa al paciente en su atención.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">📋</span><strong class="vtile__big">Contenido mínimo</strong><span class="vtile__txt">Lo que debe tener siempre</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🎓</span><strong class="vtile__big">4 funciones</strong><span class="vtile__txt">Docente, investigadora, médico-legal, gestión</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">✅</span><strong class="vtile__big">7 rasgos</strong><span class="vtile__txt">Identificada, ordenada, normalizada…</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🔐</span><strong class="vtile__big">Conservable</strong><span class="vtile__txt">Y recuperable</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 4 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
+<p>1. La <b>historia clínica (HC)</b> es un documento médico-legal que recoge, de forma estructurada, todo el estado de salud del paciente.</p>
+<p>2. Tiene un <b>contenido mínimo</b> de 16 documentos (apartados a–o) y cumple <b>4 funciones</b>.</p>
+<p>3. Debe tener <b>6 características</b>: identificada, reproducible, ordenada, normalizada, conservable y que identifique al personal.</p></div>
+
+<h2 id="que-es">¿Qué es? <a class="anchor" href="#que-es" aria-label="Enlace a la sección: ¿Qué es?">#</a></h2>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Definición</p><p>La historia clínica es un <b>documento médico legal</b> que recoge de manera <b>estructurada y detallada</b> toda la información relacionada con el estado de salud de un paciente, incluyendo <b>antecedentes, diagnósticos, tratamientos, procedimientos y evolución</b>.</p></div>
+<p>«Médico legal» significa que sirve para la atención, pero también como <b>prueba documental</b> de lo que se hizo y por qué.</p>
+
+<h2 id="contenido-minimo">Contenido mínimo <a class="anchor" href="#contenido-minimo" aria-label="Enlace a la sección: Contenido mínimo">#</a></h2>
+<p>La lista que sigue (apartados a a o, con la ñ incluida: son 16) es el contenido mínimo. <span class="badge-ampl">Ampliación</span> Procede del artículo 15.2 de la Ley 41/2002 (verifica la versión vigente). Algunos documentos solo existen si hay motivo: por ejemplo, el informe de quirófano solo se genera si el paciente es operado.</p>
+<div class="table-wrap"><table class="table"><caption>Los 16 documentos del contenido mínimo, explicados en llano</caption>
+<thead><tr><th scope="col">Ap.</th><th scope="col">Documento</th><th scope="col">¿Qué es, en palabras sencillas?</th></tr></thead><tbody>
+<tr><th scope="row">a</th><td>Hoja clínico-estadística</td><td>Ficha resumen con datos del episodio (filiación, diagnóstico, destino al alta) que sirve para la estadística sanitaria.</td></tr>
+<tr><th scope="row">b</th><td>Autorización de ingreso</td><td>Documento que deja constancia de que el ingreso está indicado y autorizado.</td></tr>
+<tr><th scope="row">c</th><td>Informe de urgencia</td><td>Qué le pasó al paciente en urgencias, qué se hizo y qué se decidió.</td></tr>
+<tr><th scope="row">d</th><td>Anamnesis y exploración física</td><td>La «entrevista» (síntomas, antecedentes) y el examen físico del paciente.</td></tr>
+<tr><th scope="row">e</th><td>Evolución</td><td>Anotaciones del día a día: cómo va el paciente y qué cambios hay.</td></tr>
+<tr><th scope="row">f</th><td>Órdenes médicas</td><td>Las instrucciones del médico: fármacos, pruebas, dieta, cuidados.</td></tr>
+<tr><th scope="row">g</th><td>Hoja de interconsulta</td><td>Petición de opinión a otro especialista y su respuesta.</td></tr>
+<tr><th scope="row">h</th><td>Informes de exploraciones complementarias</td><td>Resultados de pruebas: analíticas, radiografías, ecografías…</td></tr>
+<tr><th scope="row">i</th><td>Consentimiento informado</td><td>Prueba de que el paciente recibió información y aceptó un procedimiento.</td></tr>
+<tr><th scope="row">j</th><td>Informe de anestesia</td><td>Qué anestesia se usó y cómo respondió el paciente.</td></tr>
+<tr><th scope="row">k</th><td>Informe de quirófano o registro del parto</td><td>Qué se hizo durante la intervención o cómo fue el parto.</td></tr>
+<tr><th scope="row">l</th><td>Informe de anatomía patológica</td><td>Resultado del estudio de tejidos o muestras en el laboratorio.</td></tr>
+<tr><th scope="row">m</th><td>Evolución y planificación de cuidados de enfermería</td><td>Seguimiento del paciente por enfermería y plan de cuidados.</td></tr>
+<tr><th scope="row">n</th><td>Aplicación terapéutica de enfermería</td><td>Registro de lo que enfermería administra (medicación, curas) y cuándo.</td></tr>
+<tr><th scope="row">ñ</th><td>Gráfico de constantes</td><td>Gráfica de tensión, temperatura, pulso… a lo largo del tiempo.</td></tr>
+<tr><th scope="row">o</th><td>Informe clínico de alta</td><td>Resumen final: diagnóstico, tratamiento y recomendaciones al salir.</td></tr>
+</tbody></table></div>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">Ojo con lo administrativo</p><p>Una <b>factura</b> o un <b>informe financiero</b> de gastos hospitalarios son documentos administrativos y económicos: <b>no</b> forman parte de la historia clínica. Pruébalo en el juego.</p></div>
+
+<div class="widget" data-widget="sis-hc-clasificador"><div class="widget__head"><h3 class="widget__title" id="juego-va-o-no-va-en-la-historia-clinica">Juego: ¿va o no va en la historia clínica? <a class="anchor" href="#juego-va-o-no-va-en-la-historia-clinica" aria-label="Enlace a la sección: Juego: ¿va o no va en la historia clínica?">#</a></h3><p class="widget__sub">Decide en cada documento. Rondas de 12.</p></div>
+<noscript><p class="noscript-note">Sin JavaScript: van en la HC los 16 documentos de la tabla anterior; no van las facturas, informes financieros, nóminas ni contratos.</p></noscript></div>
+
+<h2 id="funciones">Las 4 funciones <a class="anchor" href="#funciones" aria-label="Enlace a la sección: Las 4 funciones">#</a></h2>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 300" role="img" aria-labelledby="fun-t fun-d">
+<title id="fun-t">Funciones de la historia clínica</title>
+<desc id="fun-d">La historia clínica, en el centro, cumple cuatro funciones: docente, investigadora, médico-legal, y de gestión y calidad.</desc>
+<path class="ln" d="M190 125L105 70M290 125L375 70M190 175L105 230M290 175L375 230"/>
+<rect class="b-green" x="10" y="10" width="190" height="60" rx="12"/><text class="c" x="105" y="36">Docente</text><text class="c s" x="105" y="56">Formar a profesionales</text>
+<rect class="b-violet" x="280" y="10" width="190" height="60" rx="12"/><text class="c" x="375" y="36">Investigadora</text><text class="c s" x="375" y="56">Estudiar casos y tratamientos</text>
+<rect class="b-orange" x="10" y="230" width="190" height="60" rx="12"/><text class="c" x="105" y="256">Médico-legal</text><text class="c s" x="105" y="276">Prueba de lo ocurrido</text>
+<rect class="b-teal" x="280" y="230" width="190" height="60" rx="12"/><text class="c" x="375" y="256">Gestión y calidad</text><text class="c s" x="375" y="276">Planificar y evaluar</text>
+<ellipse class="b-solid" cx="240" cy="150" rx="90" ry="38"/><text class="c w" x="240" y="146">Historia</text><text class="c w" x="240" y="166">clínica</text>
+</svg>
+<figcaption><b>Fig. 1</b> Las cuatro funciones de la historia clínica.</figcaption></figure>
+<ul class="cards">
+<li class="card card--accent c-green"><h3 id="docente">Docente <a class="anchor" href="#docente" aria-label="Enlace a la sección: Docente">#</a></h3><p>Los casos reales (con datos protegidos) sirven para formar a futuros profesionales.</p></li>
+<li class="card card--accent c-violet"><h3 id="investigadora">Investigadora <a class="anchor" href="#investigadora" aria-label="Enlace a la sección: Investigadora">#</a></h3><p>Permite estudiar enfermedades y tratamientos con muchos casos reales.</p></li>
+<li class="card card--accent c-orange"><h3 id="medico-legal">Médico-legal <a class="anchor" href="#medico-legal" aria-label="Enlace a la sección: Médico-legal">#</a></h3><p>Es la prueba de qué se hizo, cuándo y quién lo hizo.</p></li>
+<li class="card card--accent c-teal"><h3 id="gestion-y-calidad">Gestión y calidad <a class="anchor" href="#gestion-y-calidad" aria-label="Enlace a la sección: Gestión y calidad">#</a></h3><p>Ayuda a organizar servicios, medir resultados y mejorar la atención.</p></li>
+</ul>
+
+<h2 id="caracteristicas">Las 6 características <a class="anchor" href="#caracteristicas" aria-label="Enlace a la sección: Las 6 características">#</a></h2>
+<ul class="cards">
+<li class="card card--accent"><span class="card__tag">1</span><h3 id="identificada">Identificada <a class="anchor" href="#identificada" aria-label="Enlace a la sección: Identificada">#</a></h3><p>Lleva los datos que identifican al paciente en cada documento.</p></li>
+<li class="card card--accent"><span class="card__tag">2</span><h3 id="reproducible">Reproducible <a class="anchor" href="#reproducible" aria-label="Enlace a la sección: Reproducible">#</a></h3><p>Se puede copiar o consultar sin perder información.</p></li>
+<li class="card card--accent"><span class="card__tag">3</span><h3 id="ordenada-y-secuencial">Ordenada y secuencial <a class="anchor" href="#ordenada-y-secuencial" aria-label="Enlace a la sección: Ordenada y secuencial">#</a></h3><p>Sigue un orden lógico y cronológico de los hechos.</p></li>
+<li class="card card--accent"><span class="card__tag">4</span><h3 id="normalizada">Normalizada <a class="anchor" href="#normalizada" aria-label="Enlace a la sección: Normalizada">#</a></h3><p>Usa formatos y criterios comunes, para que todos entiendan lo mismo.</p></li>
+<li class="card card--accent"><span class="card__tag">5</span><h3 id="conservable-y-recuperable">Conservable y recuperable <a class="anchor" href="#conservable-y-recuperable" aria-label="Enlace a la sección: Conservable y recuperable">#</a></h3><p>Se guarda el tiempo exigido y se puede localizar cuando se necesita.</p></li>
+<li class="card card--accent"><span class="card__tag">6</span><h3 id="identificadora-del-personal-sanitario">Identificadora del personal sanitario <a class="anchor" href="#identificadora-del-personal-sanitario" aria-label="Enlace a la sección: Identificadora del personal sanitario">#</a></h3><p>Cada anotación indica quién la hizo, con fecha y hora.</p></li>
+</ul>
+
+<h2 id="papel-vs-electronica">Historia clínica en papel y electrónica <a class="anchor" href="#papel-vs-electronica" aria-label="Enlace a la sección: Historia clínica en papel y electrónica">#</a></h2>
+<p>La historia en soporte electrónico (HCE) mantiene la estructura de la de papel, pero cambia cómo se escribe, se consulta y se protege. Más detalle en <a href="aplicaciones-hce.html">Aplicaciones y HCE</a>.</p>
+<div class="table-wrap"><table class="table"><caption>Comparativa HC en papel y HC electrónica</caption>
+<thead><tr><th scope="col">Aspecto</th><th scope="col">Papel</th><th scope="col">Electrónica (HCE)</th></tr></thead><tbody>
+<tr><th scope="row">Legibilidad</th><td>Depende de la letra de cada persona.</td><td>Texto legible para todos.</td></tr>
+<tr><th scope="row">Acceso</th><td>Una persona a la vez y en el lugar físico.</td><td>Rápido y simultáneo, desde distintos puestos.</td></tr>
+<tr><th scope="row">Orden y uniformidad</th><td>Variable.</td><td>Mismos formularios y estructura.</td></tr>
+<tr><th scope="row">Correcciones</th><td>Se tacha o se rehace.</td><td>Los datos no se borran: se añaden; pasado un tiempo no se modifica lo registrado.</td></tr>
+<tr><th scope="row">Quién accede <span class="badge-ampl">Ampliación</span></th><td>Difícil saberlo.</td><td>Queda registro de quién consulta y cuándo.</td></tr>
+<tr><th scope="row">Explotar los datos</th><td>Muy laborioso.</td><td>Facilita estadísticas y gestión.</td></tr>
+<tr><th scope="row">Riesgos</th><td>Pérdida, deterioro, archivo físico.</td><td>Fallos técnicos y de red; costes; necesidad de formación.</td></tr>
+</tbody></table></div>
+<p>Importante: la conservación de la HCE está sujeta a las mismas normas que la HC tradicional.</p>
+
+<h2 id="resumen">Resumen <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen">#</a></h2>
+<ul>
+<li>La HC es un documento médico-legal, estructurado y detallado, del estado de salud del paciente.</li>
+<li>Su contenido mínimo son 16 documentos (a–o); facturas e informes financieros no entran.</li>
+<li>Cumple cuatro funciones: docente, investigadora, médico-legal y de gestión y calidad.</li>
+<li>Debe ser identificada, reproducible, ordenada y secuencial, normalizada, conservable y recuperable e identificadora del personal.</li>
+<li>La HCE mantiene la estructura de la de papel y añade acceso rápido y trazabilidad.</li>
+</ul>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">5 preguntas</p></div>
+<script type="application/json">{"questions":[
+{"q":"¿Cuál NO es una función de la historia clínica?","options":["Docente","Investigadora","Publicitaria","Médico-legal"],"answer":2,"why":"Las cuatro funciones son docente, investigadora, médico-legal y de gestión y calidad."},
+{"q":"El consentimiento informado, ¿va en la historia clínica?","options":["No, es administrativo","Sí, forma parte del contenido mínimo","Solo si lo pide el paciente","Solo en urgencias"],"answer":1,"why":"Es el apartado i del contenido mínimo."},
+{"q":"¿Cuál de estos documentos NO forma parte de la historia clínica?","options":["Informe clínico de alta","Gráfico de constantes","Factura del hospital","Informe de anatomía patológica"],"answer":2,"why":"La factura es un documento administrativo-económico."},
+{"q":"Que cada anotación indique quién la escribió, con fecha y hora, corresponde a la característica…","options":["Normalizada","Reproducible","Identificadora del personal sanitario","Conservable"],"answer":2,"why":"Permite saber quién registró cada dato."},
+{"q":"En una HCE, los datos registrados…","options":["Se pueden borrar siempre","Se pueden añadir pero no borrar","No se pueden consultar a la vez","Dejan de estar sujetos a las normas de conservación"],"answer":1,"why":"En la HCE los datos no se borran, se añaden, y su conservación sigue las mismas normas que la HC en papel."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/sistemas-informacion.html" rel="prev"><small>← Anterior</small><strong>Los sistemas de información sanitaria</strong></a><a class="next" href="../sis/elementos-sis.html" rel="next"><small>Siguiente →</small><strong>Elementos de un SIS</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 4 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/sis-hc-clasificador.js" defer></script>
+</body>
+</html>

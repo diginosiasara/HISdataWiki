@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es" data-page="practicas/historias-clinicas">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Historias clínicas: administrativos y clínicos · HISdata Wiki</title>
+<meta name="description" content="Probabilidad de intersección de sucesos independientes con datos de historias clínicas y su hoja Excel.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="historias clinicas, administrativo, clinico, interseccion, independencia, excel">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Historias clínicas: administrativos y clínicos · HISdata Wiki">
+<meta property="og:description" content="Probabilidad de intersección de sucesos independientes con datos de historias clínicas y su hoja Excel.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/sheet.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Historias clínicas: administrativos y clínicos", "description": "Probabilidad de intersección de sucesos independientes con datos de historias clínicas y su hoja Excel.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["historias clinicas", "administrativo", "clinico", "interseccion", "independencia", "excel"], "headline": "Historias clínicas: administrativos y clínicos"}</script>
+</head>
+<body data-block="casos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html" aria-current="page"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../practicas/index.html">Prácticas</a></li><li><span aria-current="page">Historias clínicas: administrativos y clínicos</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow">Práctica · Hoja de cálculo</p><h1>Historias clínicas: administrativos y <span class="grad">clínicos</span></h1><p class="lead">Cuántas historias contienen a la vez datos administrativos y clínicos.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 8 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">📁</span><strong class="vtile__big">1000</strong><span class="vtile__txt">Historias clínicas</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🗂️</span><strong class="vtile__big">30 % · 20 %</strong><span class="vtile__txt">Administrativo · clínico</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">✖️</span><strong class="vtile__big">0,30 × 0,20</strong><span class="vtile__txt">Si son independientes</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🎯</span><strong class="vtile__big">0,06</strong><span class="vtile__txt">60 historias</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#enunciado">El problema</a></li><li><a href="#resolucion">Paso a paso</a></li><li><a href="#hoja">La hoja de cálculo, con fórmulas explicadas</a></li><li><a href="#autoevaluacion">Comprueba lo aprendido</a></li><li><a href="#relacionado">Sigue aprendiendo</a></li></ol></details>
+<div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>1. De 1000 historias, P(A administrativo) = 0,30 y P(C clínico) = 0,20.</p><p>2. Si son independientes, P(A∩C) = 0,30 × 0,20 = 0,06.</p><p>3. Eso equivale a unas 60 historias de las 1000.</p></div>
+<h2 id="enunciado">El problema <a class="anchor" href="#enunciado" aria-label="Enlace a la sección: El problema">#</a></h2><p>En 1000 historias clínicas, un 30 % tiene un dato administrativo destacado (suceso A) y un 20 % uno clínico destacado (suceso C). ¿Cuál es la probabilidad de que una historia tenga ambos?</p>
+<h2 id="resolucion">Paso a paso <a class="anchor" href="#resolucion" aria-label="Enlace a la sección: Paso a paso">#</a></h2><ol class="flow"><li><b>Independencia</b>P(A∩C) = P(A)·P(C)</li><li><b>Cálculo</b>0,30 × 0,20 = 0,06</li><li><b>En casos</b>0,06 × 1000 = 60 historias</li></ol><div class="widget" data-widget="venn" data-pa="0.3" data-pb="0.2" data-indep="true" data-na="300" data-nb="200"><div class="widget__head"><h3 class="widget__title" id="venn-a-y-c">Venn: A y C <a class="anchor" href="#venn-a-y-c" aria-label="Enlace a la sección: Venn: A y C">#</a></h3><p class="widget__sub">Regiones con 1000 historias.</p></div><noscript><p class="noscript-note">P(A)=0,30; P(C)=0,20; P(A∩C)=0,06.</p></noscript></div>
+<h2 id="hoja">La hoja de cálculo, con fórmulas explicadas <a class="anchor" href="#hoja" aria-label="Enlace a la sección: La hoja de cálculo, con fórmulas explicadas">#</a></h2>
+<p>Es el Excel original: cambia los datos azules y mira cómo se recalculan las celdas. Pulsa una celda con fórmula para ver su explicación paso a paso; usa las pestañas para cambiar de hoja.</p>
+<div class="widget widget--wide" data-widget="sheet" data-book="historias"><div class="widget__head"><h3 class="widget__title">Hoja de cálculo</h3><p class="widget__sub">Auditoría de historias clínicas. Hojas: Ejercicio, Explicacion.</p></div><noscript><p class="noscript-note">Probabilidad de errores administrativos y clínicos como sucesos independientes: intersección, unión, tabla de contingencia y frecuencias esperadas. Activa JavaScript para editar las celdas y ver las fórmulas explicadas; mientras tanto, esta es la versión estática.</p></noscript><details class="fold"><summary>Explicación del ejercicio (texto)</summary><p>Resolución del ejercicio de probabilidad</p><p>Datos del problema</p><p>Evento · Probabilidad</p><p>A = Errores administrativos · P(A) = 0,30</p><p>C = Errores clínicos · P(C) = 0,20</p><p>El enunciado nos dice que ambos tipos de errores se producen de manera independiente. Esto es fundamental porque nos permite aplicar la regla del producto para eventos independientes:</p><p>P(A∩C)=P(A)×P(C)P(A∩C)=P(A)×P(C)</p><p>Resultado</p><p>La probabilidad de que una historia clínica seleccionada al azar presente ambos tipos de errores (administrativos y clínicos) es del 6 %.</p><p>Interpretación</p><p>Esto significa que, de cada 100 historias clínicas revisadas, aproximadamente 6 presentarán simultáneamente errores en los datos administrativos y en los datos clínicos.</p><p>Verificación con tabla de contingencia (opcional)</p><p>Errores clínicos (C) · Sin errores clínicos (C&#x27;) · Total</p><p>Errores admin. (A) · 0.06 · 0.24 · 0.3</p><p>Sin errores admin. (A&#x27;) · 0.14 · 0.56 · 0.7</p><p>Total · 0.2 · 0.8 · 1</p><p>Cada celda se obtiene multiplicando las probabilidades marginales (por la independencia), y la suma total da 1, lo que confirma que el cálculo es correcto.</p></details><details class="fold"><summary>Hoja «Ejercicio»: celdas y fórmulas (versión sin JavaScript)</summary><div class="table-wrap"><table class="table table--compact"><caption>Hoja «Ejercicio» del libro «Auditoría de historias clínicas»: celdas con su valor o su fórmula</caption><thead><tr><th scope="col"><span class="sr-only">Fila</span></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th></tr></thead><tbody><tr><th scope="row">1</th><td>Auditoría de historias clínicas: probabilidad de errores (sucesos independientes)</td><td></td><td></td><td></td></tr><tr><th scope="row">2</th><td>Celdas en amarillo/azul = datos editables. El resto son fórmulas.</td><td></td><td></td><td></td></tr><tr><th scope="row">4</th><td>1. DATOS (del enunciado)</td><td></td><td></td><td></td></tr><tr><th scope="row">5</th><td>P(A) = errores administrativos</td><td>30,0 %</td><td>Dato del enunciado (30 %)</td><td></td></tr><tr><th scope="row">6</th><td>P(C) = errores clínicos</td><td>20,0 %</td><td>Dato del enunciado (20 %)</td><td></td></tr><tr><th scope="row">7</th><td>Nº de historias revisadas (para ejemplo de frecuencias)</td><td>1.000</td><td>Supuesto del ejemplo (editable)</td><td></td></tr><tr><th scope="row">9</th><td>2. RESULTADOS</td><td></td><td></td><td></td></tr><tr><th scope="row">10</th><td>P(A ∩ C) = P(A)·P(C)  → AMBOS errores</td><td><code>=B5*B6</code> <span class="sheet-static__val">→ 6,00 %</span></td><td>Independencia: P(A∩C)=P(A)·P(C)</td><td></td></tr><tr><th scope="row">11</th><td>P(A solo administrativo) = P(A)·(1−P(C))</td><td><code>=B5*(1-B6)</code> <span class="sheet-static__val">→ 24,00 %</span></td><td></td><td></td></tr><tr><th scope="row">12</th><td>P(C solo clínico) = P(C)·(1−P(A))</td><td><code>=B6*(1-B5)</code> <span class="sheet-static__val">→ 14,00 %</span></td><td></td><td></td></tr><tr><th scope="row">13</th><td>P(ningún error) = (1−P(A))·(1−P(C))</td><td><code>=(1-B5)*(1-B6)</code> <span class="sheet-static__val">→ 56,00 %</span></td><td></td><td></td></tr><tr><th scope="row">14</th><td>P(A ∪ C) = al menos un error</td><td><code>=B5+B6-B10</code> <span class="sheet-static__val">→ 44,00 %</span></td><td>P(A)+P(C)−P(A∩C)</td><td></td></tr><tr><th scope="row">15</th><td>Comprobación: suma de los 4 casos (debe ser 100 %)</td><td><code>=B10+B11+B12+B13</code> <span class="sheet-static__val">→ 100,00 %</span></td><td></td><td></td></tr><tr><th scope="row">17</th><td>RESPUESTA:</td><td><code>=&quot;La probabilidad de que una historia tenga ambos errores es &quot;&amp;TEXT(B10,&quot;0.0%&quot;)</code> <span class="sheet-static__val">→ La probabilidad de que una historia tenga ambos errores es 06%</span></td><td></td><td></td></tr><tr><th scope="row">19</th><td>3. TABLA DE CONTINGENCIA (probabilidades)</td><td></td><td></td><td></td></tr><tr><th scope="row">20</th><td></td><td>Clínico: SÍ</td><td>Clínico: NO</td><td>Total</td></tr><tr><th scope="row">21</th><td>Administrativo: SÍ</td><td><code>=B5*B6</code> <span class="sheet-static__val">→ 6,00 %</span></td><td><code>=B5*(1-B6)</code> <span class="sheet-static__val">→ 24,00 %</span></td><td><code>=B21+C21</code> <span class="sheet-static__val">→ 30,00 %</span></td></tr><tr><th scope="row">22</th><td>Administrativo: NO</td><td><code>=(1-B5)*B6</code> <span class="sheet-static__val">→ 14,00 %</span></td><td><code>=(1-B5)*(1-B6)</code> <span class="sheet-static__val">→ 56,00 %</span></td><td><code>=B22+C22</code> <span class="sheet-static__val">→ 70,00 %</span></td></tr><tr><th scope="row">23</th><td>Total</td><td><code>=B21+B22</code> <span class="sheet-static__val">→ 20,00 %</span></td><td><code>=C21+C22</code> <span class="sheet-static__val">→ 80,00 %</span></td><td><code>=D21+D22</code> <span class="sheet-static__val">→ 100,00 %</span></td></tr><tr><th scope="row">25</th><td>4. EJEMPLO: Nº ESPERADO DE HISTORIAS</td><td></td><td></td><td></td></tr><tr><th scope="row">26</th><td></td><td>Clínico: SÍ</td><td>Clínico: NO</td><td>Total</td></tr><tr><th scope="row">27</th><td>Administrativo: SÍ</td><td><code>=B21*$B$7</code> <span class="sheet-static__val">→ 60</span></td><td><code>=C21*$B$7</code> <span class="sheet-static__val">→ 240</span></td><td><code>=D21*$B$7</code> <span class="sheet-static__val">→ 300</span></td></tr><tr><th scope="row">28</th><td>Administrativo: NO</td><td><code>=B22*$B$7</code> <span class="sheet-static__val">→ 140</span></td><td><code>=C22*$B$7</code> <span class="sheet-static__val">→ 560</span></td><td><code>=D22*$B$7</code> <span class="sheet-static__val">→ 700</span></td></tr><tr><th scope="row">29</th><td>Total</td><td><code>=B23*$B$7</code> <span class="sheet-static__val">→ 200</span></td><td><code>=C23*$B$7</code> <span class="sheet-static__val">→ 800</span></td><td><code>=D23*$B$7</code> <span class="sheet-static__val">→ 1.000</span></td></tr><tr><th scope="row">31</th><td>Nota: se asume independencia entre errores administrativos y clínicos, como indica el enunciado.</td><td></td><td></td><td></td></tr></tbody></table></div><p><a class="btn btn--ghost" href="../assets/excel/ejercicio_historias_clinicas.xlsx" download>Descargar el Excel original (.xlsx)</a></p></details></div>
+
+<h2 id="autoevaluacion">Comprueba lo aprendido <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Comprueba lo aprendido">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion-2">Autoevaluación <a class="anchor" href="#autoevaluacion-2" aria-label="Enlace a la sección: Autoevaluación">#</a></h3></div><script type="application/json">{"questions": [{"q": "P(A)=0,30 y P(C)=0,20 independientes. P(A∩C)=", "options": ["0,06", "0,50", "0,10", "0,44"], "answer": 0, "why": "Se multiplican: 0,30·0,20."}]}</script></div>
+<h2 id="relacionado">Sigue aprendiendo <a class="anchor" href="#relacionado" aria-label="Enlace a la sección: Sigue aprendiendo">#</a></h2>
+<ul><li><a href="../probabilidad/venn.html">Venn y sucesos</a></li><li><a href="casos-sis.html">Casos prácticos de SIS</a></li></ul>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../practicas/farmacos.html" rel="prev"><small>← Anterior</small><strong>Eficacia de fármacos (sucesos independientes)</strong></a><a class="next" href="../practicas/citas-uniforme.html" rel="next"><small>Siguiente →</small><strong>Citas médicas: distribución uniforme</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#enunciado">El problema</a></li><li><a href="#resolucion">Paso a paso</a></li><li><a href="#hoja">La hoja de cálculo, con fórmulas explicadas</a></li><li><a href="#autoevaluacion">Comprueba lo aprendido</a></li><li><a href="#relacionado">Sigue aprendiendo</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/../data/workbooks.js" defer></script>
+<script src="../assets/js/services/numfmt.js" defer></script>
+<script src="../assets/js/services/formula-explain.js" defer></script>
+<script src="../assets/js/ui/sheet-charts.js" defer></script>
+<script src="../assets/js/services/formula.js" defer></script>
+<script src="../assets/js/widgets/sheet.js" defer></script>
+<script src="../assets/js/widgets/venn.js" defer></script>
+</body>
+</html>

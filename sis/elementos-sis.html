@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es" data-page="sis/elementos-sis">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elementos de un SIS · HISdata Wiki</title>
+<meta name="description" content="Los 4 elementos de un sistema de información sanitaria (fuentes, procedimientos, indicadores y usuarios) y los SIS de atención primaria y especializada.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="elementos sis, fuentes de datos, procedimientos, indicadores, usuarios, siap, bdcap, rae-cmbd, atención primaria, atención especializada">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Elementos de un SIS · HISdata Wiki">
+<meta property="og:description" content="Los 4 elementos de un sistema de información sanitaria (fuentes, procedimientos, indicadores y usuarios) y los SIS de atención primaria y especializada.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Elementos de un SIS", "description": "Los 4 elementos de un sistema de información sanitaria (fuentes, procedimientos, indicadores y usuarios) y los SIS de atención primaria y especializada.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["elementos sis", "fuentes de datos", "procedimientos", "indicadores", "usuarios", "siap", "bdcap", "rae-cmbd"], "headline": "Elementos de un SIS"}</script>
+</head>
+<body data-block="sis">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html" aria-current="page"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/sistemas-informacion.html">Módulo B · Sistemas de información</a></li><li><span aria-current="page">Elementos de un SIS</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">B3</span>Módulo B · Sistemas de información sanitaria</p><h1>Elementos de un <span class="grad">SIS</span></h1><p class="lead">Todo SIS se apoya en cuatro piezas. Si una falla, el sistema entero se resiente. Después, dos ejemplos reales: atención primaria y atención especializada.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🗄️</span><strong class="vtile__big">Fuentes</strong><span class="vtile__txt">De dónde salen los datos</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">⚙️</span><strong class="vtile__big">Procedimientos</strong><span class="vtile__txt">Cómo se procesan</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📈</span><strong class="vtile__big">Indicadores</strong><span class="vtile__txt">Qué se mide</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">👥</span><strong class="vtile__big">Usuarios</strong><span class="vtile__txt">Quién los utiliza</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#cuatro-elementos">Los 4 elementos de un SIS</a></li><li><a href="#ap-y-ae">Atención primaria y atención especializada</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
+<p>1. Un SIS tiene <b>4 elementos</b>: fuentes de datos, procedimientos, indicadores y usuarios.</p>
+<p>2. En <b>atención primaria</b> destacan el <b>SIAP</b> y la <b>BDCAP</b>; en <b>atención especializada</b>, el <b>RAE-CMBD</b>, el Catálogo Nacional de Hospitales, los costes y listas de espera, y las transfusiones y trasplantes.</p>
+<p>3. Ambos buscan lo mismo: <b>optimizar recursos y evaluar la calidad asistencial</b>.</p></div>
+
+<h2 id="cuatro-elementos">Los 4 elementos de un SIS <a class="anchor" href="#cuatro-elementos" aria-label="Enlace a la sección: Los 4 elementos de un SIS">#</a></h2>
+<p>Piensa en el SIS como una cadena: los datos <b>nacen</b> en las fuentes, se <b>tratan</b> con procedimientos, se <b>resumen</b> en indicadores y <b>llegan</b> a los usuarios que deciden.</p>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 270" role="img" aria-labelledby="el-t el-d">
+<title id="el-t">Los cuatro elementos de un sistema de información sanitaria</title>
+<desc id="el-d">Cuatro cajas enlazadas en ciclo: fuentes de datos, procedimientos, indicadores y usuarios. De los usuarios sale una flecha de vuelta a las fuentes, porque sus necesidades definen qué datos hay que recoger.</desc>
+<rect class="b-blue" x="10" y="20" width="200" height="70" rx="12"/><text class="c" x="110" y="50">1 · Fuentes de datos</text><text class="c s" x="110" y="72">De dónde salen</text>
+<rect class="b-green" x="270" y="20" width="200" height="70" rx="12"/><text class="c" x="370" y="50">2 · Procedimientos</text><text class="c s" x="370" y="72">Cómo se tratan</text>
+<rect class="b-orange" x="270" y="160" width="200" height="70" rx="12"/><text class="c" x="370" y="190">3 · Indicadores</text><text class="c s" x="370" y="212">Qué miden</text>
+<rect class="b-violet" x="10" y="160" width="200" height="70" rx="12"/><text class="c" x="110" y="190">4 · Usuarios</text><text class="c s" x="110" y="212">Quién decide</text>
+<path class="ar" d="M212 55H266M370 92V156M268 195H214M110 158V94"/>
+<path class="mk" d="M266 55l-10-6v12zM370 158l-6-10h12zM214 195l10-6v12zM110 92l-6 10h12z"/>
+</svg>
+<figcaption><b>Fig. 1</b> Los cuatro elementos y su recorrido. Los usuarios devuelven nuevas necesidades a las fuentes.</figcaption></figure>
+
+<div class="widget" data-widget="sis-elementos"><div class="widget__head"><h3 class="widget__title" id="explora-los-4-elementos">Explora los 4 elementos <a class="anchor" href="#explora-los-4-elementos" aria-label="Enlace a la sección: Explora los 4 elementos">#</a></h3><p class="widget__sub">Pulsa cada elemento: verás un ejemplo hospitalario y qué pasa si falla.</p></div>
+<noscript><p class="noscript-note">Fuentes de datos: de dónde salen (laboratorio, admisión). Procedimientos: reglas para recoger, codificar, validar y almacenar. Indicadores: medidas resumen (estancia media). Usuarios: clínicos, gestores y directores que deciden con la información.</p></noscript></div>
+
+<ul class="cards">
+<li class="card card--accent c-blue"><span class="card__tag">1</span><h3 id="fuentes-de-datos">Fuentes de datos <a class="anchor" href="#fuentes-de-datos" aria-label="Enlace a la sección: Fuentes de datos">#</a></h3><p>Historia clínica, laboratorio, admisión, encuestas, registros.</p></li>
+<li class="card card--accent c-green"><span class="card__tag">2</span><h3 id="procedimientos">Procedimientos <a class="anchor" href="#procedimientos" aria-label="Enlace a la sección: Procedimientos">#</a></h3><p>Reglas para recoger, codificar, validar, almacenar y procesar.</p></li>
+<li class="card card--accent c-orange"><span class="card__tag">3</span><h3 id="indicadores">Indicadores <a class="anchor" href="#indicadores" aria-label="Enlace a la sección: Indicadores">#</a></h3><p>Medidas resumen: estancia media, reingresos, esperas.</p></li>
+<li class="card card--accent c-violet"><span class="card__tag">4</span><h3 id="usuarios">Usuarios <a class="anchor" href="#usuarios" aria-label="Enlace a la sección: Usuarios">#</a></h3><p>Clínicos, gestores, directores, investigadores, salud pública.</p></li>
+</ul>
+<div class="callout callout--example" data-icon="🏥"><p class="callout__title">Ejemplo: de la analítica a la decisión</p>
+<p><b>Fuente:</b> el laboratorio registra la glucosa de un paciente. <b>Procedimiento:</b> el sistema comprueba que el valor tenga sentido. <b>Indicador:</b> «% de diabéticos con buen control». <b>Usuario:</b> la dirección del centro de salud decide reforzar la consulta de educación diabetológica.</p></div>
+
+<h2 id="ap-y-ae">Atención primaria y atención especializada <a class="anchor" href="#ap-y-ae" aria-label="Enlace a la sección: Atención primaria y atención especializada">#</a></h2>
+<p>Los SIS se aplican en los dos grandes niveles asistenciales. Atención <b>primaria</b> es la puerta de entrada (centro de salud, médico de familia); atención <b>especializada</b> es la que se presta en hospitales y consultas de especialistas.</p>
+<figure class="figure">
+<svg class="sis-svg" viewBox="0 0 480 340" role="img" aria-labelledby="ap-t ap-d">
+<title id="ap-t">Sistemas de información en atención primaria y especializada</title>
+<desc id="ap-d">Dos columnas. Atención primaria: SIAP, con población, recursos y actividad asistencial, y BDCAP, base de datos clínica con problemas de salud, intervenciones y resultados. Atención especializada: Catálogo Nacional de Hospitales, RAE-CMBD, costes y listas de espera, y transfusiones y trasplantes. Ambas tienen el mismo objetivo: optimizar recursos y evaluar la calidad asistencial.</desc>
+<rect class="b-blue" x="10" y="10" width="220" height="44" rx="10"/><text class="c" x="120" y="38">Atención primaria</text>
+<rect class="b-green" x="250" y="10" width="220" height="44" rx="10"/><text class="c" x="360" y="38">Atención especializada</text>
+<path class="ln" d="M120 54V70M360 54V70"/>
+<rect class="b-blue" x="10" y="70" width="220" height="50" rx="10"/><text class="c" x="120" y="92">SIAP</text><text class="c s" x="120" y="110">Población, recursos, actividad</text>
+<rect class="b-blue" x="10" y="130" width="220" height="50" rx="10"/><text class="c" x="120" y="152">BDCAP</text><text class="c s" x="120" y="170">Base de datos clínica</text>
+<rect class="b-green" x="250" y="70" width="220" height="40" rx="10"/><text class="c" x="360" y="95">Catálogo Nac. de Hospitales</text>
+<rect class="b-green" x="250" y="118" width="220" height="40" rx="10"/><text class="c" x="360" y="143">RAE-CMBD</text>
+<rect class="b-green" x="250" y="166" width="220" height="40" rx="10"/><text class="c" x="360" y="191">Costes y listas de espera</text>
+<rect class="b-green" x="250" y="214" width="220" height="40" rx="10"/><text class="c" x="360" y="239">Transfusiones y trasplantes</text>
+<rect class="b-solid" x="60" y="280" width="360" height="46" rx="12"/><text class="c w" x="240" y="308">Objetivo: optimizar recursos y evaluar la calidad</text>
+</svg>
+<figcaption><b>Fig. 2</b> Un mismo objetivo, dos conjuntos de sistemas.</figcaption></figure>
+
+<h3 id="atencion-primaria">Atención primaria <a class="anchor" href="#atencion-primaria" aria-label="Enlace a la sección: Atención primaria">#</a></h3>
+<ul>
+<li>Es una <b>herramienta estadística del Sistema Nacional de Salud (SNS)</b>.</li>
+<li>Sus datos son <b>anuales y estandarizados</b>, para poder comparar.</li>
+<li>Incluye indicadores de <b>calidad</b> y de <b>costes</b>.</li>
+</ul>
+<ul class="cards">
+<li class="card card--accent c-blue"><h3 id="siap">SIAP <a class="anchor" href="#siap" aria-label="Enlace a la sección: SIAP">#</a></h3><p>Reúne información sobre la <b>población</b>, los <b>recursos</b> y la <b>actividad asistencial</b> de la atención primaria.</p></li>
+<li class="card card--accent c-blue"><h3 id="bdcap">BDCAP <a class="anchor" href="#bdcap" aria-label="Enlace a la sección: BDCAP">#</a></h3><p>Base de datos <b>clínica</b>: recoge <b>problemas de salud, intervenciones y resultados</b>.</p></li>
+</ul>
+<div class="callout callout--example" data-icon="🩺"><p class="callout__title">Ejemplo en un centro de salud</p><p>El SIAP dice cuántas personas tiene asignadas el centro y cuántas consultas se hicieron al año; la BDCAP muestra, por ejemplo, cuántas personas tienen hipertensión como problema de salud y qué intervenciones se les hicieron.</p></div>
+
+<h3 id="atencion-especializada">Atención especializada <a class="anchor" href="#atencion-especializada" aria-label="Enlace a la sección: Atención especializada">#</a></h3>
+<p>Ofrece información <b>hospitalaria y especializada</b>. Incluye cuatro piezas:</p>
+<div class="table-wrap"><table class="table"><caption>Piezas del SIS de atención especializada</caption>
+<thead><tr><th scope="col">Pieza</th><th scope="col">Qué aporta</th><th scope="col">Ejemplo sencillo</th></tr></thead><tbody>
+<tr><th scope="row">Catálogo Nacional de Hospitales</th><td>Relación de los hospitales con sus características.</td><td>Saber cuántos hospitales hay y qué dotación tienen.</td></tr>
+<tr><th scope="row">RAE-CMBD</th><td>Registro de actividad de atención especializada (conjunto mínimo básico de datos).</td><td>Cuántas altas y con qué diagnósticos y procedimientos.</td></tr>
+<tr><th scope="row">Costes y listas de espera</th><td>Cuánto cuesta la actividad y cuánto tarda el paciente en ser atendido.</td><td>Días medios de espera para una cirugía.</td></tr>
+<tr><th scope="row">Transfusiones y trasplantes</th><td>Información sobre estas actividades específicas.</td><td>Número de trasplantes realizados por hospital.</td></tr>
+</tbody></table></div>
+<p><span class="badge-ampl">Ampliación</span> El CMBD recoge, por cada alta hospitalaria, datos del paciente, fechas de ingreso y alta, diagnósticos y procedimientos codificados (CIE-10-ES). Es la fuente habitual para calcular la <b>estancia media</b>. Verifica el detalle de los campos en la normativa vigente.</p>
+
+<h3 id="tabla-comparativa">Comparativa rápida <a class="anchor" href="#tabla-comparativa" aria-label="Enlace a la sección: Comparativa rápida">#</a></h3>
+<div class="table-wrap"><table class="table"><caption>Atención primaria frente a atención especializada</caption>
+<thead><tr><th scope="col">Aspecto</th><th scope="col">Atención primaria</th><th scope="col">Atención especializada</th></tr></thead><tbody>
+<tr><th scope="row">Dónde</th><td>Centros de salud</td><td>Hospitales y consultas de especialistas</td></tr>
+<tr><th scope="row">Sistemas clave</th><td>SIAP y BDCAP</td><td>Catálogo Nacional de Hospitales, RAE-CMBD, costes y listas de espera, transfusiones y trasplantes</td></tr>
+<tr><th scope="row">Qué recoge</th><td>Población, recursos, actividad, problemas de salud, intervenciones y resultados</td><td>Actividad hospitalaria, costes, esperas y actividades específicas</td></tr>
+<tr><th scope="row">Datos</th><td>Anuales y estandarizados</td><td>Información hospitalaria y especializada</td></tr>
+<tr><th scope="row">Objetivo común</th><td colspan="2">Optimizar recursos y evaluar la calidad asistencial</td></tr>
+</tbody></table></div>
+
+<h2 id="resumen">Resumen <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen">#</a></h2>
+<ul>
+<li>Los 4 elementos del SIS son fuentes de datos, procedimientos, indicadores y usuarios.</li>
+<li>Si falla uno, se resiente la cadena: códigos erróneos (procedimientos), falta de indicadores (fuentes) o poco acceso de los directores (usuarios).</li>
+<li>Atención primaria: SIAP (población, recursos, actividad) y BDCAP (problemas de salud, intervenciones, resultados).</li>
+<li>Atención especializada: Catálogo Nacional de Hospitales, RAE-CMBD, costes y listas de espera, transfusiones y trasplantes.</li>
+<li>Meta común: optimizar recursos y evaluar la calidad asistencial.</li>
+</ul>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">5 preguntas</p></div>
+<script type="application/json">{"questions":[
+{"q":"¿Cuál NO es uno de los 4 elementos de un SIS?","options":["Fuentes de datos","Procedimientos","Indicadores","Presupuestos de marketing"],"answer":3,"why":"Los cuatro son fuentes de datos, procedimientos, indicadores y usuarios."},
+{"q":"En un hospital aparecen códigos erróneos en el registro de procedimientos quirúrgicos. ¿Qué elemento falla principalmente?","options":["Procedimientos","Usuarios","Ninguno","Solo los indicadores"],"answer":0,"why":"Las reglas para codificar y validar los datos (procedimientos) no están funcionando bien."},
+{"q":"La BDCAP es…","options":["Un catálogo de hospitales","Una base de datos clínica de atención primaria","Un registro de trasplantes","Un sistema de costes hospitalarios"],"answer":1,"why":"Recoge problemas de salud, intervenciones y resultados en atención primaria."},
+{"q":"¿Cuál pertenece a atención especializada?","options":["SIAP","BDCAP","RAE-CMBD","Ninguno de ellos"],"answer":2,"why":"El RAE-CMBD es el registro de actividad de la atención especializada."},
+{"q":"El objetivo común de los SIS de primaria y especializada es…","options":["Sustituir a los profesionales","Optimizar recursos y evaluar la calidad asistencial","Aumentar el papeleo","Sustituir la historia clínica"],"answer":1,"why":"Ambos aportan información para gestionar mejor los recursos y evaluar la calidad."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/historia-clinica.html" rel="prev"><small>← Anterior</small><strong>La historia clínica</strong></a><a class="next" href="../sis/aplicaciones-hce.html" rel="next"><small>Siguiente →</small><strong>Aplicaciones y historia clínica electrónica</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#cuatro-elementos">Los 4 elementos de un SIS</a></li><li><a href="#ap-y-ae">Atención primaria y atención especializada</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/sis-elementos.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* HISdata Wiki · sheet.css — visor de hojas de cálculo (widgets sheet y sheet-hub).
+   Solo usa variables de tokens.css: el modo claro, oscuro y alto contraste salen solos. */
+
+/* Barra de herramientas y leyenda */
+.sheet-toolbar{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin:var(--sp-3) 0}
+.sheet-toolbar .btn{min-height:44px}
+.sheet-toolbar .btn[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.sheet-legend{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);list-style:none;margin:0 0 var(--sp-3);padding:0;font-size:var(--fs-sm);color:var(--muted)}
+.sheet-legend li{display:flex;align-items:center;gap:.4rem}
+.sheet-key{display:inline-flex;align-items:center;justify-content:center;min-width:2.2rem;padding:.05rem .35rem;border:1px solid var(--line-strong);border-radius:4px;font:600 var(--fs-xs) var(--font-mono);color:var(--ink)}
+.sheet-key--input{background:var(--c-blue-soft);border-color:var(--c-blue);color:var(--c-blue-ink)}
+.sheet-key--formula{background:var(--surface-2)}
+.sheet-key--text{background:var(--surface)}
+
+/* Paneles de hoja */
+.sheet-panel__desc,.sheet-note{margin:0 0 var(--sp-3);color:var(--muted);font-size:var(--fs-sm)}
+.sheet-h{margin:var(--sp-5) 0 var(--sp-2);font-size:var(--fs-lg)}
+.sheet-img{margin:var(--sp-4) 0}
+.sheet-img img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:var(--r-sm);background:#fff}
+.sheet-img figcaption{font-size:var(--fs-sm);color:var(--muted);margin-top:var(--sp-1)}
+
+/* Cuadrícula: desplazamiento interno (la página nunca se desborda) y altura máxima en hojas largas */
+.sheet-scroll{max-width:100%;max-height:min(30rem,70vh);overflow:auto;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--surface);overscroll-behavior:contain;scroll-padding:2.4rem 0 0 3.2rem}
+.sheet-grid{border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+.sheet-grid col.sheet-rh{width:3rem}
+.sheet-grid th,.sheet-grid td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:.25rem .45rem;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.35;color:var(--ink)}
+.sheet-grid thead th{position:sticky;top:0;z-index:2;background:var(--surface-2);font-weight:700;color:var(--muted);text-align:center}
+.sheet-grid tbody th.sheet-rh{position:sticky;left:0;z-index:1;background:var(--surface-2);font-weight:600;color:var(--muted);text-align:center}
+.sheet-grid thead th.sheet-corner{left:0;z-index:3}
+.sheet-cell.is-wrap{white-space:normal;overflow:visible}
+.sheet-cell.is-right{text-align:right}
+.sheet-cell.is-center{text-align:center}
+.sheet-cell.is-b{font-weight:700}
+.sheet-cell.is-i{font-style:italic}
+.sheet-cell.is-title{font-size:var(--fs-lg);font-family:var(--font-display)}
+.sheet-cell.is-head{background:var(--accent-ink,#7a3300);color:var(--on-ink,#fff)}
+:root[data-theme="dark"] .sheet-cell.is-head{color:#111}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sheet-cell.is-head{color:#111}}
+.sheet-cell.is-input{background:var(--c-blue-soft);color:var(--c-blue-ink);font-weight:600;box-shadow:inset 0 0 0 1px var(--c-blue)}
+.sheet-cell.is-formula{background:var(--surface-2)}
+.is-formulas .sheet-cell.is-formula{font-family:var(--font-mono);font-size:var(--fs-xs);text-align:left}
+.sheet-cell{cursor:cell}
+.sheet-cell:focus{outline:3px solid var(--focus);outline-offset:-3px;position:relative;z-index:1}
+.sheet-cell.is-sel{box-shadow:inset 0 0 0 2px var(--accent)}
+/* precedentes resaltados: 6 tonos (también se distinguen por el subrayado discontinuo, no solo por color) */
+.sheet-cell.is-p0,.sheet-cell.is-p1,.sheet-cell.is-p2,.sheet-cell.is-p3,.sheet-cell.is-p4,.sheet-cell.is-p5{text-decoration:underline dotted;text-underline-offset:3px}
+.sheet-cell.is-p0{background:var(--c-violet-soft)}
+.sheet-cell.is-p1{background:var(--c-orange-soft)}
+.sheet-cell.is-p2{background:var(--c-green-soft)}
+.sheet-cell.is-p3{background:var(--c-teal-soft)}
+.sheet-cell.is-p4{background:var(--c-red-soft)}
+.sheet-cell.is-p5{background:var(--c-yellow-soft)}
+.sheet-edit{width:100%;min-width:0;box-sizing:border-box;font:inherit;padding:.1rem .25rem;border:2px solid var(--focus);border-radius:4px;background:var(--surface);color:var(--ink)}
+
+/* Inspector de celda: barra de fórmulas + explicación */
+.sheet-insp{margin:0 0 var(--sp-3);padding:var(--sp-3);border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface-2)}
+.sheet-fbar{display:flex;align-items:stretch;gap:0;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--surface);overflow:hidden;min-width:0}
+.sheet-fbar__ref{flex:none;padding:.35rem .7rem;font-weight:700;background:var(--surface-2);border-right:1px solid var(--line-strong);min-width:3.2rem;text-align:center}
+.sheet-fbar__fx{flex:none;padding:.35rem .5rem;font:italic 700 var(--fs-sm) var(--font-display);color:var(--accent-ink);border-right:1px solid var(--line)}
+.sheet-fbar__code{flex:1;min-width:0;padding:.35rem .7rem;background:none;font-family:var(--font-mono);font-size:var(--fs-sm);overflow-x:auto;white-space:nowrap}
+.sheet-tk--fn{font-weight:700;color:var(--accent-ink)}
+.sheet-tk--num{color:var(--ink)}
+.sheet-tk--str{color:var(--c-green-ink)}
+.sheet-tk--op,.sheet-tk--paren,.sheet-tk--sep{color:var(--muted)}
+.sheet-tk--ref{font-weight:700;border-bottom:2px solid currentColor}
+.sheet-tk--c0{color:var(--c-violet-ink)}
+.sheet-tk--c1{color:var(--c-orange-ink)}
+.sheet-tk--c2{color:var(--c-green-ink)}
+.sheet-tk--c3{color:var(--c-teal-ink)}
+.sheet-tk--c4{color:var(--c-red-ink)}
+.sheet-tk--c5{color:var(--c-yellow-ink)}
+.sheet-insp__dl{display:grid;grid-template-columns:minmax(7rem,max-content) 1fr;gap:var(--sp-2) var(--sp-4);margin:var(--sp-3) 0 0;font-size:var(--fs-sm)}
+.sheet-insp__dl dt{font-weight:700;color:var(--muted)}
+.sheet-insp__dl dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.sheet-insp__lab{color:var(--muted)}
+.sheet-insp code{font-family:var(--font-mono);font-size:.92em}
+.sheet-prec,.sheet-fns{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--sp-1)}
+.sheet-fns li{padding:.2rem 0;border-bottom:1px dashed var(--line)}
+.sheet-prec__b{display:inline-flex;align-items:center;gap:.4rem;flex-wrap:wrap;text-align:left;background:none;border:1px solid var(--line);border-radius:var(--r-sm);padding:.3rem .6rem;min-height:44px;font:inherit;color:var(--ink);cursor:pointer}
+.sheet-prec__b:hover{border-color:var(--accent);background:var(--surface)}
+.sheet-prec__sw{display:inline-block;width:.8rem;height:.8rem;border-radius:3px;background:currentColor;flex:none}
+.sheet-more{color:var(--muted)}
+
+/* Gráficas reproducidas */
+.sheet-charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--sp-4)}
+.sheet-chart{min-width:0}
+
+/* Selector de libros (sheet-hub) */
+.sheet-hub__list{list-style:none;margin:var(--sp-3) 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:var(--sp-3)}
+.sheet-hub__btn{display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;width:100%;height:100%;text-align:left;padding:var(--sp-3) var(--sp-4);min-height:44px;border:1.5px solid var(--line-strong);border-radius:var(--r);background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.sheet-hub__btn:hover{border-color:var(--accent)}
+.sheet-hub__btn[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.sheet-hub__btn strong{font-size:var(--fs-0)}
+.sheet-hub__btn small{color:var(--muted);font-size:var(--fs-xs)}
+.sheet-hub__stage{margin-top:var(--sp-4)}
+.sheet-hub__stage > .widget{margin-left:0;margin-right:0;box-shadow:none}
+
+@media (max-width:640px){
+  .sheet-insp__dl{grid-template-columns:1fr;gap:var(--sp-1)}
+  .sheet-insp__dl dd{margin-bottom:var(--sp-2)}
+  .sheet-scroll{max-height:min(26rem,65vh)}
+}
+@media (forced-colors:active){
+  .sheet-cell.is-input{outline:1px solid Highlight}
+  .sheet-cell.is-sel{outline:2px solid Highlight}
+}
+@media (prefers-reduced-motion:reduce){.sheet-scroll{scroll-behavior:auto}}

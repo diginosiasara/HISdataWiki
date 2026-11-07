@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es" data-page="practicas/farmacos">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eficacia de fármacos (sucesos independientes) · HISdata Wiki</title>
+<meta name="description" content="Dos tratamientos con distinta eficacia: probabilidad complementaria, unión e intersección de sucesos independientes, con la hoja Excel explicada.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="farmacos, eficacia, tratamiento, curados, complementario, union, independientes, excel">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Eficacia de fármacos (sucesos independientes) · HISdata Wiki">
+<meta property="og:description" content="Dos tratamientos con distinta eficacia: probabilidad complementaria, unión e intersección de sucesos independientes, con la hoja Excel explicada.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/sheet.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Eficacia de fármacos (sucesos independientes)", "description": "Dos tratamientos con distinta eficacia: probabilidad complementaria, unión e intersección de sucesos independientes, con la hoja Excel explicada.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["farmacos", "eficacia", "tratamiento", "curados", "complementario", "union", "independientes", "excel"], "headline": "Eficacia de fármacos (sucesos independientes)"}</script>
+</head>
+<body data-block="casos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html" aria-current="page"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../practicas/index.html">Prácticas</a></li><li><span aria-current="page">Eficacia de fármacos (sucesos independientes)</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow">Práctica · Hoja de cálculo</p><h1>Eficacia de fármacos (sucesos <span class="grad">independientes)</span></h1><p class="lead">Compara dos tratamientos y calcula la probabilidad de que al menos uno cure al paciente.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">💊</span><strong class="vtile__big">95 % vs 68 %</strong><span class="vtile__txt">Eficacia de A y de B</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">1 − 0,05·0,32</strong><span class="vtile__txt">Al menos uno cura</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">🎯</span><strong class="vtile__big">98,4 %</strong><span class="vtile__txt">Probabilidad de la unión</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">📊</span><strong class="vtile__big">Excel</strong><span class="vtile__txt">Con fórmulas explicadas</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#enunciado">El problema</a></li><li><a href="#resolucion">Paso a paso</a></li><li><a href="#hoja">La hoja de cálculo, con fórmulas explicadas</a></li><li><a href="#autoevaluacion">Comprueba lo aprendido</a></li><li><a href="#relacionado">Sigue aprendiendo</a></li></ol></details>
+<div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>1. Tratamiento A cura al 95 % (760 de 800); B al 68 % (340 de 500).</p><p>2. Los no curados son el complementario: 40 (A) y 160 (B).</p><p>3. Si son independientes: P(A∪B) = 1 − P(no A)·P(no B) = 98,4 %.</p></div>
+<h2 id="enunciado">El problema <a class="anchor" href="#enunciado" aria-label="Enlace a la sección: El problema">#</a></h2>
+<p>Un hospital prueba dos tratamientos: A con 800 pacientes y B con 500. Queremos saber la eficacia de cada uno y la probabilidad de que un paciente se cure con <em>al menos uno</em>.</p>
+<h2 id="resolucion">Paso a paso <a class="anchor" href="#resolucion" aria-label="Enlace a la sección: Paso a paso">#</a></h2>
+<ol class="flow"><li><b>Eficacia A</b>760/800 = 0,95 → 95 %</li><li><b>Eficacia B</b>340/500 = 0,68 → 68 %</li><li><b>Complementarios</b>P(no A) = 0,05 · P(no B) = 0,32</li><li><b>Ninguno cura</b>0,05 × 0,32 = 0,016 (independientes)</li><li><b>Al menos uno</b>1 − 0,016 = 0,984 → 98,4 %</li></ol>
+<div class="stats"><div class="stat stat--green"><span class="stat__value">30,4 %</span><span class="stat__label">solo A</span></div><div class="stat stat--blue"><span class="stat__value">3,4 %</span><span class="stat__label">solo B</span></div><div class="stat stat--violet"><span class="stat__value">64,6 %</span><span class="stat__label">ambos</span></div><div class="stat stat--red"><span class="stat__value">1,6 %</span><span class="stat__label">ninguno</span></div></div>
+<div class="callout callout--note"><p class="callout__title">Supuesto</p><p>Que A y B sean <b>independientes</b> es una hipótesis de trabajo: el resultado de uno no cambia la probabilidad del otro.</p></div>
+<div class="widget" data-widget="venn" data-pa="0.95" data-pb="0.68" data-indep="true"><div class="widget__head"><h3 class="widget__title" id="diagrama-de-venn-de-los-dos-tratamientos">Diagrama de Venn de los dos tratamientos <a class="anchor" href="#diagrama-de-venn-de-los-dos-tratamientos" aria-label="Enlace a la sección: Diagrama de Venn de los dos tratamientos">#</a></h3><p class="widget__sub">Cambia las probabilidades y observa las regiones.</p></div><noscript><p class="noscript-note">P(A)=0,95; P(B)=0,68; independientes; P(A∪B)=0,984.</p></noscript></div>
+<h2 id="hoja">La hoja de cálculo, con fórmulas explicadas <a class="anchor" href="#hoja" aria-label="Enlace a la sección: La hoja de cálculo, con fórmulas explicadas">#</a></h2>
+<p>Es el Excel original: cambia los datos azules y mira cómo se recalculan las celdas. Pulsa una celda con fórmula para ver su explicación paso a paso; usa las pestañas para cambiar de hoja.</p>
+<div class="widget widget--wide" data-widget="sheet" data-book="farmacos"><div class="widget__head"><h3 class="widget__title">Hoja de cálculo</h3><p class="widget__sub">Eficacia de dos fármacos. Hojas: Fármacos.</p></div><noscript><p class="noscript-note">Compara la probabilidad de curación de dos fármacos, calcula su diferencia y reparte las regiones del diagrama de Venn suponiendo independencia. Activa JavaScript para editar las celdas y ver las fórmulas explicadas; mientras tanto, esta es la versión estática.</p></noscript><details class="fold"><summary>Hoja «Fármacos»: celdas y fórmulas (versión sin JavaScript)</summary><div class="table-wrap"><table class="table table--compact"><caption>Hoja «Fármacos» del libro «Eficacia de dos fármacos»: celdas con su valor o su fórmula</caption><thead><tr><th scope="col"><span class="sr-only">Fila</span></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th><th scope="col">E</th><th scope="col">F</th><th scope="col">G</th></tr></thead><tbody><tr><th scope="row">1</th><td>¿QUÉ FÁRMACO ES MÁS EFECTIVO?</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">3</th><td>1. DATOS DEL ENUNCIADO (azul = datos de entrada)</td><td></td><td></td><td></td><td></td><td></td><td>Diagrama de Venn (imagen generada con los valores de la hoja)</td></tr><tr><th scope="row">4</th><td>Fármaco</td><td>Tratamientos totales</td><td>Pacientes curados</td><td>No curados</td><td>Fórmula (no curados)</td><td></td><td></td></tr><tr><th scope="row">5</th><td>Fármaco A</td><td>800</td><td>760</td><td><code>=B5-C5</code> <span class="sheet-static__val">→ 40</span></td><td>Total − Curados</td><td></td><td></td></tr><tr><th scope="row">6</th><td>Fármaco B</td><td>500</td><td>340</td><td><code>=B6-C6</code> <span class="sheet-static__val">→ 160</span></td><td>Total − Curados</td><td></td><td></td></tr><tr><th scope="row">8</th><td>2. PROBABILIDADES</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">9</th><td>Fármaco</td><td>P(curación)</td><td>P(no curación)</td><td>Fórmula P(curación)</td><td>Fórmula P(no curación)</td><td></td><td></td></tr><tr><th scope="row">10</th><td><code>=A5</code> <span class="sheet-static__val">→ Fármaco A</span></td><td><code>=C5/B5</code> <span class="sheet-static__val">→ 0,95</span></td><td><code>=1-B10</code> <span class="sheet-static__val">→ 0,05</span></td><td>Curados / Totales</td><td>1 − P(curación)</td><td></td><td></td></tr><tr><th scope="row">11</th><td><code>=A6</code> <span class="sheet-static__val">→ Fármaco B</span></td><td><code>=C6/B6</code> <span class="sheet-static__val">→ 0,68</span></td><td><code>=1-B11</code> <span class="sheet-static__val">→ 0,32</span></td><td>Curados / Totales</td><td>1 − P(curación)</td><td></td><td></td></tr><tr><th scope="row">13</th><td>3. COMPARACIÓN</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">14</th><td>Concepto</td><td>Resultado</td><td></td><td>Fórmula</td><td></td><td></td><td></td></tr><tr><th scope="row">15</th><td>P(curación) A en %</td><td><code>=B10</code> <span class="sheet-static__val">→ 95,0 %</span></td><td></td><td>P(A) formateada como %</td><td></td><td></td><td></td></tr><tr><th scope="row">16</th><td>P(curación) B en %</td><td><code>=B11</code> <span class="sheet-static__val">→ 68,0 %</span></td><td></td><td>P(B) formateada como %</td><td></td><td></td><td></td></tr><tr><th scope="row">17</th><td>Diferencia A − B (puntos %)</td><td><code>=B10-B11</code> <span class="sheet-static__val">→ 27,0 %</span></td><td></td><td>P(A) − P(B)</td><td></td><td></td><td></td></tr><tr><th scope="row">18</th><td>Fármaco más efectivo</td><td><code>=IF(B10&gt;B11,A5,IF(B11&gt;B10,A6,&quot;Igual&quot;))</code> <span class="sheet-static__val">→ Fármaco A</span></td><td></td><td>Mayor probabilidad de curación</td><td></td><td></td><td></td></tr><tr><th scope="row">20</th><td><code>=&quot;Conclusión: con &quot;&amp;A5&amp;&quot; se cura el &quot;&amp;TEXT(B10,&quot;0%&quot;)&amp;&quot; de los pacientes y con &quot;&amp;A6&amp;&quot; el &quot;&amp;TEXT(B11,&quot;0%&quot;)&amp;&quot;. El más efectivo es &quot;&amp;B18&amp;&quot;.&quot;</code> <span class="sheet-static__val">→ Conclusión: con Fármaco A se cura el 95% de los pacientes y con Fármaco B el 68%. El más efectivo es Fármaco A.</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">21</th><td>Nota: se interpreta «supervivencia» como la probabilidad de curación, tal como plantea el enunciado.</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">22</th><td>Leyenda: azul = datos de entrada · negro = fórmulas.</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">23</th><td>4. DIAGRAMA DE VENN CONJUNTO (A = curarse con A; B = curarse con B)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">24</th><td>Región</td><td>Probabilidad</td><td></td><td>Fórmula aplicada</td><td></td><td></td><td></td></tr><tr><th scope="row">25</th><td>A ∩ B (curado con A y con B)</td><td><code>=B10*B11</code> <span class="sheet-static__val">→ 0,646</span></td><td></td><td>P(A) · P(B)  [supuesto de independencia]</td><td></td><td></td><td></td></tr><tr><th scope="row">26</th><td>Solo A</td><td><code>=B10-B25</code> <span class="sheet-static__val">→ 0,304</span></td><td></td><td>P(A) − P(A ∩ B)</td><td></td><td></td><td></td></tr><tr><th scope="row">27</th><td>Solo B</td><td><code>=B11-B25</code> <span class="sheet-static__val">→ 0,034</span></td><td></td><td>P(B) − P(A ∩ B)</td><td></td><td></td><td></td></tr><tr><th scope="row">28</th><td>Ninguno (no curado con A ni con B)</td><td><code>=1-B29</code> <span class="sheet-static__val">→ 0,016</span></td><td></td><td>1 − P(A ∪ B)</td><td></td><td></td><td></td></tr><tr><th scope="row">29</th><td>P(A ∪ B)</td><td><code>=B10+B11-B25</code> <span class="sheet-static__val">→ 0,984</span></td><td></td><td>P(A) + P(B) − P(A ∩ B)</td><td></td><td></td><td></td></tr><tr><th scope="row">31</th><td>Nota: A y B son pacientes distintos en el enunciado; la intersección solo tiene sentido suponiendo que ambos fármacos actúan de forma independiente sobre un mismo paciente.</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div><p><a class="btn btn--ghost" href="../assets/excel/eficacia_farmacos_(2).xlsx" download>Descargar el Excel original (.xlsx)</a></p></details></div>
+
+<h2 id="autoevaluacion">Comprueba lo aprendido <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Comprueba lo aprendido">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion-2">Autoevaluación <a class="anchor" href="#autoevaluacion-2" aria-label="Enlace a la sección: Autoevaluación">#</a></h3></div><script type="application/json">{"questions": [{"q": "Si P(A)=0,95 y P(B)=0,68 son independientes, P(ninguno cura) es…", "options": ["0,016", "0,646", "0,05", "0,32"], "answer": 0, "why": "0,05 × 0,32 = 0,016."}, {"q": "P(A∪B) se calcula como…", "options": ["P(A)+P(B)", "1 − P(no A)·P(no B)", "P(A)·P(B)", "P(A)−P(B)"], "answer": 1, "why": "Es el complementario de que ninguno cure."}]}</script></div>
+<h2 id="relacionado">Sigue aprendiendo <a class="anchor" href="#relacionado" aria-label="Enlace a la sección: Sigue aprendiendo">#</a></h2>
+<ul><li><a href="../probabilidad/venn.html">Venn y sucesos</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad: introducción</a></li></ul>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../practicas/index.html" rel="prev"><small>← Anterior</small><strong>Prácticas y casos</strong></a><a class="next" href="../practicas/historias-clinicas.html" rel="next"><small>Siguiente →</small><strong>Historias clínicas: administrativos y clínicos</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#enunciado">El problema</a></li><li><a href="#resolucion">Paso a paso</a></li><li><a href="#hoja">La hoja de cálculo, con fórmulas explicadas</a></li><li><a href="#autoevaluacion">Comprueba lo aprendido</a></li><li><a href="#relacionado">Sigue aprendiendo</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/../data/workbooks.js" defer></script>
+<script src="../assets/js/services/numfmt.js" defer></script>
+<script src="../assets/js/services/formula-explain.js" defer></script>
+<script src="../assets/js/ui/sheet-charts.js" defer></script>
+<script src="../assets/js/services/formula.js" defer></script>
+<script src="../assets/js/widgets/sheet.js" defer></script>
+<script src="../assets/js/widgets/venn.js" defer></script>
+</body>
+</html>

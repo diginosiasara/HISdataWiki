@@ -1,0 +1,68 @@
+/* HISdata Wiki · widgets-desc.css — bloque «Fundamentos» (estadística descriptiva) */
+body[data-block="descriptiva"]{--accent:var(--c-green);--accent-ink:var(--c-green-ink);--accent-soft:var(--c-green-soft)}
+.formula-grid{display:grid;gap:var(--sp-4);grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));margin:var(--sp-5) 0}
+.formula-grid .formula{margin:0}
+.formula__t{margin:0;font:600 clamp(1.15rem,1rem + 1vw,1.6rem)/1.4 var(--font-display);color:var(--ink);overflow-wrap:anywhere}
+.is-total th,.is-total td{font-weight:800;background:var(--surface-2)}
+/* band · duo · apps · flow emoji */
+.dband{display:grid;gap:.4rem;justify-items:center;text-align:center;margin:var(--sp-5) 0;padding:var(--sp-5);border-radius:var(--r-xl);background:linear-gradient(120deg,var(--c-violet-soft),var(--c-blue-soft),var(--c-orange-soft));border:1px solid var(--line)}
+.dband b{font:800 clamp(1.3rem,1rem + 2vw,2.2rem)/1.1 var(--font-display);letter-spacing:.02em}
+.dband__m{font-weight:700;color:var(--muted)}
+.dband p{margin:0;color:var(--muted)}
+.duo{display:grid;gap:var(--sp-4);grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin:var(--sp-5) 0}
+.duo__c{padding:var(--sp-5);border-radius:var(--r-card);box-shadow:var(--shadow-soft);border:1px solid var(--line);background:var(--c-violet-soft)}
+.duo__c--1{background:var(--c-orange-soft)}
+.duo__c h3{margin:.6rem 0 .3rem;font-size:1.3rem}
+.duo__c p{margin:.3rem 0}
+.duo__r{font-weight:700}
+.pill{display:inline-block;padding:.25rem .7rem;border-radius:999px;background:var(--surface);font:700 .72rem/1.2 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line)}
+.card__ico{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--accent-soft);font-size:1.5rem;margin-bottom:.4rem}
+.cards--apps .card p{margin:.2rem 0}
+.flow--emoji > li::before{display:none}
+.flow__ico{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--surface);font-size:1.5rem;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-bottom:.4rem}
+.flow--emoji small{display:block;margin-top:.35rem;color:var(--muted)}
+.checklist{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.5rem}
+.checklist label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.checklist input{margin-top:.3rem;width:1.1rem;height:1.1rem;accent-color:var(--accent-ink)}
+.checklist small{display:block;color:var(--muted)}
+/* mapa conceptual */
+.maptree,.maptree ul{list-style:none;margin:0;padding:0}
+.maptree ul{margin-left:1.1rem;padding-left:1rem;border-left:2px solid var(--line-strong)}
+.maptree li{margin:.45rem 0;position:relative}
+.maptree li::before{content:"";position:absolute;left:-1rem;top:.85rem;width:.8rem;border-top:2px solid var(--line-strong)}
+.maptree > li::before{display:none}
+.maptree > li > a,.maptree > li > span{font-weight:800}
+.maptree a{display:inline-block;padding:.2rem .7rem;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);text-decoration:none;border:1px solid color-mix(in srgb,var(--accent-ink) 20%,transparent)}
+.maptree a:hover,.maptree a:focus-visible{background:var(--accent-ink);color:var(--on-ink)}
+/* gráficos de ejemplo */
+.gf__k{font:700 .74rem/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.gf__plot{background:var(--surface-2);border-radius:var(--r-card);padding:var(--sp-3)}
+.gf__svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.gf__gl{stroke:var(--line);stroke-width:1}.gf__bl{stroke:var(--ink);stroke-width:1.5}
+.gf__xl,.gf__vl,.gf__cs{fill:var(--ink);font:600 11px var(--font-body)}
+.gf__vl{font-weight:800}.gf__ct{fill:var(--ink);font:800 26px var(--font-display)}
+.gf__ln{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
+.shp{cursor:pointer;transition:opacity .15s,stroke .15s}
+.shp.k0{fill:var(--c-violet);stroke:var(--c-violet)}.shp.k1{fill:var(--c-blue);stroke:var(--c-blue)}.shp.k2{fill:var(--c-orange);stroke:var(--c-orange)}.shp.k3{fill:var(--c-teal);stroke:var(--c-teal)}
+circle.shp[stroke-width="40"]{fill:none}
+rect.shp{stroke:var(--surface);stroke-width:1.5}
+.shp.sel{stroke:var(--ink);stroke-width:3}
+.gf__plot:has(.shp.sel) .shp:not(.sel){opacity:.45}
+.chipb{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .85rem;border-radius:999px;border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);font:600 .85rem var(--font-body);cursor:pointer}
+.chipb[aria-pressed="true"]{background:var(--accent-ink);border-color:var(--accent-ink);color:var(--on-ink)}
+/* muestreo */
+.dw__g{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;max-width:460px;margin:var(--sp-4) 0}
+.dot{display:grid;place-items:center;aspect-ratio:1;border-radius:50%;font:800 .7rem var(--font-body);color:#fff;opacity:.28;border:2px solid transparent;transition:opacity .2s,transform .2s}
+.dot.g0{background:var(--c-violet)}.dot.g1{background:var(--c-blue)}.dot.g2{background:var(--c-orange)}
+.dot.on{opacity:1;transform:scale(1.12);border-color:var(--ink)}
+/* calculadora */
+.cw label{font-weight:700;display:block;margin-bottom:.4rem}
+.cw textarea{width:100%;font:500 1rem var(--font-mono);padding:.7rem;border-radius:var(--r);border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);margin-bottom:var(--sp-4)}
+.stat__sub{display:block;font-size:var(--fs-xs);color:var(--muted)}
+.strip{display:flex;flex-wrap:wrap;gap:6px;margin:var(--sp-3) 0}
+.chp{display:inline-flex;flex-direction:column;align-items:center;min-width:2.6rem;padding:.3rem .5rem;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-weight:700}
+.chp small{font-size:.62rem;color:var(--muted)}
+.chp.med{background:var(--c-orange-soft);border-color:var(--c-orange)}.chp.mo{background:var(--c-green-soft);border-color:var(--c-green)}.chp.qq{background:var(--c-violet-soft);border-color:var(--c-violet)}
+/* percentil */
+.trk{position:relative;height:14px;border-radius:999px;background:linear-gradient(90deg,var(--c-teal),var(--c-violet),var(--c-orange));margin:var(--sp-4) 0}
+.trk i{position:absolute;top:-5px;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--surface);border:4px solid var(--ink)}

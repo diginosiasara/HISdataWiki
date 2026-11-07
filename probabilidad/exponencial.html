@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es" data-page="probabilidad/exponencial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distribución exponencial · HISdata Wiki</title>
+<meta name="description" content="Distribución exponencial: tiempos de espera, tasa λ, función acumulada y falta de memoria, con los casos de la ambulancia y las urgencias.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="distribucion exponencial, lambda, tasa, tiempo de espera, falta de memoria, ambulancia, urgencias">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Distribución exponencial · HISdata Wiki">
+<meta property="og:description" content="Distribución exponencial: tiempos de espera, tasa λ, función acumulada y falta de memoria, con los casos de la ambulancia y las urgencias.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Distribución exponencial", "description": "Distribución exponencial: tiempos de espera, tasa λ, función acumulada y falta de memoria, con los casos de la ambulancia y las urgencias.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["distribucion exponencial", "lambda", "tasa", "tiempo de espera", "falta de memoria", "ambulancia", "urgencias"], "headline": "Distribución exponencial"}</script>
+</head>
+<body data-block="probabilidad">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html" aria-current="page"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/introduccion.html">Módulo A · Probabilidad</a></li><li><span aria-current="page">Distribución exponencial</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">A5</span>Módulo A · Probabilidad y distribuciones</p><h1>Distribución <span class="grad">exponencial</span></h1><p class="lead">Modela cuánto se tarda hasta que ocurre algo impredecible: muchos tiempos cortos y unos pocos muy largos.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">⏱️</span><strong class="vtile__big">Tiempos</strong><span class="vtile__txt">Cuánto se tarda en que ocurra algo</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🚑</span><strong class="vtile__big">39,35 %</strong><span class="vtile__txt">Ambulancia en menos de 3 min</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📉</span><strong class="vtile__big">Decae</strong><span class="vtile__txt">Cuanto más esperas, menos probable</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🏥</span><strong class="vtile__big">36,8 %</strong><span class="vtile__txt">Esperar más que la media</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#por-que">¿Por qué exponencial?</a></li><li><a href="#formulas">Fórmulas</a></li><li><a href="#ambulancia">Caso: ¿llega a tiempo la ambulancia?</a></li><li><a href="#lambda">Ojo con λ: es una tasa, no una probabilidad</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>Con media μ, la tasa es <strong>λ = 1/μ</strong>. La probabilidad de esperar <em>como máximo</em> x es <strong>1 − e<sup>−λx</sup></strong>, y de esperar <em>más de</em> x, <strong>e<sup>−λx</sup></strong>. No tiene forma de campana: decrece desde el principio.</p></div>
+
+<h2 id="por-que">¿Por qué exponencial? <a class="anchor" href="#por-que" aria-label="Enlace a la sección: ¿Por qué exponencial?">#</a></h2>
+<ul class="cards">
+<li class="card card--accent" style="--card-c:var(--c-orange-ink)"><span class="card__tag">1</span><h3 id="continuo-e-impredecible">Continuo e impredecible <a class="anchor" href="#continuo-e-impredecible" aria-label="Enlace a la sección: Continuo e impredecible">#</a></h3><p>Las llamadas no llegan cada 6 min exactos: pueden llegar a los 30 s o a los 14 min.</p></li>
+<li class="card card--accent" style="--card-c:var(--c-orange-ink)"><span class="card__tag">2</span><h3 id="muchos-cortos-pocos-largos">Muchos cortos, pocos largos <a class="anchor" href="#muchos-cortos-pocos-largos" aria-label="Enlace a la sección: Muchos cortos, pocos largos">#</a></h3><p>Curva decreciente con «cola» larga: explica los casos muy lentos aunque la media sea buena.</p></li>
+<li class="card card--accent" style="--card-c:var(--c-orange-ink)"><span class="card__tag">3</span><h3 id="sin-memoria">Sin memoria <a class="anchor" href="#sin-memoria" aria-label="Enlace a la sección: Sin memoria">#</a></h3><p>Si ya llevas 5 min esperando, la probabilidad de esperar otros 3 es la misma que al principio.</p></li></ul>
+
+<h2 id="formulas">Fórmulas <a class="anchor" href="#formulas" aria-label="Enlace a la sección: Fórmulas">#</a></h2>
+<figure class="formula" data-speak="La densidad exponencial es lambda por e elevado a menos lambda x.">
+<math display="block" aria-label="f de x igual a lambda por e elevado a menos lambda x, con x mayor o igual que 0"><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>λ</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>λ</mi><mi>x</mi></mrow></msup><mo>,</mo><mspace width="1em"/><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math><figcaption>Densidad</figcaption></figure>
+<figure class="formula" data-speak="La probabilidad acumulada es uno menos e elevado a menos lambda x.">
+<math display="block" aria-label="P de X menor o igual que x igual a 1 menos e elevado a menos lambda x"><mrow><mi>P</mi><mo>(</mo><mi>X</mi><mo>≤</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>λ</mi><mi>x</mi></mrow></msup></mrow></math><figcaption>Acumulada. Equivale a 1 − e<sup>−x/μ</sup>.</figcaption></figure>
+<p>Además: media μ = 1/λ y desviación típica σ = 1/λ (¡igual que la media!).</p>
+
+<h2 id="ambulancia">Caso: ¿llega a tiempo la ambulancia? <a class="anchor" href="#ambulancia" aria-label="Enlace a la sección: Caso: ¿llega a tiempo la ambulancia?">#</a></h2>
+<p>Tiempo de respuesta con media μ = 6 min (λ = 1/6 ≈ 0,1667 por minuto).</p>
+<div class="stats"><div class="stat stat--green"><div class="stat__label">Rápidas (&lt; 3 min)</div><div class="stat__value">39,35 %</div><div class="stat__note">1 − e<sup>−3/6</sup></div></div><div class="stat stat--orange"><div class="stat__label">Entre 3 y 9 min</div><div class="stat__value">38,34 %</div><div class="stat__note">resta de ambas</div></div><div class="stat stat--red"><div class="stat__label">Tardías (&gt; 9 min)</div><div class="stat__value">22,31 %</div><div class="stat__note">e<sup>−9/6</sup></div></div></div>
+<p>Aunque la media sea de 6 minutos, <strong>22 de cada 100 avisos superan los 9 minutos</strong>: eso explica las quejas.</p>
+<div class="widget" data-widget="distrib" data-dist="exp" data-p1="6" data-tipo="menor" data-x1="3" data-unit="min" data-var="Tiempo de respuesta"><div class="widget__head"><h3 class="widget__title" id="simulador-exponencial">Simulador · Exponencial <a class="anchor" href="#simulador-exponencial" aria-label="Enlace a la sección: Simulador · Exponencial">#</a></h3><p class="widget__sub">Cambia la media μ y el umbral y observa la cola.</p></div><noscript><p class="noscript-note">μ=6: P(X≤3)=39,35 %; P(X&gt;9)=22,31 %.</p></noscript></div>
+<div class="widget" data-widget="pictograma" data-mu="6" data-x="9" data-unit="min" data-noun="avisos" data-ok="llegan antes de 9 min" data-ko="tardan más de 9 min"><div class="widget__head"><h3 class="widget__title" id="100-avisos-de-ambulancia">100 avisos de ambulancia <a class="anchor" href="#100-avisos-de-ambulancia" aria-label="Enlace a la sección: 100 avisos de ambulancia">#</a></h3><p class="widget__sub">Cada icono es un aviso. ¿Cuántos tardan más del umbral?</p></div><noscript><p class="noscript-note">De cada 100 avisos, unos 78 llegan antes de 9 min y 22 tardan más.</p></noscript></div>
+<p>Hoja de cálculo de este ejercicio en <a href="../practicas/ambulancia.html">Práctica: ambulancia</a>.</p>
+
+<h2 id="lambda">Ojo con λ: es una tasa, no una probabilidad <a class="anchor" href="#lambda" aria-label="Enlace a la sección: Ojo con λ: es una tasa, no una probabilidad">#</a></h2>
+<div class="callout callout--warn"><p class="callout__title">Error común</p><p>Decir «λ = 6,67 % de probabilidad». Si en urgencias llega 1 paciente cada 15 min (μ = 15), λ = 1/15 = 0,0667 <em>pacientes por minuto</em>. La probabilidad real de que llegue alguien en el próximo minuto es 1 − e<sup>−λ</sup> ≈ 6,45 %. Y la de seguir sin pacientes tras 15 min es e<sup>−1</sup> ≈ 36,8 %.</p></div>
+<div class="widget" data-widget="distrib" data-dist="exp" data-p1="15" data-tipo="mayor" data-x1="15" data-unit="min" data-var="Tiempo hasta el siguiente paciente"><div class="widget__head"><h3 class="widget__title" id="urgencias-tiempo-entre-llegadas">Urgencias · tiempo entre llegadas <a class="anchor" href="#urgencias-tiempo-entre-llegadas" aria-label="Enlace a la sección: Urgencias · tiempo entre llegadas">#</a></h3><p class="widget__sub">Con μ = 15 min, la probabilidad de esperar más de 15 min es e⁻¹.</p></div><noscript><p class="noscript-note">S(15)=e^(-1)=36,8 %.</p></noscript></div>
+<p>Hoja de cálculo en <a href="../practicas/urgencias.html">Práctica: urgencias</a>.</p>
+
+<h2 id="test">Comprueba lo que sabes <a class="anchor" href="#test" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3></div><script type="application/json">{"questions":[
+{"q":"Si μ = 10 min, ¿cuánto vale λ?","options":["10","0,1 por minuto","1","0,01"],"answer":1,"why":"λ = 1/μ = 0,1."},
+{"q":"Con μ = 6, P(X > 9) =","options":["1 − e^(−1,5)","e^(−1,5)","e^(−9)","0,5"],"answer":1,"why":"Cola: e^(−x/μ) = e^(−1,5) ≈ 0,2231."},
+{"q":"«Sin memoria» significa que…","options":["La media es 0","Haber esperado ya no cambia la probabilidad de seguir esperando","No hay densidad","Es una campana"],"answer":1,"why":"P(X > s+t | X > s) = P(X > t)."}
+]}</script></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../probabilidad/uniforme.html" rel="prev"><small>← Anterior</small><strong>Distribución uniforme</strong></a><a class="next" href="../probabilidad/normal.html" rel="next"><small>Siguiente →</small><strong>Distribución normal</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#por-que">¿Por qué exponencial?</a></li><li><a href="#formulas">Fórmulas</a></li><li><a href="#ambulancia">Caso: ¿llega a tiempo la ambulancia?</a></li><li><a href="#lambda">Ojo con λ: es una tasa, no una probabilidad</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/distrib.js" defer></script>
+<script src="../assets/js/widgets/pictograma.js" defer></script>
+</body>
+</html>
