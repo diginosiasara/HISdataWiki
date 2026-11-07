@@ -1,95 +1,172 @@
-<!DOCTYPE html>
-<html lang="es" data-theme="auto">
+<!doctype html>
+<html lang="es" data-page="index">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>HISdata Wiki · Estadística sanitaria: codificar, validar y comprender</title>
-<meta name="description" content="HISdata Wiki: fichas de conocimiento de estadística sanitaria (población, muestreo, variables, tablas de frecuencias, gráficos y medidas de posición).">
-<meta name="keywords" content="estadística sanitaria, muestreo, tablas de frecuencias, histograma, mediana, cuartiles, datos clínicos">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="author" content="HISdata Wiki">
-<meta name="theme-color" content="#0F2A3D" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#102329" media="(prefers-color-scheme: dark)">
-<link rel="canonical" href="https://TU-DOMINIO/hisdata-wiki/">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HISdata Wiki · Conocimiento, análisis y gestión de la información sanitaria</title>
+<meta name="description" content="HISdata Wiki: probabilidad, estadística y sistemas de información sanitaria, visual e interactiva. Conocimiento, análisis y gestión de la información sanitaria.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="probabilidad, estadística, sistemas de información sanitaria, historia clínica, distribución normal, excel">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
 <meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="HISdata Wiki · Codificar, validar y comprender la información sanitaria">
-<meta property="og:description" content="Fichas de conocimiento de estadística sanitaria con etiquetas, buscador y lector de voz.">
-<meta property="og:url" content="https://TU-DOMINIO/hisdata-wiki/">
-<meta property="og:image" content="https://TU-DOMINIO/hisdata-wiki/assets/og.png">
-<meta property="og:image:alt" content="HISdata Wiki, estadística sanitaria">
+<meta property="og:title" content="HISdata Wiki · Conocimiento, análisis y gestión de la información sanitaria">
+<meta property="og:description" content="HISdata Wiki: probabilidad, estadística y sistemas de información sanitaria, visual e interactiva. Conocimiento, análisis y gestión de la información sanitaria.">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HISdata Wiki">
-<meta name="twitter:description" content="Codificar, validar y comprender la información sanitaria.">
-<meta name="twitter:image" content="https://TU-DOMINIO/hisdata-wiki/assets/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/pages.css">
-<link rel="stylesheet" href="css/widgets.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HISdata Wiki","inLanguage":"es","description":"Codificar, validar y comprender la información sanitaria.","potentialAction":{"@type":"SearchAction","target":"https://TU-DOMINIO/hisdata-wiki/#/buscar?q={q}","query-input":"required name=q"}}</script>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/modules.css">
+<link rel="stylesheet" href="assets/css/widgets-sis.css">
+<link rel="stylesheet" href="assets/css/widgets-prob.css">
+<link rel="stylesheet" href="assets/css/widgets-desc.css">
+<link rel="stylesheet" href="assets/css/theme-apuntes.css">
+<script>window.HIS_BASE="";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "HISdata Wiki", "description": "HISdata Wiki: probabilidad, estadística y sistemas de información sanitaria, visual e interactiva. Conocimiento, análisis y gestión de la información sanitaria.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}}</script>
 </head>
-<body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<header class="top" role="banner">
-  <div class="top__in">
-    <button class="btn btn--icon" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú de fichas"><span aria-hidden="true">☰</span></button>
-    <a class="brand" href="#/" aria-label="HISdata Wiki, ir al inicio"><span class="brand__mark" aria-hidden="true">H</span><span class="brand__t">HIS<b>data</b> Wiki</span></a>
-    <form class="search" id="search-form" role="search" aria-label="Buscar en la wiki">
-      <label class="sr" for="q">Buscar fichas, etiquetas o términos</label>
-      <input id="q" type="search" placeholder="Buscar… (ej. mediana, #muestreo)" autocomplete="off" enterkeyhint="search">
-      <button class="btn btn--icon" type="submit" aria-label="Buscar"><span aria-hidden="true">🔎</span></button>
-    </form>
-    <div class="tools" role="group" aria-label="Preferencias de lectura">
-      <button class="btn btn--icon" id="font-down" aria-label="Reducir tamaño de texto">A−</button>
-      <button class="btn btn--icon" id="font-up" aria-label="Aumentar tamaño de texto">A+</button>
-      <button class="btn btn--icon" id="theme-btn" aria-label="Cambiar tema: automático" aria-pressed="false"><span aria-hidden="true">◐</span></button>
-    </div>
+<body data-block="meta">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
   </div>
 </header>
 <div class="shell">
-  <nav id="menu" class="menu" aria-label="Índice de fichas" hidden></nav>
-  <div class="scrim" id="scrim" hidden></div>
-  <main id="main" tabindex="-1"><noscript><p class="note">Esta wiki necesita JavaScript para mostrar las fichas.</p></noscript></main>
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="index.html" aria-current="page"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
+      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
+        <li><a href="descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
+        <li><a href="descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
+        <li><a href="descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
+        <li><a href="descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
+        <li><a href="descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
+        <li><a href="descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
+        <li><a href="descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
+        <li><a href="probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
+        <li><a href="probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
+        <li><a href="probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
+        <li><a href="sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+
+
+
+<section class="hero"><p class="eyebrow">Diginosia.com</p><h1>HISdata <span class="grad">Wiki</span></h1><p class="lead">Conocimiento, análisis y gestión de la información sanitaria.</p>
+<form class="big-search" data-search-form role="search"><label for="hq" class="sr-only">Buscar en la wiki</label><input id="hq" type="search" placeholder="Busca: normal, historia clínica, z…" autocomplete="off"><button class="btn" type="submit">Buscar</button></form>
+<p class="muted">Por Sara Lopez Figueredo Sainz</p>
+<figure class="formula hero__formula" data-speak="Probabilidad de un suceso A igual a casos favorables entre casos posibles."><math display="block" aria-label="P de A igual a casos favorables entre casos posibles"><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>=</mo><mfrac><mtext>casos favorables</mtext><mtext>casos posibles</mtext></mfrac></mrow></math><figcaption>Fórmula de Laplace · empieza aquí</figcaption></figure></section>
+<h2 id="modulos">Empieza por aquí <a class="anchor" href="#modulos" aria-label="Enlace a la sección: Empieza por aquí">#</a></h2>
+<div class="cards"><a class="card card--accent" style="--card-c:var(--c-green)" href="descriptiva/index.html"><span class="badge">Fundamentos</span><p class="card__h">Estadística descriptiva</p><p>18 fichas ilustradas: población, variables, frecuencias, gráficos, media y cuartiles.</p></a><a class="card card--accent" style="--card-c:var(--c-violet)" href="probabilidad/introduccion.html"><span class="badge">Módulo A</span><p class="card__h">Probabilidad y distribuciones</p><p>11 temas: Laplace, Venn, uniforme, exponencial, normal, intervalos y χ²/t/F.</p></a><a class="card card--accent" style="--card-c:var(--c-blue)" href="sis/sistemas-informacion.html"><span class="badge">Módulo B</span><p class="card__h">Sistemas de información sanitaria</p><p>Historia clínica, elementos, HCE, calidad de datos y aspectos legales.</p></a><a class="card card--accent" style="--card-c:var(--c-orange)" href="practicas/index.html"><span class="badge">Prácticas</span><p class="card__h">Casos con Excel</p><p>9 ejercicios resueltos con hojas de cálculo explicadas.</p></a><a class="card card--accent" style="--card-c:var(--c-teal)" href="recursos/hojas-de-calculo.html"><span class="badge">Recursos</span><p class="card__h">Hojas, tabla Z y glosario</p><p>Formulario, glosario, accesibilidad.</p></a></div>
+<h2 id="mapa">Mapa de contenidos <a class="anchor" href="#mapa" aria-label="Enlace a la sección: Mapa de contenidos">#</a></h2>
+<figure class="figure"><svg viewBox="0 0 520 220" role="img" aria-labelledby="mp-t mp-d" style="width:100%;height:auto"><title id="mp-t">Mapa de contenidos</title><desc id="mp-d">HISdata Wiki se divide en Probabilidad, Sistemas de información sanitaria, Prácticas y Recursos.</desc>
+<rect x="190" y="10" width="140" height="44" rx="10" fill="#6d4aff"/><text x="260" y="37" text-anchor="middle" fill="#fff" font-size="15">HISdata Wiki</text>
+<g stroke="#888" stroke-width="2"><path d="M260 54V90M65 90H455M65 90V120M195 90V120M325 90V120M455 90V120"/></g>
+<g font-size="13" text-anchor="middle"><rect x="10" y="120" width="110" height="60" rx="8" fill="#7c5cff"/><text x="65" y="155" fill="#fff">Probabilidad</text><rect x="140" y="120" width="110" height="60" rx="8" fill="#3b82f6"/><text x="195" y="145" fill="#fff">Sistemas de</text><text x="195" y="162" fill="#fff">información</text><rect x="270" y="120" width="110" height="60" rx="8" fill="#f59e0b"/><text x="325" y="155" fill="#111">Prácticas</text><rect x="400" y="120" width="110" height="60" rx="8" fill="#14b8a6"/><text x="455" y="155" fill="#111">Recursos</text></g></svg><figcaption><b>Fig. 1</b> Las cuatro áreas de la wiki.</figcaption></figure>
+<div class="callout callout--tip"><p class="callout__title">Consejo</p><p>Pulsa <kbd>/</kbd> en cualquier página para buscar, o <kbd>Alt</kbd>+<kbd>L</kbd> para escuchar el contenido.</p></div>
+
+
+    </div>
+  </main>
+
 </div>
-<aside class="reader" id="reader" aria-label="Lector de voz" hidden>
-  <button class="btn" id="rd-sec">Leer sección</button>
-  <button class="btn" id="rd-sel">Leer selección</button>
-  <button class="btn" id="rd-all">Leer ficha</button>
-  <button class="btn" id="rd-tap" aria-pressed="false">Leer al pulsar</button>
-  <button class="btn" id="rd-pause" aria-pressed="false">Pausa</button>
-  <button class="btn" id="rd-stop">Detener</button>
-  <label class="rd-rate">Velocidad <input id="rd-rate" type="range" min="0.6" max="1.6" step="0.1" value="1"></label>
-</aside>
-<footer class="foot" role="contentinfo"><p>HISdata Wiki · Codificar, validar y comprender la información sanitaria.</p><p class="muted">Contenido: sesiones 0 y 1 de estadística y manual UAX227 UF1.</p></footer>
-<div class="sr" id="live" role="status" aria-live="polite" aria-atomic="true"></div>
-<script src="js/config.js"></script>
-<script src="js/data/entries.js"></script>
-<script src="js/data/meta.js"></script>
-<script src="js/data/quizzes.js"></script>
-<script src="js/data/visuals.js"></script>
-<script src="js/data/glossary.js"></script>
-<script src="js/data/manual.js"></script>
-<script src="js/data/guide.js"></script>
-<script src="js/core/utils.js"></script>
-<script src="js/core/a11y.js"></script>
-<script src="js/core/seo.js"></script>
-<script src="js/features/search.js"></script>
-<script src="js/features/prefs.js"></script>
-<script src="js/features/menu.js"></script>
-<script src="js/features/quiz.js"></script>
-<script src="js/features/reader.js"></script>
-<script src="js/views/widgets.js"></script>
-<script src="js/views/render.js"></script>
-<script src="js/views/views.js"></script>
-<script src="js/core/router.js"></script>
-<script src="js/app.js"></script>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="descriptiva/index.html">Estadística descriptiva</a></li><li><a href="probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="practicas/index.html">Prácticas y casos</a></li><li><a href="recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="recursos/glosario.html">Glosario</a></li><li><a href="recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="assets/js/his.core.js" defer></script>
+
 </body>
 </html>

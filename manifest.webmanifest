@@ -1,1 +1,18 @@
-{"name":"HISdata Wiki","short_name":"HISdata","description":"Codificar, validar y comprender la información sanitaria.","lang":"es","start_url":"./index.html","display":"standalone","background_color":"#FFF9F0","theme_color":"#0F2A3D","icons":[{"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+ "name": "HISdata Wiki",
+ "short_name": "HISdata",
+ "description": "Conocimiento, análisis y gestión de la información sanitaria",
+ "lang": "es",
+ "start_url": "./index.html",
+ "display": "standalone",
+ "background_color": "#fcfbf8",
+ "theme_color": "#7c3aed",
+ "icons": [
+  {
+   "src": "assets/img/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "any"
+  }
+ ]
+}
