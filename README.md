@@ -5,7 +5,7 @@ Wiki estática de estadística sanitaria (sesiones 0 y 1). Sin dependencias ni c
 - `index.html` — estructura semántica, metadatos SEO/Open Graph/Twitter Card y JSON-LD.
 - `css/` — `tokens` (variables), `base` (reset, foco, accesibilidad), `layout` (cabecera, menú, rejilla), `components` (tarjetas, tablas), `pages` (héroe, secciones, panel OJO, quiz), `widgets` (gráficos, calculadoras, muestreo con puntos, fases).
 - `js/config.js` — ajustes.
-- `js/data/` — `entries` (fichas), `meta` (iconos), `visuals` (visualizaciones por ficha y héroes), `quizzes` (preguntas).
+- `js/data/` — `entries` (fichas), `meta` (iconos), `visuals` (visualizaciones por ficha y héroes), `quizzes` (preguntas), `manual` (ampliación del manual UAX por ficha), `guide` (guía del manual y casos prácticos), `glossary` (glosario y fórmulas).
 - `js/core/` — utilidades, accesibilidad (avisos y foco), SEO dinámico, router.
 - `js/features/` — buscador, preferencias, menú, lector de voz, quiz.
 - `js/views/` — `widgets` (componentes interactivos), `render` (bloques y héroe), `views` (vistas).

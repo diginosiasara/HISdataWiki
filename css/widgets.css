@@ -75,3 +75,8 @@
 .pf{display:flex;flex-wrap:wrap;gap:1.2rem;margin:.6rem 0 1rem;font-weight:700}.pf label{display:flex;flex-direction:column;gap:.3rem}.pf input[type=number]{width:7rem;font:700 1rem var(--f-b);padding:.4rem .7rem;border:2px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink)}.pf input[type=range]{width:min(100%,320px);accent-color:var(--coral)}
 .trk{position:relative;height:12px;border-radius:99px;background:linear-gradient(90deg,#9fe3dc,#FFC94D,#FF6B6B);margin:.4rem 0 1rem}.trk i{position:absolute;top:-6px;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--navy);border:3px solid #fff;box-shadow:0 2px 6px #0004}
 .pr{font-weight:700}
+/* guía y casos */
+.mapa ul{list-style:none;margin:.3rem 0 .3rem 1.1rem;padding-left:1rem;border-left:3px solid var(--line)}.mapa>ul{margin-left:0;border-left:0;padding-left:0}.mapa>ul>li{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:.8rem 1.1rem;margin:.7rem 0;font:700 1.1rem var(--f-d)}.mapa li li{font:600 .95rem var(--f-b);padding:.15rem 0}.mapa a{font-weight:800}
+.links{padding-left:1.2rem;font-weight:600}.links li{margin:.5rem 0}
+.caso{margin:2.5rem 0}.caso h2{font-size:clamp(1.6rem,4vw,2.4rem)}
+.sol{background:var(--surface);border:2px solid var(--navy);border-radius:22px;box-shadow:6px 6px 0 var(--navy);padding:1rem 1.4rem;margin:1rem 6px 1rem 0}.sol summary{cursor:pointer;font:800 1rem var(--f-b);color:var(--teal);min-height:44px;display:flex;align-items:center}.sol[open] summary{margin-bottom:.6rem}
