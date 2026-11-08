@@ -64,7 +64,7 @@
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
       <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
-      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
       <ul>
         <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
         <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
@@ -85,6 +85,9 @@
         <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
         <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
         <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
       </ul>
       <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
@@ -125,14 +128,17 @@
         <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
         <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
         <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
       </ul>
       <h2>Recursos</h2>
       <ul>
         <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
         <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li>
         <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
         <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
         <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
@@ -146,7 +152,7 @@
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#explorador">Explorador</a></li><li><a href="#criticos">Valores críticos de referencia</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>χ² y F son asimétricas (cola a la derecha) y solo toman valores positivos. t es simétrica como la normal, pero con colas más pesadas. Las tres dependen de los <strong>grados de libertad (gl)</strong>.</p></div>
 
-<div class="table-wrap"><table class="table"><caption>Cuándo se usa cada una</caption><thead><tr><th scope="col">Distribución</th><th scope="col">Para qué</th><th scope="col">Estadístico</th><th scope="col">gl</th></tr></thead><tbody>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Cuándo se usa cada una</caption><thead><tr><th scope="col">Distribución</th><th scope="col">Para qué</th><th scope="col">Estadístico</th><th scope="col">gl</th></tr></thead><tbody>
 <tr><th scope="row">χ² (ji-cuadrado)</th><td>Inferencias sobre la varianza; tablas de contingencia</td><td><math aria-label="ji cuadrado igual a n menos 1 por s cuadrado entre sigma cuadrado"><mrow><msup><mi>χ</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><msup><mi>σ</mi><mn>2</mn></msup></mfrac></mrow></math></td><td>n − 1</td></tr>
 <tr><th scope="row">t de Student</th><td>Media con σ desconocida y n pequeña; comparar dos medias</td><td><math aria-label="t igual a x barra menos mu entre s partido raíz de n"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mover><mi>x</mi><mo>¯</mo></mover><mo>−</mo><mi>μ</mi></mrow><mrow><mi>s</mi><mo>/</mo><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow></math></td><td>n − 1 (una muestra); (n₁−1)+(n₂−1) (dos muestras)</td></tr>
 <tr><th scope="row">F de Snedecor</th><td>Comparar dos varianzas; ANOVA</td><td><math aria-label="F igual a s uno cuadrado entre s dos cuadrado"><mrow><mi>F</mi><mo>=</mo><mfrac><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>s</mi><mn>2</mn><mn>2</mn></msubsup></mfrac></mrow></math></td><td>gl₁ = n₁−1, gl₂ = n₂−1</td></tr></tbody></table></div>
@@ -157,7 +163,7 @@
 <div class="widget widget--wide" data-widget="muestrales"><div class="widget__head"><h3 class="widget__title" id="laboratorio-t-y-f">Laboratorio · χ², t y F <a class="anchor" href="#laboratorio-t-y-f" aria-label="Enlace a la sección: Laboratorio · χ², t y F">#</a></h3><p class="widget__sub">Elige la distribución, cambia los grados de libertad y mira el valor crítico.</p></div><noscript><p class="noscript-note">Valores críticos: χ²(0,95; 4) = 9,49; t(0,975; 4) = 2,776; F(0,95; 5, 10) = 3,33.</p></noscript></div>
 
 <h2 id="criticos">Valores críticos de referencia <a class="anchor" href="#criticos" aria-label="Enlace a la sección: Valores críticos de referencia">#</a></h2>
-<div class="table-wrap"><table class="table"><caption>Ejemplos de valores críticos</caption><thead><tr><th scope="col">Distribución</th><th scope="col">Condición</th><th scope="col" class="num">Valor</th></tr></thead><tbody><tr><td>χ²</td><td>4 gl, cola derecha 5 %</td><td class="num">9,49</td></tr><tr><td>t</td><td>4 gl, bilateral 95 %</td><td class="num">2,776</td></tr><tr><td>F</td><td>gl 5 y 10, cola derecha 5 %</td><td class="num">3,33</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Ejemplos de valores críticos</caption><thead><tr><th scope="col">Distribución</th><th scope="col">Condición</th><th scope="col" class="num">Valor</th></tr></thead><tbody><tr><td>χ²</td><td>4 gl, cola derecha 5 %</td><td class="num">9,49</td></tr><tr><td>t</td><td>4 gl, bilateral 95 %</td><td class="num">2,776</td></tr><tr><td>F</td><td>gl 5 y 10, cola derecha 5 %</td><td class="num">3,33</td></tr></tbody></table></div>
 <div class="callout callout--tip"><p class="callout__title">Truco para recordar</p><p>t se parece a z cuando hay muchos grados de libertad; χ² y F son «razones de cuadrados», por eso nunca son negativas.</p></div>
 
 <h2 id="test">Comprueba lo que sabes <a class="anchor" href="#test" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>

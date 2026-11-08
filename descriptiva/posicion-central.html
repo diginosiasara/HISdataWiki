@@ -64,7 +64,7 @@
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
       <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
-      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
       <ul>
         <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
         <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
@@ -85,6 +85,9 @@
         <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
         <li><a href="../descriptiva/posicion-central.html" aria-current="page"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
         <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
       </ul>
       <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
@@ -125,14 +128,17 @@
         <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
         <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
         <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
       </ul>
       <h2>Recursos</h2>
       <ul>
         <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
         <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li>
         <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
         <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
         <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
@@ -154,7 +160,7 @@
 
 <h2 id="practica">En la práctica: ejemplos y datos <a class="anchor" href="#practica" aria-label="Enlace a la sección: En la práctica: ejemplos y datos">#</a></h2>
 <div class="widget" data-widget="calculadora" data-mode="central"><div class="widget__head"><h3 class="widget__title" id="media-mediana-y-moda-con-tus-datos">Media, mediana y moda con tus datos <a class="anchor" href="#media-mediana-y-moda-con-tus-datos" aria-label="Enlace a la sección: Media, mediana y moda con tus datos">#</a></h3><p class="widget__sub">Prueba con tus propios datos.</p></div><noscript><p class="noscript-note">Este elemento interactivo necesita JavaScript.</p></noscript></div>
-<div class="table-wrap"><table class="table"><caption>Medidas de posición central</caption><thead><tr><th scope="col">Medida</th><th scope="col">Definición</th><th scope="col">Cálculo</th><th scope="col">Particularidades</th></tr></thead><tbody><tr><th scope="row">Media (x̄)</th><td>Suma de todos los datos entre el número de datos.</td><td>x̄ = Σ xᵢ / n</td><td>Con tabla de frecuencias: Σ (xᵢ · fᵢ) / n. Con intervalos se usa la marca de clase. Se ve afectada por valores extremos.</td></tr><tr><th scope="row">Mediana (Me)</th><td>Valor que ocupa el centro de los datos ordenados.</td><td>n impar: dato en la posición central. n par: media de los dos centrales.</td><td>Es resistente: depende de la posición, no de los valores extremos. Coincide con Q2 y con el percentil 50.</td></tr><tr><th scope="row">Moda (Mo)</th><td>Valor con mayor frecuencia (el que más se repite).</td><td>Se cuentan las repeticiones.</td><td>Si dos valores empatan hay dos modas.</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Medidas de posición central</caption><thead><tr><th scope="col">Medida</th><th scope="col">Definición</th><th scope="col">Cálculo</th><th scope="col">Particularidades</th></tr></thead><tbody><tr><th scope="row">Media (x̄)</th><td>Suma de todos los datos entre el número de datos.</td><td>x̄ = Σ xᵢ / n</td><td>Con tabla de frecuencias: Σ (xᵢ · fᵢ) / n. Con intervalos se usa la marca de clase. Se ve afectada por valores extremos.</td></tr><tr><th scope="row">Mediana (Me)</th><td>Valor que ocupa el centro de los datos ordenados.</td><td>n impar: dato en la posición central. n par: media de los dos centrales.</td><td>Es resistente: depende de la posición, no de los valores extremos. Coincide con Q2 y con el percentil 50.</td></tr><tr><th scope="row">Moda (Mo)</th><td>Valor con mayor frecuencia (el que más se repite).</td><td>Se cuentan las repeticiones.</td><td>Si dos valores empatan hay dos modas.</td></tr></tbody></table></div>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Glucosa en ayunas (n = 25 pacientes, mg/dL)</p><p>Se ordenan los datos de menor a mayor (mínimo 90, máximo 112). Mediana: n = 25 es impar, así que es el dato de la posición 13: 99. Moda: el 92 aparece 5 veces (ningún otro llega a 5), luego Mo = 92. Media: se suman los 25 datos y se divide entre 25: x̄ = 99,56. Media y mediana son muy parecidas; la moda se separa algo.</p></div>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Solución del manual · caso práctico 4 (a)</p><p>Media 99,56 mg/dL. Mediana, tras ordenar los datos: 99 mg/dL. Moda: 92 mg/dL, que se repite 5 veces.</p></div>
 

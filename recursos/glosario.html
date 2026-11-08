@@ -64,7 +64,7 @@
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
       <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
-      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
       <ul>
         <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
         <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
@@ -85,6 +85,9 @@
         <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
         <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
         <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
       </ul>
       <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
@@ -125,14 +128,17 @@
         <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
         <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
         <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
       </ul>
       <h2>Recursos</h2>
       <ul>
         <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html" aria-current="page"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
         <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li>
         <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
         <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
         <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
@@ -165,7 +171,9 @@
 <dt id="g-dato-clinico">Dato clínico</dt><dd>Dato derivado de la atención al paciente; queda registrado en la historia clínica. <span class="muted">Ver también: Historia clínica, Dato no clínico.</span></dd>
 <dt id="g-dato-no-clinico">Dato no clínico</dt><dd>Información no vinculada directamente con la atención sanitaria; se publica en boletines y encuestas. <span class="muted">Ver también: Dato clínico.</span></dd>
 <dt id="g-densidad">Densidad</dt><dd>Curva cuyo área bajo ella entre dos valores es la probabilidad. <span class="muted">Ver también: Variable continua.</span></dd>
+<dt id="g-desviacion-tipica">Desviación típica</dt><dd>Raíz cuadrada de la varianza; mide cuánto se alejan, de media, los datos de la media, en sus mismas unidades. Siempre ≥ 0. <span class="muted">Ver también: Varianza.</span></dd>
 <dt id="g-diagrama-de-barras">Diagrama de barras</dt><dd>Representación mediante barras de los valores de la variable, con altura proporcional a su frecuencia. <span class="muted">Estadística descriptiva.</span></dd>
+<dt id="g-diagrama-de-cajas">Diagrama de cajas</dt><dd>Gráfico con la caja de Q1 a Q3, la mediana, los bigotes y los valores atípicos. <span class="muted">Ver también: Valor atípico.</span></dd>
 <dt id="g-diagrama-de-sectores">Diagrama de sectores</dt><dd>Representación gráfica circular de la proporción de cada valor de la variable. <span class="muted">Estadística descriptiva.</span></dd>
 <dt id="g-distribucion-exponencial">Distribución exponencial</dt><dd>Tiempo de espera entre sucesos; P(X≤x)=1−e^(−x/μ). <span class="muted">Ver también: Densidad.</span></dd>
 <dt id="g-distribucion-normal">Distribución normal</dt><dd>Campana simétrica definida por μ y σ. <span class="muted">Ver también: Puntuación z.</span></dd>
@@ -203,8 +211,10 @@
 <dt id="g-probabilidad">Probabilidad</dt><dd>Número entre 0 y 1 que mide lo posible que es un suceso. <span class="muted">Ver también: Ley de Laplace.</span></dd>
 <dt id="g-procedimientos">Procedimientos</dt><dd>Elemento del SIS: reglas para recoger, codificar, validar, almacenar y procesar datos. <span class="muted">Ver también: Fuentes de datos, Indicador.</span></dd>
 <dt id="g-puntuacion-z">Puntuación z</dt><dd>Cuántas desviaciones típicas se aleja un valor de la media: z=(x−μ)/σ. <span class="muted">Ver también: Distribución normal.</span></dd>
+<dt id="g-r-programa">R</dt><dd>Lenguaje y entorno estadístico libre y gratuito, ampliable con librerías; R Commander añade una interfaz gráfica. <span class="muted">Ver también: SPSS.</span></dd>
 <dt id="g-rae-cmbd">RAE-CMBD</dt><dd>Registro de actividad de atención especializada basado en el conjunto mínimo básico de datos. <span class="muted">Ver también: Catálogo Nacional de Hospitales, CIE-10-ES.</span></dd>
 <dt id="g-rango">Rango</dt><dd>Diferencia entre el dato mayor y el menor del conjunto de datos. <span class="muted">Estadística descriptiva.</span></dd>
+<dt id="g-rango-intercuartilico">Rango intercuartílico (RIC o IQR)</dt><dd>Diferencia entre el tercer y el primer cuartil: Q3 − Q1. Estadístico robusto. <span class="muted">Estadística descriptiva.</span></dd>
 <dt id="g-regla-de-sturges">Regla de Sturges</dt><dd>Fórmula orientativa para el número de intervalos: K = 1 + 3,322 · log₁₀(n). <span class="muted">Estadística descriptiva.</span></dd>
 <dt id="g-regla-empirica">Regla empírica</dt><dd>68 % a ±1σ, 95 % a ±2σ, 99,7 % a ±3σ. <span class="muted">Ver también: Distribución normal.</span></dd>
 <dt id="g-relevancia">Relevancia</dt><dd>Dimensión de calidad: el dato es útil para el fin concreto. <span class="muted">Ver también: Actualización.</span></dd>
@@ -212,6 +222,8 @@
 <dt id="g-siap">SIAP</dt><dd>Sistema de información de atención primaria: población, recursos y actividad asistencial. <span class="muted">Ver también: BDCAP.</span></dd>
 <dt id="g-sis">SIS</dt><dd>Conjunto organizado de personas, procesos, herramientas, protocolos y recursos para recopilar, procesar, analizar y utilizar información sanitaria. <span class="muted">Ver también: Historia clínica, Fuentes de datos.</span></dd>
 <dt id="g-snomed-ct">SNOMED CT</dt><dd>Terminología clínica detallada para registrar hallazgos, diagnósticos y procedimientos. <span class="muted">Ver también: CIE-10-ES, Interoperabilidad.</span></dd>
+<dt id="g-spss">SPSS</dt><dd>Programa estadístico de pago, muy usado en investigación; se maneja con comandos o pantallas. <span class="muted">Ver también: R, Stata.</span></dd>
+<dt id="g-stata">Stata</dt><dd>Programa estadístico de pago con interfaz gráfica o comandos; descriptiva y regresiones. <span class="muted">Ver también: SPSS.</span></dd>
 <dt id="g-suceso-complementario">Suceso complementario</dt><dd>Lo contrario de un suceso A: P(no A) = 1 − P(A). <span class="muted">Ver también: Probabilidad.</span></dd>
 <dt id="g-sucesos-independientes">Sucesos independientes</dt><dd>Uno no cambia la probabilidad del otro: P(A∩B) = P(A)·P(B). <span class="muted">Ver también: Unión.</span></dd>
 <dt id="g-t-de-student">t de Student</dt><dd>Distribución para medias con muestra pequeña y σ desconocida. <span class="muted">Ver también: Intervalo de confianza.</span></dd>
@@ -222,9 +234,11 @@
 <dt id="g-une-en">UNE-EN</dt><dd>Norma que integra estándares europeos en el sistema normativo español. <span class="muted">Ver también: ISO, UNE.</span></dd>
 <dt id="g-union">Unión</dt><dd>Ocurre A, B o ambos: P(A∪B) = P(A)+P(B)−P(A∩B). <span class="muted">Ver también: Intersección.</span></dd>
 <dt id="g-usuarios">Usuarios</dt><dd>Elemento del SIS: quienes usan la información para decidir. <span class="muted">Ver también: Indicador.</span></dd>
+<dt id="g-valor-atipico">Valor atípico (outlier)</dt><dd>Dato que queda a más de 1,5 veces el RIC de la caja; se dibuja como un punto. <span class="muted">Ver también: Diagrama de cajas.</span></dd>
 <dt id="g-variable-continua">Variable continua</dt><dd>Puede tomar cualquier valor de un intervalo; se describe con una función de densidad. <span class="muted">Ver también: Densidad.</span></dd>
 <dt id="g-variable-cualitativa">Variable cualitativa</dt><dd>La que indica una cualidad de los individuos. <span class="muted">Estadística descriptiva.</span></dd>
 <dt id="g-variable-cuantitativa">Variable cuantitativa</dt><dd>La que es cuantificable. Puede ser discreta (valores aislados) o continua. <span class="muted">Estadística descriptiva.</span></dd>
+<dt id="g-varianza">Varianza</dt><dd>Media de los cuadrados de las distancias de los datos a la media: s² = Σ(xᵢ − x̄)² / (n − 1). <span class="muted">Ver también: Desviación típica.</span></dd>
 </dl>
 
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../recursos/tabla-z.html" rel="prev"><small>← Anterior</small><strong>Tabla de la normal tipificada</strong></a><a class="next" href="../recursos/formulas.html" rel="next"><small>Siguiente →</small><strong>Formulario</strong></a></nav>

@@ -64,7 +64,7 @@
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
       <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
-      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
       <ul>
         <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
         <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
@@ -85,6 +85,9 @@
         <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
         <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
         <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
       </ul>
       <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
@@ -125,14 +128,17 @@
         <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
         <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
         <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
       </ul>
       <h2>Recursos</h2>
       <ul>
         <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
         <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li>
         <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
         <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
         <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
@@ -153,7 +159,7 @@
 <div class="widget" data-widget="grafico" data-kind="hist"><div class="widget__head"><h3 class="widget__title" id="histograma">Histograma <a class="anchor" href="#histograma" aria-label="Enlace a la sección: Histograma">#</a></h3><p class="widget__sub">Barras juntas: variable continua agrupada en intervalos. Pulsa un elemento para ver su dato explicado.</p></div><noscript><p class="noscript-note">Barras juntas: variable continua agrupada en intervalos.</p></noscript></div>
 <div class="widget" data-widget="calculadora" data-mode="interv"><div class="widget__head"><h3 class="widget__title" id="datos-agrupados-en-intervalos-sturges">Datos agrupados en intervalos (Sturges) <a class="anchor" href="#datos-agrupados-en-intervalos-sturges" aria-label="Enlace a la sección: Datos agrupados en intervalos (Sturges)">#</a></h3><p class="widget__sub">Prueba con tus propios datos.</p></div><noscript><p class="noscript-note">Este elemento interactivo necesita JavaScript.</p></noscript></div>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Ejemplo B · colesterol en sangre (n = 25)</p><p>Variable cuantitativa continua. Máximo 215 y mínimo 183: R = 32. Sturges: K = 1 + 3,322 · log 25 ≈ 5,64 → 5 intervalos. Amplitud: 32 / 5 = 6,4 → se toma 7 para que quepan todos los datos. Se empieza por el valor más bajo (183) y se suma la amplitud: 183–190, 190–197, 197–204, 204–211, 211–218. El máximo (215) queda dentro del último.</p></div>
-<div class="table-wrap"><table class="table"><caption>Colesterol (mg/dL)</caption><thead><tr><th scope="col">Intervalo</th><th scope="col">Marca (cᵢ)</th><th scope="col">fᵢ</th><th scope="col">hᵢ</th><th scope="col">Fᵢ</th><th scope="col">Hᵢ</th></tr></thead><tbody><tr><th scope="row">[183, 190)</th><td>186,5</td><td>5</td><td>0,20</td><td>5</td><td>0,20</td></tr><tr><th scope="row">[190, 197)</th><td>193,5</td><td>5</td><td>0,20</td><td>10</td><td>0,40</td></tr><tr><th scope="row">[197, 204)</th><td>200,5</td><td>6</td><td>0,24</td><td>16</td><td>0,64</td></tr><tr><th scope="row">[204, 211)</th><td>207,5</td><td>6</td><td>0,24</td><td>22</td><td>0,88</td></tr><tr><th scope="row">[211, 218]</th><td>214,5</td><td>3</td><td>0,12</td><td>25</td><td>1,00</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Colesterol (mg/dL)</caption><thead><tr><th scope="col">Intervalo</th><th scope="col">Marca (cᵢ)</th><th scope="col">fᵢ</th><th scope="col">hᵢ</th><th scope="col">Fᵢ</th><th scope="col">Hᵢ</th></tr></thead><tbody><tr><th scope="row">[183, 190)</th><td>186,5</td><td>5</td><td>0,20</td><td>5</td><td>0,20</td></tr><tr><th scope="row">[190, 197)</th><td>193,5</td><td>5</td><td>0,20</td><td>10</td><td>0,40</td></tr><tr><th scope="row">[197, 204)</th><td>200,5</td><td>6</td><td>0,24</td><td>16</td><td>0,64</td></tr><tr><th scope="row">[204, 211)</th><td>207,5</td><td>6</td><td>0,24</td><td>22</td><td>0,88</td></tr><tr><th scope="row">[211, 218]</th><td>214,5</td><td>3</td><td>0,12</td><td>25</td><td>1,00</td></tr></tbody></table></div>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Enunciado del manual · caso práctico 3</p><p>Estudio del nivel de colesterol (mg/dL) en 25 pacientes: {190, 202, 185, 210, 198, 205, 192, 200, 188, 215, 195, 207, 183, 203, 211, 189, 197, 204, 206, 193, 208, 187, 199, 212, 194}. Se pide a) la tabla de frecuencias y b) el histograma.</p></div>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Solución del manual</p><p>R = 215 − 183 = 32. k = 1 + 3,332 · log 25 = 5,65 → 5 intervalos. I = 32 / 5 = 6,4 → 7. En el manual todos los intervalos aparecen abiertos por la derecha.</p></div>
 

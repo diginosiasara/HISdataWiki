@@ -64,7 +64,7 @@
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
       <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
-      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
       <ul>
         <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
         <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
@@ -85,6 +85,9 @@
         <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
         <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
         <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
       </ul>
       <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
@@ -125,14 +128,17 @@
         <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
         <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
         <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
       </ul>
       <h2>Recursos</h2>
       <ul>
         <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
         <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li>
         <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
         <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
         <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
@@ -157,7 +163,7 @@
 <div class="widget" data-widget="grafico" data-kind="poly"><div class="widget__head"><h3 class="widget__title" id="poligono-de-frecuencias">Polígono de frecuencias <a class="anchor" href="#poligono-de-frecuencias" aria-label="Enlace a la sección: Polígono de frecuencias">#</a></h3><p class="widget__sub">Línea que une las marcas de clase. Pulsa un elemento para ver su dato explicado.</p></div><noscript><p class="noscript-note">Línea que une las marcas de clase.</p></noscript></div>
 <div class="widget" data-widget="grafico" data-kind="ojiva"><div class="widget__head"><h3 class="widget__title" id="curva-acumulativa-ojiva">Curva acumulativa (ojiva) <a class="anchor" href="#curva-acumulativa-ojiva" aria-label="Enlace a la sección: Curva acumulativa (ojiva)">#</a></h3><p class="widget__sub">Frecuencias acumuladas: siempre sube y acaba en n. Pulsa un elemento para ver su dato explicado.</p></div><noscript><p class="noscript-note">Frecuencias acumuladas: siempre sube y acaba en n.</p></noscript></div>
 <div class="widget" data-widget="grafico" data-kind="donut"><div class="widget__head"><h3 class="widget__title" id="diagrama-de-sectores">Diagrama de sectores <a class="anchor" href="#diagrama-de-sectores" aria-label="Enlace a la sección: Diagrama de sectores">#</a></h3><p class="widget__sub">Cada porción es la proporción hᵢ; ángulo = 360° · hᵢ. Pulsa un elemento para ver su dato explicado.</p></div><noscript><p class="noscript-note">Cada porción es la proporción hᵢ; ángulo = 360° · hᵢ.</p></noscript></div>
-<div class="table-wrap"><table class="table"><caption>Elección del gráfico</caption><thead><tr><th scope="col">Gráfico</th><th scope="col">Variable / datos</th><th scope="col">Qué se representa</th></tr></thead><tbody><tr><th scope="row">Diagrama de barras</th><td>Cualitativas (y discretas)</td><td>Categorías en X, frecuencia en Y. Barras separadas.</td></tr><tr><th scope="row">Histograma</th><td>Continuas o agrupadas en intervalos</td><td>Intervalos en X, frecuencia en Y. Barras juntas.</td></tr><tr><th scope="row">Polígono de frecuencias</th><td>Discretas o agrupadas</td><td>Línea que une puntos (marcas de clase o valores) con su frecuencia.</td></tr><tr><th scope="row">Curva acumulativa</th><td>Frecuencias acumuladas</td><td>Línea de puntos de marcas de clase frente a frecuencias acumuladas.</td></tr><tr><th scope="row">Diagrama de sectores</th><td>Cualitativas, discretas o agrupadas</td><td>Tarta con ángulo proporcional a la frecuencia relativa.</td></tr><tr><th scope="row">Diagrama de cajas y bigotes</th><td>Cuantitativas</td><td>Cuartiles, mediana, mínimo, máximo y valores atípicos (sesión 2).</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Elección del gráfico</caption><thead><tr><th scope="col">Gráfico</th><th scope="col">Variable / datos</th><th scope="col">Qué se representa</th></tr></thead><tbody><tr><th scope="row">Diagrama de barras</th><td>Cualitativas (y discretas)</td><td>Categorías en X, frecuencia en Y. Barras separadas.</td></tr><tr><th scope="row">Histograma</th><td>Continuas o agrupadas en intervalos</td><td>Intervalos en X, frecuencia en Y. Barras juntas.</td></tr><tr><th scope="row">Polígono de frecuencias</th><td>Discretas o agrupadas</td><td>Línea que une puntos (marcas de clase o valores) con su frecuencia.</td></tr><tr><th scope="row">Curva acumulativa</th><td>Frecuencias acumuladas</td><td>Línea de puntos de marcas de clase frente a frecuencias acumuladas.</td></tr><tr><th scope="row">Diagrama de sectores</th><td>Cualitativas, discretas o agrupadas</td><td>Tarta con ángulo proporcional a la frecuencia relativa.</td></tr><tr><th scope="row">Diagrama de cajas y bigotes</th><td>Cuantitativas</td><td>Cuartiles, mediana, mínimo, máximo y valores atípicos (sesión 2).</td></tr></tbody></table></div>
 
 <h2 id="quiz">Comprueba lo aprendido <a class="anchor" href="#quiz" aria-label="Enlace a la sección: Comprueba lo aprendido">#</a></h2>
 <div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="mini-quiz-3-preguntas">Mini quiz · 3 preguntas <a class="anchor" href="#mini-quiz-3-preguntas" aria-label="Enlace a la sección: Mini quiz · 3 preguntas">#</a></h3></div><script type="application/json">{"questions":[{"q":"Variable cualitativa (destino de vacaciones):","options":["Histograma","Ojiva","Diagrama de barras"],"answer":2,"why":"Las categorías llevan barras separadas."},{"q":"Variable continua agrupada en intervalos:","options":["Histograma","Sectores","Barras separadas"],"answer":0,"why":"Las barras del histograma se tocan."},{"q":"El ángulo de cada sector es proporcional a…","options":["La frecuencia relativa","El rango","La mediana"],"answer":0,"why":"α = 360° · hᵢ."}]}</script></div>
