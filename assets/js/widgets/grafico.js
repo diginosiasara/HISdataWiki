@@ -66,6 +66,6 @@
     box.addEventListener('click', function (ev) { var s = ev.target.closest('.shp'); if (s) sel(Number(s.getAttribute('data-i'))); });
     var rows = it.map(function (x) { return h('tr', null, h('td', null, x.l), h('td', null, x.r)); });
     el.append(h('div.gf', null, h('p.gf__k', null, INFO[k].k), box, h('p.muted', null, h('b', null, 'Observa: '), INFO[k].o), chips, out,
-      h('details.fold', null, h('summary', null, 'Ver los datos del gráfico en una tabla'), h('div.table-wrap', null, h('table.table', null, h('caption', null, INFO[k].t), h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Elemento'), h('th', { scope: 'col' }, 'Explicación'))), h('tbody', null, rows))))));
+      h('details.fold', null, h('summary', null, 'Ver los datos del gráfico en una tabla'), h('div.table-wrap', { tabindex: '0', role: 'region', 'aria-label': 'Tabla (desplazable)' }, h('table.table', null, h('caption', null, INFO[k].t), h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Elemento'), h('th', { scope: 'col' }, 'Explicación'))), h('tbody', null, rows))))));
   });
 })(window);

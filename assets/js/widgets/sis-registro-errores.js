@@ -83,7 +83,7 @@
       D.clear(out);
       out.append(
         h('p.result-line', { role: 'status' }, h('b', null, hallados + ' de ' + f.errores.length), ' problemas detectados · ' + falsas + (falsas === 1 ? ' falsa alarma' : ' falsas alarmas')),
-        h('div.table-wrap', null, h('table.table', null, h('caption', null, 'Problemas de calidad de la ficha'),
+        h('div.table-wrap', { tabindex: '0', role: 'region', 'aria-label': 'Tabla (desplazable)' }, h('table.table', null, h('caption', null, 'Problemas de calidad de la ficha'),
           h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Campo(s)'), h('th', { scope: 'col' }, 'Dimensión'), h('th', { scope: 'col' }, 'Motivo'), h('th', { scope: 'col' }, 'Corrección propuesta'))),
           h('tbody', null, rows))),
         h('p.field__help', null, 'Sin la fuente original no se inventa el dato correcto: se verifica, se corrige y se deja constancia de quién lo cambió.')

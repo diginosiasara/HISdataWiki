@@ -12,7 +12,7 @@
     var mu = U.slider({ label: 'Media (μ)', min: mu0 * 0.5, max: mu0 * 1.5, step: step, value: mu0, decimals: step === 1 ? 0 : 1, unit: cfg.unit });
     var sg = U.slider({ label: 'Desviación típica (σ)', min: Math.max(s0 * 0.3, 0.1), max: s0 * 2.5, step: step, value: s0, decimals: step === 1 ? 0 : 1, unit: cfg.unit });
     var tbody = h('tbody'), plot = h('div');
-    var table = h('div.table-wrap', null, h('table.table.table--compact', null, h('caption', null, 'Rangos esperados según la regla empírica'),
+    var table = h('div.table-wrap', { tabindex: '0', role: 'region', 'aria-label': 'Tabla (desplazable)' }, h('table.table.table--compact', null, h('caption', null, 'Rangos esperados según la regla empírica'),
       h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Intervalo'), h('th.num', { scope: 'col' }, '% de datos'), h('th', { scope: 'col' }, 'Rango'))), tbody));
     el.append(h('div.widget__grid.widget__grid--2', null, h('div.controls', null, mu.el, sg.el), h('div', null, plot, table)));
     var p = null;

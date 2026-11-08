@@ -27,8 +27,8 @@
       var min = Math.min.apply(null, raw), max = Math.max.apply(null, raw), pad = (max - min) * .08 || 1, lo = min - pad, hi = max + pad;
       var X = function (x) { return 20 + (x - lo) / (hi - lo) * 560; };
       var svg = '<svg viewBox="0 0 600 120" role="img" aria-label="Recta numérica con los datos y la media; los segmentos son las distancias a la media" focusable="false"><line x1="20" y1="70" x2="580" y2="70" class="ax"/>';
-      raw.forEach(function (x, i) { svg += '<line class="dist" x1="' + X(m) + '" y1="70" x2="' + X(x) + '" y2="' + (40 - (i % 4) * 7) + '"/><circle class="pt" cx="' + X(x) + '" cy="' + (40 - (i % 4) * 7) + '" r="5"/>'; });
-      svg += '<line class="mean" x1="' + X(m) + '" y1="22" x2="' + X(m) + '" y2="92"/><text x="' + X(m) + '" y="110" text-anchor="middle">media = ' + f(m) + '</text>';
+      raw.forEach(function (x, i) { svg += '<line class="dist" pathLength="1" style="--k:' + i + '" x1="' + X(m) + '" y1="70" x2="' + X(x) + '" y2="' + (40 - (i % 4) * 7) + '"/><circle class="pt" cx="' + X(x) + '" cy="' + (40 - (i % 4) * 7) + '" r="5"/>'; });
+      svg += '<line class="mean" pathLength="1" x1="' + X(m) + '" y1="22" x2="' + X(m) + '" y2="92"/><text x="' + X(m) + '" y="110" text-anchor="middle">media = ' + f(m) + '</text>';
       svg += '<rect class="sd" x="' + X(m - s) + '" y="76" width="' + (X(m + s) - X(m - s)) + '" height="8" rx="4"/></svg>';
       var rows = raw.slice(0, 8).map(function (x) { return '<tr><td>' + f(x, x % 1 ? 2 : 0) + '</td><td>' + f(x - m) + '</td><td>' + f((x - m) * (x - m)) + '</td></tr>'; }).join('');
       var more = n > 8 ? '<tr><td colspan="3">… y ' + (n - 8) + ' filas más</td></tr>' : '';

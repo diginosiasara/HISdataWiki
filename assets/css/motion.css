@@ -1,0 +1,55 @@
+/* HISdata Wiki · motion.css — animaciones y visualizaciones CSS (mejora progresiva, respeta «reducir animaciones») */
+/* barra de progreso de lectura (CSS puro, ligada al scroll) */
+@supports (animation-timeline:scroll()){
+  body::after{content:"";position:fixed;inset:0 0 auto 0;height:4px;z-index:90;background:linear-gradient(90deg,var(--c-violet),var(--c-pink),var(--c-orange));transform-origin:0 50%;transform:scaleX(0);animation:progbar linear both;animation-timeline:scroll(root);pointer-events:none}
+  @keyframes progbar{to{transform:scaleX(1)}}
+  /* revelado al entrar en pantalla de los componentes nuevos */
+  .tm-card,.cs-card,.pm-card,.mp-card,.tl,.ct-rule,.fig-box,.fmt li,.ex-list li,.dp__res li,.tm-g,.cards .card,.callout,.table-wrap{animation:revealup linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+  .tm-g:nth-child(2),.tl:nth-child(2),.ct-rule:nth-child(2){animation-range:entry 6% entry 46%}
+  .tm-g:nth-child(3),.tl:nth-child(3),.ct-rule:nth-child(3){animation-range:entry 12% entry 52%}
+  .tl:nth-child(4),.ct-rule:nth-child(4){animation-range:entry 18% entry 58%}
+  /* subrayado de rotulador en las palabras clave, al leerlas */
+  .callout b,.content p>b,.content li>b{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--c-yellow) 70%,transparent) 62%) no-repeat 0 0/0% 100%;animation:marker linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+  @keyframes marker{to{background-size:100% 100%}}
+  /* títulos de sección: el número del círculo gira al entrar */
+  .content h2::before{animation:spinin linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+  @keyframes spinin{from{transform:rotate(-200deg) scale(.3);opacity:0}to{transform:none;opacity:1}}
+}
+/* figuras de dispersión y cajas: las líneas se dibujan y los puntos aparecen */
+.dp__fig .dist{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards;animation-delay:calc(var(--k,0)*35ms)}
+.dp__fig .pt{transform-box:fill-box;transform-origin:center;animation:pop .5s both;animation-delay:calc(var(--k,0)*35ms + .5s)}
+.dp__fig .sd{transform-box:fill-box;transform-origin:center;animation:reveal 1s .6s ease-out both}
+.dp__fig .mean{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .8s ease-out forwards}
+.bx__fig .wh{stroke-dasharray:1;animation:draw .8s .5s ease-out both}
+.bx__fig .out{animation:pop .6s 1s both;transform-box:fill-box;transform-origin:center}
+.dp__res li b{display:inline-block;animation:rise .5s both}
+.dp__res li.hl{animation:glowhl 2.4s ease-in-out 1}
+@keyframes glowhl{0%,100%{box-shadow:0 0 0 0 transparent}40%{box-shadow:0 0 0 6px color-mix(in srgb,var(--c-violet) 30%,transparent)}}
+/* tablas: fila resaltada al pasar o al leer */
+.table tbody tr{transition:background .2s}.table tbody tr:hover{background:color-mix(in srgb,var(--c-yellow) 22%,transparent)}
+tr.is-reading>*{background:color-mix(in srgb,var(--c-yellow) 45%,transparent)}
+tr.is-reading{outline:3px solid var(--c-yellow);outline-offset:-2px}
+/* lector: barra de progreso y bloque activo con marca lateral */
+.reader__prog{width:100%;height:8px;margin-top:.5rem;border-radius:999px;overflow:hidden;appearance:none;border:0;background:var(--line)}
+.reader__prog::-webkit-progress-bar{background:var(--line)}.reader__prog::-webkit-progress-value{background:linear-gradient(90deg,var(--c-violet),var(--c-pink));transition:width .4s}
+.reader__prog::-moz-progress-bar{background:var(--c-violet)}
+.is-reading{animation:readpulse 1.6s ease-in-out infinite}
+@keyframes readpulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--c-yellow) 60%,transparent)}50%{box-shadow:0 0 0 8px transparent}}
+/* micro-interacciones */
+.tm-card,.cs-card,.pm-card,.mp-card,.tl,.ct-rule{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.tm-card:hover,.cs-card:hover,.pm-card:hover,.mp-card:hover,.tl:hover,.ct-rule:hover{transform:translateY(-5px);box-shadow:0 18px 30px -18px rgba(20,20,40,.45)}
+.chipb{transition:transform .15s,background .2s}.chipb:active{transform:scale(.94)}.chipb[aria-pressed="true"]{animation:pop .35s both}
+:focus-visible{transition:outline-offset .15s}
+details.fold>summary{transition:background .2s}details.fold[open]>*:not(summary){animation:fadein .35s both}
+.ex-list li::before{animation:pop .5s both}
+.fmt li:hover b{animation:bob .8s ease-in-out infinite}
+.origin{background-size:200% 100%;transition:background-position .6s}.origin:hover{background-position:100% 0}
+/* respeto a las preferencias de movimiento */
+@media (prefers-reduced-motion:reduce){
+  body::after,.tm-card,.cs-card,.pm-card,.mp-card,.tl,.ct-rule,.fig-box,.fmt li,.ex-list li,.dp__res li,.tm-g,.cards .card,.callout,.table-wrap,.callout b,.content p>b,.content li>b,.content h2::before,.dp__fig *,.bx__fig *,.is-reading{animation:none!important}
+  .dp__fig .dist,.bx__fig .wh{stroke-dashoffset:0}
+  .callout b,.content p>b,.content li>b{background-size:100% 100%}
+}
+:root[data-reduce-motion] body::after,:root[data-reduce-motion] :is(.tm-card,.cs-card,.pm-card,.mp-card,.tl,.ct-rule,.fig-box,.fmt li,.ex-list li,.dp__res li,.tm-g,.cards .card,.callout,.table-wrap,.callout b,.content p>b,.content li>b,.content h2::before,.is-reading){animation:none!important}
+:root[data-reduce-motion] :is(.callout b,.content p>b,.content li>b){background-size:100% 100%}
+:root[data-reduce-motion] :is(.dp__fig .dist,.bx__fig .wh){stroke-dashoffset:0;animation:none}

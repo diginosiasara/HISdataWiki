@@ -12,7 +12,7 @@
   function stat(label, val, sub, tone) { return h('div.stat.stat--' + tone, null, h('span.stat__label', null, label), h('span.stat__value', null, val), h('span.stat__sub', null, sub)); }
   function strip(a, m) { return h('div.strip', { 'aria-hidden': 'true' }, a.map(function (v, i) { var c = m && m[i]; return h('span.chp' + (c ? '.' + c[0] : ''), null, f(v), c && c[1] ? h('small', null, c[1]) : null); })); }
   function table(cap, head, rows) {
-    return h('div.table-wrap', null, h('table.table', null, h('caption', null, cap), h('thead', null, h('tr', null, head.map(function (x) { return h('th', { scope: 'col' }, x); }))),
+    return h('div.table-wrap', { tabindex: '0', role: 'region', 'aria-label': 'Tabla (desplazable)' }, h('table.table', null, h('caption', null, cap), h('thead', null, h('tr', null, head.map(function (x) { return h('th', { scope: 'col' }, x); }))),
       h('tbody', null, rows.map(function (r) { return h('tr' + (/^total/i.test(r[0]) ? '.is-total' : ''), null, r.map(function (c, i) { return i ? h('td', null, c) : h('th', { scope: 'row' }, c); })); }))));
   }
   HIS.widgets.register('calculadora', function (el, cfg) {
