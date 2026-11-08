@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Distribución exponencial", "description": "Distribución exponencial: tiempos de espera, tasa λ, función acumulada y falta de memoria, con los casos de la ambulancia y las urgencias.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["distribucion exponencial", "lambda", "tasa", "tiempo de espera", "falta de memoria", "ambulancia", "urgencias"], "headline": "Distribución exponencial"}</script>
 </head>
@@ -62,55 +63,57 @@
 <div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html" aria-current="page"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html" aria-current="page"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +128,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -137,10 +141,13 @@
   </aside>
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
-<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/introduccion.html">Módulo A · Probabilidad</a></li><li><span aria-current="page">Distribución exponencial</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">A5</span>Módulo A · Probabilidad y distribuciones</p><h1>Distribución <span class="grad">exponencial</span></h1><p class="lead">Modela cuánto se tarda hasta que ocurre algo impredecible: muchos tiempos cortos y unos pocos muy largos.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">⏱️</span><strong class="vtile__big">Tiempos</strong><span class="vtile__txt">Cuánto se tarda en que ocurra algo</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🚑</span><strong class="vtile__big">39,35 %</strong><span class="vtile__txt">Ambulancia en menos de 3 min</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📉</span><strong class="vtile__big">Decae</strong><span class="vtile__txt">Cuanto más esperas, menos probable</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🏥</span><strong class="vtile__big">36,8 %</strong><span class="vtile__txt">Esperar más que la media</span></li></ul></header>
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/index.html">UF2 · Probabilidad</a></li><li><span aria-current="page">Distribución exponencial</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF2·5</span>UF2 · Probabilidad y distribuciones</p><h1>Distribución <span class="grad">exponencial</span></h1><p class="lead">Modela cuánto se tarda hasta que ocurre algo impredecible: muchos tiempos cortos y unos pocos muy largos.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span><span class="origin origin--uf2">Unidad formativa 2 · manual de probabilidad</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">⏱️</span><strong class="vtile__big">Tiempos</strong><span class="vtile__txt">Cuánto se tarda en que ocurra algo</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🚑</span><strong class="vtile__big">39,35 %</strong><span class="vtile__txt">Ambulancia en menos de 3 min</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📉</span><strong class="vtile__big">Decae</strong><span class="vtile__txt">Cuanto más esperas, menos probable</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🏥</span><strong class="vtile__big">36,8 %</strong><span class="vtile__txt">Esperar más que la media</span></li></ul></header>
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#por-que">¿Por qué exponencial?</a></li><li><a href="#formulas">Fórmulas</a></li><li><a href="#ambulancia">Caso: ¿llega a tiempo la ambulancia?</a></li><li><a href="#lambda">Ojo con λ: es una tasa, no una probabilidad</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>Con media μ, la tasa es <strong>λ = 1/μ</strong>. La probabilidad de esperar <em>como máximo</em> x es <strong>1 − e<sup>−λx</sup></strong>, y de esperar <em>más de</em> x, <strong>e<sup>−λx</sup></strong>. No tiene forma de campana: decrece desde el principio.</p></div>
+
+<figure class="anim anim--exp"><svg viewBox="0 0 540 224" role="img" aria-labelledby="f-exp-decay-t f-exp-decay-d" focusable="false"><title id="f-exp-decay-t">Curva exponencial decreciente</title><desc id="f-exp-decay-d">La curva empieza alta y baja cada vez más despacio: lo más probable es esperar poco. Un punto desciende por la curva.</desc><line class="axis" x1="40" x2="510" y1="190" y2="190"/><path class="area" d="M40.0 40.0 L44.6 45.3 L49.2 50.3 L53.8 55.2 L58.4 60.0 L63.0 64.5 L67.6 68.9 L72.2 73.2 L76.8 77.3 L81.4 81.2 L86.0 85.0 L90.6 88.7 L95.2 92.3 L99.8 95.7 L104.4 99.0 L109.0 102.2 L113.6 105.3 L118.2 108.3 L122.8 111.1 L127.4 113.9 L132.0 116.6 L136.6 119.1 L141.2 121.6 L145.8 124.0 L150.4 126.3 L155.0 128.6 L159.6 130.7 L164.2 132.8 L168.8 134.8 L173.4 136.8 L178.0 138.6 L182.6 140.4 L187.2 142.2 L191.8 143.8 L196.4 145.5 L201.0 147.0 L205.6 148.5 L210.2 150.0 L214.8 151.4 L219.4 152.7 L224.0 154.1 L228.6 155.3 L233.2 156.5 L237.8 157.7 L242.4 158.8 L247.0 159.9 L251.6 161.0 L256.2 162.0 L260.8 163.0 L265.4 163.9 L270.0 164.8 L274.6 165.7 L279.2 166.6 L283.8 167.4 L288.4 168.2 L293.0 169.0 L297.6 169.7 L302.2 170.4 L306.8 171.1 L311.4 171.8 L316.0 172.4 L320.6 173.0 L325.2 173.6 L329.8 174.2 L334.4 174.7 L339.0 175.3 L343.6 175.8 L348.2 176.3 L352.8 176.8 L357.4 177.2 L362.0 177.7 L366.6 178.1 L371.2 178.5 L375.8 178.9 L380.4 179.3 L385.0 179.7 L389.6 180.1 L394.2 180.4 L398.8 180.7 L403.4 181.1 L408.0 181.4 L412.6 181.7 L417.2 182.0 L421.8 182.3 L426.4 182.5 L431.0 182.8 L435.6 183.0 L440.2 183.3 L444.8 183.5 L449.4 183.8 L454.0 184.0 L458.6 184.2 L463.2 184.4 L467.8 184.6 L472.4 184.8 L477.0 185.0 L481.6 185.1 L486.2 185.3 L490.8 185.5 L495.4 185.6 L500.0 185.8 L500 190 L40 190Z"/><path class="draw" pathLength="1" d="M40.0 40.0 L44.6 45.3 L49.2 50.3 L53.8 55.2 L58.4 60.0 L63.0 64.5 L67.6 68.9 L72.2 73.2 L76.8 77.3 L81.4 81.2 L86.0 85.0 L90.6 88.7 L95.2 92.3 L99.8 95.7 L104.4 99.0 L109.0 102.2 L113.6 105.3 L118.2 108.3 L122.8 111.1 L127.4 113.9 L132.0 116.6 L136.6 119.1 L141.2 121.6 L145.8 124.0 L150.4 126.3 L155.0 128.6 L159.6 130.7 L164.2 132.8 L168.8 134.8 L173.4 136.8 L178.0 138.6 L182.6 140.4 L187.2 142.2 L191.8 143.8 L196.4 145.5 L201.0 147.0 L205.6 148.5 L210.2 150.0 L214.8 151.4 L219.4 152.7 L224.0 154.1 L228.6 155.3 L233.2 156.5 L237.8 157.7 L242.4 158.8 L247.0 159.9 L251.6 161.0 L256.2 162.0 L260.8 163.0 L265.4 163.9 L270.0 164.8 L274.6 165.7 L279.2 166.6 L283.8 167.4 L288.4 168.2 L293.0 169.0 L297.6 169.7 L302.2 170.4 L306.8 171.1 L311.4 171.8 L316.0 172.4 L320.6 173.0 L325.2 173.6 L329.8 174.2 L334.4 174.7 L339.0 175.3 L343.6 175.8 L348.2 176.3 L352.8 176.8 L357.4 177.2 L362.0 177.7 L366.6 178.1 L371.2 178.5 L375.8 178.9 L380.4 179.3 L385.0 179.7 L389.6 180.1 L394.2 180.4 L398.8 180.7 L403.4 181.1 L408.0 181.4 L412.6 181.7 L417.2 182.0 L421.8 182.3 L426.4 182.5 L431.0 182.8 L435.6 183.0 L440.2 183.3 L444.8 183.5 L449.4 183.8 L454.0 184.0 L458.6 184.2 L463.2 184.4 L467.8 184.6 L472.4 184.8 L477.0 185.0 L481.6 185.1 L486.2 185.3 L490.8 185.5 L495.4 185.6 L500.0 185.8" fill="none" stroke-width="4"/><circle class="slide" r="9" style="offset-path:path('M40.0 40.0 L44.6 45.3 L49.2 50.3 L53.8 55.2 L58.4 60.0 L63.0 64.5 L67.6 68.9 L72.2 73.2 L76.8 77.3 L81.4 81.2 L86.0 85.0 L90.6 88.7 L95.2 92.3 L99.8 95.7 L104.4 99.0 L109.0 102.2 L113.6 105.3 L118.2 108.3 L122.8 111.1 L127.4 113.9 L132.0 116.6 L136.6 119.1 L141.2 121.6 L145.8 124.0 L150.4 126.3 L155.0 128.6 L159.6 130.7 L164.2 132.8 L168.8 134.8 L173.4 136.8 L178.0 138.6 L182.6 140.4 L187.2 142.2 L191.8 143.8 L196.4 145.5 L201.0 147.0 L205.6 148.5 L210.2 150.0 L214.8 151.4 L219.4 152.7 L224.0 154.1 L228.6 155.3 L233.2 156.5 L237.8 157.7 L242.4 158.8 L247.0 159.9 L251.6 161.0 L256.2 162.0 L260.8 163.0 L265.4 163.9 L270.0 164.8 L274.6 165.7 L279.2 166.6 L283.8 167.4 L288.4 168.2 L293.0 169.0 L297.6 169.7 L302.2 170.4 L306.8 171.1 L311.4 171.8 L316.0 172.4 L320.6 173.0 L325.2 173.6 L329.8 174.2 L334.4 174.7 L339.0 175.3 L343.6 175.8 L348.2 176.3 L352.8 176.8 L357.4 177.2 L362.0 177.7 L366.6 178.1 L371.2 178.5 L375.8 178.9 L380.4 179.3 L385.0 179.7 L389.6 180.1 L394.2 180.4 L398.8 180.7 L403.4 181.1 L408.0 181.4 L412.6 181.7 L417.2 182.0 L421.8 182.3 L426.4 182.5 L431.0 182.8 L435.6 183.0 L440.2 183.3 L444.8 183.5 L449.4 183.8 L454.0 184.0 L458.6 184.2 L463.2 184.4 L467.8 184.6 L472.4 184.8 L477.0 185.0 L481.6 185.1 L486.2 185.3 L490.8 185.5 L495.4 185.6 L500.0 185.8')"/><text class="hint" x="70" y="40">Espera corta: muy probable</text><text class="hint" x="500" y="150" text-anchor="end">Espera larga: cada vez menos probable</text><text class="tick" x="40" y="212">0</text><text class="tick" x="270" y="212" text-anchor="middle">tiempo →</text></svg><figcaption><b>Animación.</b> La curva se dibuja y un punto desciende por ella: cuanto más se espera, menos probable.</figcaption></figure>
+
 
 <h2 id="por-que">¿Por qué exponencial? <a class="anchor" href="#por-que" aria-label="Enlace a la sección: ¿Por qué exponencial?">#</a></h2>
 <ul class="cards">

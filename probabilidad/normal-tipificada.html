@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Normal tipificada y puntuaciones z", "description": "Cómo tipificar una variable normal con z = (x − μ)/σ, usar la tabla z y comparar valores de distintas escalas. Con ejemplos de presión arterial y estaturas.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["tipificacion", "puntuacion z", "normal estandar", "N(0", "1)", "tabla z", "estandarizar"], "headline": "Normal tipificada y puntuaciones z"}</script>
 </head>
@@ -62,55 +63,57 @@
 <div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html" aria-current="page"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html" aria-current="page"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +128,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -137,14 +141,17 @@
   </aside>
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
-<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/introduccion.html">Módulo A · Probabilidad</a></li><li><span aria-current="page">Normal tipificada y puntuaciones z</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">A7</span>Módulo A · Probabilidad y distribuciones</p><h1>Normal tipificada y puntuaciones <span class="grad">z</span></h1><p class="lead">Tipificar es medir cada dato en «pasos de desviación típica» desde la media.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">🧭</span><strong class="vtile__big">z</strong><span class="vtile__txt">Cuántas σ me separo de la media</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🔄</span><strong class="vtile__big">(x−μ)/σ</strong><span class="vtile__txt">Convierte cualquier normal a N(0,1)</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📖</span><strong class="vtile__big">Tabla Z</strong><span class="vtile__txt">Da el área acumulada</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🩸</span><strong class="vtile__big">z = 1</strong><span class="vtile__txt">128 mmHg en N(121, 7)</span></li></ul></header>
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/index.html">UF2 · Probabilidad</a></li><li><span aria-current="page">Normal tipificada y puntuaciones z</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF2·7</span>UF2 · Probabilidad y distribuciones</p><h1>Normal tipificada y puntuaciones <span class="grad">z</span></h1><p class="lead">Tipificar es medir cada dato en «pasos de desviación típica» desde la media.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span><span class="origin origin--uf2">Unidad formativa 2 · manual de probabilidad</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">🧭</span><strong class="vtile__big">z</strong><span class="vtile__txt">Cuántas σ me separo de la media</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🔄</span><strong class="vtile__big">(x−μ)/σ</strong><span class="vtile__txt">Convierte cualquier normal a N(0,1)</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📖</span><strong class="vtile__big">Tabla Z</strong><span class="vtile__txt">Da el área acumulada</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🩸</span><strong class="vtile__big">z = 1</strong><span class="vtile__txt">128 mmHg en N(121, 7)</span></li></ul></header>
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#simulador">Simulador de tipificación</a></li><li><a href="#interpretar">Cómo interpretar z</a></li><li><a href="#ejemplo">Ejemplo: presión sistólica de 19 pacientes</a></li><li><a href="#tabla-z">La tabla z interactiva</a></li><li><a href="#pasos">Receta para calcular probabilidades</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>Para pasar de X ~ N(μ, σ) a Z ~ N(0, 1) se aplica <strong>z = (x − μ)/σ</strong>. Se resta μ (desplaza el centro a 0) y se divide por σ (cambia la escala). La forma de la campana y el área no cambian.</p></div>
 
 <figure class="formula" data-speak="z es igual a x menos mu, dividido entre sigma.">
 <math display="block" aria-label="z igual a x menos mu entre sigma"><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow></math><figcaption>z indica a cuántas desviaciones típicas está x de la media.</figcaption></figure>
 <ol class="flow"><li><b>Desplazar</b>Restar μ: la campana pasa de centrarse en μ a centrarse en 0.</li><li><b>Reescalar</b>Dividir entre σ: cada 1 de z equivale a σ unidades originales.</li><li><b>Misma forma</b>P(X ≤ x) = P(Z ≤ z): el área se conserva.</li></ol>
+
+<figure class="anim anim--tip"><svg viewBox="0 0 540 190" role="img" aria-labelledby="f-tipificar-t f-tipificar-d" focusable="false"><title id="f-tipificar-t">Tipificar una normal</title><desc id="f-tipificar-d">Una campana centrada en 121 mmHg se desplaza hasta el cero y se reescala: así se convierte en la normal estándar N(0,1).</desc><line class="axis" x1="30" x2="510" y1="160" y2="160"/><g class="move"><path class="draw draw--soft" pathLength="1" d="M46.0 160.0 L51.6 159.9 L57.2 159.9 L62.8 159.9 L68.4 159.8 L74.0 159.8 L79.6 159.7 L85.2 159.5 L90.8 159.3 L96.4 159.1 L102.0 158.8 L107.6 158.4 L113.2 157.8 L118.8 157.1 L124.4 156.3 L130.0 155.2 L135.6 153.8 L141.2 152.2 L146.8 150.2 L152.4 147.9 L158.0 145.1 L163.6 141.9 L169.2 138.2 L174.8 134.1 L180.4 129.4 L186.0 124.3 L191.6 118.7 L197.2 112.7 L202.8 106.5 L208.4 99.9 L214.0 93.3 L219.6 86.6 L225.2 80.1 L230.8 73.9 L236.4 68.1 L242.0 62.9 L247.6 58.5 L253.2 54.8 L258.8 52.2 L264.4 50.5 L270.0 50.0 L275.6 50.5 L281.2 52.2 L286.8 54.8 L292.4 58.5 L298.0 62.9 L303.6 68.1 L309.2 73.9 L314.8 80.1 L320.4 86.6 L326.0 93.3 L331.6 99.9 L337.2 106.5 L342.8 112.7 L348.4 118.7 L354.0 124.3 L359.6 129.4 L365.2 134.1 L370.8 138.2 L376.4 141.9 L382.0 145.1 L387.6 147.9 L393.2 150.2 L398.8 152.2 L404.4 153.8 L410.0 155.2 L415.6 156.3 L421.2 157.1 L426.8 157.8 L432.4 158.4 L438.0 158.8 L443.6 159.1 L449.2 159.3 L454.8 159.5 L460.4 159.7 L466.0 159.8 L471.6 159.8 L477.2 159.9 L482.8 159.9 L488.4 159.9 L494.0 160.0" fill="none" stroke-width="4"/><path class="area" d="M46.0 160.0 L51.6 159.9 L57.2 159.9 L62.8 159.9 L68.4 159.8 L74.0 159.8 L79.6 159.7 L85.2 159.5 L90.8 159.3 L96.4 159.1 L102.0 158.8 L107.6 158.4 L113.2 157.8 L118.8 157.1 L124.4 156.3 L130.0 155.2 L135.6 153.8 L141.2 152.2 L146.8 150.2 L152.4 147.9 L158.0 145.1 L163.6 141.9 L169.2 138.2 L174.8 134.1 L180.4 129.4 L186.0 124.3 L191.6 118.7 L197.2 112.7 L202.8 106.5 L208.4 99.9 L214.0 93.3 L219.6 86.6 L225.2 80.1 L230.8 73.9 L236.4 68.1 L242.0 62.9 L247.6 58.5 L253.2 54.8 L258.8 52.2 L264.4 50.5 L270.0 50.0 L275.6 50.5 L281.2 52.2 L286.8 54.8 L292.4 58.5 L298.0 62.9 L303.6 68.1 L309.2 73.9 L314.8 80.1 L320.4 86.6 L326.0 93.3 L331.6 99.9 L337.2 106.5 L342.8 112.7 L348.4 118.7 L354.0 124.3 L359.6 129.4 L365.2 134.1 L370.8 138.2 L376.4 141.9 L382.0 145.1 L387.6 147.9 L393.2 150.2 L398.8 152.2 L404.4 153.8 L410.0 155.2 L415.6 156.3 L421.2 157.1 L426.8 157.8 L432.4 158.4 L438.0 158.8 L443.6 159.1 L449.2 159.3 L454.8 159.5 L460.4 159.7 L466.0 159.8 L471.6 159.8 L477.2 159.9 L482.8 159.9 L488.4 159.9 L494.0 160.0 L494 160 L46 160Z"/><line class="mu" x1="270" x2="270" y1="160" y2="50"/></g><g class="axis-a"><text class="tick" x="158" y="182" text-anchor="middle">107</text><text class="tick" x="270" y="182" text-anchor="middle">121</text><text class="tick" x="382" y="182" text-anchor="middle">135</text><text class="hint" x="270" y="30" text-anchor="middle">N(121; 7) en mmHg</text></g><g class="axis-b"><text class="tick" x="102" y="182" text-anchor="middle">−3</text><text class="tick" x="158" y="182" text-anchor="middle">−2</text><text class="tick" x="214" y="182" text-anchor="middle">−1</text><text class="tick" x="270" y="182" text-anchor="middle">0</text><text class="tick" x="326" y="182" text-anchor="middle">1</text><text class="tick" x="382" y="182" text-anchor="middle">2</text><text class="tick" x="438" y="182" text-anchor="middle">3</text><text class="hint" x="270" y="30" text-anchor="middle">z = (x − μ)/σ  →  N(0, 1)</text></g></svg><figcaption><b>Animación.</b> La campana se desplaza al cero y se reescala: la normal se vuelve estándar.</figcaption></figure>
+
 
 <h2 id="simulador">Simulador de tipificación <a class="anchor" href="#simulador" aria-label="Enlace a la sección: Simulador de tipificación">#</a></h2>
 <div class="widget" data-widget="tipificar" data-mu="121" data-sigma="7" data-x="128" data-unit="mmHg" data-var="Presión sistólica"><div class="widget__head"><h3 class="widget__title" id="laboratorio-tipificar">Laboratorio · Tipificar <a class="anchor" href="#laboratorio-tipificar" aria-label="Enlace a la sección: Laboratorio · Tipificar">#</a></h3><p class="widget__sub">Con N(121, 7), el dato 128 equivale a z = 1.</p></div><noscript><p class="noscript-note">z = (128−121)/7 = 1.</p></noscript></div>

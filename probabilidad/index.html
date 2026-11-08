@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es" data-page="probabilidad/index">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UF2 · Probabilidad y distribuciones · HISdata Wiki</title>
+<meta name="description" content="Visión general de la UF2: probabilidad, distribuciones, intervalos de confianza y sus prácticas con hoja de cálculo.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="UF2, probabilidad, distribuciones, indice">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="UF2 · Probabilidad y distribuciones · HISdata Wiki">
+<meta property="og:description" content="Visión general de la UF2: probabilidad, distribuciones, intervalos de confianza y sus prácticas con hoja de cálculo.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "UF2 · Probabilidad y distribuciones", "description": "Visión general de la UF2: probabilidad, distribuciones, intervalos de confianza y sus prácticas con hoja de cálculo.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["UF2", "probabilidad", "distribuciones", "indice"], "headline": "UF2 · Probabilidad y distribuciones"}</script>
+</head>
+<body data-block="probabilidad">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+      </ul>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/index.html" aria-current="page"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/index.html">UF2 · Probabilidad</a></li><li><span aria-current="page">UF2 · Probabilidad y distribuciones</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF2·0</span>UF2 · Probabilidad y distribuciones</p><h1>UF2 · Probabilidad y <span class="grad">distribuciones</span></h1><p class="lead">De la probabilidad de un suceso a los intervalos de confianza, siempre con demostraciones interactivas.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 2 min de lectura</span><span class="origin origin--uf2">Unidad formativa 2 · manual de probabilidad</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">🎲</span><strong class="vtile__big">11 temas</strong><span class="vtile__txt">Teoría y simuladores</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🔔</span><strong class="vtile__big">Normal</strong><span class="vtile__txt">La distribución estrella</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📊</span><strong class="vtile__big">Excel</strong><span class="vtile__txt">Ejercicios con fórmulas</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🎣</span><strong class="vtile__big">IC</strong><span class="vtile__txt">Estimar con confianza</span></li></ul></header>
+
+<h2 id="temas">Temas de la UF2 <a class="anchor" href="#temas" aria-label="Enlace a la sección: Temas de la UF2">#</a></h2>
+<ul class="cards cards--index"><li class="card"><span class="badge">UF2·1</span><p class="card__h"><a href="../probabilidad/introduccion.html">Probabilidad y sucesos</a></p><p>Qué es la probabilidad, tipos de sucesos, regla de Laplace y probabilidad del suceso contrario, con laboratorios interactivos y ejemplos sanitarios.</p></li><li class="card"><span class="badge">UF2·2</span><p class="card__h"><a href="../probabilidad/venn.html">Diagramas de Venn</a></p><p>Representa sucesos con diagramas de Venn y calcula la probabilidad de la unión y la intersección, con y sin independencia.</p></li><li class="card"><span class="badge">UF2·3</span><p class="card__h"><a href="../probabilidad/variables-continuas.html">Variables continuas</a></p><p>Diferencia entre variables discretas y continuas, función de densidad y por qué en una variable continua la probabilidad es un área.</p></li><li class="card"><span class="badge">UF2·4</span><p class="card__h"><a href="../probabilidad/uniforme.html">Distribución uniforme</a></p><p>La distribución uniforme continua explicada con citas médicas: densidad constante, área rectangular, media, desviación típica y simulador.</p></li><li class="card"><span class="badge">UF2·5</span><p class="card__h"><a href="../probabilidad/exponencial.html">Distribución exponencial</a></p><p>Distribución exponencial: tiempos de espera, tasa λ, función acumulada y falta de memoria, con los casos de la ambulancia y las urgencias.</p></li><li class="card"><span class="badge">UF2·6</span><p class="card__h"><a href="../probabilidad/normal.html">Distribución normal</a></p><p>La campana de Gauss: parámetros μ y σ, simetría, función de densidad y acumulada, con ejemplos de tensión arterial y simulador interactivo.</p></li><li class="card"><span class="badge">UF2·7</span><p class="card__h"><a href="../probabilidad/normal-tipificada.html">Normal tipificada (z)</a></p><p>Cómo tipificar una variable normal con z = (x − μ)/σ, usar la tabla z y comparar valores de distintas escalas. Con ejemplos de presión arterial y estaturas.</p></li><li class="card"><span class="badge">UF2·8</span><p class="card__h"><a href="../probabilidad/regla-empirica.html">Regla empírica</a></p><p>La regla 68-95-99,7 de la distribución normal para estimar rangos normales de medidas clínicas y detectar valores atípicos con la desviación típica.</p></li><li class="card"><span class="badge">UF2·9</span><p class="card__h"><a href="../probabilidad/forma-normalidad.html">Forma y normalidad</a></p><p>Asimetría y curtosis de una distribución y cómo comprobar si unos datos son normales (histograma, gráfico Q-Q, Shapiro-Wilk, Kolmogorov-Smirnov).</p></li><li class="card"><span class="badge">UF2·10</span><p class="card__h"><a href="../probabilidad/intervalos-confianza.html">Intervalos de confianza</a></p><p>Qué es un intervalo de confianza para la media, cómo calcularlo con z o con t de Student y cómo interpretarlo. Calculadora interactiva y ejemplos clínicos.</p></li><li class="card"><span class="badge">UF2·11</span><p class="card__h"><a href="../probabilidad/distribuciones-muestrales.html">χ², t y F</a></p><p>Las distribuciones derivadas de la normal: ji-cuadrado, t de Student y F de Snedecor. Cuándo se usan, cómo cambian con los grados de libertad y valores críticos.</p></li></ul>
+<h2 id="practicas">Prácticas de la UF2 <a class="anchor" href="#practicas" aria-label="Enlace a la sección: Prácticas de la UF2">#</a></h2>
+<ul class="cards cards--index"><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/farmacos.html">Eficacia de fármacos (sucesos independientes)</a></p><p>Dos tratamientos con distinta eficacia: probabilidad complementaria, unión e intersección de sucesos independientes, con la hoja Excel explicada.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/historias-clinicas.html">Historias clínicas: administrativos y clínicos</a></p><p>Probabilidad de intersección de sucesos independientes con datos de historias clínicas y su hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/citas-uniforme.html">Citas médicas: distribución uniforme</a></p><p>Ejercicio de uniforme continua U(0,60) con probabilidades de tramos, media y desviación típica, con su Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/ambulancia.html">Ambulancia: tiempos exponenciales</a></p><p>Tiempo de respuesta de una ambulancia con distribución exponencial de media 6 min, con su hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/urgencias.html">Urgencias: factor de decaimiento</a></p><p>Llegadas a urgencias con λ = 1/15: probabilidad de espera mayor que la media y hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/presion-sistolica.html">Presión sistólica: tipificación</a></p><p>Tipificar la presión sistólica de 19 pacientes con N(121, 7), con su Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/tension-arterial.html">Tensión arterial normal</a></p><p>Sistólica N(128,25) y diastólica N(89,19): rangos ±1, 2 y 3σ, tipificación y Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/estaturas-z.html">Estaturas pediátricas y puntuación z</a></p><p>22 pacientes pediátricos: media 116,09 cm, σ 6,31 cm; puntuaciones z y Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/glucosa.html">Glucosa: intervalo de confianza con t</a></p><p>Caso del manual: IC al 95 % para la glucosa media con t de Student.</p></li></ul>
+<p>Antes de empezar, repasa las <a href="../descriptiva/index.html">sesiones de estadística descriptiva</a>.</p>
+
+<nav class="pager" aria-label="Navegación entre páginas"><span></span><a class="next" href="../probabilidad/introduccion.html" rel="next"><small>Siguiente →</small><strong>Probabilidad y sucesos</strong></a></nav>
+    </div>
+  </main>
+
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+
+</body>
+</html>

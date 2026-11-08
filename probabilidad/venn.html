@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Diagramas de Venn, unión e intersección", "description": "Representa sucesos con diagramas de Venn y calcula la probabilidad de la unión y la intersección, con y sin independencia.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["venn", "union", "interseccion", "independencia", "sucesos compatibles", "probabilidad condicionada", "baraja"], "headline": "Diagramas de Venn, unión e intersección"}</script>
 </head>
@@ -62,55 +63,57 @@
 <div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html" aria-current="page"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html" aria-current="page"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +128,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -137,8 +141,8 @@
   </aside>
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
-<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/introduccion.html">Módulo A · Probabilidad</a></li><li><span aria-current="page">Diagramas de Venn, unión e intersección</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">A2</span>Módulo A · Probabilidad y distribuciones</p><h1>Diagramas de Venn, unión e <span class="grad">intersección</span></h1><p class="lead">Un diagrama de Venn dibuja cada suceso como un círculo; donde se solapan, ocurren los dos a la vez.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">⭕</span><strong class="vtile__big">A∪B</strong><span class="vtile__txt">Ocurre A, B o ambos</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🔗</span><strong class="vtile__big">A∩B</strong><span class="vtile__txt">Ocurren los dos a la vez</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">➖</span><strong class="vtile__big">−P(A∩B)</strong><span class="vtile__txt">Se resta para no contar dos veces</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🃏</span><strong class="vtile__big">13/40</strong><span class="vtile__txt">Ejemplo con la baraja</span></li></ul></header>
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/index.html">UF2 · Probabilidad</a></li><li><span aria-current="page">Diagramas de Venn, unión e intersección</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF2·2</span>UF2 · Probabilidad y distribuciones</p><h1>Diagramas de Venn, unión e <span class="grad">intersección</span></h1><p class="lead">Un diagrama de Venn dibuja cada suceso como un círculo; donde se solapan, ocurren los dos a la vez.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span><span class="origin origin--uf2">Unidad formativa 2 · manual de probabilidad</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">⭕</span><strong class="vtile__big">A∪B</strong><span class="vtile__txt">Ocurre A, B o ambos</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🔗</span><strong class="vtile__big">A∩B</strong><span class="vtile__txt">Ocurren los dos a la vez</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">➖</span><strong class="vtile__big">−P(A∩B)</strong><span class="vtile__txt">Se resta para no contar dos veces</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🃏</span><strong class="vtile__big">13/40</strong><span class="vtile__txt">Ejemplo con la baraja</span></li></ul></header>
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#dado">Ejemplo con un dado</a></li><li><a href="#union">Unión: la fórmula para no contar dos veces</a></li><li><a href="#independencia">Sucesos independientes</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>Intersección (A ∩ B): ocurren A <em>y</em> B. Unión (A ∪ B): ocurre A <em>o</em> B (o ambos). Y para no contar dos veces el solape: <strong>P(A∪B) = P(A) + P(B) − P(A∩B)</strong>.</p></div>
 

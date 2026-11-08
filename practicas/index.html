@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prácticas y casos · HISdata Wiki</title>
-<meta name="description" content="Ejercicios resueltos con su hoja de cálculo: fármacos, historias clínicas, citas, ambulancia, urgencias, tensión arterial, estaturas, glucosa y casos de SIS.">
+<meta name="description" content="Ejercicios resueltos con su hoja de cálculo, separados por unidad formativa y sesión.">
 <meta name="author" content="Sara Lopez Figueredo Sainz">
 <meta name="keywords" content="practicas, ejercicios, excel, casos">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Prácticas y casos · HISdata Wiki">
-<meta property="og:description" content="Ejercicios resueltos con su hoja de cálculo: fármacos, historias clínicas, citas, ambulancia, urgencias, tensión arterial, estaturas, glucosa y casos de SIS.">
+<meta property="og:description" content="Ejercicios resueltos con su hoja de cálculo, separados por unidad formativa y sesión.">
 
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -31,8 +31,9 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Prácticas y casos", "description": "Ejercicios resueltos con su hoja de cálculo: fármacos, historias clínicas, citas, ambulancia, urgencias, tensión arterial, estaturas, glucosa y casos de SIS.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["practicas", "ejercicios", "excel", "casos"], "headline": "Prácticas y casos"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Prácticas y casos", "description": "Ejercicios resueltos con su hoja de cálculo, separados por unidad formativa y sesión.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["practicas", "ejercicios", "excel", "casos"], "headline": "Prácticas y casos"}</script>
 </head>
 <body data-block="casos">
 <div class="skip-links">
@@ -59,58 +60,60 @@
     </button>
   </div>
 </header>
-<div class="shell">
+<div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html" aria-current="page"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html" aria-current="page"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +128,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -138,15 +142,19 @@
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
 <nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../practicas/index.html">Prácticas</a></li><li><span aria-current="page">Prácticas y casos</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow">Prácticas</p><h1>Prácticas y <span class="grad">casos</span></h1><p class="lead">Aplica la teoría con casos sanitarios reales y las hojas de cálculo originales.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 3 min de lectura</span></p></header>
-
-<h2 id="casos">Elige un caso <a class="anchor" href="#casos" aria-label="Enlace a la sección: Elige un caso">#</a></h2>
-<div class="cards"><a class="card" href="farmacos.html"><p class="card__h">Fármacos</p><p>Sucesos independientes</p></a><a class="card" href="historias-clinicas.html"><p class="card__h">Historias clínicas</p><p>Intersección</p></a><a class="card" href="citas-uniforme.html"><p class="card__h">Citas</p><p>Uniforme</p></a><a class="card" href="ambulancia.html"><p class="card__h">Ambulancia</p><p>Exponencial</p></a><a class="card" href="urgencias.html"><p class="card__h">Urgencias</p><p>Exponencial</p></a><a class="card" href="presion-sistolica.html"><p class="card__h">Presión sistólica</p><p>Tipificación</p></a><a class="card" href="tension-arterial.html"><p class="card__h">Tensión arterial</p><p>Regla empírica</p></a><a class="card" href="estaturas-z.html"><p class="card__h">Estaturas</p><p>Puntuación z</p></a><a class="card" href="glucosa.html"><p class="card__h">Glucosa</p><p>IC con t</p></a><a class="card" href="casos-sis.html"><p class="card__h">Casos de SIS</p><p>Módulo B</p></a></div>
+<header class="page-head"><p class="eyebrow">Prácticas</p><h1>Prácticas y <span class="grad">casos</span></h1><p class="lead">Aplica la teoría con casos sanitarios reales y las hojas de cálculo originales.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 2 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">💊</span><strong class="vtile__big">9 prácticas</strong><span class="vtile__txt">UF2 con Excel</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🏥</span><strong class="vtile__big">6 casos</strong><span class="vtile__txt">UF3 de SIS</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📊</span><strong class="vtile__big">4 casos</strong><span class="vtile__txt">Sesión 1</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🔬</span><strong class="vtile__big">Simuladores</strong><span class="vtile__txt">En cada práctica</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#uf2">UF2 · Probabilidad (con hoja de cálculo)</a></li><li><a href="#uf3">UF3 · Sistemas de información</a></li><li><a href="#s1">Sesión 1 · Estadística descriptiva</a></li></ol></details>
+<h2 id="uf2">UF2 · Probabilidad (con hoja de cálculo) <a class="anchor" href="#uf2" aria-label="Enlace a la sección: UF2 · Probabilidad (con hoja de cálculo)">#</a></h2>
+<ul class="cards cards--index"><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/farmacos.html">Eficacia de fármacos (sucesos independientes)</a></p><p>Dos tratamientos con distinta eficacia: probabilidad complementaria, unión e intersección de sucesos independientes, con la hoja Excel explicada.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/historias-clinicas.html">Historias clínicas: administrativos y clínicos</a></p><p>Probabilidad de intersección de sucesos independientes con datos de historias clínicas y su hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/citas-uniforme.html">Citas médicas: distribución uniforme</a></p><p>Ejercicio de uniforme continua U(0,60) con probabilidades de tramos, media y desviación típica, con su Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/ambulancia.html">Ambulancia: tiempos exponenciales</a></p><p>Tiempo de respuesta de una ambulancia con distribución exponencial de media 6 min, con su hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/urgencias.html">Urgencias: factor de decaimiento</a></p><p>Llegadas a urgencias con λ = 1/15: probabilidad de espera mayor que la media y hoja Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/presion-sistolica.html">Presión sistólica: tipificación</a></p><p>Tipificar la presión sistólica de 19 pacientes con N(121, 7), con su Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/tension-arterial.html">Tensión arterial normal</a></p><p>Sistólica N(128,25) y diastólica N(89,19): rangos ±1, 2 y 3σ, tipificación y Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/estaturas-z.html">Estaturas pediátricas y puntuación z</a></p><p>22 pacientes pediátricos: media 116,09 cm, σ 6,31 cm; puntuaciones z y Excel.</p></li><li class="card"><span class="badge">UF2</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/glucosa.html">Glucosa: intervalo de confianza con t</a></p><p>Caso del manual: IC al 95 % para la glucosa media con t de Student.</p></li></ul>
+<h2 id="uf3">UF3 · Sistemas de información <a class="anchor" href="#uf3" aria-label="Enlace a la sección: UF3 · Sistemas de información">#</a></h2>
+<ul class="cards cards--index"><li class="card"><span class="badge">P10</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/casos-sis.html">Casos prácticos del SIS</a></p><p>Seis casos prácticos de sistemas de información sanitaria con ayuda y propuesta de solución: historia clínica, elementos del SIS, HCE y calidad de datos.</p></li></ul>
+<h2 id="s1">Sesión 1 · Estadística descriptiva <a class="anchor" href="#s1" aria-label="Enlace a la sección: Sesión 1 · Estadística descriptiva">#</a></h2>
+<ul class="cards cards--index"><li class="card"><span class="badge">S1</span><span class="card__kind">Práctica</span><p class="card__h"><a href="../practicas/casos-descriptiva.html">Casos de descriptiva</a></p><p>Cuatro casos resueltos: muestreo en artrosis, infecciones nosocomiales, colesterol y estandarización de la diabetes.</p></li></ul>
 
 <nav class="pager" aria-label="Navegación entre páginas"><span></span><a class="next" href="../practicas/farmacos.html" rel="next"><small>Siguiente →</small><strong>Eficacia de fármacos (sucesos independientes)</strong></a></nav>
     </div>
   </main>
-
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#uf2">UF2 · Probabilidad (con hoja de cálculo)</a></li><li><a href="#uf3">UF3 · Sistemas de información</a></li><li><a href="#s1">Sesión 1 · Estadística descriptiva</a></li></ol></aside>
 </div>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">

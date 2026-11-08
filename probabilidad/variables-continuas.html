@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Variables aleatorias continuas y densidad", "description": "Diferencia entre variables discretas y continuas, función de densidad y por qué en una variable continua la probabilidad es un área.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["variable continua", "discreta", "funcion de densidad", "area bajo la curva", "probabilidad acumulada"], "headline": "Variables aleatorias continuas y densidad"}</script>
 </head>
@@ -62,55 +63,57 @@
 <div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html" aria-current="page"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html" aria-current="page"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +128,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -137,12 +141,15 @@
   </aside>
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
-<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/introduccion.html">Módulo A · Probabilidad</a></li><li><span aria-current="page">Variables aleatorias continuas y densidad</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">A3</span>Módulo A · Probabilidad y distribuciones</p><h1>Variables aleatorias continuas y <span class="grad">densidad</span></h1><p class="lead">En una variable continua la probabilidad no es una altura: es el área bajo la curva en un intervalo.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 8 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">📏</span><strong class="vtile__big">∞ valores</strong><span class="vtile__txt">Cualquier número de un tramo</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🏔️</span><strong class="vtile__big">Área = 1</strong><span class="vtile__txt">La curva encierra toda la probabilidad</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📐</span><strong class="vtile__big">P(X=a)=0</strong><span class="vtile__txt">Un punto no tiene área</span></li><li class="vtile vtile--3"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">∫</strong><span class="vtile__txt">Probabilidad = área bajo la curva</span></li></ul></header>
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../probabilidad/index.html">UF2 · Probabilidad</a></li><li><span aria-current="page">Variables aleatorias continuas y densidad</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF2·3</span>UF2 · Probabilidad y distribuciones</p><h1>Variables aleatorias continuas y <span class="grad">densidad</span></h1><p class="lead">En una variable continua la probabilidad no es una altura: es el área bajo la curva en un intervalo.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 8 min de lectura</span><span class="origin origin--uf2">Unidad formativa 2 · manual de probabilidad</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">📏</span><strong class="vtile__big">∞ valores</strong><span class="vtile__txt">Cualquier número de un tramo</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🏔️</span><strong class="vtile__big">Área = 1</strong><span class="vtile__txt">La curva encierra toda la probabilidad</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📐</span><strong class="vtile__big">P(X=a)=0</strong><span class="vtile__txt">Un punto no tiene área</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">∫</strong><span class="vtile__txt">Probabilidad = área bajo la curva</span></li></ul></header>
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#discreta-continua">Discreta frente a continua</a></li><li><a href="#densidad">Función de densidad: altura ≠ probabilidad</a></li><li><a href="#acumulada">Función de distribución acumulada</a></li><li><a href="#familias">Las tres distribuciones que veremos</a></li><li><a href="#test">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key"><p class="callout__title">Resumen en 3 líneas</p><p>Una variable continua puede tomar infinitos valores en un intervalo (estatura, tiempo, presión arterial). Su comportamiento se describe con una <strong>función de densidad f(x)</strong>. La probabilidad de un intervalo es el <strong>área</strong> bajo f(x); la de un valor exacto es 0.</p></div>
 
 <div class="callout callout--tip" data-icon="📚"><p class="callout__title">Repasa antes</p><p>Teoría relacionada: <a href="../descriptiva/histograma.html">Histograma: la versión por intervalos de la densidad</a>.</p></div>
+
+<figure class="anim anim--hc"><svg viewBox="0 0 540 220" role="img" aria-labelledby="f-histo-curva-t f-histo-curva-d" focusable="false"><title id="f-histo-curva-t">Del histograma a la curva de densidad</title><desc id="f-histo-curva-d">Diez barras crecen formando un histograma en campana. Después una curva suave se dibuja sobre ellas: es la densidad.</desc><line class="axis" x1="40" x2="500" y1="190" y2="190"/><rect class="bar" style="--i:0" x="42" y="178.1" width="42" height="11.9" rx="3"/><rect class="bar" style="--i:1" x="88" y="157.6" width="42" height="32.4" rx="3"/><rect class="bar" style="--i:2" x="134" y="121.3" width="42" height="68.7" rx="3"/><rect class="bar" style="--i:3" x="180" y="76.8" width="42" height="113.2" rx="3"/><rect class="bar" style="--i:4" x="226" y="44.6" width="42" height="145.4" rx="3"/><rect class="bar" style="--i:5" x="272" y="44.6" width="42" height="145.4" rx="3"/><rect class="bar" style="--i:6" x="318" y="76.8" width="42" height="113.2" rx="3"/><rect class="bar" style="--i:7" x="364" y="121.3" width="42" height="68.7" rx="3"/><rect class="bar" style="--i:8" x="410" y="157.6" width="42" height="32.4" rx="3"/><rect class="bar" style="--i:9" x="456" y="178.1" width="42" height="11.9" rx="3"/><path class="draw draw--late" pathLength="1" d="M40.0 183.4 L44.6 182.5 L49.2 181.6 L53.8 180.5 L58.4 179.3 L63.0 178.1 L67.6 176.7 L72.2 175.1 L76.8 173.5 L81.4 171.7 L86.0 169.7 L90.6 167.6 L95.2 165.3 L99.8 162.9 L104.4 160.3 L109.0 157.6 L113.6 154.6 L118.2 151.5 L122.8 148.3 L127.4 144.9 L132.0 141.3 L136.6 137.6 L141.2 133.7 L145.8 129.7 L150.4 125.6 L155.0 121.3 L159.6 117.0 L164.2 112.6 L168.8 108.1 L173.4 103.6 L178.0 99.0 L182.6 94.5 L187.2 90.0 L191.8 85.5 L196.4 81.1 L201.0 76.8 L205.6 72.6 L210.2 68.6 L214.8 64.7 L219.4 61.1 L224.0 57.6 L228.6 54.4 L233.2 51.5 L237.8 48.9 L242.4 46.6 L247.0 44.6 L251.6 43.0 L256.2 41.7 L260.8 40.7 L265.4 40.2 L270.0 40.0 L274.6 40.2 L279.2 40.7 L283.8 41.7 L288.4 43.0 L293.0 44.6 L297.6 46.6 L302.2 48.9 L306.8 51.5 L311.4 54.4 L316.0 57.6 L320.6 61.1 L325.2 64.7 L329.8 68.6 L334.4 72.6 L339.0 76.8 L343.6 81.1 L348.2 85.5 L352.8 90.0 L357.4 94.5 L362.0 99.0 L366.6 103.6 L371.2 108.1 L375.8 112.6 L380.4 117.0 L385.0 121.3 L389.6 125.6 L394.2 129.7 L398.8 133.7 L403.4 137.6 L408.0 141.3 L412.6 144.9 L417.2 148.3 L421.8 151.5 L426.4 154.6 L431.0 157.6 L435.6 160.3 L440.2 162.9 L444.8 165.3 L449.4 167.6 L454.0 169.7 L458.6 171.7 L463.2 173.5 L467.8 175.1 L472.4 176.7 L477.0 178.1 L481.6 179.3 L486.2 180.5 L490.8 181.6 L495.4 182.5 L500.0 183.4" fill="none" stroke-width="4"/><text class="hint" x="270" y="34" text-anchor="middle">Con intervalos cada vez más finos, las barras dibujan una curva</text></svg><figcaption><b>Animación.</b> Las barras crecen una a una y una curva suave se dibuja encima.</figcaption></figure>
+
 
 <h2 id="discreta-continua">Discreta frente a continua <a class="anchor" href="#discreta-continua" aria-label="Enlace a la sección: Discreta frente a continua">#</a></h2>
 <div class="table-wrap"><table class="table"><caption>Comparación de variables aleatorias</caption><thead><tr><th scope="col"></th><th scope="col">Discreta</th><th scope="col">Continua</th></tr></thead><tbody>

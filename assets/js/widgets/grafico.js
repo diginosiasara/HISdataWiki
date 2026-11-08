@@ -41,12 +41,12 @@
       var hh = v / mx * hh0, cx = x0 + i * bw + bw / 2, lb = k === 'bars' ? VAC[i][0] : k === 'hist' ? COL[i][0].replace(', ', ',') : f(COL[i][1]);
       if (k === 'bars' || k === 'hist') {
         var w = k === 'bars' ? bw * 0.6 : bw, x = k === 'bars' ? x0 + i * bw + bw * 0.2 : x0 + i * bw;
-        o += '<rect class="shp k' + (k === 'hist' ? 0 : i % 4) + '" data-i="' + i + '" x="' + x + '" y="' + (y0 - hh) + '" width="' + w + '" height="' + hh + '" rx="' + (k === 'bars' ? 5 : 0) + '"/><text class="gf__vl" x="' + cx + '" y="' + (y0 - hh - 6) + '" text-anchor="middle">' + v + '</text>';
+        o += '<rect class="shp k' + (k === 'hist' ? 0 : i % 4) + '" style="--i:' + i + '" data-i="' + i + '" x="' + x + '" y="' + (y0 - hh) + '" width="' + w + '" height="' + hh + '" rx="' + (k === 'bars' ? 5 : 0) + '"/><text class="gf__vl" x="' + cx + '" y="' + (y0 - hh - 6) + '" text-anchor="middle">' + v + '</text>';
       } else pts.push([cx, y0 - hh, i, v]);
       o += '<text class="gf__xl" x="' + cx + '" y="' + (y0 + 17) + '" text-anchor="middle">' + lb + '</text>';
     });
     if (pts.length) {
-      o += '<polyline class="gf__ln" fill="none" points="' + pts.map(function (p) { return p[0] + ',' + p[1]; }).join(' ') + '"/>';
+      o += '<polyline class="gf__ln" pathLength="1" fill="none" points="' + pts.map(function (p) { return p[0] + ',' + p[1]; }).join(' ') + '"/>';
       pts.forEach(function (p) { o += '<circle class="shp k' + (p[2] % 4) + '" data-i="' + p[2] + '" cx="' + p[0] + '" cy="' + p[1] + '" r="8"/><text class="gf__vl" x="' + p[0] + '" y="' + (p[1] - 13) + '" text-anchor="middle">' + p[3] + '</text>'; });
     }
     return o + '<line class="gf__bl" x1="' + x0 + '" x2="' + x1 + '" y1="' + y0 + '" y2="' + y0 + '"/></svg>';

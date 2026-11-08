@@ -31,6 +31,8 @@
 <link rel="stylesheet" href="../assets/css/widgets-prob.css">
 <link rel="stylesheet" href="../assets/css/widgets-desc.css">
 <link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<link rel="stylesheet" href="../assets/css/muestreo-visual.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Población, muestra e individuo", "description": "Los tres conceptos base de todo estudio, con los ejemplos de las estatinas y de la artrosis.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["poblacion", "muestra", "individuo", "estadística descriptiva"], "headline": "Población, muestra e individuo"}</script>
 </head>
@@ -62,55 +64,57 @@
 <div class="shell has-toc">
   <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
     <nav class="nav" aria-label="Contenidos">
-      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li></ul>
-      <h2>Fundamentos · Estadística descriptiva</h2>
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 y 1 · Estadística descriptiva</h2>
       <ul>
-        <li><a href="../descriptiva/index.html"><span class="num">D0</span><span>Introducción</span></a></li>
-        <li><a href="../descriptiva/estadistica.html"><span class="num">D1</span><span>¿Qué es la estadística?</span></a></li>
-        <li><a href="../descriptiva/poblacion-muestra.html" aria-current="page"><span class="num">D2</span><span>Población y muestra</span></a></li>
-        <li><a href="../descriptiva/muestreo.html"><span class="num">D3</span><span>Tipos de muestreo</span></a></li>
-        <li><a href="../descriptiva/variables.html"><span class="num">D4</span><span>Tipos de variables</span></a></li>
-        <li><a href="../descriptiva/fases.html"><span class="num">D5</span><span>Fases de un estudio</span></a></li>
-        <li><a href="../descriptiva/cualitativas.html"><span class="num">D6</span><span>Tablas cualitativas</span></a></li>
-        <li><a href="../descriptiva/doble-entrada.html"><span class="num">D7</span><span>Tablas de doble entrada</span></a></li>
-        <li><a href="../descriptiva/frecuencias.html"><span class="num">D8</span><span>Tipos de frecuencias</span></a></li>
-        <li><a href="../descriptiva/intervalos.html"><span class="num">D9</span><span>Datos en intervalos</span></a></li>
-        <li><a href="../descriptiva/colesterol.html"><span class="num">D10</span><span>Ejercicio: colesterol</span></a></li>
-        <li><a href="../descriptiva/que-grafico.html"><span class="num">D11</span><span>Qué gráfico usar</span></a></li>
-        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">D12</span><span>Diagrama de barras</span></a></li>
-        <li><a href="../descriptiva/histograma.html"><span class="num">D13</span><span>Histograma</span></a></li>
-        <li><a href="../descriptiva/poligono.html"><span class="num">D14</span><span>Polígono</span></a></li>
-        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">D15</span><span>Curva acumulativa</span></a></li>
-        <li><a href="../descriptiva/sectores.html"><span class="num">D16</span><span>Diagrama de sectores</span></a></li>
-        <li><a href="../descriptiva/posicion-central.html"><span class="num">D17</span><span>Media, mediana y moda</span></a></li>
-        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">D18</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html" aria-current="page"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
       </ul>
-      <h2>Módulo A · Probabilidad y distribuciones</h2>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
       <ul>
-        <li><a href="../probabilidad/introduccion.html"><span class="num">A1</span><span>Probabilidad y sucesos</span></a></li>
-        <li><a href="../probabilidad/venn.html"><span class="num">A2</span><span>Diagramas de Venn</span></a></li>
-        <li><a href="../probabilidad/variables-continuas.html"><span class="num">A3</span><span>Variables continuas</span></a></li>
-        <li><a href="../probabilidad/uniforme.html"><span class="num">A4</span><span>Distribución uniforme</span></a></li>
-        <li><a href="../probabilidad/exponencial.html"><span class="num">A5</span><span>Distribución exponencial</span></a></li>
-        <li><a href="../probabilidad/normal.html"><span class="num">A6</span><span>Distribución normal</span></a></li>
-        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">A7</span><span>Normal tipificada (z)</span></a></li>
-        <li><a href="../probabilidad/regla-empirica.html"><span class="num">A8</span><span>Regla empírica</span></a></li>
-        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">A9</span><span>Forma y normalidad</span></a></li>
-        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">A10</span><span>Intervalos de confianza</span></a></li>
-        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">A11</span><span>χ², t y F</span></a></li>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
       </ul>
-      <h2>Módulo B · Sistemas de información sanitaria</h2>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
       <ul>
-        <li><a href="../sis/sistemas-informacion.html"><span class="num">B1</span><span>Los sistemas de información sanitaria</span></a></li>
-        <li><a href="../sis/historia-clinica.html"><span class="num">B2</span><span>La historia clínica</span></a></li>
-        <li><a href="../sis/elementos-sis.html"><span class="num">B3</span><span>Elementos de un SIS</span></a></li>
-        <li><a href="../sis/aplicaciones-hce.html"><span class="num">B4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
-        <li><a href="../sis/calidad-datos.html"><span class="num">B5</span><span>Calidad de los datos sanitarios</span></a></li>
-        <li><a href="../sis/aspectos-legales.html"><span class="num">B6</span><span>Aspectos legales de los SIS</span></a></li>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li>
       </ul>
       <h2>Prácticas y casos</h2>
       <ul>
-        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Prácticas y casos</span></a></li>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
         <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
         <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
         <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
@@ -125,6 +129,7 @@
       </ul>
       <h2>Recursos</h2>
       <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
         <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
         <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
         <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
@@ -137,10 +142,13 @@
   </aside>
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
-<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../descriptiva/index.html">Fundamentos · Estadística descriptiva</a></li><li><span aria-current="page">Población, muestra e individuo</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">D2</span>Fundamentos · Estadística descriptiva</p><h1>Población, muestra e <span class="grad">individuo</span></h1><p class="lead">Los tres conceptos base de todo estudio, con los ejemplos de las estatinas y de la artrosis.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 5 min de lectura</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0"><span class="vtile__ico" aria-hidden="true">💡</span><strong class="vtile__big">Población</strong><span class="vtile__txt">Conjunto de todos los elementos de los que se quieren extraer conclusiones.</span></li><li class="vtile vtile--1"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">Muestra</strong><span class="vtile__txt">Subconjunto representativo de la población al que se toman los datos.</span></li><li class="vtile vtile--2"><span class="vtile__ico" aria-hidden="true">📌</span><strong class="vtile__big">Individuo</strong><span class="vtile__txt">Cada elemento de la población o de la muestra; es sobre quien se miden los datos</span></li></ul></header>
-<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#practica">En la práctica: ejemplos y datos</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></details>
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../descriptiva/index.html">Sesiones · Estadística descriptiva</a></li><li><span aria-current="page">Población, muestra e individuo</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">S0·2</span>Sesión 0 · Estadística descriptiva</p><h1>Población, muestra e <span class="grad">individuo</span></h1><p class="lead">Los tres conceptos base de todo estudio, con los ejemplos de las estatinas y de la artrosis.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 5 min de lectura</span><span class="origin origin--s0">Sesión 0 · apuntes de clase</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">💡</span><strong class="vtile__big">Población</strong><span class="vtile__txt">Conjunto de todos los elementos de los que se quieren extraer conclusiones.</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🧮</span><strong class="vtile__big">Muestra</strong><span class="vtile__txt">Subconjunto representativo de la población al que se toman los datos.</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📌</span><strong class="vtile__big">Individuo</strong><span class="vtile__txt">Cada elemento de la población o de la muestra; es sobre quien se miden los datos</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#todo-parte-cada-uno">Todo, parte y cada uno</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></details>
 <div class="callout callout--key" data-icon="⚡"><p class="callout__title">La idea en una frase</p><p>Población: Conjunto de todos los elementos de los que se quieren extraer conclusiones. Depende del contexto (habitantes de un municipio, estudiantes de un centro, plantilla de un equipo…). No tiene por qué ser humana: pueden ser animales, plantas, minerales…</p></div>
+
+<figure class="anim anim--muestra"><svg viewBox="0 0 530 240" role="img" aria-labelledby="f-muestra-t f-muestra-d" focusable="false"><title id="f-muestra-t">De la población a la muestra</title><desc id="f-muestra-d">Cuarenta puntos representan a la población. Diez de ellos se iluminan y pasan a formar la muestra.</desc><rect class="box" x="24" y="30" width="280" height="190" rx="20"/><text class="cap" x="164" y="22" text-anchor="middle">Población · 40 individuos</text><circle class="pdot" style="--k:0" cx="50" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="82" cy="62" r="10"/><circle class="pdot smp" style="--k:0" cx="114" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="146" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="178" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="210" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="242" cy="62" r="10"/><circle class="pdot smp" style="--k:1" cx="274" cy="62" r="10"/><circle class="pdot" style="--k:0" cx="50" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="82" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="114" cy="94" r="10"/><circle class="pdot smp" style="--k:2" cx="146" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="178" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="210" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="242" cy="94" r="10"/><circle class="pdot" style="--k:0" cx="274" cy="94" r="10"/><circle class="pdot smp" style="--k:3" cx="50" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="82" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="114" cy="126" r="10"/><circle class="pdot smp" style="--k:4" cx="146" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="178" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="210" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="242" cy="126" r="10"/><circle class="pdot smp" style="--k:5" cx="274" cy="126" r="10"/><circle class="pdot" style="--k:0" cx="50" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="82" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="114" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="146" cy="158" r="10"/><circle class="pdot smp" style="--k:6" cx="178" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="210" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="242" cy="158" r="10"/><circle class="pdot smp" style="--k:7" cx="274" cy="158" r="10"/><circle class="pdot" style="--k:0" cx="50" cy="190" r="10"/><circle class="pdot" style="--k:0" cx="82" cy="190" r="10"/><circle class="pdot smp" style="--k:8" cx="114" cy="190" r="10"/><circle class="pdot" style="--k:0" cx="146" cy="190" r="10"/><circle class="pdot" style="--k:0" cx="178" cy="190" r="10"/><circle class="pdot" style="--k:0" cx="210" cy="190" r="10"/><circle class="pdot smp" style="--k:9" cx="242" cy="190" r="10"/><circle class="pdot" style="--k:0" cx="274" cy="190" r="10"/><path class="flowarrow" d="M312 125 H392" /><path class="head" d="M388 117 L402 125 L388 133"/><rect class="box box--s" x="396" y="30" width="110" height="190" rx="20"/><text class="cap" x="451" y="22" text-anchor="middle">Muestra · 10</text><circle class="sdot" style="--k:0" cx="420" cy="66" r="10"/><circle class="sdot" style="--k:1" cx="454" cy="66" r="10"/><circle class="sdot" style="--k:2" cx="420" cy="98" r="10"/><circle class="sdot" style="--k:3" cx="454" cy="98" r="10"/><circle class="sdot" style="--k:4" cx="420" cy="130" r="10"/><circle class="sdot" style="--k:5" cx="454" cy="130" r="10"/><circle class="sdot" style="--k:6" cx="420" cy="162" r="10"/><circle class="sdot" style="--k:7" cx="454" cy="162" r="10"/><circle class="sdot" style="--k:8" cx="420" cy="194" r="10"/><circle class="sdot" style="--k:9" cx="454" cy="194" r="10"/></svg><figcaption><b>Animación.</b> Los puntos elegidos se iluminan y viajan a la muestra.</figcaption></figure>
+
 
 <h2 id="esencial">Lo esencial: qué necesitas saber <a class="anchor" href="#esencial" aria-label="Enlace a la sección: Lo esencial: qué necesitas saber">#</a></h2>
 <div class="callout callout--def" data-icon="📘"><p class="callout__title">Población</p><p>Conjunto de todos los elementos de los que se quieren extraer conclusiones. Depende del contexto (habitantes de un municipio, estudiantes de un centro, plantilla de un equipo…). No tiene por qué ser humana: pueden ser animales, plantas, minerales…</p></div>
@@ -148,12 +156,65 @@
 <div class="callout callout--def" data-icon="📘"><p class="callout__title">Individuo</p><p>Cada elemento de la población o de la muestra; es sobre quien se miden los datos. Puede ser una persona, un animal, una planta o un mineral.</p></div>
 <p>Para elegir una muestra representativa de toda la población a la que va dirigido el estudio se realizan procesos de muestreo: aquellos en los que se selecciona un grupo de individuos sobre los que realizar el estudio estadístico.</p>
 
-<h2 id="practica">En la práctica: ejemplos y datos <a class="anchor" href="#practica" aria-label="Enlace a la sección: En la práctica: ejemplos y datos">#</a></h2>
+<h2 id="todo-parte-cada-uno">Todo, parte y cada uno <a class="anchor" href="#todo-parte-cada-uno" aria-label="Enlace a la sección: Todo, parte y cada uno">#</a></h2>
+<p>Tres ideas que se confunden mucho. Aquí quedan claras con dos casos reales: un fármaco y una técnica de rehabilitación.</p>
+<ul class="pm-trio">
+<li class="pm-card pm-card--pop"><span class="pm-card__tag">TODO</span><span class="pm-card__ico" aria-hidden="true">🌍</span><p class="pm-card__kick">01 · Población</p><h3>Todo el conjunto</h3><p>El grupo completo sobre el que quieres obtener información.</p><p class="pm-card__chip">Todas las personas que cumplen los criterios</p></li>
+<li class="pm-card pm-card--mu"><span class="pm-card__tag">PARTE</span><span class="pm-card__ico" aria-hidden="true">🧪</span><p class="pm-card__kick">02 · Muestra</p><h3>Parte seleccionada</h3><p>El subgrupo que realmente estudias, elegido desde la población.</p><p class="pm-card__chip">La parte que representa al todo</p></li>
+<li class="pm-card pm-card--ind"><span class="pm-card__tag">CADA UNO</span><span class="pm-card__ico" aria-hidden="true">👤</span><p class="pm-card__kick">03 · Individuos</p><h3>Cada persona</h3><p>Cada integrante de la muestra. Sin individuos, no hay datos.</p><p class="pm-card__chip">Una persona = un individuo</p></li></ul>
+<div class="pm-chain"><span class="p p1">🌍 Población</span><span class="arr" aria-hidden="true">→</span><span class="p p2">🧪 Muestra</span><span class="arr" aria-hidden="true">→</span><span class="p p3">👤 Individuos</span><q>La población es el TODO, la muestra es una PARTE, los individuos son CADA UNO.</q></div>
+<div class="callout callout--tip" data-icon="🧭"><p class="callout__title">Antes de elegir, define a quién quieres entender</p><p>Si la población no está bien definida, la muestra tampoco puede representarla.</p></div>
 <div class="widget" data-widget="muestreo" data-mode="pob"><div class="widget__head"><h3 class="widget__title" id="poblacion-y-muestra">Población y muestra <a class="anchor" href="#poblacion-y-muestra" aria-label="Enlace a la sección: Población y muestra">#</a></h3><p class="widget__sub">Cada punto es un individuo; los resaltados forman la muestra.</p></div><noscript><p class="noscript-note">Este elemento interactivo necesita JavaScript.</p></noscript></div>
-<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Eficacia de un fármaco (estatinas)</p><p>Población: hombres de 65 años o más que van a tomar el fármaco, sin límite geográfico. Muestra: conjunto representativo de esos hombres, de distintas provincias, entornos rurales y urbanos, niveles socioeconómicos y tramos de edad (65–70, 70–75, 75–80…). Individuos: cada persona incluida en la muestra.</p></div>
-<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Estudio de artrosis en el hospital</p><p>Técnica de rehabilitación dirigida a pacientes de más de 50 años; solo hay 50 que cumplen las características. Población: todos los pacientes de más de 50 años a los que se quiere aplicar la técnica. Muestra: esos 50 pacientes. Individuos: cada uno de ellos. Muestreo: lo ideal sería aleatorio simple entre todos los pacientes de más de 50 años; al haber solo 50 con unas características concretas, puede considerarse no aleatorio intencional (otras respuestas valen si se justifican).</p></div>
-<div class="callout callout--example" data-icon="🧪"><p class="callout__title">Ejemplo · Solución del manual · caso práctico 1 (artrosis)</p><p>La población es el conjunto de personas mayores de 50 años, a las que va destinada la técnica. La muestra es el conjunto de 50 pacientes que se pueden analizar y los individuos son cada uno de ellos. El muestreo es no aleatorio, ya que se analizan los 50 pacientes que hay. Si fuera aleatorio habría que escoger una submuestra de esos 50, con lo que el estudio podría perder poder estadístico.</p></div>
-
+<h2 id="cuatro-preguntas">Cuatro preguntas, cuatro respuestas <a class="anchor" href="#cuatro-preguntas" aria-label="Enlace a la sección: Cuatro preguntas, cuatro respuestas">#</a></h2>
+<p>Si puedes responder a estas cuatro frases, ya dominas la base del muestreo.</p>
+<div class="pm-gold"><span class="pm-gold__tag">⭐ LA REGLA DE ORO</span><h3>Cuatro preguntas. Cuatro respuestas claras.</h3>
+<ul><li class="pm-q"><span aria-hidden="true">🎯</span><em>DEFINICIÓN</em><strong>Población <i>=</i></strong><p>sobre quién quiero saber.</p></li>
+<li class="pm-q"><span aria-hidden="true">🔍</span><em>DEFINICIÓN</em><strong>Muestra <i>=</i></strong><p>a quién estudio.</p></li>
+<li class="pm-q"><span aria-hidden="true">👤</span><em>DEFINICIÓN</em><strong>Individuos <i>=</i></strong><p>cada integrante.</p></li>
+<li class="pm-q"><span aria-hidden="true">🧭</span><em>DEFINICIÓN</em><strong>Muestreo <i>=</i></strong><p>cómo los elijo.</p></li></ul></div>
+<h2 id="dos-casos">Dos casos, una misma estructura <a class="anchor" href="#dos-casos" aria-label="Enlace a la sección: Dos casos, una misma estructura">#</a></h2>
+<p>Compara y decide: ¿cuándo usar cada muestreo?</p>
+<div class="cs-wrap" data-widget="caso-muestra"><div class="cs-grid">
+<article class="cs-card cs-card--1" data-case="1" aria-labelledby="cs1-h">
+<header class="cs-card__head"><span class="ico" aria-hidden="true">💊</span><span class="k">CASO 1 · PROBABILÍSTICO</span><small>Eficacia de un fármaco</small><h3 id="cs1-h">Estatinas</h3><p>Un estudio grande necesita que todos los grupos queden representados.</p></header>
+<div class="cs-card__body">
+<figure class="cs-circle"><svg viewBox="0 0 240 250" role="img" aria-labelledby="cs1-t cs1-d" focusable="false"><title id="cs1-t">Población, muestra e individuo del caso de las estatinas</title><desc id="cs1-d">Un círculo grande de puntos representa a toda la población. Dentro hay un círculo más pequeño, la muestra. Un punto naranja destacado es un individuo, una persona.</desc><text class="lbl" x="120" y="12" text-anchor="middle">POBLACIÓN</text><circle class="rim" cx="120" cy="132" r="108"/><g class="ring"><circle class="pd" cx="214.0" cy="132.0" r="4"/><circle class="pd" cx="211.9" cy="151.5" r="4"/><circle class="pd" cx="205.9" cy="170.2" r="4"/><circle class="pd" cx="196.0" cy="187.3" r="4"/><circle class="pd" cx="182.9" cy="201.9" r="4"/><circle class="pd" cx="167.0" cy="213.4" r="4"/><circle class="pd" cx="149.0" cy="221.4" r="4"/><circle class="pd" cx="129.8" cy="225.5" r="4"/><circle class="pd" cx="110.2" cy="225.5" r="4"/><circle class="pd" cx="91.0" cy="221.4" r="4"/><circle class="pd" cx="73.0" cy="213.4" r="4"/><circle class="pd" cx="57.1" cy="201.9" r="4"/><circle class="pd" cx="44.0" cy="187.3" r="4"/><circle class="pd" cx="34.1" cy="170.2" r="4"/><circle class="pd" cx="28.1" cy="151.5" r="4"/><circle class="pd" cx="26.0" cy="132.0" r="4"/><circle class="pd" cx="28.1" cy="112.5" r="4"/><circle class="pd" cx="34.1" cy="93.8" r="4"/><circle class="pd" cx="44.0" cy="76.7" r="4"/><circle class="pd" cx="57.1" cy="62.1" r="4"/><circle class="pd" cx="73.0" cy="50.6" r="4"/><circle class="pd" cx="91.0" cy="42.6" r="4"/><circle class="pd" cx="110.2" cy="38.5" r="4"/><circle class="pd" cx="129.8" cy="38.5" r="4"/><circle class="pd" cx="149.0" cy="42.6" r="4"/><circle class="pd" cx="167.0" cy="50.6" r="4"/><circle class="pd" cx="182.9" cy="62.1" r="4"/><circle class="pd" cx="196.0" cy="76.7" r="4"/><circle class="pd" cx="205.9" cy="93.8" r="4"/><circle class="pd" cx="211.9" cy="112.5" r="4"/></g><circle class="core" cx="120" cy="132" r="56"/><text x="120" y="130" text-anchor="middle">MUESTRA</text><text x="120" y="146" text-anchor="middle" style="font-size:10px;font-weight:600">representativa</text><circle class="who" cx="189.9" cy="69.1" r="11"/><text class="lbl" x="203.9" y="55.1" text-anchor="start">INDIVIDUO</text></svg><figcaption>El círculo pequeño vive dentro del grande. El punto naranja es una persona.</figcaption></figure>
+<dl class="cs-def"><dt>🌍 POBLACIÓN</dt><dd>Todos los hombres de <b>65 años o más</b> que van a recibir estatinas, sin límite geográfico.</dd>
+<dt class="m">🧪 MUESTRA</dt><dd>Grupo representativo de distintas provincias, zonas rurales y urbanas, niveles socioeconómicos y tramos de edad 65–70 · 70–75 · 75–80…</dd>
+<dt class="i">👤 INDIVIDUOS</dt><dd>Cada hombre que participa en el estudio.</dd></dl>
+<div class="cs-how"><h4>🎯 Muestreo: aleatorio estratificado</h4><p>Es probabilístico. Garantiza la representación por edad, zona y nivel socioeconómico.</p><div class="cs-chips" aria-label="Estratos"><span>65–70</span><span>70–75</span><span>75–80</span><span>Rural</span><span>Urbano</span><span>Provincias</span></div></div>
+</div></article>
+<article class="cs-card cs-card--2" data-case="2" aria-labelledby="cs2-h">
+<header class="cs-card__head"><span class="ico" aria-hidden="true">🦵</span><span class="k">CASO 2 · NO PROBABILÍSTICO</span><small>Estudio en el hospital</small><h3 id="cs2-h">Artrosis</h3><p>Cuando el grupo accesible es pequeño, estudiar a todos puede ser la mejor decisión.</p></header>
+<div class="cs-card__body">
+<div class="cs-meter"><div class="cs-meter__n">50<span>/50</span></div><div>pacientes incluidos · <b>100 % incluidos</b></div><div class="cs-meter__bar" aria-hidden="true"><i></i></div><p style="margin:0">No se dejó fuera a nadie que cumpliera los criterios.</p></div>
+<ul class="cs-people" aria-hidden="true"><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li><li>👤</li></ul>
+<div class="cs-pick"><label for="cs-rng">Arrastra para destacar a un paciente</label><input id="cs-rng" type="range" min="1" max="50" value="25"><div class="ends"><span>1</span><span>50</span></div><p class="cs-pick__out" role="status" style="margin:.4rem 0 0">Paciente 25 de 50 · cada silueta es un individuo.</p></div>
+<dl class="cs-def"><dt>🌍 POBLACIÓN</dt><dd>Todos los pacientes de más de <b>50 años</b> a los que va destinada la técnica de rehabilitación.</dd>
+<dt class="m">🧪 MUESTRA</dt><dd>Los 50 pacientes que cumplen los criterios.</dd>
+<dt class="i">👤 INDIVIDUOS</dt><dd>Cada uno de los 50 pacientes.</dd></dl>
+<div class="cs-how"><h4>🎯 Muestreo: intencional / por conveniencia</h4><p>No probabilístico. Solo hay 50 que cumplen los criterios: se estudian todos. Una submuestra aleatoria perdería poder estadístico. Es estudiar <b>toda la población accesible</b>.</p></div>
+</div></article></div></div>
+<p class="ct__rule" style="margin-top:1rem"><b>En una frase:</b> en el caso 1 la variedad exige estratificar; en el caso 2 la escasez exige incluir a todos.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Tabla comparativa final: la misma estructura, dos decisiones distintas</caption><thead><tr><th scope="col">Pregunta</th><th scope="col">💊 Caso 1 · Estatinas</th><th scope="col">🦵 Caso 2 · Artrosis</th></tr></thead><tbody><tr><th scope="row">Población</th><td>Hombres ≥ 65 años que recibirán estatinas, sin límite geográfico.</td><td>Pacientes &gt; 50 años destinatarios de la técnica.</td></tr><tr><th scope="row">Muestra</th><td>Grupo representativo por edad, zona y nivel socioeconómico.</td><td>Los 50 pacientes que cumplen criterios.</td></tr><tr><th scope="row">Muestreo</th><td>Probabilístico · aleatorio estratificado</td><td>No probabilístico · intencional / conveniencia</td></tr><tr><th scope="row">¿Por qué ese muestreo?</th><td>Garantiza la representación de cada grupo importante.</td><td>Solo hay 50 elegibles; incluirlos a todos conserva el poder estadístico.</td></tr></tbody></table></div>
+<h2 id="actividad-resuelta">Actividad resuelta: población, muestra, individuos y muestreo <a class="anchor" href="#actividad-resuelta" aria-label="Enlace a la sección: Actividad resuelta: población, muestra, individuos y muestreo">#</a></h2>
+<p>Actividad del manual (caso práctico 1): identifica población, muestra, individuos y tipo de muestreo en cada ejemplo.</p>
+<div class="duo"><div class="duo__c duo__c--0"><span class="pill">1 · Caso</span><h3>Eficacia de un fármaco (estatinas)</h3>
+<ul><li><b>Población:</b> todos los hombres de 65 años o más que van a recibir tratamiento con estatinas, independientemente de su lugar de residencia.</li>
+<li><b>Muestra:</b> un grupo representativo de esos hombres, de diferentes provincias, de zonas rurales y urbanas y con distintos niveles socioeconómicos y edades (65-70, 70-75, 75-80 años…).</li>
+<li><b>Individuos:</b> cada uno de los hombres que participa en el estudio.</li>
+<li><b>Tipo de muestreo:</b> probabilístico, preferiblemente aleatorio estratificado, para garantizar la representación de los distintos grupos de edad, zonas geográficas y niveles socioeconómicos.</li></ul></div>
+<div class="duo__c duo__c--1"><span class="pill">2 · Caso</span><h3>Estudio de artrosis en el hospital</h3>
+<ul><li><b>Población:</b> todos los pacientes mayores de 50 años que presentan las características necesarias para recibir la técnica de rehabilitación estudiada.</li>
+<li><b>Muestra:</b> los 50 pacientes que cumplen los criterios establecidos y participan en el estudio.</li>
+<li><b>Individuos:</b> cada uno de los 50 pacientes incluidos.</li>
+<li><b>Tipo de muestreo:</b> no probabilístico, de tipo intencional o por conveniencia, ya que se seleccionan los 50 pacientes disponibles que cumplen los requisitos. Otras respuestas valen si se justifican.</li></ul></div></div>
+<h3 id="justificacion">Justificación del tipo de muestreo <a class="anchor" href="#justificacion" aria-label="Enlace a la sección: Justificación del tipo de muestreo">#</a></h3>
+<p><b>Caso 1:</b> se recomienda un muestreo aleatorio estratificado porque permite representar adecuadamente los diferentes grupos de edad, procedencias geográficas y situaciones socioeconómicas.</p>
+<p><b>Caso 2:</b> al disponer únicamente de 50 pacientes que cumplen los criterios, se considera adecuado incluirlos a todos. Se estudia así toda la población accesible, sin necesidad de seleccionar una submuestra (que podría restar poder estadístico).</p>
+<div class="callout callout--warn" data-icon="💬"><p class="callout__title">Recuerda</p><p>En el segundo supuesto, incluir a los 50 pacientes significa estudiar toda la población accesible que cumple los criterios, no seleccionar una muestra aleatoria de ellos. Esta distinción es importante para justificar bien la respuesta.</p></div>
+<div class="callout callout--key" data-icon="✅"><p class="callout__title">Conclusión</p><p>La población es el conjunto total sobre el que se desea obtener información; la muestra, el grupo seleccionado para realizar el estudio; y los individuos, cada uno de sus integrantes. El muestreo es el procedimiento utilizado para seleccionar a los participantes: elegir bien el tipo de muestreo define si los resultados pueden representar a la población.</p></div>
+<p class="muted"><b>Bibliografía de consulta:</b> Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, P. (2014). <i>Metodología de la investigación</i>. McGraw-Hill. · Argimon Pallàs, J. M. y Jiménez Villa, J. (2019). <i>Métodos de investigación clínica y epidemiológica</i>. Elsevier. · Organización Mundial de la Salud (OMS), <a href="https://www.who.int/" rel="noopener">Investigación en salud pública</a>.</p>
 <h2 id="ojo">Ojo: ten en cuenta <a class="anchor" href="#ojo" aria-label="Enlace a la sección: Ojo: ten en cuenta">#</a></h2>
 <div class="callout callout--warn" data-icon="👁"><p class="callout__title">Regla de oro</p><p>Si la población es pequeña se puede estudiar entera; si es muy grande es físicamente imposible, y se trabaja con una muestra.</p></div>
 
@@ -166,7 +227,7 @@
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../descriptiva/estadistica.html" rel="prev"><small>← Anterior</small><strong>¿Qué es la estadística?</strong></a><a class="next" href="../descriptiva/muestreo.html" rel="next"><small>Siguiente →</small><strong>Tipos de muestreo</strong></a></nav>
     </div>
   </main>
-  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#practica">En la práctica: ejemplos y datos</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></aside>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#esencial">Lo esencial: qué necesitas saber</a></li><li><a href="#todo-parte-cada-uno">Todo, parte y cada uno</a></li><li><a href="#ojo">Ojo: ten en cuenta</a></li><li><a href="#demostracion">Pasa a la demostración</a></li><li><a href="#quiz">Comprueba lo aprendido</a></li></ol></aside>
 </div>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
@@ -177,6 +238,7 @@
   <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
 </footer>
 <script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/js/widgets/caso-muestra.js" defer></script>
 <script src="../assets/js/widgets/muestreo.js" defer></script>
 </body>
 </html>
