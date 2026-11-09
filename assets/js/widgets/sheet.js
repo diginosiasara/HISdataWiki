@@ -12,6 +12,7 @@
   var KIND = { formula: 'Fórmula', input: 'Entrada editable', text: 'Texto', number: 'Número fijo', empty: 'Celda vacía' };
   var MAXCOL = 26;
 
+  function colW(sd, c) { return Math.max(6, Math.min(c === 1 ? 34 : 22, ((sd.colWidths || [])[c - 1] || 12))); }
   function merges(sd) {
     var F = HIS.formula, span = {}, cover = {};
     (sd.merges || []).forEach(function (m) {
@@ -27,9 +28,10 @@
     var F = HIS.formula, def = (root.HIS_BOOKS || {})[cfg.book];
     var base = root.HIS_BASE || '';
     if (!def) { el.appendChild(h('p.callout.callout--warn', { role: 'alert' }, 'No se encuentra la hoja de cálculo «' + cfg.book + '».')); return; }
-    var book = F.createBook(def, { locale: 'es' });
+    var book = F.createBook(def, { locale: 'es' }), api = {};
+    (HIS.sheets = HIS.sheets || {})[cfg.book] = api;
     var X = HIS.formulaExplain;
-    var mode = 'values', panels = [], byName = {}, current = 0, tabsApi = null;
+    var mode = 'values', panels = [], byName = {}, current = 0, tabsApi = null, lastOpener = null, routeVals = [];
 
     /* ---------- cabecera ---------- */
     var head = el.querySelector('.widget__head');
@@ -47,7 +49,11 @@
       h('li', null, h('span.sheet-key.sheet-key--input', { 'aria-hidden': 'true' }, '12'), ' Entrada: se puede cambiar (Intro o F2)'),
       h('li', null, h('span.sheet-key.sheet-key--formula', { 'aria-hidden': 'true' }, '='), ' Fórmula: se calcula sola'),
       h('li', null, h('span.sheet-key.sheet-key--text', { 'aria-hidden': 'true' }, 'Aa'), ' Texto o rótulo'));
-    var toolbar = h('div.sheet-toolbar', { role: 'group', 'aria-label': 'Opciones de la hoja de cálculo' }, fxBtn, resetBtn, dl);
+    var bigBtn = h('button.btn.btn--ghost', { type: 'button', 'aria-pressed': 'false', onclick: function () { var on = el.classList.toggle('is-big'); bigBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); bigBtn.textContent = on ? 'Reducir la hoja' : 'Ampliar la hoja'; HIS.a11y.announce(on ? 'Hoja ampliada.' : 'Hoja reducida.', { delay: 50 }); } }, 'Ampliar la hoja');
+    var backBtn = h('button.btn.sheet-back', { type: 'button', hidden: true, onclick: function () { var o = lastOpener; backBtn.hidden = true; lastOpener = null; if (o && o.isConnected) { o.scrollIntoView({ block: 'center', behavior: HIS.prefs.reducedMotion() ? 'auto' : 'smooth' }); o.focus({ preventScroll: true }); } } }, '↩ Volver al paso del ejercicio');
+    var simple = false;
+    var simpleBtn = h('button.btn.btn--ghost', { type: 'button', 'aria-pressed': 'false', onclick: function () { setSimple(!simple); } }, 'Vista de tabla simple');
+    var toolbar = h('div.sheet-toolbar', { role: 'group', 'aria-label': 'Opciones de la hoja de cálculo' }, backBtn, fxBtn, simpleBtn, bigBtn, resetBtn, dl);
     el.appendChild(toolbar);
     el.appendChild(legend);
 
@@ -56,13 +62,74 @@
       var P = buildPanel(sd);
       panels.push(P); byName[sd.name] = P;
     });
+    var route = buildRoute(); if (route) el.appendChild(route);
     var tabs = HIS.ui.tabs(panels.map(function (P) { return { id: P.name, label: P.name, content: P.root }; }), {
       label: 'Hojas del libro ' + def.title,
-      onSelect: function (i) { current = i; if (panels[i]) showCharts(panels[i]); }
+      onSelect: function (i) {
+        var first = current === i && !tabsApi; current = i; if (panels[i]) { showCharts(panels[i]); if (simple) renderSimple(panels[i]); }
+        if (tabsApi && panels.length > 1) HIS.a11y.announce('Hoja ' + panels[i].name + ', ' + (i + 1) + ' de ' + panels.length + (panels[i].rows ? '. ' + panels[i].rows + ' filas.' : '.'), { delay: 80 });
+      }
     });
+    tabs.el.classList.add('tabs--sheet'); if (panels.length === 1) tabs.el.classList.add('tabs--single');
     tabsApi = tabs;
     el.appendChild(tabs.el);
     showCharts(panels[0]);
+
+    /* ---------- ruta guiada: salta directo a cada fórmula, agrupada por apartado ---------- */
+    function sectionOf(sd, row) {
+      var best = null;
+      Object.keys(sd.cells).forEach(function (k) {
+        var p = F.parseRef(k), c = sd.cells[k];
+        if (p.col === 1 && p.row < row && c.b && typeof c.v === 'string' && !c.bg && (!best || p.row > best.row)) best = { row: p.row, text: c.v.replace(/\s*\(.*$/, '') };
+      });
+      return best ? best.text : '';
+    }
+    function buildRoute() {
+      var wrap = h('details.fold.sheet-route'), body = h('div.sheet-route__body'), total = 0;
+      panels.forEach(function (P) {
+        if (!P.tds || !Object.keys(P.tds).length) return;
+        var cells = P.sd.cells, fk = Object.keys(cells).filter(function (k) { return cells[k].f != null && P.tds[k]; });
+        if (!fk.length) return;
+        var items = [];
+        if (fk.length > 40) {
+          var cols = {};
+          fk.forEach(function (k) { var p = F.parseRef(k); if (!cols[p.col] || p.row < cols[p.col].row) cols[p.col] = { key: k, row: p.row, col: p.col }; cols[p.col].n = (cols[p.col].n || 0) + 1; });
+          Object.keys(cols).forEach(function (c) { var o = cols[c]; items.push({ key: o.key, label: (X.labelOf(book, P.name, o.col, o.row) || 'columna ' + F.numToCol(o.col)) + ' (' + o.n + ' celdas)', sec: 'Columnas calculadas' }); });
+        } else {
+          fk.sort(function (a, b) { var p = F.parseRef(a), q = F.parseRef(b); return p.row - q.row || p.col - q.col; }).forEach(function (k) {
+            var p = F.parseRef(k), v = book.display(P.name, k);
+            if (typeof v === 'string' && v.length > 40) return;
+            items.push({ key: k, label: X.labelOf(book, P.name, p.col, p.row) || '', sec: sectionOf(P.sd, p.row) });
+          });
+        }
+        var secs = {}, order = [];
+        items.forEach(function (it) { var t = it.sec || 'Fórmulas'; if (!secs[t]) { secs[t] = []; order.push(t); } secs[t].push(it); });
+        order.forEach(function (t) {
+          var ul = h('ul.sheet-route__list');
+          secs[t].forEach(function (it) {
+            var val = h('span.sheet-route__v');
+            routeVals.push({ P: P, key: it.key, el: val });
+            ul.appendChild(h('li', null, h('button.sheet-route__b', { type: 'button', onclick: function (e) { jump(P.name, it.key, e.currentTarget); } }, h('b', null, it.key), it.label ? ' ' + it.label : '', ' ', val)));
+            total++;
+          });
+          body.appendChild(h('div.sheet-route__g', null, h('h4.sheet-route__t', null, (panels.length > 1 ? P.name + ' · ' : '') + t), ul));
+        });
+      });
+      if (!total) return null;
+      wrap.appendChild(h('summary', null, 'Ir directamente a una fórmula (' + total + ')'));
+      wrap.appendChild(body); refreshRoute();
+      return wrap;
+    }
+    function refreshRoute() { routeVals.forEach(function (r) { var t = book.display(r.P.name, r.key); r.el.textContent = t != null && String(t).length <= 30 && !/ celdas\)/.test(r.el.parentNode.textContent) ? '= ' + t : ''; }); }
+    function jump(sheet, key, opener) {
+      var P = byName[sheet]; if (!P || !P.tds[key]) return;
+      el.scrollIntoView({ block: 'start', behavior: HIS.prefs.reducedMotion() ? 'auto' : 'smooth' });
+      goTo(sheet, key);
+      if (opener) { lastOpener = opener; backBtn.hidden = !!opener.closest('.sheet-route'); }
+      var ex = X.explain(book, sheet, key);
+      HIS.a11y.announce('Celda ' + key + ' de la hoja ' + sheet + (ex.valueText ? ', valor ' + ex.valueText : '') + '. ' + (ex.what || ''), { delay: 250 });
+    }
+    api.jump = jump;
 
     function cellKind(c) {
       if (!c) return 'empty';
@@ -93,19 +160,19 @@
       if (chartsOnly) {
         keys.forEach(function (k) { P.root.appendChild(h('p.sheet-note', null, cells[k].v)); });
       } else {
-        P.root.appendChild(inspBox);
         var cols = Math.min(sd.cols || 1, MAXCOL), rows = sd.rows || 1, c, r;
         P.cols = cols; P.rows = rows; P.mg = mg;
         var colgroup = h('colgroup', null, h('col.sheet-rh'));
-        for (c = 1; c <= cols; c++) colgroup.appendChild(h('col', { style: { width: Math.max(6, Math.min(60, ((sd.colWidths || [])[c - 1] || 12))) + 'ch' } }));
+        for (c = 1; c <= cols; c++) colgroup.appendChild(h('col', { style: { width: colW(sd, c) + 'ch' } }));
         var thead = h('tr', { role: 'row' }, h('th.sheet-corner', { scope: 'col', role: 'columnheader' }, h('span.sr-only', null, 'Fila')));
         for (c = 1; c <= cols; c++) thead.appendChild(h('th.sheet-ch', { scope: 'col', role: 'columnheader' }, F.numToCol(c)));
         var tbody = h('tbody');
         for (r = 1; r <= rows; r++) {
           var tr = h('tr', { role: 'row' }, h('th.sheet-rh', { scope: 'row', role: 'rowheader' }, String(r)));
+          var skipTo = 0;
           for (c = 1; c <= cols; c++) {
             var key = F.keyOf(c, r);
-            if (mg.cover[key]) continue;
+            if (mg.cover[key] || c <= skipTo) continue;
             var rec = cells[key], cell = book.cell(sd.name, key), kind = cellKind(cell), cls = ['sheet-cell', 'is-' + kind];
             if (rec) {
               if (rec.b) cls.push('is-b'); if (rec.i) cls.push('is-i');
@@ -116,7 +183,16 @@
               if (kind !== 'text' && kind !== 'empty' && typeof (cell && book.get(sd.name, key)) === 'number' && !rec.al) cls.push('is-right');
             }
             var td = h('td', { class: cls.join(' '), role: 'gridcell', tabindex: '-1', 'aria-readonly': kind === 'input' ? 'false' : 'true', 'aria-selected': 'false', dataset: { ref: key } });
-            var sp = mg.span[key];
+            var sp = mg.span[key], spill = 0;
+            if (!sp && rec && kind === 'text' && !rec.bg && typeof rec.v === 'string') {
+              var need = Math.ceil(rec.v.length * (rec.b ? 1.1 : 1) * (rec.sz && rec.sz >= 14 ? 1.5 : 1)), have = colW(sd, c);
+              for (var k = c + 1; k <= cols && have < need; k++) {
+                var nk = F.keyOf(k, r), nr = cells[nk];
+                if (mg.cover[nk] || mg.span[nk] || (nr && (nr.v != null && nr.v !== '' || nr.f != null || nr.bg || nr.input))) break;
+                have += colW(sd, k); spill++;
+              }
+              if (spill) { td.setAttribute('colspan', spill + 1); td.className = td.className.replace(' is-wrap', '') + ' is-spill'; skipTo = c + spill; }
+            }
             if (sp) { if (sp.cs > 1) td.setAttribute('colspan', Math.min(sp.cs, cols - c + 1)); if (sp.rs > 1) td.setAttribute('rowspan', sp.rs); }
             P.tds[key] = td; td.textContent = cellText(P, key);
             tr.appendChild(td);
@@ -124,8 +200,10 @@
           tbody.appendChild(tr);
         }
         P.table = h('table.sheet-grid', { role: 'grid', 'aria-label': 'Hoja «' + sd.name + '» del libro ' + def.title + '. ' + (HIS.sheetHint || 'Usa las flechas para moverte; Intro o F2 edita las celdas de entrada.'), 'aria-rowcount': rows + 1, 'aria-colcount': cols + 1 }, colgroup, h('thead', null, thead), tbody);
+        var tw = 0; for (c = 1; c <= cols; c++) tw += colW(sd, c); P.table.style.width = 'calc(3rem + ' + (tw + cols * 1.6) + 'ch)';
         P.scroll = h('div.sheet-scroll', { tabindex: '0', role: 'region', 'aria-label': 'Hoja ' + sd.name + ': cuadrícula desplazable' + (rows > 14 ? ' (' + rows + ' filas)' : '') }, P.table);
         P.root.appendChild(P.scroll);
+        P.root.appendChild(inspBox);
         P.table.addEventListener('keydown', function (e) { onKey(P, e); });
         P.table.addEventListener('click', function (e) { var td = e.target.closest && e.target.closest('td'); if (td && td.dataset.ref && !(e.target.tagName === 'INPUT')) select(P, td.dataset.ref, false); });
         P.table.addEventListener('dblclick', function (e) { var td = e.target.closest && e.target.closest('td'); if (td && td.dataset.ref) { select(P, td.dataset.ref, true); startEdit(P, td.dataset.ref); } });
@@ -190,11 +268,11 @@
       P.lastExplain = ex;
       var cell = book.cell(P.name, key), kind = ex.kind, lab = X.labelOf(book, P.name, F.parseRef(key).col, F.parseRef(key).row);
       HIS.dom.clear(box);
-      box.setAttribute('role', 'region'); box.setAttribute('aria-label', 'Explicación de la celda ' + key + ' (hoja ' + P.name + ', ' + def.title + ')');
+      box.setAttribute('role', 'region'); box.setAttribute('tabindex', '0'); box.setAttribute('aria-label', 'Explicación de la celda ' + key + ' (hoja ' + P.name + ', ' + def.title + ')');
       var fx = h('div.sheet-fbar__f');
       if (kind === 'formula') ex.tokens.forEach(function (t) { fx.appendChild(tokenNode(t)); });
       else fx.appendChild(h('span', null, ex.valueText || (kind === 'empty' ? '(vacía)' : '')));
-      box.appendChild(h('div.sheet-fbar', null, h('span.sheet-fbar__ref', null, key), h('span.sheet-fbar__fx', { 'aria-hidden': 'true' }, 'fx'), h('code.sheet-fbar__code', null, fx)));
+      box.appendChild(h('div.sheet-fbar', null, h('span.sheet-fbar__ref', null, key), h('span.sheet-fbar__fx', { 'aria-hidden': 'true' }, 'fx'), h('code.sheet-fbar__code', { tabindex: '0' }, fx)));
       var dl = h('dl.sheet-insp__dl');
       dl.appendChild(h('dt', null, 'Tipo de celda'));
       dl.appendChild(h('dd', null, h('span.pill', null, KIND[kind]), lab && kind !== 'text' ? h('span.sheet-insp__lab', null, ' ' + lab) : null));
@@ -234,7 +312,11 @@
       var i = panels.indexOf(P);
       if (i !== current) tabsApi.select(i);
       select(P, key, true);
-      var td = P.tds[key]; if (td && td.scrollIntoView) td.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      var td = P.tds[key], sc = P.scroll;
+      if (td && sc) {
+        var right = td.offsetLeft + td.offsetWidth;
+        sc.scrollTo({ top: Math.max(0, td.offsetTop - sc.clientHeight / 2 + td.offsetHeight / 2), left: right <= sc.clientWidth ? 0 : Math.max(0, right - sc.clientWidth + 24) });
+      }
     }
 
     /* ---------- teclado ---------- */
@@ -320,7 +402,7 @@
       panels.forEach(function (Q) { if (Q.charts && Q !== panels[current]) Q.dirty = true; });
       var cur = panels[current]; cur.dirty = true; showCharts(cur);
       if (cur.active) renderInspector(cur, cur.active);
-      resetBtn.disabled = !book.isModified();
+      resetBtn.disabled = !book.isModified(); refreshRoute(); refreshSimple();
       var n = Math.max(0, changed.length - 1);
       HIS.a11y.announce(key + ' vale ahora ' + book.display(P.name, key) + '. Se ' + (n === 1 ? 'ha recalculado 1 celda.' : 'han recalculado ' + n + ' celdas.') + ' Gráficas actualizadas.', { delay: 150 });
     }
@@ -330,9 +412,45 @@
       panels.forEach(function (P) { Object.keys(P.tds).forEach(function (k) { paintCell(P, k); }); P.dirty = true; });
       showCharts(panels[current]);
       var P = panels[current]; if (P.active) renderInspector(P, P.active);
-      resetBtn.disabled = true;
+      resetBtn.disabled = true; refreshRoute(); refreshSimple();
       HIS.a11y.announce('Valores originales restablecidos.', { delay: 100 });
     }
+
+    /* Vista de tabla simple: una tabla HTML normal (sin cuadrícula interactiva) para lectores de pantalla y para móviles */
+    function renderSimple(P) {
+      if (!P || !P.table) return;
+      if (!P.simpleBox) { P.simpleBox = h('div.sheet-simple', { tabindex: '0', role: 'region', 'aria-label': 'Hoja ' + P.name + ' como tabla simple' }); P.scroll.parentNode.insertBefore(P.simpleBox, P.scroll); }
+      var sd = P.sd, cells = sd.cells, F2 = F, rows = [], used = [], r, c;
+      for (r = 1; r <= P.rows; r++) {
+        var row = [], any = false;
+        for (c = 1; c <= P.cols; c++) {
+          var k = F2.keyOf(c, r), t = book.cell(sd.name, k) ? book.display(sd.name, k) : (cells[k] && cells[k].v != null ? String(cells[k].v) : '');
+          if (t !== '' && t != null) { any = true; used[c] = true; }
+          row.push({ k: k, t: t == null ? '' : String(t), c: cells[k] });
+        }
+        if (any) rows.push({ r: r, cells: row });
+      }
+      var cs = []; for (c = 1; c <= P.cols; c++) if (used[c]) cs.push(c);
+      var tb = h('tbody'), body, isHead = function (x) { return x.c && x.c.bg && x.c.fg === '#ffffff'; };
+      var th = h('tr', null, h('th', { scope: 'col' }, 'Fila')); cs.forEach(function (cc) { th.appendChild(h('th', { scope: 'col' }, 'Col. ' + F2.numToCol(cc))); });
+      rows.forEach(function (R) {
+        var head = R.cells.some(isHead), tr = h('tr', { class: head ? 'is-head' : '' }, h('th', { scope: 'row' }, String(R.r)));
+        cs.forEach(function (cc) {
+          var x = R.cells[cc - 1], kind = x.c && x.c.input ? 'is-input' : x.c && x.c.f != null ? 'is-formula' : '';
+          tr.appendChild(head && x.t ? h('th', { scope: 'col', class: 'is-h' }, x.t) : h('td', { class: kind }, x.t));
+        });
+        tb.appendChild(tr);
+      });
+      HIS.dom.clear(P.simpleBox);
+      P.simpleBox.appendChild(h('table.sheet-simple__t', null, h('caption', null, 'Hoja «' + P.name + '» (' + rows.length + ' filas con datos). Verde: fórmula; azul: dato que puedes cambiar en la hoja interactiva.'), h('thead', null, th), tb));
+    }
+    function setSimple(on) {
+      simple = on; simpleBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); simpleBtn.textContent = on ? 'Volver a la hoja interactiva' : 'Vista de tabla simple';
+      el.classList.toggle('is-simple', on);
+      if (on) panels.forEach(function (P) { renderSimple(P); });
+      HIS.a11y.announce(on ? 'Vista de tabla simple activada. Cada hoja es ahora una tabla normal con cabeceras de fila y de columna.' : 'Vuelves a la hoja interactiva.', { delay: 80 });
+    }
+    function refreshSimple() { if (simple) renderSimple(panels[current]); }
 
     function setMode(m) {
       mode = m; fxBtn.setAttribute('aria-pressed', m === 'formulas' ? 'true' : 'false');
@@ -343,5 +461,13 @@
   }
 
   HIS.widgets.register('sheet', mount);
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-sheet-goto]'); if (!b) return;
+    var a = b.getAttribute('data-sheet-goto').split('|'), w = document.querySelector('[data-widget="sheet"][data-book="' + a[0] + '"]');
+    if (!w) return;
+    HIS.widgets.init(w);
+    var go = function () { var api = HIS.sheets && HIS.sheets[a[0]]; if (api && api.jump) api.jump(a[1], a[2], b); };
+    go();
+  });
   HIS.sheetMount = mount;
 })(window);

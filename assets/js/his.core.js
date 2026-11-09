@@ -370,7 +370,7 @@
     var list = h('div.tabs__list', { role: 'tablist', 'aria-label': o.label || 'Secciones' });
     var panels = [], buttons = [];
     items.forEach(function (it, i) {
-      var b = h('button.tabs__tab', { role: 'tab', type: 'button', id: base + '-t' + i, 'aria-controls': base + '-p' + i, 'aria-selected': 'false', tabindex: '-1' }, it.label);
+      var b = h('button.tabs__tab', { role: 'tab', type: 'button', id: base + '-t' + i, 'aria-controls': base + '-p' + i, 'aria-selected': 'false', tabindex: '-1', 'aria-label': it.label + (items.length > 1 ? ', pestaña ' + (i + 1) + ' de ' + items.length : '') }, it.label);
       var p = h('div.tabs__panel', { role: 'tabpanel', id: base + '-p' + i, 'aria-labelledby': base + '-t' + i, tabindex: '0', hidden: '' }, it.content);
       buttons.push(b); panels.push(p); list.appendChild(b);
       b.addEventListener('click', function () { select(i); });
@@ -382,6 +382,7 @@
         if (on) panels[j].removeAttribute('hidden'); else panels[j].setAttribute('hidden', '');
       });
       if (focus) buttons[i].focus();
+      if (buttons[i].scrollIntoView && list.scrollWidth > list.clientWidth) buttons[i].scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'auto' });
       if (o.onSelect) o.onSelect(i, items[i]);
     }
     list.addEventListener('keydown', function (e) {
@@ -389,6 +390,7 @@
       var k = e.key, n = buttons.length, t = null;
       if (k === 'ArrowRight') t = (i + 1) % n; else if (k === 'ArrowLeft') t = (i - 1 + n) % n;
       else if (k === 'Home') t = 0; else if (k === 'End') t = n - 1;
+      else if (e.ctrlKey && k === 'PageDown') t = (i + 1) % n; else if (e.ctrlKey && k === 'PageUp') t = (i - 1 + n) % n;
       if (t != null) { e.preventDefault(); select(t, true); }
     });
     var el = h('div.tabs', null, list, panels);
