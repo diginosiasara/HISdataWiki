@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es" data-page="sis/cmbd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conjunto mínimo básico de datos (CMBD) · HISdata Wiki</title>
+<meta name="description" content="Qué es el CMBD, sus cuatro grupos de variables (personales, administrativas, clínico-asistenciales y de ámbito), el RD 69/2015, usos, fortalezas y comité técnico.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="CMBD, conjunto mínimo básico de datos, RAE-CMBD, POA, RUG, Real Decreto 69/2015, UF4">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Conjunto mínimo básico de datos (CMBD) · HISdata Wiki">
+<meta property="og:description" content="Qué es el CMBD, sus cuatro grupos de variables (personales, administrativas, clínico-asistenciales y de ámbito), el RD 69/2015, usos, fortalezas y comité técnico.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Conjunto mínimo básico de datos (CMBD)", "headline": "Conjunto mínimo básico de datos (CMBD)", "description": "Qué es el CMBD, sus cuatro grupos de variables (personales, administrativas, clínico-asistenciales y de ámbito), el RD 69/2015, usos, fortalezas y comité técnico.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}}</script>
+<link rel="stylesheet" href="../assets/css/cmbd.css">
+</head>
+<body data-block="sis">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li><li><a href="../descriptiva/laboratorio-posicion.html"><span class="num">Lab</span><span>Laboratorio visual</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
+      </ul>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html" aria-current="page"><span class="num">UF4·1</span><span>CMBD</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li><li><a href="../recursos/test-autoevaluacion.html"><span class="dot" style="--dot:var(--c-violet)"></span><span>Test de autoevaluación</span></a></li><li><a href="../recursos/test-plataforma.html"><span class="dot" style="--dot:var(--c-pink)"></span><span>Test por tipos UF1 a UF4</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/index.html">UF3 · Sistemas de información sanitaria</a></li><li><span aria-current="page">Conjunto mínimo básico de datos (CMBD)</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF4·1</span>UF4 · CMBD</p><h1>Conjunto mínimo básico de datos <span class="grad">(CMBD)</span></h1><p class="lead">La ficha común de cada episodio hospitalario: qué datos incluye, cómo se agrupan y para qué sirven.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 8 min de lectura</span><span class="origin origin--uf3">UF4 · Apuntes del curso</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">🗂️</span><strong class="vtile__big">4</strong><span class="vtile__txt">grupos de variables</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">⚖️</span><strong class="vtile__big">RD 69/2015</strong><span class="vtile__txt">regula los datos mínimos</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">📊</span><strong class="vtile__big">3</strong><span class="vtile__txt">listas: usos, fortalezas, comité</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🏥</span><strong class="vtile__big">RAE</strong><span class="vtile__txt">atención especializada</span></li></ul></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#que-es">¿Qué es el CMBD?</a></li><li><a href="#variables">Los grupos de variables</a></li><li><a href="#norma">Marco normativo</a></li><li><a href="#usos">Usos, fortalezas y funciones del Comité Técnico</a></li><li><a href="#niveles">Dónde encaja en los niveles del SIS</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">La idea en una frase</p><p>El CMBD es la «ficha común» de cada episodio hospitalario: los mismos datos en todos los centros para poder compararlos.</p></div>
+
+<h2 id="que-es">¿Qué es el CMBD? <a class="anchor" href="#que-es" aria-label="Enlace a la sección: ¿Qué es el CMBD?">#</a></h2>
+<div class="callout callout--def" data-icon="📘"><p class="callout__title">Conjunto mínimo básico de datos</p><p>Es el <b>conjunto estandarizado de datos administrativos y clínicos</b> que se recoge de cada episodio de atención especializada. Al ser iguales para todos los hospitales, permiten <b>comparar</b> la actividad asistencial.</p></div><ol class="flow"><li><b>Se atiende un episodio</b>Ingreso, urgencia, cirugía ambulatoria…</li><li><b>Se registran los datos</b>Personales, administrativos y clínicos.</li><li><b>Se codifican y validan</b>Con criterios comunes.</li><li><b>Se explotan</b>Indicadores, investigación y gestión.</li></ol>
+
+<h2 id="variables">Los grupos de variables <a class="anchor" href="#variables" aria-label="Enlace a la sección: Los grupos de variables">#</a></h2>
+<p>Los datos se organizan en cuatro grupos. Fíjate en qué <b>describe</b> cada uno:</p><ul class="cards"><li class="card"><span class="card__ico" aria-hidden="true">🪪</span><p class="card__h">Personales del paciente</p><p>Fecha de nacimiento, sexo, municipio de residencia, código de identificación personal y nº de historia clínica.</p></li><li class="card"><span class="card__ico" aria-hidden="true">🗂️</span><p class="card__h">Del episodio · administrativas</p><p>Fecha de ingreso, fecha de alta, tipo de ingreso y de contacto.</p></li><li class="card"><span class="card__ico" aria-hidden="true">🩺</span><p class="card__h">Del episodio · clínico-asistenciales</p><p>Diagnósticos, procedimientos codificados y el marcador <b>POA</b>.</p></li><li class="card"><span class="card__ico" aria-hidden="true">🧩</span><p class="card__h">De un ámbito concreto y otras</p><p>Variables específicas de un área, como los <b>RUG</b>, y otras variables.</p></li></ul><div class="callout callout--tip" data-icon="💡"><p class="callout__title">Truco para no confundirte</p><p><b>Personales</b> identifican a la persona; <b>administrativas</b> dicen cuándo y cómo entra y sale; <b>clínico-asistenciales</b> dicen qué le pasó y qué se hizo. Los diagnósticos con POA son clínicos, no administrativos.</p></div>
+
+<h2 id="norma">Marco normativo <a class="anchor" href="#norma" aria-label="Enlace a la sección: Marco normativo">#</a></h2>
+<p>El <b>Real Decreto 69/2015</b> regula los datos mínimos del CMBD y sus anexos definen la estructura y las características de los datos. Las <b>comunidades autónomas pueden añadir datos adicionales</b> a los mínimos.</p><div class="callout callout--warn" data-icon="⚖️"><p class="callout__title">No lo mezcles con la protección de datos</p><p>El Reglamento General 2016/679 (RGPD) regula el tratamiento de datos personales en general, tanto en el ámbito público como en el privado; no es exclusivo de los datos médicos privados. Más en <a href="../sis/aspectos-legales.html">Aspectos legales de los SIS</a>.</p></div>
+
+<h2 id="usos">Usos, fortalezas y funciones del Comité Técnico <a class="anchor" href="#usos" aria-label="Enlace a la sección: Usos, fortalezas y funciones del Comité Técnico">#</a></h2>
+<p>Tres listas que suelen pedirse en el test (pregunta 34). Aprende a qué columna pertenece cada frase:</p><div class="cmbd-cols"><section class="cmbd-col cmbd-col--uso"><h3>📊 Usos del CMBD</h3><ul><li>Análisis de la actividad asistencial</li><li>Docencia e investigación</li><li>Estudio de la mortalidad hospitalaria</li><li>Mejora continua en la calidad asistencial</li></ul></section><section class="cmbd-col cmbd-col--fort"><h3>💪 Fortalezas</h3><ul><li>Amplia variedad de indicadores a partir de datos primarios</li><li>Base homogénea y comparable entre instituciones</li></ul></section><section class="cmbd-col cmbd-col--com"><h3>🧑‍⚖️ Funciones del Comité Técnico</h3><ul><li>Ampliación del CMBD</li><li>Análisis de la información suministrada</li><li>Homologación de criterios y definiciones</li></ul></section></div><p class="cmbd-note">Ojo: «mejora continua de la calidad asistencial» podría considerarse también una fortaleza.</p>
+
+<h2 id="niveles">Dónde encaja en los niveles del SIS <a class="anchor" href="#niveles" aria-label="Enlace a la sección: Dónde encaja en los niveles del SIS">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Niveles del SIS y sus fuentes (desplazable)"><table class="table"><caption>Niveles del SIS y sus fuentes</caption><thead><tr><th scope="col">Nivel</th><th scope="col">Fuentes</th></tr></thead><tbody><tr><th scope="row">Atención primaria</th><td>SIAP y BDCAP</td></tr><tr><th scope="row">Atención especializada</th><td>RAE-CMBD, listas de espera quirúrgica y estadísticas hospitalarias</td></tr></tbody></table></div><p>Más detalle en <a href="../sis/elementos-sis.html">Elementos de un SIS</a>.</p>
+
+<h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
+<div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="quiz-cmbd">Test rápido del CMBD <a class="anchor" href="#quiz-cmbd" aria-label="Enlace a la sección: Test rápido del CMBD">#</a></h3></div><script type="application/json">{"questions": [{"q": "¿Qué grupo de variables incluye el marcador POA?", "options": ["Personales del paciente", "Administrativas del episodio", "Clínico-asistenciales del episodio"], "answer": 2, "why": "Los diagnósticos y el marcador POA son variables clínico-asistenciales del episodio."}, {"q": "¿Qué norma regula los datos mínimos del CMBD?", "options": ["Reglamento 2016/679", "Real Decreto 69/2015", "UNE 23500"], "answer": 1, "why": "El RD 69/2015 regula los datos mínimos; el 2016/679 es el RGPD."}, {"q": "¿Pueden las comunidades autónomas añadir datos al CMBD?", "options": ["Sí, datos adicionales", "No, nunca", "Solo en atención primaria"], "answer": 0, "why": "Los datos mínimos son comunes, pero cada comunidad puede ampliarlos."}, {"q": "«Base homogénea y comparable entre instituciones» es…", "options": ["Un uso", "Una fortaleza", "Una función del Comité Técnico"], "answer": 1, "why": "Es una fortaleza del CMBD."}]}</script></div><div class="callout callout--tip" data-icon="📝"><p class="callout__title">Sigue practicando</p><p>Las preguntas 31 a 34 del <a href="../recursos/test-plataforma.html">test por tipos</a> son de CMBD.</p></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/aspectos-legales.html" rel="prev"><small>← Anterior</small><strong>Aspectos legales de los SIS</strong></a><a class="next" href="../recursos/test-plataforma.html" rel="next"><small>Siguiente →</small><strong>Test por tipos</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#que-es">¿Qué es el CMBD?</a></li><li><a href="#variables">Los grupos de variables</a></li><li><a href="#norma">Marco normativo</a></li><li><a href="#usos">Usos, fortalezas y funciones del Comité Técnico</a></li><li><a href="#niveles">Dónde encaja en los niveles del SIS</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.cmbd-cols{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin:1rem 0}
+.cmbd-col{padding:1rem 1.1rem;border-radius:var(--r-card,16px);background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--cc);box-shadow:var(--shadow-soft)}
+.cmbd-col h3{margin:0 0 .6rem;font-size:1.05rem}.cmbd-col ul{margin:0;padding-left:1.1rem;display:grid;gap:.4rem}
+.cmbd-col--uso{--cc:var(--c-blue)}.cmbd-col--fort{--cc:var(--c-green)}.cmbd-col--com{--cc:var(--c-orange)}
+.cmbd-note{color:var(--muted);font-size:var(--fs-sm)}

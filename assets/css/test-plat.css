@@ -1,0 +1,17 @@
+/* HISdata Wiki · test-plat.css — extras del test por tipos (reutiliza test-uf.css) */
+.tp-typ{background:var(--c-violet-soft);color:var(--c-violet-ink)}
+.tp-rows{list-style:none;margin:.6rem 0;padding:0;display:grid;gap:.5rem}
+.tp-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:.4rem .8rem;align-items:center;padding:.55rem .7rem;border-radius:12px;background:var(--surface-2);border:2px solid var(--line)}
+.tp-row.is-ok{border-color:var(--c-green);background:var(--c-green-soft)}.tp-row.is-ko{border-color:var(--c-red);background:var(--c-red-soft)}
+.tp-it{font-weight:700}
+.tp-row select{width:100%;padding:.5rem;border:2px solid var(--line-strong,var(--line));border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+.tp-row select:focus-visible{outline:3px solid var(--c-violet);outline-offset:2px}
+.tp-m{grid-column:1/-1;font-size:var(--fs-sm);font-weight:800}
+.tp-row.is-ok .tp-m{color:var(--c-green-ink)}.tp-row.is-ko .tp-m{color:var(--c-red-ink)}
+.tp-act{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+.tp-hints{margin-top:.5rem;padding:.6rem .9rem;border-radius:12px;background:var(--c-yellow-soft);color:var(--ink)}
+.tp-hints:empty{display:none}
+.tp-hh{margin:0;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}.tp-hl{margin:.3rem 0 0;padding-left:1.2rem}
+.tp-src{display:inline-block;padding:.15rem .6rem;border-radius:99px;font-size:.78rem;font-weight:800}
+.tp-src--v{background:var(--c-green-soft);color:var(--c-green-ink)}.tp-src--d{background:var(--c-yellow-soft);color:var(--ink)}.tp-src--p{background:var(--c-orange-soft);color:var(--c-orange-ink)}
+@media (max-width:40rem){.tp-row{grid-template-columns:1fr}}
