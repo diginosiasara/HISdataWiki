@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es" data-page="sesion4/apuntes">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sesión 4 · apuntes de clase · HISdata Wiki</title>
+<meta name="description" content="Apuntes de la clase del 12/11/2026: SIS, historia clínica, HCE y calidad de datos.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="formulas, formulario, resumen">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Sesión 4 · apuntes de clase · HISdata Wiki">
+<meta property="og:description" content="Apuntes de la clase del 12/11/2026: SIS, historia clínica, HCE y calidad de datos.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Sesión 4 · apuntes de clase", "description": "Apuntes de la clase del 12/11/2026: SIS, historia clínica, HCE y calidad de datos.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["sesión 4", "SIS", "historia clínica", "calidad de datos", "ISO"], "headline": "Sesión 4 · apuntes de clase"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
+</head>
+<body data-block="recursos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li><li><a href="../descriptiva/laboratorio-posicion.html"><span class="num">Lab</span><span>Laboratorio visual</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
+      </ul>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
+        <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
+      </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html" aria-current="page"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+      </ul>
+      <h2>UF4 · CMBD</h2>
+      <ul>
+        <li><a href="../uf4/index.html"><span class="num">UF4·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf4/estructura-cmbd.html"><span class="num">UF4·1</span><span>Estructura del CMBD</span></a></li>
+        <li><a href="../uf4/validacion-explotacion.html"><span class="num">UF4·2</span><span>Validación y explotación</span></a></li>
+        <li><a href="../uf4/cuadros-de-mando.html"><span class="num">UF4·3</span><span>Cuadros de mando</span></a></li>
+        <li><a href="../uf4/envios-cmbd.html"><span class="num">UF4·4</span><span>Envíos del CMBD</span></a></li>
+        <li><a href="../uf4/casos-uf4.html"><span class="num">UF4·5</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>UF5 · Clasificación de pacientes</h2>
+      <ul>
+        <li><a href="../uf5/index.html"><span class="num">UF5·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf5/origen-necesidad.html"><span class="num">UF5·1</span><span>Origen y necesidad</span></a></li>
+        <li><a href="../uf5/tipos-scp.html"><span class="num">UF5·2</span><span>Tipos de SCP</span></a></li>
+        <li><a href="../uf5/apr-grd.html"><span class="num">UF5·3</span><span>AP-GRD y APR-GRD</span></a></li>
+        <li><a href="../uf5/peso-case-mix.html"><span class="num">UF5·4</span><span>Case-mix y peso</span></a></li>
+        <li><a href="../uf5/casos-uf5.html"><span class="num">UF5·5</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>UF6 · Calidad asistencial</h2>
+      <ul>
+        <li><a href="../uf6/index.html"><span class="num">UF6·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf6/calidad-seguridad.html"><span class="num">UF6·1</span><span>Calidad y seguridad</span></a></li>
+        <li><a href="../uf6/procesos-variabilidad.html"><span class="num">UF6·2</span><span>Procesos y variabilidad</span></a></li>
+        <li><a href="../uf6/indicadores.html"><span class="num">UF6·3</span><span>Indicadores</span></a></li>
+        <li><a href="../uf6/modelos-calidad.html"><span class="num">UF6·4</span><span>Modelos de calidad</span></a></li>
+        <li><a href="../uf6/investigacion-evidencia.html"><span class="num">UF6·5</span><span>Investigación y evidencia</span></a></li>
+        <li><a href="../uf6/casos-uf6.html"><span class="num">UF6·6</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html" ><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/como-se-calcula.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Cómo se calcula todo</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li><li><a href="../recursos/test-autoevaluacion.html"><span class="dot" style="--dot:var(--c-violet)"></span><span>Test de autoevaluación</span></a></li><li><a href="../recursos/test-plataforma.html"><span class="dot" style="--dot:var(--c-pink)"></span><span>Test por tipos UF1 a UF4</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sesion4/apuntes.html">Sesión 4 · SIS, historia clínica y calidad de datos</a></li><li><span aria-current="page">Sesión 4 · apuntes de clase</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">S4·1</span>Sesión 4 · SIS, historia clínica y calidad de datos</p><h1><span class="grad">Sesión 4</span> · apuntes de clase</h1><p class="lead">SIS, historia clínica, HCE y calidad de datos tal como se explicó el 12/11/2026.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 9 min de lectura</span><span class="origin origin--s4">Sesión 4 · apuntes de clase</span></p></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#avisos">Avisos</a></li><li><a href="#repaso">Repaso tema 2</a></li><li><a href="#sis">SIS</a></li><li><a href="#ap-ae">Primaria y especializada</a></li><li><a href="#hc">Historia clínica</a></li><li><a href="#hce">HCE</a></li><li><a href="#calidad">Calidad</a></li><li><a href="#casos">Casos</a></li><li><a href="#chuleta">Chuleta</a></li></ol></details>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p><p>1. Un <b>SIS</b> tiene 4 elementos: fuentes de datos, procedimientos, indicadores y usuarios. Su objetivo principal es la gestión eficiente de los recursos.</p><p>2. La <b>historia clínica</b> tiene 5 funciones (la principal, la asistencial) y características que cayeron en el repaso: identificada, reproducible, ordenada, normalizada, conservable y con identificación del personal.</p><p>3. La <b>calidad de los datos</b> se mide con 6 características; ISO, UNE y EN son normas voluntarias.</p></div>
+<h2 id="avisos">Avisos que afectan al examen <a class="anchor" href="#avisos" aria-label="Enlace a la sección: Avisos que afectan al examen">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Lo dicho en clase (desplazable)"><table class="table table--compact"><caption>Lo dicho en clase</caption><thead><tr><th scope="col">Tema</th><th scope="col">Qué se dijo</th></tr></thead><tbody><tr><th scope="row">Cuestionarios</th><td>2 intentos y cuenta el más alto; suben hasta 1,5 puntos en el examen. Las respuestas correctas se ven al cierre, que es una semana antes del examen. La profesora lo consultará con coordinación y avisará si cambia algo.</td></tr><tr><th scope="row">Tipo de examen</th><td>Se parecerá más a los Kahoot de clase que a los cuestionarios del campus, que son más difíciles.</td></tr><tr><th scope="row">Qué no se pregunta</th><td>Leyes ni números de norma de memoria. Sí hay que saber qué son ISO, UNE y EN.</td></tr><tr><th scope="row">Seguro que puede caer</th><td>Apartados 1.2 y 1.3: funciones y características de la historia clínica.</td></tr><tr><th scope="row">Reto 2</th><td>Ya se puede hacer. El Kahoot queda colgado para practicar.</td></tr><tr><th scope="row">Trabajo final</th><td>Se mencionó el 5 de diciembre como entrega ⚠ (verificar). El tutor de prácticas suele coincidir con el del trabajo final.</td></tr></tbody></table></div>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">⚠ Transcripción automática</p><p>Los términos con ⚠ vienen de una transcripción sin corregir. Contrástalos con el PDF de la asignatura.</p></div>
+
+<h2 id="repaso">Repaso del tema 2 <a class="anchor" href="#repaso" aria-label="Enlace a la sección: Repaso del tema 2">#</a></h2>
+<div class="cards"><div class="card card--accent c-blue"><p class="card__h"><b>Función de densidad</b></p><p>La curva de campana; la probabilidad es el área bajo la curva.</p></div><div class="card card--accent c-green"><p class="card__h"><b>Distribución acumulada</b></p><p>La curva en S: probabilidad acumulada hasta un valor. Se puede ver «de puntillas».</p></div><div class="card card--accent c-orange"><p class="card__h"><b>Tipificar</b></p><p>Pasar a una normal de media 0: Z = (dato − media) / desviación típica. Dice cuántas desviaciones se separa el dato de la media.</p></div></div>
+<h3>Varianza en 5 pasos (criterio de la clase: dividir entre n)</h3><ol><li>Calcular la media.</li><li>Restar la media a cada dato: <b>dato − media</b>, no al revés.</li><li>Elevar cada diferencia al cuadrado.</li><li>Sumar todos los cuadrados.</li><li>Dividir entre <b>n</b>.</li></ol>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Acuerdo de la clase</p><p>En esta asignatura se divide <b>siempre entre n</b>, como en las fórmulas de los apuntes y las soluciones. Con muestras sería más correcto n − 1, y la profesora dijo que no penalizaría a quien lo use así. Los programas estadísticos lo calculan; a mano se hace para practicar.</p><p>La Z se calcula para todos los datos, no solo para uno.</p></div>
+
+<h2 id="sis">Sistemas de información sanitaria <a class="anchor" href="#sis" aria-label="Enlace a la sección: Sistemas de información sanitaria">#</a></h2>
+<div class="callout callout--def" data-icon="📖"><p class="callout__title">Concepto</p><p>Conjunto organizado de personas, procesos, herramientas, protocolos y recursos para recopilar, procesar, analizar y usar información que apoye las políticas de salud. No hay que saber la definición de memoria.</p></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Los 4 elementos (desplazable)"><table class="table table--compact"><caption>Los 4 elementos</caption><thead><tr><th scope="col">Elemento</th><th scope="col">Ejemplo</th></tr></thead><tbody><tr><th scope="row">Fuentes de datos</th><td>Pacientes e historias clínicas</td></tr><tr><th scope="row">Procedimientos</th><td>De la petición de muestra al resultado; de la entrada en urgencias a la salida</td></tr><tr><th scope="row">Indicadores</th><td>Tiempo de espera, altas por semana, fallecimientos en cirugía de colon</td></tr><tr><th scope="row">Usuarios</th><td>Pacientes y todos los profesionales sanitarios</td></tr></tbody></table></div>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">Trampa de examen</p><p>Los <b>contratos de mantenimiento</b> no son un componente del SIS. El CMBD es una fuente de datos.</p></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Clasificación de los datos (desplazable)"><table class="table table--compact"><caption>Clasificación de los datos</caption><thead><tr><th scope="col">Tipo</th><th scope="col">Qué es</th><th scope="col">Ejemplos</th></tr></thead><tbody><tr><th scope="row">Sanitarios clínicos</th><td>Derivados de la atención al paciente</td><td>Informe de laboratorio, historia clínica, consentimiento informado</td></tr><tr><th scope="row">Sanitarios no clínicos</th><td>Estadísticas generales</td><td>Natalidad, mortalidad, listas de espera, costes</td></tr><tr><th scope="row">No sanitarios</th><td>Documentos administrativos</td><td>Facturas, contratos con proveedores</td></tr></tbody></table></div>
+
+<h2 id="ap-ae">Atención primaria y especializada <a class="anchor" href="#ap-ae" aria-label="Enlace a la sección: Atención primaria y especializada">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparativa (desplazable)"><table class="table table--compact"><caption>Comparativa</caption><thead><tr><th scope="col"></th><th scope="col">Primaria</th><th scope="col">Especializada</th></tr></thead><tbody><tr><th scope="row">Sistemas</th><td>SIAP y BDCAP (datos clínicos codificados)</td><td>Catálogo Nacional de Hospitales y RAE-CMBD ⚠</td></tr><tr><th scope="row">Se centra en</th><td>Población, recursos, actividad, calidad y costes</td><td>Costes, listas de espera, transfusiones y trasplantes</td></tr><tr><th scope="row">Objetivo</th><td>Calidad y estadística del SNS</td><td>Optimizar recursos y evaluar la calidad asistencial</td></tr></tbody></table></div>
+<p>Los datos se envían de forma <b>anual</b> al Sistema Nacional de Salud y están estandarizados: no se manda todo, solo datos concretos. También sirven para la financiación y los incentivos (contrato programa en primaria).</p>
+
+<h2 id="hc">La historia clínica <a class="anchor" href="#hc" aria-label="Enlace a la sección: La historia clínica">#</a></h2>
+<div class="callout callout--def" data-icon="📖"><p class="callout__title">Definición</p><p>Documento médico-legal con toda la información de salud del paciente de cada episodio asistencial. Incluye consentimiento informado, protocolo anestésico, gráfica de enfermería, interconsulta, informe de alta y de urgencias. <b>No incluye</b> facturas ni informes financieros.</p></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Funciones (apartado 1.2) (desplazable)"><table class="table table--compact"><caption>Funciones (apartado 1.2)</caption><thead><tr><th scope="col">Función</th><th scope="col">Para qué</th></tr></thead><tbody><tr><th scope="row">Asistencial (la principal)</th><td>Registrar la atención sanitaria</td></tr><tr><th scope="row">Docente</th><td>Enseñar con casos reales sin datos personales</td></tr><tr><th scope="row">Investigadora</th><td>Estudiar patologías, manejo clínico y gestión</td></tr><tr><th scope="row">Médico-legal</th><td>Prueba en reclamaciones por negligencia o juicios</td></tr><tr><th scope="row">Gestión y calidad</th><td>Indicadores, p. ej. tiempo desde que se pide una analítica hasta que se entrega</td></tr></tbody></table></div>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Características (apartado 1.3) (desplazable)"><table class="table table--compact"><caption>Características (apartado 1.3)</caption><thead><tr><th scope="col">Característica</th><th scope="col">Significado</th></tr></thead><tbody><tr><th scope="row">Identificada</th><td>Una historia por paciente; lo primero son sus datos administrativos</td></tr><tr><th scope="row">Reproducible</th><td>Se puede revisar, imprimir o enviar cuando se necesite</td></tr><tr><th scope="row">Ordenada y secuencial</th><td>Normalmente en orden cronológico</td></tr><tr><th scope="row">Normalizada</th><td>Estructura y normas comunes; anotar también lo que no se ha explorado</td></tr><tr><th scope="row">Conservable y recuperable</th><td>Copias de seguridad en la HCE</td></tr><tr><th scope="row">Identificación del personal</th><td>Queda registrado quién accede y quién escribe</td></tr><tr><th scope="row">Única</th><td>Una sola por paciente; los programas avisan si se duplica el DNI</td></tr><tr><th scope="row">Acumulativa</th><td>La información se añade tras cada episodio</td></tr></tbody></table></div>
+<ul><li><b>Conservación</b>: mínimo 5 años desde el último episodio por ley estatal; algunas comunidades exigen 10 o 15; lo habitual es conservarla toda la vida.</li><li><b>Modificación</b>: se dispone de un plazo corto para completar lo escrito (una compañera citó 24 horas; no es un dato oficial). Después no se puede modificar y queda registrado usuario, fecha y hora.</li><li>La imposibilidad de modificar es lo que da <b>validez legal</b> a la HCE.</li></ul>
+
+<h2 id="hce">Historia clínica electrónica <a class="anchor" href="#hce" aria-label="Enlace a la sección: Historia clínica electrónica">#</a></h2>
+<ul><li>La transición en España fue gradual (5 a 10 años según la profesora), con duplicidad de papel y digital.</li><li>Aplicaciones citadas: Selene, Gacela, Casiopea (Indra) y programas autonómicos; un programa de Indra aparece como «HCC» ⚠.</li><li>Se asocia a la tarjeta sanitaria; normalmente los datos no pasan de una comunidad a otra.</li><li>Admite anotaciones internas que no ve el paciente. El paciente, con certificado digital, puede ocultar elementos en su carpeta de salud. Cada perfil profesional tiene su nivel de acceso.</li></ul>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Ventajas y desventajas (desplazable)"><table class="table table--compact"><caption>Ventajas y desventajas</caption><thead><tr><th scope="col">Ventajas</th><th scope="col">Desventajas</th></tr></thead><tbody><tr><th scope="row">Información organizada y uniforme</th><td>Rigidez de estructura</td></tr><tr><th scope="row">Acceso en tiempo real</th><td>Más tiempo de introducción</td></tr><tr><th scope="row">Sin letra ilegible</th><td>Requiere formación</td></tr><tr><th scope="row">Facilita explotar datos e indicadores</th><td>Coste económico alto (la principal)</td></tr><tr><th scope="row">Ahorra tiempo de búsqueda</th><td>Depende de luz, red y soporte técnico; desconfianza por ciberseguridad</td></tr></tbody></table></div>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Seguridad y papel</p><p>Los datos de salud son <b>categoría especial</b> según el RGPD.</p><p>Una brecha de seguridad se notifica a la AEPD y se avisa a los usuarios en <b>72 horas</b>, explicando cómo se soluciona.</p><p>El consentimiento informado se sigue firmando en papel y luego se digitaliza; las imágenes médicas se digitalizaron pronto.</p></div>
+
+<h2 id="calidad">Calidad de los datos <a class="anchor" href="#calidad" aria-label="Enlace a la sección: Calidad de los datos">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Seis características (desplazable)"><table class="table table--compact"><caption>Seis características</caption><thead><tr><th scope="col">Característica</th><th scope="col">Significado</th><th scope="col">Ejemplo</th></tr></thead><tbody><tr><th scope="row">Precisión</th><td>Reflejo fiel de la realidad</td><td>Peso 450 kg</td></tr><tr><th scope="row">Integridad</th><td>Datos completos</td><td>Falta algo relevante</td></tr><tr><th scope="row">Consistencia</th><td>Sin contradicciones</td><td>Alta anterior al ingreso</td></tr><tr><th scope="row">Actualización</th><td>Se registra al momento</td><td>Cambio de medicación en cuanto ocurre</td></tr><tr><th scope="row">Relevancia</th><td>Solo datos pertinentes</td><td>Alergias antes de anestesiar</td></tr><tr><th scope="row">Accesibilidad</th><td>Se llega a los datos con facilidad</td><td>Datos que nadie sabe localizar</td></tr></tbody></table></div>
+<p><b>Para qué sirve</b>: seguridad del paciente, mejor toma de decisiones, cumplimiento de la normativa, optimización de recursos e investigación científica fiable.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Normas y certificación (desplazable)"><table class="table table--compact"><caption>Normas y certificación</caption><thead><tr><th scope="col">Sigla</th><th scope="col">Qué es</th></tr></thead><tbody><tr><th scope="row">ISO</th><td>Normas internacionales</td></tr><tr><th scope="row">UNE</th><td>Normas españolas</td></tr><tr><th scope="row">EN</th><td>Normas europeas</td></tr><tr><th scope="row">ENAC ⚠</th><td>Acredita a las entidades certificadoras (AENOR y Bureau Veritas son ejemplos)</td></tr><tr><th scope="row">AEPD</th><td>Protección de datos; no certifica calidad</td></tr></tbody></table></div>
+<p>Las normas son <b>voluntarias</b>: no tener ISO no implica mala calidad, pero tenerla garantiza un proceso de calidad. Pueden aplicarse a todo el hospital o a un servicio. La profesora citó el código que vincula los datos personales con la historia clínica como «PIPA» ⚠, probablemente el <b>CIPA</b>.</p>
+
+<h2 id="casos">Casos resueltos en clase <a class="anchor" href="#casos" aria-label="Enlace a la sección: Casos resueltos en clase">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Casos (desplazable)"><table class="table table--compact"><caption>Casos</caption><thead><tr><th scope="col">Problema</th><th scope="col">Afecta a</th><th scope="col">Solución</th></tr></thead><tbody><tr><th scope="row">Factura e informe financiero entre los documentos</th><td>No van en la historia clínica</td><td>Dejarlos fuera: son datos no sanitarios</td></tr><tr><th scope="row">Códigos erróneos en procedimientos quirúrgicos</th><td>Procedimientos</td><td>Revisar protocolos y códigos</td></tr><tr><th scope="row">No se recogen datos para los indicadores</th><td>Fuentes de datos e indicadores</td><td>Ver quién los recoge y formarle</td></tr><tr><th scope="row">Directores con acceso limitado a costes</th><td>Usuarios</td><td>Revisar y ampliar autorizaciones</td></tr><tr><th scope="row">Accesos no autorizados</th><td>Confidencialidad</td><td>Revisar permisos con el proveedor</td></tr><tr><th scope="row">Profesionales sin información</th><td>Capacitación</td><td>Formar a responsables de unidad que lo transmitan</td></tr><tr><th scope="row">Laboratorio no se integra</th><td>Interoperabilidad</td><td>Interconectar servicios</td></tr><tr><th scope="row">Alta anterior al ingreso</th><td>Consistencia</td><td>Validaciones automáticas</td></tr><tr><th scope="row">Peso 450 kg y altura 75 m (Juan Pérez, nacido el 32/13/1985)</th><td>Precisión</td><td>Validaciones y revisión por documentación</td></tr></tbody></table></div>
+
+<h2 id="chuleta">Chuleta de examen <a class="anchor" href="#chuleta" aria-label="Enlace a la sección: Chuleta de examen">#</a></h2>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Para memorizar</p><p><b>4</b> elementos del SIS · <b>5</b> funciones de la HC · <b>6</b> características de calidad.</p><p><b>72 h</b> para notificar una brecha · <b>5 años</b> de conservación mínima.</p><p>Varianza: <b>÷ n</b> · Z = (dato − media) / desviación típica.</p><p>Desventaja principal de la HCE: coste económico y dependencia técnica.</p><p>ISO internacional, UNE española, EN europea; todas voluntarias.</p></div>
+
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/casos-uf3.html" rel="prev"><small>← Anterior</small><strong>Casos prácticos UF3</strong></a><a class="next" href="../sesion4/ejercicios.html" rel="next"><small>Siguiente →</small><strong>Banco de 27 ejercicios</strong></a></nav>
+    </div>
+  </main>
+
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
+</body>
+</html>

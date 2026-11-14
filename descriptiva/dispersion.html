@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="../assets/css/uf1-s2s3.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Medidas de dispersión", "description": "Rango, rango intercuartílico, varianza y desviación típica: cuánto se separan los datos de su centro, con un ejemplo paso a paso.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["dispersión", "rango", "varianza", "desviación típica", "RIC", "estadística descriptiva"], "headline": "Medidas de dispersión"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
 </head>
 <body data-block="descriptiva">
 <div class="skip-links">
@@ -116,6 +117,24 @@
         <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
         <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
         <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
+      </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
       </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
@@ -199,6 +218,7 @@
 <h2 id="quiz">Comprueba lo aprendido <a class="anchor" href="#quiz" aria-label="Enlace a la sección: Comprueba lo aprendido">#</a></h2>
 <div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="quiz-dispersion">Mini quiz · 5 preguntas <a class="anchor" href="#quiz-dispersion" aria-label="Enlace a la sección: Mini quiz · 5 preguntas">#</a></h3></div><script type="application/json">{"questions": [{"q": "¿Cómo se calcula el rango?", "options": ["Máximo menos mínimo", "Q3 menos Q1", "Raíz de la varianza"], "answer": 0, "why": "R = máx − mín."}, {"q": "La desviación típica es…", "options": ["El cuadrado de la varianza", "La raíz cuadrada de la varianza", "La media de los datos"], "answer": 1, "why": "s = √s², y siempre es ≥ 0."}, {"q": "¿Por qué se elevan al cuadrado las diferencias a la media?", "options": ["Para que no se anulen los signos", "Para que salgan decimales", "Para ordenar los datos"], "answer": 0, "why": "Positivos y negativos se compensarían y saldría cerca de 0."}, {"q": "Con datos de una muestra, la varianza se divide entre…", "options": ["n", "n − 1", "2n"], "answer": 1, "why": "Muestra: n − 1. Población: n."}, {"q": "Una desviación típica elevada indica…", "options": ["Datos más dispersos", "Datos más agrupados", "Que todos los datos son iguales"], "answer": 0, "why": "Cuanto mayor s, más se alejan los datos de la media."}]}</script></div>
 
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Criterio de la clase (sesión 4)</p><p>En esta asignatura la varianza y la desviación típica se calculan <b>dividiendo entre n</b>, como en las fórmulas y soluciones de los apuntes. Con muestras sería más correcto n − 1 y la profesora no lo penalizaría, pero el criterio del curso es n. Las diapositivas de glucosa usan n − 1 (S² = 44,92); con n sale 43,13.</p></div>
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../descriptiva/cuartiles-percentiles.html" rel="prev"><small>← Anterior</small><strong>Cuartiles y percentiles</strong></a><a class="next" href="../descriptiva/diagrama-cajas.html" rel="next"><small>Siguiente →</small><strong>Diagrama de cajas</strong></a></nav>
     </div>
   </main>
@@ -214,5 +234,7 @@
 </footer>
 <script src="../assets/js/his.core.js" defer></script>
 <script src="../assets/js/widgets/dispersion.js" defer></script>
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

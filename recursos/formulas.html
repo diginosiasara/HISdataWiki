@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="../assets/css/motion.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Formulario", "description": "Todas las fórmulas de probabilidad, distribuciones, tipificación e intervalos en una tabla.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["formulas", "formulario", "resumen"], "headline": "Formulario"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
 </head>
 <body data-block="recursos">
 <div class="skip-links">
@@ -116,6 +117,24 @@
         <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
         <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
       </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+      </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
         <li><a href="../uf4/index.html"><span class="num">UF4·0</span><span>Visión general</span></a></li>
@@ -184,6 +203,7 @@
 <h2 id="tabla">Fórmulas <a class="anchor" href="#tabla" aria-label="Enlace a la sección: Fórmulas">#</a></h2>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla (desplazable)"><table class="table"><caption>Formulario resumen</caption><thead><tr><th scope="col">Tema</th><th scope="col">Fórmula</th><th scope="col">Uso</th></tr></thead><tbody><tr><th scope="row">Frecuencia relativa</th><td>hᵢ = fᵢ / n  (Σ hᵢ = 1)</td><td>Descriptiva</td></tr><tr><th scope="row">Suma de frecuencias absolutas</th><td>Σ fᵢ = n</td><td>Descriptiva</td></tr><tr><th scope="row">Frecuencias acumuladas</th><td>Fₖ = f₁ + … + fₖ (última = n); Hₖ = h₁ + … + hₖ (última = 1)</td><td>Descriptiva</td></tr><tr><th scope="row">Rango</th><td>R = máx − mín</td><td>Descriptiva</td></tr><tr><th scope="row">Rango intercuartílico</th><td>RIC = Q3 − Q1</td><td>Descriptiva</td></tr><tr><th scope="row">Varianza muestral</th><td>s² = Σ (xᵢ − x̄)² / (n − 1)</td><td>Descriptiva</td></tr><tr><th scope="row">Desviación típica</th><td>s = √s²</td><td>Descriptiva</td></tr><tr><th scope="row">Límites de valores atípicos</th><td>Q1 − 1,5 · RIC  y  Q3 + 1,5 · RIC</td><td>Diagrama de cajas</td></tr><tr><th scope="row">Nº de intervalos (Sturges)</th><td>K = 1 + 3,322 · log₁₀(n)</td><td>Descriptiva</td></tr><tr><th scope="row">Amplitud</th><td>A = R / K</td><td>Descriptiva</td></tr><tr><th scope="row">Marca de clase</th><td>cᵢ = (extremo inf. + extremo sup.) / 2</td><td>Descriptiva</td></tr><tr><th scope="row">Ángulo en diagrama de sectores</th><td>αᵢ = 360° · hᵢ</td><td>Descriptiva</td></tr><tr><th scope="row">Media</th><td>x̄ = Σ xᵢ / n  (con frecuencias: Σ xᵢ·fᵢ / n)</td><td>Descriptiva</td></tr><tr><th scope="row">Posición de cuartiles y percentiles</th><td>Q1: n/4 · Q2: n/2 · Q3: 3n/4 · Pₖ: k·n/100</td><td>Descriptiva</td></tr><tr><th scope="row">Laplace</th><td>P(A) = favorables / posibles</td><td>Casos equiprobables</td></tr><tr><th scope="row">Complementario</th><td>P(no A) = 1 − P(A)</td><td>Probabilidad de lo contrario</td></tr><tr><th scope="row">Unión</th><td>P(A∪B) = P(A)+P(B)−P(A∩B)</td><td>A o B</td></tr><tr><th scope="row">Independientes</th><td>P(A∩B) = P(A)·P(B)</td><td>A y B</td></tr><tr><th scope="row">Uniforme</th><td>f = 1/(b−a); μ=(a+b)/2; σ=(b−a)/√12</td><td>U(a,b)</td></tr><tr><th scope="row">Exponencial</th><td>P(X≤x)=1−e^(−x/μ); λ=1/μ</td><td>Tiempos de espera</td></tr><tr><th scope="row">Tipificación</th><td>z = (x − μ)/σ</td><td>Normal</td></tr><tr><th scope="row">Regla empírica</th><td>68 % · 95 % · 99,7 %</td><td>μ±1σ, 2σ, 3σ</td></tr><tr><th scope="row">Error típico</th><td>σ/√n</td><td>Media muestral</td></tr><tr><th scope="row">IC de la media</th><td>x̄ ± crítico · s/√n</td><td>z o t</td></tr></tbody></table></div>
 
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Criterio de la clase (sesión 4)</p><p>En esta asignatura la varianza y la desviación típica se calculan <b>dividiendo entre n</b>, como en las fórmulas y soluciones de los apuntes. Con muestras sería más correcto n − 1 y la profesora no lo penalizaría, pero el criterio del curso es n. Las diapositivas de glucosa usan n − 1 (S² = 44,92); con n sale 43,13.</p></div>
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../recursos/glosario.html" rel="prev"><small>← Anterior</small><strong>Glosario</strong></a><a class="next" href="../recursos/accesibilidad.html" rel="next"><small>Siguiente →</small><strong>Accesibilidad y lector</strong></a></nav>
     </div>
   </main>
@@ -199,5 +219,7 @@
 </footer>
 <script src="../assets/js/his.core.js" defer></script>
 
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

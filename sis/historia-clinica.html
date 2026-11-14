@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="../assets/css/motion.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "La historia clínica", "description": "Definición, contenido mínimo (a–o), funciones y características de la historia clínica, y diferencias entre la de papel y la electrónica.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["historia clínica", "contenido mínimo", "funciones", "características", "hc papel", "hce", "documento médico-legal"], "headline": "La historia clínica"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
 </head>
 <body data-block="sis">
 <div class="skip-links">
@@ -116,6 +117,24 @@
         <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
         <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
       </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+      </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
         <li><a href="../uf4/index.html"><span class="num">UF4·0</span><span>Visión general</span></a></li>
@@ -180,10 +199,10 @@
     <div class="content">
 <nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../sis/index.html">UF3 · Sistemas de información</a></li><li><span aria-current="page">La historia clínica</span></li></ol></nav>
 <header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF3·2</span>UF3 · Sistemas de información sanitaria</p><h1>La historia <span class="grad">clínica</span></h1><p class="lead">La historia clínica es el documento central del sistema: ahí se escribe todo lo que le pasa al paciente en su atención.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 10 min de lectura</span><span class="origin origin--uf3">Unidad formativa 3 · presentación de sistemas de información</span></p><ul class="vstrip" aria-label="La idea en una imagen"><li class="vtile vtile--0" style="--i:0"><span class="vtile__ico" aria-hidden="true">📋</span><strong class="vtile__big">Contenido mínimo</strong><span class="vtile__txt">Lo que debe tener siempre</span></li><li class="vtile vtile--1" style="--i:1"><span class="vtile__ico" aria-hidden="true">🎓</span><strong class="vtile__big">4 funciones</strong><span class="vtile__txt">Docente, investigadora, médico-legal, gestión</span></li><li class="vtile vtile--2" style="--i:2"><span class="vtile__ico" aria-hidden="true">✅</span><strong class="vtile__big">7 rasgos</strong><span class="vtile__txt">Identificada, ordenada, normalizada…</span></li><li class="vtile vtile--3" style="--i:3"><span class="vtile__ico" aria-hidden="true">🔐</span><strong class="vtile__big">Conservable</strong><span class="vtile__txt">Y recuperable</span></li></ul></header>
-<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 4 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 5 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></details>
 <div class="callout callout--key" data-icon="⚡"><p class="callout__title">Resumen en 3 líneas</p>
 <p>1. La <b>historia clínica (HC)</b> es un documento médico-legal que recoge, de forma estructurada, todo el estado de salud del paciente.</p>
-<p>2. Tiene un <b>contenido mínimo</b> de 16 documentos (apartados a–o) y cumple <b>4 funciones</b>.</p>
+<p>2. Tiene un <b>contenido mínimo</b> de 16 documentos (apartados a–o) y cumple <b>5 funciones</b>: la asistencial (la principal) y las 4 del esquema.</p>
 <p>3. Debe tener <b>6 características</b>: identificada, reproducible, ordenada, normalizada, conservable y que identifique al personal.</p></div>
 
 <h2 id="que-es">¿Qué es? <a class="anchor" href="#que-es" aria-label="Enlace a la sección: ¿Qué es?">#</a></h2>
@@ -216,7 +235,8 @@
 <div class="widget" data-widget="sis-hc-clasificador"><div class="widget__head"><h3 class="widget__title" id="juego-va-o-no-va-en-la-historia-clinica">Juego: ¿va o no va en la historia clínica? <a class="anchor" href="#juego-va-o-no-va-en-la-historia-clinica" aria-label="Enlace a la sección: Juego: ¿va o no va en la historia clínica?">#</a></h3><p class="widget__sub">Decide en cada documento. Rondas de 12.</p></div>
 <noscript><p class="noscript-note">Sin JavaScript: van en la HC los 16 documentos de la tabla anterior; no van las facturas, informes financieros, nóminas ni contratos.</p></noscript></div>
 
-<h2 id="funciones">Las 4 funciones <a class="anchor" href="#funciones" aria-label="Enlace a la sección: Las 4 funciones">#</a></h2>
+<h2 id="funciones">Las 5 funciones <a class="anchor" href="#funciones" aria-label="Enlace a la sección: Las 5 funciones">#</a></h2>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Ojo: son 5</p><p>En clase y en el PDF la función <b>asistencial</b> es la principal: registrar la atención sanitaria del paciente y permitir la comunicación entre profesionales. Las otras cuatro son las del esquema: docente, investigadora, médico-legal y de gestión y calidad. Es una pregunta típica de examen (apartado 1.2).</p></div>
 <figure class="figure">
 <svg class="sis-svg" viewBox="0 0 480 300" role="img" aria-labelledby="fun-t fun-d">
 <title id="fun-t">Funciones de la historia clínica</title>
@@ -264,7 +284,7 @@
 <ul>
 <li>La HC es un documento médico-legal, estructurado y detallado, del estado de salud del paciente.</li>
 <li>Su contenido mínimo son 16 documentos (a–o); facturas e informes financieros no entran.</li>
-<li>Cumple cuatro funciones: docente, investigadora, médico-legal y de gestión y calidad.</li>
+<li>Cumple cinco funciones: asistencial (la principal), docente, investigadora, médico-legal y de gestión y calidad.</li>
 <li>Debe ser identificada, reproducible, ordenada y secuencial, normalizada, conservable y recuperable e identificadora del personal.</li>
 <li>La HCE mantiene la estructura de la de papel y añade acceso rápido y trazabilidad.</li>
 </ul>
@@ -272,7 +292,7 @@
 <h2 id="comprueba">Comprueba lo que sabes <a class="anchor" href="#comprueba" aria-label="Enlace a la sección: Comprueba lo que sabes">#</a></h2>
 <div class="widget" data-widget="quiz"><div class="widget__head"><h3 class="widget__title" id="autoevaluacion">Autoevaluación <a class="anchor" href="#autoevaluacion" aria-label="Enlace a la sección: Autoevaluación">#</a></h3><p class="widget__sub">5 preguntas</p></div>
 <script type="application/json">{"questions":[
-{"q":"¿Cuál NO es una función de la historia clínica?","options":["Docente","Investigadora","Publicitaria","Médico-legal"],"answer":2,"why":"Las cuatro funciones son docente, investigadora, médico-legal y de gestión y calidad."},
+{"q":"¿Cuál NO es una función de la historia clínica?","options":["Docente","Investigadora","Publicitaria","Médico-legal"],"answer":2,"why":"Las funciones son asistencial, docente, investigadora, médico-legal y de gestión y calidad."},
 {"q":"El consentimiento informado, ¿va en la historia clínica?","options":["No, es administrativo","Sí, forma parte del contenido mínimo","Solo si lo pide el paciente","Solo en urgencias"],"answer":1,"why":"Es el apartado i del contenido mínimo."},
 {"q":"¿Cuál de estos documentos NO forma parte de la historia clínica?","options":["Informe clínico de alta","Gráfico de constantes","Factura del hospital","Informe de anatomía patológica"],"answer":2,"why":"La factura es un documento administrativo-económico."},
 {"q":"Que cada anotación indique quién la escribió, con fecha y hora, corresponde a la característica…","options":["Normalizada","Reproducible","Identificadora del personal sanitario","Conservable"],"answer":2,"why":"Permite saber quién registró cada dato."},
@@ -282,7 +302,7 @@
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../sis/sistemas-informacion.html" rel="prev"><small>← Anterior</small><strong>Los sistemas de información sanitaria</strong></a><a class="next" href="../sis/elementos-sis.html" rel="next"><small>Siguiente →</small><strong>Elementos de un SIS</strong></a></nav>
     </div>
   </main>
-  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 4 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#que-es">¿Qué es?</a></li><li><a href="#contenido-minimo">Contenido mínimo</a></li><li><a href="#funciones">Las 5 funciones</a></li><li><a href="#caracteristicas">Las 6 características</a></li><li><a href="#papel-vs-electronica">Historia clínica en papel y electrónica</a></li><li><a href="#resumen">Resumen</a></li><li><a href="#comprueba">Comprueba lo que sabes</a></li></ol></aside>
 </div>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
@@ -294,5 +314,7 @@
 </footer>
 <script src="../assets/js/his.core.js" defer></script>
 <script src="../assets/js/widgets/sis-hc-clasificador.js" defer></script>
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

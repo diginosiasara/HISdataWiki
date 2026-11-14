@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="../assets/css/motion.css">
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Cómo se calcula todo", "description": "Resumen paso a paso de cómo se calcula cada medida y probabilidad de los temas 1 y 2.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["formulas", "formulario", "resumen"], "headline": "Formulario"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
 </head>
 <body data-block="recursos">
 <div class="skip-links">
@@ -116,6 +117,24 @@
         <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
         <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
       </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+      </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
         <li><a href="../uf4/index.html"><span class="num">UF4·0</span><span>Visión general</span></a></li>
@@ -189,6 +208,7 @@
 <div class="table-wrap" tabindex="0" role="region" aria-label="Distribuciones continuas paso a paso (desplazable)"><table class="table table--compact"><caption>Distribuciones continuas paso a paso</caption><thead><tr><th scope="col">Distribución</th><th scope="col">Fórmulas</th><th scope="col">Ejemplo con los datos del tema</th></tr></thead><tbody><tr><th scope="row">Uniforme (a, b)</th><td>f(x) = 1 / (b − a) · P(x₁ ≤ X ≤ x₂) = longitud del tramo / longitud total · media = (a + b)/2</td><td>Llegada entre 0 y 60 min: f = 1/60, media = 30 min</td></tr><tr><th scope="row">Exponencial</th><td>λ = 1/μ · P(X ≤ x) = 1 − e<sup>−λx</sup> · P(X &gt; x) = e<sup>−λx</sup></td><td>Ambulancia μ = 6, λ = 0,1667: P(X ≤ 3) = 1 − e<sup>−0,5</sup> = 1 − 0,6065 = 39,35 % · P(X &gt; 9) = e<sup>−1,5</sup> = 22,31 %</td></tr><tr><th scope="row">Exponencial (urgencias)</th><td>Mismo procedimiento con μ = 15 min</td><td>λ = 1/15 = 0,0667 · P(X &lt; 10) = 1 − e<sup>−0,6667</sup> = 1 − 0,5134 = 48,66 %</td></tr><tr><th scope="row">Normal N(μ, σ)</th><td>Simétrica en campana; media = mediana = moda</td><td>Presión sistólica N(128, 25)</td></tr><tr><th scope="row">Tipificación</th><td>z = (x − μ) / σ → N(0, 1); z indica cuántas σ está x de la media</td><td>(115 − 121)/7 = −0,857 · 121 → 0 · 128 → 1,000</td></tr><tr><th scope="row">Regla empírica</th><td>μ ± 1σ ≈ 68 % · μ ± 2σ ≈ 95 % · μ ± 3σ ≈ 99,7 %</td><td>Si z = −3, el dato está 3σ por debajo de la media</td></tr><tr><th scope="row">Puntuaciones z (estaturas)</th><td>Media, σ poblacional (÷ N) y luego z de cada dato</td><td>2.554/22 = 116,09 · σ = √(875,82/22) = 6,31 · 100 → (100 − 116)/6 = −2,667 con los redondeos del curso</td></tr><tr><th scope="row">Intervalo de confianza 95 %</th><td>IC = x̄ ± z · σ/√n, con z = 1,96</td><td>154 ± 1,96 · 5/√52 = 154 ± 1,36 → [152,64 ; 155,36] mmHg</td></tr><tr><th scope="row">t de Student</th><td>Muestras pequeñas; gl = n − 1 (dos muestras: (n₁−1) + (n₂−1))</td><td>n = 8 glucosas → 7 grados de libertad</td></tr><tr><th scope="row">χ²</th><td>gl = (filas − 1)(columnas − 1) en tablas de contingencia</td><td>Tabla 2×2 → 1 grado de libertad</td></tr><tr><th scope="row">F de Snedecor</th><td>Cociente de dos χ² independientes divididas entre sus gl (m y n); se usa en ANOVA</td><td>—</td></tr></tbody></table></div>
 <h2 id="avisos">4 · Erratas y matices de las diapositivas <a class="anchor" href="#avisos" aria-label="Enlace a la sección: 4 · Erratas y matices de las diapositivas">#</a></h2>
 <div class="callout callout--key"><p class="callout__title">Para no confundirte en el examen</p><p>• Uniforme: la diapositiva escribe f(x) = 1/(a − b); lo correcto es 1/(b − a), para que sea positiva.</p><p>• Regla empírica: aparece «98 %» y «99 %» para ±3σ; el valor exacto es 99,7 %.</p><p>• Ambulancia: una línea escribe 0,1663 en lugar de 0,1667; el resultado 39,35 % es el correcto.</p><p>• Varianza de la glucosa: la suma de cuadrados es 1.078,16 con datos exactos (1.078,27 con redondeos); en ambos casos S² = 44,92.</p><p>• Desviación: la varianza de una muestra divide entre n − 1; en las puntuaciones z de estaturas el curso divide entre N.</p></div>
+<div class="callout callout--key" data-icon="⚡"><p class="callout__title">Criterio de la clase (sesión 4)</p><p>En esta asignatura la varianza y la desviación típica se calculan <b>dividiendo entre n</b>, como en las fórmulas y soluciones de los apuntes. Con muestras sería más correcto n − 1 y la profesora no lo penalizaría, pero el criterio del curso es n. Las diapositivas de glucosa usan n − 1 (S² = 44,92); con n sale 43,13.</p></div>
 <nav class="pager" aria-label="Navegación entre páginas"><a href="../recursos/formulas.html" rel="prev"><small>← Anterior</small><strong>Formulario</strong></a><a class="next" href="../recursos/repaso-examen.html" rel="next"><small>Siguiente →</small><strong>Repaso tipo test y examen</strong></a></nav>
     </div>
   </main>
@@ -204,5 +224,7 @@
 </footer>
 <script src="../assets/js/his.core.js" defer></script>
 
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

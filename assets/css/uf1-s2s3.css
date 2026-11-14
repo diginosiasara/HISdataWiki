@@ -1,6 +1,7 @@
 /* HISdata Wiki · uf1-s2s3.css — dispersión, cajas, herramientas, mapa sesiones/UF, repaso */
 .origin--uf1{--oc:var(--c-violet);--oc-ink:var(--c-violet-ink)}
 .origin--s2{--oc:var(--c-pink);--oc-ink:var(--c-pink-ink)}
+.origin--s4{--oc:var(--c-yellow);--oc-ink:var(--c-yellow-ink)}
 .origin--s3{--oc:var(--c-teal);--oc-ink:var(--c-teal-ink)}
 .sr-only-live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* widgets dispersión y cajas */
