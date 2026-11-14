@@ -17,8 +17,12 @@ Sustituye `https://TU-DOMINIO/hisdata-wiki/` en `index.html` y `js/config.js`, y
 ## Añadir una ficha
 Añade un objeto a `HIS.entries` (id, s, title, desc, tags, b). Opcional: icono en `meta.js`, visualizaciones en `visuals.js` y preguntas en `quizzes.js`. Menú, buscador, etiquetas y relacionadas se actualizan solos.
 
-## Asistente, calculadora y paneles visuales
-- `assets/js/his.math.js` (motor estadístico) y `assets/js/his.assistant.js` (chat con avatar, calculadora científica, datos y distribuciones) se cargan en todas las páginas junto a `assets/css/assistant.css`.
-- `assets/js/kb.js` es la base de conocimiento del chat (secciones de las páginas). Hay que regenerarla si cambias el contenido.
-- Modo IA opcional: ⚙ en el chat, clave de API de Anthropic (se guarda solo en el navegador) o endpoint propio.
+## Asistente, IA, accesibilidad y paneles visuales
+- `assets/js/ai/`: `ai.providers.js` (Integrado, Ollama, LM Studio, nube, Antigravity/MCP; autodetección), `ai.gateway.js` (agentes, herramientas, privacidad, verificación con HISMath) y `ai.center.js` (pestaña IA). La clave de API ya no se guarda en localStorage: solo en la sesión.
+- `assets/js/his.assistant.js`: chat (role="log", mensajes identificados, pestañas con teclado), calculadora, datos y distribuciones. `his.math.js`: motor estadístico.
+- `assets/js/voice/` (dictado y lectura en voz alta) y `assets/js/dyslexia/` + `assets/css/reading.css` (preferencias de lectura, regla de lectura, modo concentración).
+- `assets/js/his.nav.js` + `assets/css/nav.css`: menú de temas plegable con filtro.
+- `modelos-ia/`: catálogo, descargador y carpetas para los modelos (los pesos no se incluyen; ver su README).
+- `servidor/mcp/`: servidor MCP de solo lectura para Google Antigravity (Node 18+).
+- `assets/js/kb.js` es la base de conocimiento del chat: hay que regenerarla si cambias el contenido.
 - `visual/` contiene paneles interactivos autónomos (`visual/app/*.html`) incrustados en páginas de la wiki.

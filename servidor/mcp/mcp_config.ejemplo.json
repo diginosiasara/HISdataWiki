@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hisdata-wiki": {
+      "command": "node",
+      "args": ["RUTA/ABSOLUTA/HISdataWiki/servidor/mcp/server.js"]
+    }
+  }
+}

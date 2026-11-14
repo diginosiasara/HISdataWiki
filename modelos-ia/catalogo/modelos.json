@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "descripcion": "Catálogo de modelos que HISdata puede alojar en esta carpeta. Los pesos NO vienen en el paquete: se descargan con descargar-modelos.mjs. Las URL no están verificadas en esta versión (el paquete se preparó sin acceso a Internet): comprueba cada repositorio y su licencia antes de redistribuir.",
+  "perfiles": {
+    "A": [
+      "multilingual-e5-small"
+    ],
+    "B": [
+      "multilingual-e5-small",
+      "qwen2.5-0.5b-instruct"
+    ],
+    "C": [
+      "multilingual-e5-small",
+      "qwen2.5-1.5b-instruct"
+    ]
+  },
+  "modelos": [
+    {
+      "id": "multilingual-e5-small",
+      "nombre": "multilingual-e5-small (ONNX cuantizado)",
+      "rol": "Embeddings para búsqueda semántica",
+      "tipo": "embeddings",
+      "formato": "ONNX cuantizado (Transformers.js)",
+      "tamano": "≈ 120 MB",
+      "licencia": "MIT",
+      "origen": "https://huggingface.co/Xenova/multilingual-e5-small",
+      "verificado": false,
+      "sonda": "modelos-ia/embeddings/multilingual-e5-small/onnx/model_quantized.onnx",
+      "destino": "modelos-ia/embeddings/multilingual-e5-small",
+      "archivos": [
+        {
+          "ruta": "config.json",
+          "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/main/config.json"
+        },
+        {
+          "ruta": "tokenizer.json",
+          "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/main/tokenizer.json"
+        },
+        {
+          "ruta": "tokenizer_config.json",
+          "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/main/tokenizer_config.json"
+        },
+        {
+          "ruta": "onnx/model_quantized.onnx",
+          "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/main/onnx/model_quantized.onnx"
+        }
+      ]
+    },
+    {
+      "id": "qwen2.5-0.5b-instruct",
+      "nombre": "Qwen2.5-0.5B-Instruct (cuantizado)",
+      "rol": "Generación de texto ligera",
+      "tipo": "llm",
+      "formato": "ONNX cuantizado (Transformers.js). WebLLM necesita el formato MLC.",
+      "tamano": "≈ 400-500 MB",
+      "licencia": "Apache-2.0",
+      "origen": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct",
+      "verificado": false,
+      "sonda": "modelos-ia/llm/qwen2.5-0.5b-instruct/onnx/model_q4.onnx",
+      "destino": "modelos-ia/llm/qwen2.5-0.5b-instruct",
+      "archivos": [
+        {
+          "ruta": "config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/main/config.json"
+        },
+        {
+          "ruta": "tokenizer.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/main/tokenizer.json"
+        },
+        {
+          "ruta": "tokenizer_config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/main/tokenizer_config.json"
+        },
+        {
+          "ruta": "generation_config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/main/generation_config.json"
+        },
+        {
+          "ruta": "onnx/model_q4.onnx",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/main/onnx/model_q4.onnx"
+        }
+      ]
+    },
+    {
+      "id": "qwen2.5-1.5b-instruct",
+      "nombre": "Qwen2.5-1.5B-Instruct (cuantizado)",
+      "rol": "Generación de texto de mayor capacidad",
+      "tipo": "llm",
+      "formato": "ONNX cuantizado (Transformers.js). WebLLM necesita el formato MLC.",
+      "tamano": "≈ 1,0-1,2 GB",
+      "licencia": "Apache-2.0",
+      "origen": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct",
+      "verificado": false,
+      "sonda": "modelos-ia/llm/qwen2.5-1.5b-instruct/onnx/model_q4.onnx",
+      "destino": "modelos-ia/llm/qwen2.5-1.5b-instruct",
+      "archivos": [
+        {
+          "ruta": "config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct/resolve/main/config.json"
+        },
+        {
+          "ruta": "tokenizer.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct/resolve/main/tokenizer.json"
+        },
+        {
+          "ruta": "tokenizer_config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct/resolve/main/tokenizer_config.json"
+        },
+        {
+          "ruta": "generation_config.json",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct/resolve/main/generation_config.json"
+        },
+        {
+          "ruta": "onnx/model_q4.onnx",
+          "url": "https://huggingface.co/onnx-community/Qwen2.5-1.5B-Instruct/resolve/main/onnx/model_q4.onnx"
+        }
+      ]
+    }
+  ]
+}

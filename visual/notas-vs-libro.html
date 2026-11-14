@@ -36,6 +36,9 @@
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Notas de clase frente al libro", "description": "Comparación de las notas de clase con el PDF: SIS, historia clínica, HCE, calidad de datos, normativa y estadística.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["notas de clase", "PDF", "historia clínica", "calidad de datos", "examen"], "headline": "Notas de clase frente al libro"}</script>
 <link rel="stylesheet" href="../assets/css/assistant.css">
+<link rel="stylesheet" href="../assets/css/reading.css">
+<script src="../assets/js/dyslexia/dyslexia.js"></script>
+<link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body data-block="recursos">
 <div class="skip-links">
@@ -133,7 +136,8 @@
         <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
         <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
         <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
-        <li><a href="../visual/notas-vs-libro.html" aria-current="page"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+        <li><a href="../visual/reto-pagina.html"><span class="num">V·9</span><span>Reto del hospital (página)</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html" aria-current="page"><span class="num">V·10</span><span>Notas frente al libro</span></a></li>
       </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
@@ -198,7 +202,7 @@
   <main class="main" id="main-content" tabindex="-1">
     <div class="content">
 <nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../visual/index.html">Visual · paneles interactivos</a></li><li><span aria-current="page">Notas de clase frente al libro</span></li></ol></nav>
-<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">V·9</span>Visual · paneles interactivos</p><h1>Notas de clase frente al libro</h1><p class="lead">Guía visual con leyenda: qué dicen las notas, qué dice el PDF y qué coincide.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 14 min de lectura</span><span class="origin origin--s4">Notas vs libro</span></p></header>
+<header class="page-head"><p class="eyebrow"><span class="eyebrow__num">V·10</span>Visual · paneles interactivos</p><h1>Notas de clase frente al libro</h1><p class="lead">Guía visual con leyenda: qué dicen las notas, qué dice el PDF y qué coincide.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 14 min de lectura</span><span class="origin origin--s4">Notas vs libro</span></p></header>
 <details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#s0-1-mapa-del-tema-de-un-vistazo">1. Mapa del tema de un vistazo</a></li><li><a href="#s1-2-el-sistema-de-informacin-sanitaria-sis">2. El sistema de información sanitaria (SIS)</a></li><li><a href="#s2-3-la-historia-clnica-hc">3. La historia clínica (HC) 🎯🎯</a></li><li><a href="#s3-4-historia-clnica-electrnica-hce">4. Historia clínica electrónica (HCE) 🎯</a></li><li><a href="#s4-5-calidad-de-los-datos-sanitarios">5. Calidad de los datos sanitarios 🎯🎯</a></li><li><a href="#s5-6-aspectos-legales">6. Aspectos legales ⚖️</a></li><li><a href="#s6-7-los-casos-prcticos-tus-notas-frente-al">7. Los casos prácticos: tus notas frente al solucionario</a></li><li><a href="#s7-8-estadstica-de-apoyo-uf2-y-uf1">8. Estadística de apoyo (UF2 y UF1)</a></li><li><a href="#s8-9-extra-del-pdf-que-no-est-en-tus-notas">9. Extra del PDF que no está en tus notas: el CMBD (UF4)</a></li><li><a href="#s9-10-chuleta-final">10. Chuleta final 🎯</a></li></ol></details>
 <div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">Cómo leerla</p><p>Es una guía de <b>comparación</b> entre tus notas de clase y el PDF de la asignatura. Algunas afirmaciones están marcadas para verificar; contrástalas con el libro.</p></div>
 
@@ -208,7 +212,7 @@
 <p><strong>Regla práctica:</strong> la profesora dijo que el examen se parecerá a los Kahoot y que no pedirá números de leyes o normas de memoria. Si tus notas y el PDF difieren, en el examen manda lo que se dijo en clase, pero conviene conocer las dos versiones.</p>
 </blockquote>
 <h2 id="s0-1-mapa-del-tema-de-un-vistazo">1. Mapa del tema de un vistazo <a class="anchor" href="#s0-1-mapa-del-tema-de-un-vistazo" aria-label="Enlace a la sección: 1. Mapa del tema de un vistazo">#</a></h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>1. Mapa del tema de un vistazo (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -262,7 +266,7 @@
 <li><p>📘 Misma definición. Añade que el objetivo es una gestión eficiente de los <strong>recursos económicos</strong> que permita mejorar de forma constante la salud de la población, y que su propósito es apoyar el desarrollo, seguimiento, evaluación y mejora de las políticas de salud. ✅</p></li>
 </ul>
 <h3 id="s2-2-2-los-4-elementos">2.2 Los 4 elementos 🎯 <a class="anchor" href="#s2-2-2-los-4-elementos" aria-label="Enlace a la sección: 2.2 Los 4 elementos 🎯">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>2.2 Los 4 elementos 🎯 (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -303,7 +307,7 @@
 <p>🎯 <strong>Trampa típica:</strong> «contratos de mantenimiento» no es un elemento del SIS. Los 4 elementos deben trabajar de forma coordinada.</p>
 </blockquote>
 <h3 id="s2-2-3-tipos-de-datos">2.3 Tipos de datos <a class="anchor" href="#s2-2-3-tipos-de-datos" aria-label="Enlace a la sección: 2.3 Tipos de datos">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>2.3 Tipos de datos (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -335,7 +339,7 @@
 </tbody>
 </table></div>
 <h3 id="s2-2-4-sis-en-atencin-primaria-y-especializ">2.4 SIS en atención primaria y especializada <a class="anchor" href="#s2-2-4-sis-en-atencin-primaria-y-especializ" aria-label="Enlace a la sección: 2.4 SIS en atención primaria y especializada">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>2.4 SIS en atención primaria y especializada (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -368,7 +372,7 @@
 <li><p>📘 Documento médico legal que recoge de forma estructurada y detallada el estado de salud del paciente (antecedentes, diagnósticos, tratamientos, procedimientos y evolución). ✅</p></li>
 </ul>
 <p><strong>Contenido mínimo según el PDF (tabla 1):</strong></p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>3.1 Definición y contenido mínimo (notas de clase frente al PDF)</caption>
 
 <tbody>
 <tr class="odd">
@@ -407,7 +411,7 @@
 <p>⚠️ Nombres distintos: «protocolo anestésico» en tus notas es <strong>informe de anestesia</strong> en el PDF; «gráfica de enfermería» es <strong>gráfico de constantes</strong>; el «informe de urgencias» del PDF es «informe de urgencia». En la clase se dijo «ánalisis y exploración física» por error de transcripción: es <strong>anamnesis</strong>.</p>
 </blockquote>
 <h3 id="s3-3-2-las-5-funciones">3.2 Las 5 funciones 🎯 <a class="anchor" href="#s3-3-2-las-5-funciones" aria-label="Enlace a la sección: 3.2 Las 5 funciones 🎯">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>3.2 Las 5 funciones 🎯 (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -449,7 +453,7 @@
 <blockquote>
 <p><strong>Las tres «grandes»:</strong> única · integrada · acumulativa. ⚠️ Tus notas no recogen <strong>integrada</strong>.</p>
 </blockquote>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>3.3 Las características 🎯🎯 (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -528,7 +532,7 @@
 <li><p>🗒️ Transición gradual de 5 a 10 años con duplicidad papel y digital. Lo que le da validez legal es la imposibilidad de modificar lo registrado.</p></li>
 <li><p>📘 Recursos: <strong>materiales</strong> (ordenadores y hardware en red) y <strong>humanos</strong> (soporte técnico y personal sanitario capacitado). Validez legal por <strong>cuatro condiciones</strong>:</p></li>
 </ul>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>4.1 Implantación y validez legal (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -551,7 +555,7 @@
 <p>⚠️ Tus notas solo recogen la tercera. En una pregunta sobre validez legal, la tercera es la que más se destacó en clase.</p>
 </blockquote>
 <h3 id="s4-4-2-ventajas-y-desventajas">4.2 Ventajas y desventajas <a class="anchor" href="#s4-4-2-ventajas-y-desventajas" aria-label="Enlace a la sección: 4.2 Ventajas y desventajas">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>4.2 Ventajas y desventajas (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -595,7 +599,7 @@
 <li><p>📘 Los sistemas electrónicos son más seguros que el papel: contraseñas y autorizaciones, acceso diferenciado entre personal sanitario y administrativo. El consentimiento informado fue el único documento que siguió en papel (no había firma electrónica); las imágenes (radiografías, resonancias, tomografías) se digitalizaron. ✅ con tus notas.</p></li>
 </ul>
 <h3 id="s4-4-5-aplicaciones">4.5 Aplicaciones <a class="anchor" href="#s4-4-5-aplicaciones" aria-label="Enlace a la sección: 4.5 Aplicaciones">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>4.5 Aplicaciones (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -639,7 +643,7 @@
 </table></div>
 <h2 id="s4-5-calidad-de-los-datos-sanitarios">5. Calidad de los datos sanitarios 🎯🎯 <a class="anchor" href="#s4-5-calidad-de-los-datos-sanitarios" aria-label="Enlace a la sección: 5. Calidad de los datos sanitarios 🎯🎯">#</a></h2>
 <h3 id="s5-5-1-las-6-caractersticas">5.1 Las 6 características <a class="anchor" href="#s5-5-1-las-6-caractersticas" aria-label="Enlace a la sección: 5.1 Las 6 características">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>5.1 Las 6 características (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -695,7 +699,7 @@
 <p>🛡️ Seguridad del paciente · 🧠 Toma de decisiones informada · 📜 Cumplimiento normativo (RGPD y ley española de protección de datos) · 💶 Optimización de recursos · 🔬 Investigación científica</p>
 <p>✅ Coinciden.</p>
 <h3 id="s5-5-3-normas-y-certificacin">5.3 Normas y certificación <a class="anchor" href="#s5-5-3-normas-y-certificacin" aria-label="Enlace a la sección: 5.3 Normas y certificación">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>5.3 Normas y certificación (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -735,7 +739,7 @@
 <li><p>🗒️ La AEPD no certifica calidad: se ocupa de la protección de datos.</p></li>
 </ul>
 <h2 id="s5-6-aspectos-legales">6. Aspectos legales ⚖️ <a class="anchor" href="#s5-6-aspectos-legales" aria-label="Enlace a la sección: 6. Aspectos legales ⚖️">#</a></h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>6. Aspectos legales ⚖️ (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -792,7 +796,7 @@
 <p>⚠️ Error interno del PDF: el RGPD aparece como «de 2018» en el apartado 4 y «de 2016» en el 5. Se aprobó en 2016 y es aplicable desde 2018.</p>
 </blockquote>
 <h2 id="s6-7-los-casos-prcticos-tus-notas-frente-al">7. Los casos prácticos: tus notas frente al solucionario <a class="anchor" href="#s6-7-los-casos-prcticos-tus-notas-frente-al" aria-label="Enlace a la sección: 7. Los casos prácticos: tus notas frente al solucionario">#</a></h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>7. Los casos prácticos: tus notas frente al solucionario (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -861,7 +865,7 @@
 </table></div>
 <h2 id="s7-8-estadstica-de-apoyo-uf2-y-uf1">8. Estadística de apoyo (UF2 y UF1) <a class="anchor" href="#s7-8-estadstica-de-apoyo-uf2-y-uf1" aria-label="Enlace a la sección: 8. Estadística de apoyo (UF2 y UF1)">#</a></h2>
 <h3 id="s8-8-1-distribucin-normal">8.1 Distribución normal <a class="anchor" href="#s8-8-1-distribucin-normal" aria-label="Enlace a la sección: 8.1 Distribución normal">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>8.1 Distribución normal (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -900,7 +904,7 @@
 </table></div>
 <h3 id="s8-8-2-tipificacin-puntuacin-z">8.2 Tipificación (puntuación Z) 🎯 <a class="anchor" href="#s8-8-2-tipificacin-puntuacin-z" aria-label="Enlace a la sección: 8.2 Tipificación (puntuación Z) 🎯">#</a></h3>
 <p><strong>Z = (dato − media) / desviación típica</strong></p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>8.2 Tipificación (puntuación Z) 🎯 (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -940,7 +944,7 @@
 <li><p>Sumar.</p></li>
 <li><p>Dividir.</p></li>
 </ol>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>8.3 Varianza paso a paso (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -993,7 +997,7 @@
 <li><p><strong>Estadística:</strong> Z = (dato − media)/desviación típica; la varianza se calcula elevando al cuadrado las diferencias con la media.</p></li>
 </ol>
 <h3 id="s10-diferencias-que-ms-te-pueden-confundir">Diferencias que más te pueden confundir <a class="anchor" href="#s10-diferencias-que-ms-te-pueden-confundir" aria-label="Enlace a la sección: Diferencias que más te pueden confundir">#</a></h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla comparativa (desplazable)"><table class="table table--compact"><caption>Diferencias que más te pueden confundir (notas de clase frente al PDF)</caption>
 
 <th scope="col"ead>
 <tr class="header">
@@ -1040,7 +1044,7 @@
 </tr>
 </tbody>
 </table></div>
-<nav class="pager" aria-label="Navegación entre páginas"><a href="../visual/reto-hospital.html" rel="prev"><small>← Anterior</small><strong>Reto del hospital (sesión 1)</strong></a></nav>
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../visual/reto-pagina.html" rel="prev"><small>← Anterior</small><strong>Reto del hospital (página)</strong></a></nav>
     </div>
   </main>
 
@@ -1056,6 +1060,11 @@
 <script src="../assets/js/his.core.js" defer></script>
 
 <script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/ai/ai.providers.js" defer></script>
+<script src="../assets/js/ai/ai.gateway.js" defer></script>
+<script src="../assets/js/ai/ai.center.js" defer></script>
+<script src="../assets/js/voice/voice.js" defer></script>
+<script src="../assets/js/his.nav.js" defer></script>
 <script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

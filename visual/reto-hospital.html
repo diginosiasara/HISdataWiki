@@ -36,6 +36,9 @@
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Reto del hospital (sesión 1)", "description": "Cinco tareas con orden de trabajo, comprobaciones y fórmulas.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["Reto del hospital (sesión 1)", "visual", "panel interactivo", "Reto"], "headline": "Reto del hospital (sesión 1)"}</script>
 <link rel="stylesheet" href="../assets/css/assistant.css">
+<link rel="stylesheet" href="../assets/css/reading.css">
+<script src="../assets/js/dyslexia/dyslexia.js"></script>
+<link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body data-block="recursos">
 <div class="skip-links">
@@ -133,7 +136,8 @@
         <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
         <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
         <li><a href="../visual/reto-hospital.html" aria-current="page"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
-        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+        <li><a href="../visual/reto-pagina.html"><span class="num">V·9</span><span>Reto del hospital (página)</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·10</span><span>Notas frente al libro</span></a></li>
       </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
@@ -203,7 +207,7 @@
 <p><a class="btn" href="app/reto-hospital.html" target="_blank" rel="noopener">Abrir a pantalla completa ↗</a></p>
 <iframe class="vis-frame" src="app/reto-hospital.html" title="Reto del hospital (sesión 1) · panel visual" loading="lazy" style="width:100%;height:900px;border:1px solid var(--line,#d7e6e2);border-radius:14px;background:#fff"></iframe>
 <script>window.addEventListener("message",function(e){var d=e.data;if(!d||d.his!=="height")return;var f=document.querySelectorAll("iframe.vis-frame");f.forEach(function(x){if(x.contentWindow===e.source)x.style.height=Math.min(Math.max(d.h+8,500),20000)+"px"})});</script>
-<nav class="pager" aria-label="Navegación entre páginas"><a href="../visual/estadistica-apoyo.html" rel="prev"><small>← Anterior</small><strong>Estadística de apoyo</strong></a><a class="next" href="../visual/notas-vs-libro.html" rel="next"><small>Siguiente →</small><strong>Notas de clase frente al libro</strong></a></nav>
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../visual/estadistica-apoyo.html" rel="prev"><small>← Anterior</small><strong>Estadística de apoyo</strong></a><a class="next" href="../visual/reto-pagina.html" rel="next"><small>Siguiente →</small><strong>Reto del hospital (página)</strong></a></nav>
     </div>
   </main>
 
@@ -219,6 +223,11 @@
 <script src="../assets/js/his.core.js" defer></script>
 
 <script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/ai/ai.providers.js" defer></script>
+<script src="../assets/js/ai/ai.gateway.js" defer></script>
+<script src="../assets/js/ai/ai.center.js" defer></script>
+<script src="../assets/js/voice/voice.js" defer></script>
+<script src="../assets/js/his.nav.js" defer></script>
 <script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

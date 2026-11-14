@@ -36,6 +36,9 @@
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Casos prácticos UF6", "description": "Casos prácticos resueltos de calidad de la asistencia sanitaria.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["casos", "calidad", "solucionario"], "headline": "Casos prácticos UF6"}</script>
 <link rel="stylesheet" href="../assets/css/assistant.css">
+<link rel="stylesheet" href="../assets/css/reading.css">
+<script src="../assets/js/dyslexia/dyslexia.js"></script>
+<link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body data-block="recursos">
 <div class="skip-links">
@@ -133,7 +136,8 @@
         <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
         <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
         <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
-        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+        <li><a href="../visual/reto-pagina.html"><span class="num">V·9</span><span>Reto del hospital (página)</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·10</span><span>Notas frente al libro</span></a></li>
       </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
@@ -200,6 +204,7 @@
 <nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../uf6/index.html">UF6 · Calidad de la asistencia sanitaria</a></li><li><span aria-current="page">Casos prácticos UF6</span></li></ol></nav>
 <header class="page-head"><p class="eyebrow"><span class="eyebrow__num">UF6·6</span>UF6 · Calidad de la asistencia sanitaria</p><h1>Casos prácticos <span class="grad">UF6</span></h1><p class="lead">Los seis casos del manual de calidad, con solución.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 8 min de lectura</span><span class="origin origin--uf3">PDF UF</span></p></header>
 <div class="callout callout--tip" data-icon="💡"><p class="callout__title">Cómo usar esta página</p><p>Intenta resolver cada caso antes de abrir la solución.</p></div>
+<h2 id="casos">Casos resueltos <a class="anchor" href="#casos" aria-label="Enlace a la sección: Casos resueltos">#</a></h2>
 <h3>Caso 1 · Ciclo PDCA en un centro de salud</h3>
 <div class="callout callout--example" data-icon="🧪"><p class="callout__title">Enunciado</p><p>El centro Salud y Vida recibe quejas por esperas largas, diagnósticos imprecisos y falta de atención personalizada, y tiene muchos reingresos. Describe qué harías en cada fase del PDCA.</p></div>
 <details class="sol"><summary>Ver solución</summary><ol><li><b>Planificar</b>: identificar problemas y definir indicadores (tiempo medio de espera, tasa de reingreso).</li><li><b>Hacer</b>: formar al personal, adoptar tecnología diagnóstica y reorganizar las citas.</li><li><b>Verificar</b>: comparar indicadores antes y después.</li><li><b>Actuar</b>: ajustar y fijar nuevas estrategias.</li></ol>
@@ -242,6 +247,11 @@
 <script src="../assets/js/his.core.js" defer></script>
 
 <script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/ai/ai.providers.js" defer></script>
+<script src="../assets/js/ai/ai.gateway.js" defer></script>
+<script src="../assets/js/ai/ai.center.js" defer></script>
+<script src="../assets/js/voice/voice.js" defer></script>
+<script src="../assets/js/his.nav.js" defer></script>
 <script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>

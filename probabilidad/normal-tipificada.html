@@ -36,6 +36,9 @@
 <script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Normal tipificada y puntuaciones z", "description": "Cómo tipificar una variable normal con z = (x − μ)/σ, usar la tabla z y comparar valores de distintas escalas. Con ejemplos de presión arterial y estaturas.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "isPartOf": {"@type": "WebSite", "name": "HISdata Wiki", "description": "Conocimiento, análisis y gestión de la información sanitaria"}, "learningResourceType": "Material didáctico", "educationalLevel": "Formación profesional / universitaria", "about": ["tipificacion", "puntuacion z", "normal estandar", "N(0", "1)", "tabla z", "estandarizar"], "headline": "Normal tipificada y puntuaciones z"}</script>
 <link rel="stylesheet" href="../assets/css/assistant.css">
+<link rel="stylesheet" href="../assets/css/reading.css">
+<script src="../assets/js/dyslexia/dyslexia.js"></script>
+<link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body data-block="probabilidad">
 <div class="skip-links">
@@ -133,7 +136,8 @@
         <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
         <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
         <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
-        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·9</span><span>Notas frente al libro</span></a></li>
+        <li><a href="../visual/reto-pagina.html"><span class="num">V·9</span><span>Reto del hospital (página)</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·10</span><span>Notas frente al libro</span></a></li>
       </ul>
       <h2>UF4 · CMBD</h2>
       <ul>
@@ -250,6 +254,11 @@
 <script src="../assets/js/widgets/tabla-z.js" defer></script>
 <script src="../assets/js/widgets/tipificar.js" defer></script>
 <script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/ai/ai.providers.js" defer></script>
+<script src="../assets/js/ai/ai.gateway.js" defer></script>
+<script src="../assets/js/ai/ai.center.js" defer></script>
+<script src="../assets/js/voice/voice.js" defer></script>
+<script src="../assets/js/his.nav.js" defer></script>
 <script src="../assets/js/his.assistant.js" defer></script>
 </body>
 </html>
