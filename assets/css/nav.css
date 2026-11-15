@@ -1,0 +1,19 @@
+/* Menú de temas · grupos plegables, filtro y estados claros */
+.ng-sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.ng-tools{position:sticky;top:0;z-index:3;background:var(--paper,#fff);padding:8px 4px 10px;margin:-4px -4px 6px;border-bottom:1px solid var(--line,#e2e8f0)}
+.ng-tools input[type=search]{width:100%;box-sizing:border-box;border:1.5px solid var(--line-strong,#b8c4d0);border-radius:10px;padding:9px 12px;font:inherit;font-size:14px;background:var(--surface,#fff);color:var(--ink,#16202b)}
+.ng-tools input:focus-visible,.ng-btn:focus-visible,.ng-toggle:focus-visible{outline:3px solid var(--focus,#f59e0b);outline-offset:2px}
+.ng-row{display:flex;gap:4px;flex-wrap:nowrap;margin-top:6px}
+.ng-btn{flex:1;white-space:nowrap;border:1px solid var(--line-strong,#b8c4d0);background:transparent;color:var(--ink,#16202b);border-radius:8px;padding:5px 4px;font:inherit;font-size:11.5px;cursor:pointer;min-height:32px}.ng-btn:hover{background:var(--surface,#f1f5f9)}
+.nav h2{margin:6px 0 0}
+.ng-toggle{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:8px;padding:9px 10px;min-height:44px;border-radius:10px;cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,#475569)}
+.ng-toggle:hover{background:var(--surface,#f1f5f9);color:var(--ink,#16202b)}
+.ng-ttl{flex:1;line-height:1.25}.ng-cnt{font-size:11px;font-weight:700;border:1px solid var(--line-strong,#b8c4d0);border-radius:999px;padding:0 7px;color:var(--muted,#475569)}
+.ng-chev{transition:transform .15s}.ng-toggle[aria-expanded="false"] .ng-chev{transform:rotate(-90deg)}
+.ng-has-cur .ng-toggle{color:var(--accent,#1e6db4);box-shadow:inset 3px 0 0 var(--accent,#1e6db4)}
+.nav ul[hidden]{display:none}
+.nav li[hidden]{display:none}
+.nav ul a{min-height:40px;display:flex;align-items:center;gap:8px}
+.nav a[aria-current="page"]{font-weight:700;outline:2px solid transparent}
+@media (prefers-reduced-motion:reduce){.ng-chev{transition:none}}
+@media (forced-colors:active){.nav a[aria-current="page"]{outline:2px solid Highlight}.ng-has-cur .ng-toggle{border-left:3px solid Highlight}}

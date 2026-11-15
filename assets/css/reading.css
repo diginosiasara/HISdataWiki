@@ -1,0 +1,11 @@
+/* Preferencias de lectura (se activan con html[data-read]) */
+html[data-read] body{font-size:var(--read-size,100%)}
+html[data-read] main,html[data-read] main p,html[data-read] main li,html[data-read] main td,html[data-read] main th,html[data-read] main figcaption,html[data-read] main summary,html[data-read] main label{font-family:var(--read-font,inherit);letter-spacing:var(--read-ls,normal);word-spacing:var(--read-ws,normal)}
+html[data-read] main p,html[data-read] main li,html[data-read] main td{line-height:var(--read-lh,1.6)}
+html[data-read] main p,html[data-read] main li{max-width:var(--read-width,none);text-align:left}
+html[data-read] body,html[data-read] .site-header,html[data-read] .sidebar{background-color:var(--paper)}
+html[data-read] .hx-panel,html[data-read] .hx-panel *{letter-spacing:normal;word-spacing:normal}
+html.read-focus .sidebar,html.read-focus #sidebar{display:none!important}
+html.read-focus main{margin-left:auto;margin-right:auto}
+.read-ruler{position:fixed;left:0;right:0;top:200px;height:36px;background:rgba(255,214,0,.22);border-top:2px solid rgba(180,130,0,.55);border-bottom:2px solid rgba(180,130,0,.55);pointer-events:none;z-index:8000;display:none}
+@media (prefers-color-scheme:dark){.read-ruler{background:rgba(255,214,0,.16)}}

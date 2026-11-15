@@ -1,0 +1,11 @@
+const test=require('node:test'),assert=require('node:assert');
+global.window={};require('../../assets/js/his.math.js');const M=window.HISMath;
+const close=(a,b,e=1e-6)=>assert.ok(Math.abs(a-b)<e,a+' ≠ '+b);
+const g=[92,105,110,92,99,95,92,108,110,92,97,103,92,94,100,105,112,103,99,90,93,105,105,100,96];
+test('glucosa: media, mediana, moda',()=>{const d=M.describe(g,{ddof:0});close(d.mean,99.56);assert.strictEqual(d.median,99);assert.deepStrictEqual(d.mode.values,[92]);});
+test('glucosa: varianza ÷n y ÷(n-1)',()=>{close(M.variance(g,0),43.1264,1e-4);close(M.variance(g,1),44.9233,1e-3);});
+test('exponencial ambulancia',()=>{close(M.expCdf(3,1/6),0.3934693,1e-6);close(Math.exp(-9/6),0.2231302,1e-6);});
+test('normal e IC',()=>{close(M.normCdf(1.96),0.975,1e-4);close(M.normInv(0.975),1.959964,1e-4);close(154-1.96*5/Math.sqrt(52),152.64,1e-2);});
+test('t y chi2',()=>{close(M.tInv(0.975,7),2.364624,1e-4);close(M.chi2Inv(0.95,1),3.841459,1e-4);});
+test('tabla de frecuencias de la presión',()=>{const p=[120.5,125.3,118.2,132.8,128.4,124.6,121.7,130.2,115.9,129.1,122.4,127.5,119.8,126.3,131.7,117.5,123.4,128.9,125.6,120.2];assert.deepStrictEqual(M.freqTable(p).rows.map(r=>r.f),[3,5,5,5,2]);});
+test('intérprete de expresiones',()=>{close(M.evaluate('2+3*sqrt(16)'),14);close(M.evaluate('nCr(5; 2)'),10);close(M.evaluate('sin(30)'),0.5);assert.throws(()=>M.evaluate('2+'));});

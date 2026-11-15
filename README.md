@@ -26,3 +26,9 @@ Añade un objeto a `HIS.entries` (id, s, title, desc, tags, b). Opcional: icono 
 - `servidor/mcp/`: servidor MCP de solo lectura para Google Antigravity (Node 18+).
 - `assets/js/kb.js` es la base de conocimiento del chat: hay que regenerarla si cambias el contenido.
 - `visual/` contiene paneles interactivos autónomos (`visual/app/*.html`) incrustados en páginas de la wiki.
+
+## Servidor local, funcionamiento sin conexión y voz integrada
+- `node servidor/servidor.js` sirve la wiki en http://localhost:8787 y, si defines `ANTHROPIC_API_KEY`, ofrece un proxy seguro en `/api/chat` (la clave vive solo en el servidor; límite de uso, lista de modelos y bloqueo de datos personales).
+- `sw.js` (Service Worker) guarda la wiki para usarla sin conexión. Ejecuta `node servidor/generar-sw.mjs` cuando añadas o cambies páginas.
+- Dictado integrado: `node modelos-ia/preparar-voz.mjs` (una sola vez, con Internet) deja el motor dentro del paquete. Ver `modelos-ia/speech-to-text/README.md`.
+- Pruebas: `node --test tests/unit/*.test.js`.
