@@ -1,0 +1,15 @@
+/* HISdata Wiki · simulacro.css — extras del simulacro de examen (reutiliza test-uf.css) */
+.sim{display:grid;gap:1rem;min-width:0}
+.sim-setup{display:grid;gap:.9rem;padding:1rem;border:1px solid var(--line);border-radius:var(--r-card,16px);background:var(--surface)}
+.sim-setup p{margin:0}.sim-hint{font-size:var(--fs-sm);color:var(--muted)}
+.sim-bar{position:sticky;top:4.2rem;z-index:5;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between;padding:.6rem 1rem;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-soft)}
+.sim-count{font-weight:800}.sim-clock{font-weight:800;font-variant-numeric:tabular-nums}
+.sim-time.is-low{color:var(--c-red-ink)}
+.sim-msg{margin:0;font-weight:700;color:var(--c-red-ink)}.sim-msg:empty{display:none}
+.sim-end{display:flex;flex-wrap:wrap;gap:.6rem}
+.sim-result{padding:1rem 1.2rem;border-radius:var(--r-card,16px);background:var(--surface);border:1px solid var(--line);outline:none}
+.sim-nota{margin:0;font-family:var(--font-display);font-size:3rem;line-height:1.1;color:var(--c-violet-ink)}
+.sim-nota b{font-weight:800}.sim-sub{margin:.2rem 0 0;color:var(--muted)}
+.sim-tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1rem 0}
+div.tt-opt{cursor:default}div.tt-opt:hover{border-color:var(--line)}div.tt-opt.is-ok:hover{border-color:var(--c-green)}div.tt-opt.is-ko:hover{border-color:var(--c-red)}
+@media (max-width:30rem){.sim-bar{top:3.6rem}.sim-nota{font-size:2.4rem}}

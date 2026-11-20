@@ -131,3 +131,4 @@ body::before{animation:drift 26s ease-in-out infinite alternate}
 .idx h3{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;font-size:1.5rem;margin-top:0}
 .card__kind{display:inline-block;margin-left:.4rem;padding:.1rem .55rem;border-radius:999px;font:700 .68rem/1.4 var(--font-body);letter-spacing:.08em;text-transform:uppercase;background:var(--c-orange-soft);color:var(--c-orange-ink)}
 .meta-row{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center}
+.origin--s5{--oc:var(--c-violet);--oc-ink:var(--c-violet-ink)}
