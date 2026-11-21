@@ -1,0 +1,11 @@
+const test=require('node:test'),assert=require('node:assert');
+global.window={};require('../../assets/js/his.math.js');const S=require('../../assets/js/widgets/simulacro-practico-core.js');
+const ids=['P0','P1','P2','P3','P4'];
+const get=(ex,id)=>ex.ps.flatMap(p=>p.items).find(i=>i.id===id);
+test('modo cuaderno reproduce la solución',()=>{const ex=S.build('X',ids,true);
+  assert.ok(Math.abs(get(ex,'p0_media').ans-181.1667)<1e-3);assert.strictEqual(get(ex,'p0_mediana').ans,180.5);
+  assert.deepStrictEqual([0,1,2,3,4,5].map(k=>get(ex,'p0_f'+k).ans),[4,7,4,8,5,2]);
+  assert.ok(Math.abs(get(ex,'p1_sg').ans-2.705)<1e-3);assert.strictEqual(get(ex,'p3_nr').ans,16);assert.strictEqual(get(ex,'p4_w2').ans,1.375);});
+test('Shapiro-Wilk coincide con el cuaderno',()=>{const ex=S.build('X',['P2'],true);assert.ok(get(ex,'p2_c2').label.includes('0,054'));});
+test('los exámenes aleatorios se autocorrigen',()=>{for(let k=0;k<50;k++){const ex=S.build('T'+k,ids,false);ex.ps.forEach(p=>p.items.forEach(it=>assert.ok(S.grade(it,it.kind==='sel'?it.ans:String(it.ans).replace('.',',')).ok,it.id)));}});
+test('mismo código, mismos datos',()=>{assert.deepStrictEqual(S.build('A1',ids,false).ps.map(p=>p.copy),S.build('A1',ids,false).ps.map(p=>p.copy));});
