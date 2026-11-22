@@ -10,7 +10,7 @@
  *   book.explain('Ejercicio', 'C11');        // explicación en español (lo aporta services/formula-explain.js)
  *
  * Funciones: NORMDIST, NORM.DIST, NORMSDIST, NORM.S.DIST, EXPONDIST, EXPON.DIST, EXP, LN, LOG, LOG10, SQRT, POWER, PI,
- * ABS, ROUND, MAX, MIN, SUM, AVERAGE, COUNT, SUMPRODUCT, STDEV, STDEV.S, STDEVP, STDEV.P, VAR.S, VAR.P, COUNTIF, COUNTIFS,
+ * ABS, ROUND, MAX, MIN, SUM, AVERAGE, COUNT, SUMPRODUCT, STDEV, STDEV.S, STDEVP, STDEV.P, VAR.S, VAR.P, MEDIAN, MODE, DEVSQ, COUNTIF, COUNTIFS,
  * IF, IFERROR, AND, OR, NOT, TRUE, FALSE, TEXT, N, TIME. Operadores: + - * / ^ & % = <> < > <= >=.
  * Referencias: A1, $A$1, A1:B5, Hoja!A1, 'Mi hoja'!A1:B5.
  */
@@ -237,6 +237,9 @@
   agg('VARP', function (n) { return variance(n, true); });
   agg('STDEV', function (n) { var v = variance(n, false); return isErr(v) ? v : Math.sqrt(v); });
   agg('STDEVP', function (n) { var v = variance(n, true); return isErr(v) ? v : Math.sqrt(v); });
+  agg('MEDIAN', function (n) { if (!n.length) return E.NUM; var b = n.slice().sort(function (x, y) { return x - y; }), k = b.length; return k % 2 ? b[(k - 1) / 2] : (b[k / 2 - 1] + b[k / 2]) / 2; });
+  agg('MODE', function (n) { var c = {}, best = 1, mo = null, i; for (i = 0; i < n.length; i++) { c[n[i]] = (c[n[i]] || 0) + 1; if (c[n[i]] > best) best = c[n[i]]; } if (best < 2) return E.NA; for (i = 0; i < n.length; i++) if (c[n[i]] === best) return n[i]; return E.NA; });
+  agg('DEVSQ', function (n) { var m = n.reduce(function (a, b) { return a + b; }, 0) / n.length; return n.reduce(function (a, b) { return a + (b - m) * (b - m); }, 0); });
 
   function unary(name, fn) {
     FN[name] = function (a) { var x = toNum(a[0]); if (isErr(x)) return x; var r = fn(x); return typeof r === 'number' && !isFinite(r) ? E.NUM : r; };
@@ -307,7 +310,8 @@
     if (typeof c === 'string') {
       var m = /^(<=|>=|<>|<|>|=)?(.*)$/.exec(c);
       op = m[1] || '='; rhs = m[2];
-      if (rhs.trim() !== '' && isFinite(Number(rhs))) rhs = Number(rhs);
+      var rn = rhs.trim().replace(/^(-?\d+),(\d+)$/, '$1.$2'); /* «25,25» (coma decimal del locale es) también es un número */
+      if (rn !== '' && isFinite(Number(rn))) rhs = Number(rn);
     }
     return function (v) {
       if (isErr(v)) return false;

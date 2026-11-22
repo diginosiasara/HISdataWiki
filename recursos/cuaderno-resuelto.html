@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es" data-page="recursos/cuaderno-resuelto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuaderno de prácticas resuelto, con Excel · HISdata Wiki</title>
+<meta name="description" content="Las Prácticas 0 a 4 del cuaderno de estadística sanitaria resueltas y explicadas (fórmula, cálculo, resultado e interpretación), con el Excel interactivo de la solución y descargas del enunciado y de la solución.">
+<meta name="author" content="Sara Lopez Figueredo Sainz">
+<meta name="keywords" content="simulacro, examen, test, UF1, UF2, UF3, UF4, UF5, UF6, validación y explotación de datos">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7c3aed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="HISdata Wiki">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Cuaderno de prácticas resuelto, con Excel · HISdata Wiki">
+<meta property="og:description" content="Las Prácticas 0 a 4 del cuaderno de estadística sanitaria resueltas y explicadas (fórmula, cálculo, resultado e interpretación), con el Excel interactivo de la solución y descargas del enunciado y de la solución.">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/modules.css">
+<link rel="stylesheet" href="../assets/css/widgets-sis.css">
+<link rel="stylesheet" href="../assets/css/widgets-prob.css">
+<link rel="stylesheet" href="../assets/css/widgets-desc.css">
+<link rel="stylesheet" href="../assets/css/theme-apuntes.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+<link rel="stylesheet" href="../assets/css/sheet.css">
+<script>window.HIS_BASE="../";(function(){try{var p=JSON.parse(localStorage.getItem('hisdata:prefs:v1')||'{}'),r=document.documentElement;if(p.theme&&p.theme!=='auto')r.setAttribute('data-theme',p.theme);if(p.contrast)r.setAttribute('data-contrast','');if(p.dyslexia)r.setAttribute('data-dyslexia','');if(p.fontScale)r.style.setProperty('--font-scale',p.fontScale/100)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "Cuaderno de prácticas resuelto", "description": "Las Prácticas 0 a 4 del cuaderno de estadística sanitaria resueltas y explicadas (fórmula, cálculo, resultado e interpretación), con el Excel interactivo de la solución y descargas del enunciado y de la solución.", "inLanguage": "es", "author": {"@type": "Person", "name": "Sara Lopez Figueredo Sainz"}, "publisher": {"@type": "Organization", "name": "Diginosia.com", "url": "https://diginosia.com"}, "about": "Estadística aplicada al ámbito sanitario: descriptiva, normal, z y GRD"}</script>
+<link rel="stylesheet" href="../assets/css/assistant.css">
+<link rel="stylesheet" href="../assets/css/reading.css">
+<script src="../assets/js/dyslexia/dyslexia.js"></script>
+<link rel="stylesheet" href="../assets/css/nav.css">
+</head>
+<body data-block="recursos">
+<div class="skip-links">
+  <a href="#main-content">Saltar al contenido principal</a>
+  <a href="#sidebar">Saltar a la navegación</a>
+</div>
+<header class="site-header" role="banner">
+  <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Menú de navegación">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 29c4 0 5-1 7-8s4-12 7-12 5 5 7 12 3 8 7 8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="2.6" fill="#facc15"/></svg>
+    <span>HIS<b>data</b> Wiki<small>Diginosia.com</small></span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-btn" type="button" data-search-open aria-label="Buscar en la wiki" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Buscar</span>
+    </button>
+    <button class="icon-btn" type="button" data-reader-toggle aria-label="Lector de voz" aria-pressed="false" aria-keyshortcuts="Alt+L">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span class="lbl">Lector</span>
+    </button>
+    <button class="icon-btn" type="button" data-prefs-toggle aria-label="Accesibilidad y preferencias" aria-expanded="false" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></svg><span class="lbl">Accesibilidad</span>
+    </button>
+  </div>
+</header>
+<div class="shell has-toc">
+  <aside class="sidebar" id="sidebar" data-open="false" aria-label="Navegación de la wiki">
+    <nav class="nav" aria-label="Contenidos">
+      <ul><li><a href="../index.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Inicio</a></li><li><a href="../indice.html"><span class="dot" style="--dot:var(--c-yellow)"></span>Índice general</a></li></ul>
+      <h2>Sesiones 0 a 2 · Estadística descriptiva</h2>
+      <ul>
+        <li><a href="../descriptiva/index.html"><span class="num">S0·0</span><span>Introducción</span></a></li>
+        <li><a href="../descriptiva/estadistica.html"><span class="num">S0·1</span><span>¿Qué es la estadística?</span></a></li>
+        <li><a href="../descriptiva/poblacion-muestra.html"><span class="num">S0·2</span><span>Población y muestra</span></a></li>
+        <li><a href="../descriptiva/muestreo.html"><span class="num">S0·3</span><span>Tipos de muestreo</span></a></li>
+        <li><a href="../descriptiva/variables.html"><span class="num">S0·4</span><span>Tipos de variables</span></a></li>
+        <li><a href="../descriptiva/fases.html"><span class="num">S0·5</span><span>Fases de un estudio</span></a></li>
+        <li><a href="../descriptiva/cualitativas.html"><span class="num">S0·6</span><span>Tablas cualitativas</span></a></li>
+        <li><a href="../descriptiva/doble-entrada.html"><span class="num">S0·7</span><span>Tablas de doble entrada</span></a></li>
+        <li><a href="../descriptiva/frecuencias.html"><span class="num">S0·8</span><span>Tipos de frecuencias</span></a></li>
+        <li><a href="../descriptiva/intervalos.html"><span class="num">S0·9</span><span>Datos en intervalos</span></a></li>
+        <li><a href="../descriptiva/colesterol.html"><span class="num">S1·1</span><span>Ejercicio: colesterol</span></a></li>
+        <li><a href="../descriptiva/que-grafico.html"><span class="num">S1·2</span><span>Qué gráfico usar</span></a></li>
+        <li><a href="../descriptiva/diagrama-barras.html"><span class="num">S1·3</span><span>Diagrama de barras</span></a></li>
+        <li><a href="../descriptiva/histograma.html"><span class="num">S1·4</span><span>Histograma</span></a></li>
+        <li><a href="../descriptiva/poligono.html"><span class="num">S1·5</span><span>Polígono</span></a></li>
+        <li><a href="../descriptiva/curva-acumulativa.html"><span class="num">S1·6</span><span>Curva acumulativa</span></a></li>
+        <li><a href="../descriptiva/sectores.html"><span class="num">S1·7</span><span>Diagrama de sectores</span></a></li>
+        <li><a href="../descriptiva/posicion-central.html"><span class="num">S1·8</span><span>Media, mediana y moda</span></a></li>
+        <li><a href="../descriptiva/cuartiles-percentiles.html"><span class="num">S1·9</span><span>Cuartiles y percentiles</span></a></li>
+        <li><a href="../descriptiva/dispersion.html"><span class="num">S2·1</span><span>Dispersión</span></a></li>
+        <li><a href="../descriptiva/diagrama-cajas.html"><span class="num">S2·2</span><span>Diagrama de cajas</span></a></li><li><a href="../descriptiva/laboratorio-posicion.html"><span class="num">Lab</span><span>Laboratorio visual</span></a></li>
+        <li><a href="../descriptiva/herramientas.html"><span class="num">S2·3</span><span>Herramientas informáticas</span></a></li>
+      </ul>
+      <h2>UF2 · Probabilidad y distribuciones</h2>
+      <ul>
+        <li><a href="../probabilidad/index.html"><span class="num">UF2·0</span><span>Visión general</span></a></li>
+        <li><a href="../probabilidad/introduccion.html"><span class="num">UF2·1</span><span>Probabilidad y sucesos</span></a></li>
+        <li><a href="../probabilidad/venn.html"><span class="num">UF2·2</span><span>Diagramas de Venn</span></a></li>
+        <li><a href="../probabilidad/variables-continuas.html"><span class="num">UF2·3</span><span>Variables continuas</span></a></li>
+        <li><a href="../probabilidad/uniforme.html"><span class="num">UF2·4</span><span>Distribución uniforme</span></a></li>
+        <li><a href="../probabilidad/exponencial.html"><span class="num">UF2·5</span><span>Distribución exponencial</span></a></li>
+        <li><a href="../probabilidad/normal.html"><span class="num">UF2·6</span><span>Distribución normal</span></a></li>
+        <li><a href="../probabilidad/normal-tipificada.html"><span class="num">UF2·7</span><span>Normal tipificada (z)</span></a></li>
+        <li><a href="../probabilidad/regla-empirica.html"><span class="num">UF2·8</span><span>Regla empírica</span></a></li>
+        <li><a href="../probabilidad/forma-normalidad.html"><span class="num">UF2·9</span><span>Forma y normalidad</span></a></li>
+        <li><a href="../probabilidad/intervalos-confianza.html"><span class="num">UF2·10</span><span>Intervalos de confianza</span></a></li>
+        <li><a href="../probabilidad/distribuciones-muestrales.html"><span class="num">UF2·11</span><span>χ², t y F</span></a></li>
+      </ul>
+      <h2>UF3 · Sistemas de información sanitaria</h2>
+      <ul>
+        <li><a href="../sis/index.html"><span class="num">UF3·0</span><span>Visión general</span></a></li>
+        <li><a href="../sis/sistemas-informacion.html"><span class="num">UF3·1</span><span>Los sistemas de información sanitaria</span></a></li>
+        <li><a href="../sis/historia-clinica.html"><span class="num">UF3·2</span><span>La historia clínica</span></a></li>
+        <li><a href="../sis/elementos-sis.html"><span class="num">UF3·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../sis/aplicaciones-hce.html"><span class="num">UF3·4</span><span>Aplicaciones y historia clínica electrónica</span></a></li>
+        <li><a href="../sis/calidad-datos.html"><span class="num">UF3·5</span><span>Calidad de los datos sanitarios</span></a></li>
+        <li><a href="../sis/aspectos-legales.html"><span class="num">UF3·6</span><span>Aspectos legales de los SIS</span></a></li><li><a href="../sis/cmbd.html"><span class="num">UF4·1</span><span>CMBD</span></a></li>
+        <li><a href="../sis/casos-uf3.html"><span class="num">UF3·7</span><span>Casos prácticos UF3</span></a></li>
+      </ul>
+      <h2>Sesión 4 · clase del 12/11</h2>
+      <ul>
+        <li><a href="../sesion4/apuntes.html"><span class="num">S4·1</span><span>Apuntes de clase</span></a></li>
+        <li><a href="../sesion4/ejercicios.html"><span class="num">S4·2</span><span>Banco de 27 ejercicios</span></a></li>
+      </ul>
+      <h2>Sesión 5 · clase del 19/11</h2>
+      <ul>
+        <li><a href="../sesion5/apuntes.html"><span class="num">S5·1</span><span>Apuntes de clase</span></a></li>
+      </ul>
+      <h2>Visual · paneles interactivos</h2>
+      <ul>
+        <li><a href="../visual/index.html"><span class="num">V·0</span><span>Visión general</span></a></li>
+        <li><a href="../visual/historia-clinica.html"><span class="num">V·1</span><span>La historia clínica</span></a></li>
+        <li><a href="../visual/aplicaciones-hce.html"><span class="num">V·2</span><span>Aplicaciones de la HCE</span></a></li>
+        <li><a href="../visual/elementos-sis.html"><span class="num">V·3</span><span>Elementos de un SIS</span></a></li>
+        <li><a href="../visual/sis.html"><span class="num">V·4</span><span>Sistemas de información</span></a></li>
+        <li><a href="../visual/calidad-datos.html"><span class="num">V·5</span><span>Calidad de los datos</span></a></li>
+        <li><a href="../visual/cmbd.html"><span class="num">V·6</span><span>El CMBD</span></a></li>
+        <li><a href="../visual/estadistica-apoyo.html"><span class="num">V·7</span><span>Estadística de apoyo</span></a></li>
+        <li><a href="../visual/reto-hospital.html"><span class="num">V·8</span><span>Reto del hospital</span></a></li>
+        <li><a href="../visual/reto-pagina.html"><span class="num">V·9</span><span>Reto del hospital (página)</span></a></li>
+        <li><a href="../visual/notas-vs-libro.html"><span class="num">V·10</span><span>Notas frente al libro</span></a></li>
+        <li><a href="../visual/sesion4-apuntes.html"><span class="num">V·11</span><span>Sesión 4 · apuntes visuales</span></a></li>
+        <li><a href="../visual/clasificacion-pacientes.html"><span class="num">V·12</span><span>Clasificación de pacientes</span></a></li>
+      </ul>
+      <h2>UF4 · CMBD</h2>
+      <ul>
+        <li><a href="../uf4/index.html"><span class="num">UF4·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf4/estructura-cmbd.html"><span class="num">UF4·1</span><span>Estructura del CMBD</span></a></li>
+        <li><a href="../uf4/validacion-explotacion.html"><span class="num">UF4·2</span><span>Validación y explotación</span></a></li>
+        <li><a href="../uf4/cuadros-de-mando.html"><span class="num">UF4·3</span><span>Cuadros de mando</span></a></li>
+        <li><a href="../uf4/envios-cmbd.html"><span class="num">UF4·4</span><span>Envíos del CMBD</span></a></li>
+        <li><a href="../uf4/casos-uf4.html"><span class="num">UF4·5</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>UF5 · Clasificación de pacientes</h2>
+      <ul>
+        <li><a href="../uf5/index.html"><span class="num">UF5·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf5/origen-necesidad.html"><span class="num">UF5·1</span><span>Origen y necesidad</span></a></li>
+        <li><a href="../uf5/tipos-scp.html"><span class="num">UF5·2</span><span>Tipos de SCP</span></a></li>
+        <li><a href="../uf5/apr-grd.html"><span class="num">UF5·3</span><span>AP-GRD y APR-GRD</span></a></li>
+        <li><a href="../uf5/peso-case-mix.html"><span class="num">UF5·4</span><span>Case-mix y peso</span></a></li>
+        <li><a href="../uf5/casos-uf5.html"><span class="num">UF5·5</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>UF6 · Calidad asistencial</h2>
+      <ul>
+        <li><a href="../uf6/index.html"><span class="num">UF6·0</span><span>Visión general</span></a></li>
+        <li><a href="../uf6/calidad-seguridad.html"><span class="num">UF6·1</span><span>Calidad y seguridad</span></a></li>
+        <li><a href="../uf6/procesos-variabilidad.html"><span class="num">UF6·2</span><span>Procesos y variabilidad</span></a></li>
+        <li><a href="../uf6/indicadores.html"><span class="num">UF6·3</span><span>Indicadores</span></a></li>
+        <li><a href="../uf6/modelos-calidad.html"><span class="num">UF6·4</span><span>Modelos de calidad</span></a></li>
+        <li><a href="../uf6/investigacion-evidencia.html"><span class="num">UF6·5</span><span>Investigación y evidencia</span></a></li>
+        <li><a href="../uf6/casos-uf6.html"><span class="num">UF6·6</span><span>Casos prácticos</span></a></li>
+      </ul>
+      <h2>Prácticas y casos</h2>
+      <ul>
+        <li><a href="../practicas/index.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Visión general</span></a></li>
+        <li><a href="../practicas/farmacos.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Eficacia de fármacos (sucesos independientes)</span></a></li>
+        <li><a href="../practicas/historias-clinicas.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Historias clínicas: administrativos y clínicos</span></a></li>
+        <li><a href="../practicas/citas-uniforme.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Citas médicas: distribución uniforme</span></a></li>
+        <li><a href="../practicas/ambulancia.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Ambulancia: tiempos exponenciales</span></a></li>
+        <li><a href="../practicas/urgencias.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Urgencias: factor de decaimiento</span></a></li>
+        <li><a href="../practicas/presion-sistolica.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Presión sistólica: tipificación</span></a></li>
+        <li><a href="../practicas/tension-arterial.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Tensión arterial normal</span></a></li>
+        <li><a href="../practicas/estaturas-z.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Estaturas pediátricas y puntuación z</span></a></li>
+        <li><a href="../practicas/glucosa.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Glucosa: intervalo de confianza con t</span></a></li>
+        <li><a href="../practicas/casos-descriptiva.html"><span class="dot" style="--dot:var(--c-orange)"></span><span>Casos de descriptiva</span></a></li>
+        <li><a href="../practicas/casos-sis.html"><span class="num">P10</span><span>Casos prácticos del SIS</span></a></li>
+        <li><a href="../practicas/reto-hospital.html"><span class="num">S3</span><span>Reto del hospital</span></a></li>
+      </ul>
+      <h2>Recursos</h2>
+      <ul>
+        <li><a href="../recursos/index.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Visión general</span></a></li>
+        <li><a href="../recursos/mapa-sesiones-uf.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Sesiones frente a UF</span></a></li>
+        <li><a href="../recursos/hojas-de-calculo.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Hojas de cálculo</span></a></li>
+        <li><a href="../recursos/tabla-z.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Tabla de la normal tipificada</span></a></li>
+        <li><a href="../recursos/glosario.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Glosario</span></a></li>
+        <li><a href="../recursos/formulas.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Formulario</span></a></li>
+        <li><a href="../recursos/como-se-calcula.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Cómo se calcula todo</span></a></li>
+        <li><a href="../recursos/repaso-examen.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Repaso tipo test y examen</span></a></li><li><a href="../recursos/test-autoevaluacion.html"><span class="dot" style="--dot:var(--c-violet)"></span><span>Test de autoevaluación</span></a></li><li><a href="../recursos/test-plataforma.html"><span class="dot" style="--dot:var(--c-pink)"></span><span>Test por tipos UF1 a UF4</span></a></li><li><a href="../recursos/simulacro-examen.html"><span class="dot" style="--dot:var(--c-red)"></span><span>Simulacro de examen</span></a></li><li><a href="../recursos/simulacro-practico.html"><span class="dot" style="--dot:var(--c-orange,var(--c-red))"></span><span>Simulador de examen práctico</span></a></li><li><a href="../recursos/cuaderno-resuelto.html" aria-current="page"><span class="dot" style="--dot:var(--c-teal)"></span><span>Cuaderno resuelto (con Excel)</span></a></li>
+        <li><a href="../recursos/accesibilidad.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Accesibilidad y lector</span></a></li>
+        <li><a href="../recursos/acerca.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Acerca de HISdata Wiki</span></a></li>
+        <li><a href="../recursos/buscar.html"><span class="dot" style="--dot:var(--c-teal)"></span><span>Buscar</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="main-content" tabindex="-1">
+    <div class="content">
+<nav class="breadcrumb" aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../recursos/index.html">Recursos</a></li><li><span aria-current="page">Cuaderno resuelto</span></li></ol></nav>
+<header class="page-head"><p class="eyebrow">Recursos · ejercicio resuelto con Excel</p><h1>Cuaderno de prácticas <span class="grad">resuelto</span></h1><p class="lead">Las cinco prácticas del cuaderno de estadística sanitaria, explicadas paso a paso con el esquema fórmula → cálculo → resultado → interpretación, y con el Excel de la solución para abrirlo y recalcularlo aquí mismo.</p><p class="meta-row"><span>Por Sara Lopez Figueredo Sainz</span><span>⏱ 15 min de lectura</span><span class="origin origin--uf1">Prácticas 0 a 4</span></p></header>
+<details class="toc-inline"><summary>En esta página</summary><ol><li><a href="#descargas">Descargas</a></li><li><a href="#resumen">Resumen rápido</a></li><li><a href="#p0">Práctica 0 · Estatura</a></li><li><a href="#p1">Práctica 1 · IMC</a></li><li><a href="#p2">Práctica 2 · Normalidad</a></li><li><a href="#p3">Práctica 3 · Pretérmino</a></li><li><a href="#p4">Práctica 4 · GRD</a></li><li><a href="#dudas">Dudas con la profesora</a></li><li><a href="#excel">El Excel de la solución</a></li></ol></details>
+<h2 id="descargas">Descargas <a class="anchor" href="#descargas" aria-label="Enlace a la sección: Descargas">#</a></h2>
+<ul class="cards"><li class="card"><span class="card__ico" aria-hidden="true">📊</span><p class="card__h"><a href="../assets/excel/Solucion_cuaderno_estadistica_sanitaria.xlsx" download>Excel de la solución</a></p><p>6 hojas (resumen y una por práctica) con 170 fórmulas que se recalculan si cambias los datos.</p></li><li class="card"><span class="card__ico" aria-hidden="true">📝</span><p class="card__h"><a href="../assets/docs/Cuaderno_practicas_enunciado.docx" download>Enunciado del cuaderno</a></p><p>El cuaderno original en Word, con los datos y las cuestiones de las Prácticas 0 a 4.</p></li><li class="card"><span class="card__ico" aria-hidden="true">✅</span><p class="card__h"><a href="../assets/docs/Cuaderno_practicas_resuelto.docx" download>Cuaderno resuelto</a></p><p>La solución completa en Word, con las tablas y la interpretación de cada resultado.</p></li><li class="card"><span class="card__ico" aria-hidden="true">🎯</span><p class="card__h"><a href="../recursos/simulacro-practico.html">Simulador práctico</a></p><p>Practica lo mismo con datos nuevos: cronómetro, nota sobre 10 y solución paso a paso.</p></li></ul>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Cómo usar esta página</p><p>Intenta primero resolver cada práctica con el enunciado. Después compara con la explicación de aquí y abre el Excel al final: pulsa cualquier celda con fórmula para leer en español qué hace, y cambia los datos azules para ver cómo se recalcula todo.</p></div>
+<h2 id="resumen">Resumen rápido <a class="anchor" href="#resumen" aria-label="Enlace a la sección: Resumen rápido">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Resultado clave de cada práctica (desplazable)"><table class="table table--compact"><caption>Resultado clave de cada práctica</caption><thead><tr><th scope="col">Práctica</th><th scope="col">Tema</th><th scope="col">Resultado clave</th></tr></thead><tbody><tr><td>0</td><td>Estatura</td><td>Media <b>181,17</b> · mediana <b>180,5</b> · moda <b>179</b> · s = <b>3,87 cm</b></td></tr><tr><td>1</td><td>IMC</td><td>z = ±1 → <b>25,25</b> y <b>30,67</b> · <b>24 %</b> por debajo y <b>16 %</b> por encima · entre ±2σ ≈ <b>95 %</b></td></tr><tr><td>2</td><td>Normalidad</td><td>Shapiro-Wilk con p &gt; 0,05 en las 3 variables (diastólica justo en el límite: p = 0,054)</td></tr><tr><td>3</td><td>Pretérmino</td><td><b>3</b> en riesgo con datos propios · <b>16</b> con la región (μ = 38,1)</td></tr><tr><td>4</td><td>GRD</td><td>Pesos relativos <b>0,95</b> · <b>2,00</b> · <b>1,375</b></td></tr></tbody></table></div>
+<p><b>Convenciones del curso:</b> varianza con n − 1 · intervalos con Sturges · normalidad con Shapiro-Wilk · regla 68-95-99,7.</p>
+<h2 id="p0">Práctica 0 · Estatura <a class="anchor" href="#p0" aria-label="Enlace a la sección: Práctica 0 · Estatura">#</a></h2>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Idea clave</p><p>Primero las medidas de centro (media, mediana, moda) y después las de dispersión (rango, varianza, desviación típica). La varianza se calcula con n − 1.</p></div>
+<h3>1. Tipo de variable, muestreo y tamaño</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Preguntas del apartado 1 (desplazable)"><table class="table table--compact"><caption>Preguntas del apartado 1</caption><thead><tr><th scope="col">Pregunta</th><th scope="col">Respuesta</th></tr></thead><tbody><tr><td>Tipo de variable</td><td><b>Cuantitativa continua</b> (la estatura admite decimales)</td></tr><tr><td>Muestreo</td><td><b>Aleatorio simple</b>: todos los pacientes tienen la misma probabilidad de ser elegidos</td></tr><tr><td>Tamaño de la muestra</td><td><b>n = 6</b></td></tr></tbody></table></div>
+<h3>2. Medidas descriptivas</h3><p>Datos: 182, 176, 179, 186, 185, 179 (n = 6). Fórmulas: x̄ = Σxᵢ / n · s² = Σ(xᵢ − x̄)² / (n − 1) · s = √s².</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Medidas descriptivas (n = 6) (desplazable)"><table class="table table--compact"><caption>Medidas descriptivas (n = 6)</caption><thead><tr><th scope="col">Medida</th><th scope="col">Cálculo</th><th scope="col">Resultado</th></tr></thead><tbody><tr><td>Rango</td><td>máx − mín = 186 − 176</td><td><b>10 cm</b></td></tr><tr><td>Media</td><td>(182+176+179+186+185+179)/6 = 1087/6</td><td><b>181,17 cm</b></td></tr><tr><td>Mediana</td><td>Ordenados: 176, 179, <b>179, 182</b>, 185, 186. Con n par, media de los dos centrales: (179+182)/2</td><td><b>180,5 cm</b></td></tr><tr><td>Moda</td><td>El valor más repetido</td><td><b>179 cm</b></td></tr><tr><td>Varianza</td><td>74,83 / (6 − 1)</td><td><b>14,97 cm²</b></td></tr><tr><td>Desviación típica</td><td>√14,97</td><td><b>3,87 cm</b></td></tr></tbody></table></div>
+<ol><li>Resta la media a cada dato: 0,83; −5,17; −2,17; 4,83; 3,83; −2,17.</li><li>Eleva cada diferencia al cuadrado y súmalas: Σ(xᵢ − x̄)² ≈ <b>74,83</b>.</li><li>Divide entre n − 1 = 5: s² = <b>14,97</b>.</li><li>Haz la raíz cuadrada: s = <b>3,87</b>.</li></ol>
+<h3>Ampliación de la muestra (n = 30)</h3><p>Se agrupan los datos en intervalos con la regla de Sturges: K = 1 + 3,322·log₁₀(n) · A = R/K · marca de clase = (extremo inf. + extremo sup.)/2.</p><ul><li><b>Rango:</b> R = 187 − 172 = <b>15</b>.</li><li><b>Nº de intervalos:</b> K = 1 + 3,322 · log₁₀(30) = 1 + 3,322 · 1,477 ≈ 5,9, es decir, <b>6 intervalos</b>.</li><li><b>Amplitud:</b> A = 15 / 5,9 ≈ 2,5, que se sube a <b>3</b> para que quepan todos los datos (6 × 3 = 18 cubre el rango).</li><li><b>Tabla:</b> intervalos [a, b), que incluyen el extremo inferior y no el superior. Así, el 175 va en [175–178).</li></ul>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabla de frecuencias (n = 30) (desplazable)"><table class="table table--compact"><caption>Tabla de frecuencias (n = 30)</caption><thead><tr><th scope="col">Intervalo</th><th scope="col">Marca de clase</th><th scope="col">fᵢ</th><th scope="col">hᵢ</th><th scope="col">Fᵢ</th><th scope="col">Hᵢ</th></tr></thead><tbody><tr><td>172–175</td><td>173,5</td><td>4</td><td>0,133</td><td>4</td><td>0,133</td></tr><tr><td>175–178</td><td>176,5</td><td>7</td><td>0,233</td><td>11</td><td>0,367</td></tr><tr><td>178–181</td><td>179,5</td><td>4</td><td>0,133</td><td>15</td><td>0,500</td></tr><tr><td>181–184</td><td>182,5</td><td>8</td><td>0,267</td><td>23</td><td>0,767</td></tr><tr><td>184–187</td><td>185,5</td><td>5</td><td>0,167</td><td>28</td><td>0,933</td></tr><tr><td>187–190</td><td>188,5</td><td>2</td><td>0,067</td><td>30</td><td>1,000</td></tr></tbody></table></div>
+<p><b>Comprobaciones:</b> hᵢ = fᵢ / n · Σfᵢ = 30 · la última frecuencia acumulada es 30 (y la relativa acumulada, 1). Si no coincide, hay un error en el conteo.</p><p><b>Histograma:</b> eje X con los intervalos (estatura en cm) y eje Y con la frecuencia absoluta. Barras pegadas de alturas 4, 7, 4, 8, 5 y 2. Ponle título. Lo tienes dibujado en la hoja «P0 Estatura» del Excel de más abajo.</p>
+<h2 id="p1">Práctica 1 · IMC <a class="anchor" href="#p1" aria-label="Enlace a la sección: Práctica 1 · IMC">#</a></h2>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Idea clave</p><p>El enunciado pide <b>parámetros poblacionales</b>, así que aquí σ se calcula dividiendo entre N (no n − 1). Lo confirma la pregunta 3: los valores 22,55 y 33,37 solo salen así.</p></div>
+<p>Fórmulas: μ = Σxᵢ / N · σ = √(Σ(xᵢ − μ)² / N) · z = (x − μ)/σ · x = μ + z·σ.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Datos de partida (desplazable)"><table class="table table--compact"><caption>Datos de partida</caption><thead><tr><th scope="col">Dato</th><th scope="col">Valor</th></tr></thead><tbody><tr><td>Tamaño</td><td>N = 25</td></tr><tr><td>Media</td><td>μ = 699 / 25 = <b>27,96</b></td></tr><tr><td>Desviación estándar</td><td>σ = <b>2,705</b></td></tr></tbody></table></div>
+<h3>Paso 1 · Valores de z = −1 y z = +1 (pregunta 2)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Límites a ±1σ (desplazable)"><table class="table table--compact"><caption>Límites a ±1σ</caption><thead><tr><th scope="col">z</th><th scope="col">Cálculo</th><th scope="col">Valor de IMC</th></tr></thead><tbody><tr><td>−1</td><td>27,96 − 1 · 2,705</td><td><b>25,25</b></td></tr><tr><td>+1</td><td>27,96 + 1 · 2,705</td><td><b>30,67</b></td></tr></tbody></table></div>
+<h3>Paso 2 · Proporciones fuera de ±1σ (pregunta 1)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Proporciones fuera de ±1σ (desplazable)"><table class="table table--compact"><caption>Proporciones fuera de ±1σ</caption><thead><tr><th scope="col">Zona</th><th scope="col">Pacientes</th><th scope="col">Cálculo</th><th scope="col">Proporción</th></tr></thead><tbody><tr><td>IMC &lt; 25,25</td><td>23, 23, 24, 24, 25, 25 → <b>6</b></td><td>6 / 25</td><td><b>0,24 (24 %)</b></td></tr><tr><td>IMC &gt; 30,67</td><td>31, 31, 32, 32 → <b>4</b></td><td>4 / 25</td><td><b>0,16 (16 %)</b></td></tr></tbody></table></div>
+<h3>Paso 3 · Porcentaje entre 22,55 y 33,37 (pregunta 3)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tipificación de los límites (desplazable)"><table class="table table--compact"><caption>Tipificación de los límites</caption><thead><tr><th scope="col">Límite</th><th scope="col">Cálculo de z</th><th scope="col">Resultado</th></tr></thead><tbody><tr><td>22,55</td><td>(22,55 − 27,96) / 2,705</td><td><b>z = −2</b></td></tr><tr><td>33,37</td><td>(33,37 − 27,96) / 2,705</td><td><b>z = +2</b></td></tr></tbody></table></div>
+<p><b>Regla 68-95-99,7:</b> entre z = −2 y z = +2 hay <b>≈ 95 %</b> de la población (exactamente 95,45 %).</p>
+<h2 id="p2">Práctica 2 · Normalidad <a class="anchor" href="#p2" aria-label="Enlace a la sección: Práctica 2 · Normalidad">#</a></h2>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Regla de decisión (Shapiro-Wilk)</p><p>H₀ = los datos son normales. Si <b>p ≥ 0,05</b>, no se rechaza la normalidad. Si <b>p &lt; 0,05</b>, se rechaza. Es el test indicado en los apuntes para muestras pequeñas.</p></div>
+<h3>1. Comprobación de normalidad</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Test de Shapiro-Wilk (desplazable)"><table class="table table--compact"><caption>Test de Shapiro-Wilk</caption><thead><tr><th scope="col">Variable</th><th scope="col">W</th><th scope="col">p-valor</th><th scope="col">Conclusión</th></tr></thead><tbody><tr><td>Edad</td><td>0,926</td><td>0,210</td><td>p &gt; 0,05: <b>no se rechaza</b> normalidad</td></tr><tr><td>Presión sistólica</td><td>0,922</td><td>0,179</td><td>p &gt; 0,05: <b>no se rechaza</b> normalidad</td></tr><tr><td>Presión diastólica</td><td>0,889</td><td>0,054</td><td>p &gt; 0,05, pero <b>justo en el límite</b></td></tr></tbody></table></div>
+<p>Si lo haces a mano, apóyate también en el histograma o el gráfico Q-Q, y en que media, mediana y moda sean parecidas.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Media, mediana y moda (desplazable)"><table class="table table--compact"><caption>Media, mediana y moda</caption><thead><tr><th scope="col">Variable</th><th scope="col">Media</th><th scope="col">Mediana</th><th scope="col">Moda</th></tr></thead><tbody><tr><td>Edad</td><td>83</td><td>83</td><td>83</td></tr><tr><td>Sistólica</td><td>153,8</td><td>155</td><td>150 y 156 (bimodal)</td></tr><tr><td>Diastólica</td><td>95</td><td>95</td><td>95</td></tr></tbody></table></div>
+<p>La edad y la diastólica son muy simétricas. La sistólica tiene una ligera asimetría negativa (media &lt; mediana).</p><h3>2. Media, moda y mediana en la normal</h3><p>media = mediana = moda. En una distribución normal la campana es simétrica y su pico está en el centro. Si la media &lt; mediana hay <b>asimetría negativa</b>; si la media &gt; mediana, <b>asimetría positiva</b>.</p>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">Ojo con el Excel</p><p>Excel no incluye el test de Shapiro-Wilk. En la hoja «P2 Normalidad», W y p son datos de entrada (en azul) calculados con scipy.stats.shapiro. Lo que se recalcula en vivo son la media, la mediana, la moda y la conclusión, que compara p con 0,05.</p></div>
+<h2 id="p3">Práctica 3 · Pretérmino <a class="anchor" href="#p3" aria-label="Enlace a la sección: Práctica 3 · Pretérmino">#</a></h2>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Idea clave</p><p>Un recién nacido está en riesgo si su z &lt; −1, es decir, si está por debajo de la media menos una desviación estándar. Hay que calcular z dos veces: con los datos propios y con los de la región.</p></div>
+<p>z = (x − media) / desviación típica.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Datos propios y de la región (desplazable)"><table class="table table--compact"><caption>Datos propios y de la región</caption><thead><tr><th scope="col">Dato</th><th scope="col">Valor propio</th><th scope="col">Valor de la región</th></tr></thead><tbody><tr><td>Media</td><td>870 / 25 = <b>34,8</b> semanas</td><td><b>38,1</b> semanas (el enunciado dice 48,1)</td></tr><tr><td>Desviación típica</td><td>s = <b>2,12</b> (con n − 1)</td><td><b>2,21</b> semanas</td></tr></tbody></table></div>
+<div class="callout callout--warn" data-icon="⚠️"><p class="callout__title">El dato de 48,1 semanas es un error</p><p>Ningún embarazo dura 48 semanas, y con ese valor todos los z salen entre −4 y −7. Lo más probable es que sea <b>38,1</b> (una errata de transcripción). No aparece en los apuntes, así que conviene confirmarlo con la profesora.</p></div>
+<h3>Preguntas 1 y 2 · Puntuaciones z</h3><p>Propio: z = (x − 34,8) / 2,12. Región: z = (x − 38,1) / 2,21. En <b>negrita</b>, los z &lt; −1 (riesgo).</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Puntuaciones z por semanas de gestación (desplazable)"><table class="table table--compact"><caption>Puntuaciones z por semanas de gestación</caption><thead><tr><th scope="col">Semanas</th><th scope="col">Nº de recién nacidos</th><th scope="col">z con datos propios</th><th scope="col">z con la región (μ = 38,1)</th></tr></thead><tbody><tr><td>32</td><td>3</td><td><b>−1,32</b></td><td><b>−2,76</b></td></tr><tr><td>33</td><td>6</td><td>−0,85</td><td><b>−2,31</b></td></tr><tr><td>34</td><td>3</td><td>−0,38</td><td><b>−1,86</b></td></tr><tr><td>35</td><td>4</td><td>0,09</td><td><b>−1,40</b></td></tr><tr><td>36</td><td>5</td><td>0,57</td><td>−0,95</td></tr><tr><td>38</td><td>2</td><td>1,51</td><td>−0,05</td></tr><tr><td>39</td><td>2</td><td>1,98</td><td>0,41</td></tr></tbody></table></div>
+<h3>Pregunta 3 · Recién nacidos en riesgo (z &lt; −1)</h3><p>Límite de riesgo = media − 1 · desviación típica.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Recién nacidos en riesgo (desplazable)"><table class="table table--compact"><caption>Recién nacidos en riesgo</caption><thead><tr><th scope="col">Referencia</th><th scope="col">Límite</th><th scope="col">En riesgo</th><th scope="col">Porcentaje</th></tr></thead><tbody><tr><td>Datos propios</td><td>34,8 − 2,12 = 32,68</td><td><b>3</b> (los de 32 semanas)</td><td><b>12 %</b></td></tr><tr><td>Región (μ = 38,1)</td><td>38,1 − 2,21 = 35,89</td><td><b>16</b> (32, 33, 34 y 35 semanas: 3 + 6 + 3 + 4)</td><td><b>64 %</b></td></tr><tr><td>Región (μ = 48,1)</td><td>48,1 − 2,21 = 45,89</td><td><b>25</b> (todos)</td><td>100 %: confirma que es un error</td></tr></tbody></table></div>
+<p><b>Interpretación:</b> respecto a la propia población parece que hay pocos casos de riesgo, pero comparado con la región el hospital tiene muchos más nacimientos pretérmino de lo esperable. Esa comparación es la que importa.</p>
+<h2 id="p4">Práctica 4 · Peso relativo de los GRD <a class="anchor" href="#p4" aria-label="Enlace a la sección: Práctica 4 · Peso relativo de los GRD">#</a></h2>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Idea clave</p><p>El peso relativo compara el coste de un GRD con el coste medio de todos los episodios. Sirve para ajustar la financiación a la complejidad real de los pacientes.</p></div>
+<p>peso relativo = coste medio del GRD / coste medio global (coste medio global = 4.000 €).</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Peso relativo de cada GRD (desplazable)"><table class="table table--compact"><caption>Peso relativo de cada GRD</caption><thead><tr><th scope="col">GRD</th><th scope="col">Coste (€)</th><th scope="col">Cálculo</th><th scope="col">Peso relativo</th><th scope="col">Interpretación</th></tr></thead><tbody><tr><td>03</td><td>3.800</td><td>3.800 / 4.000</td><td><b>0,95</b></td><td>Un 5 % <b>menos</b> de recursos que la media (cirugía menor)</td></tr><tr><td>07</td><td>8.000</td><td>8.000 / 4.000</td><td><b>2,00</b></td><td><b>El doble</b> de consumo que la media (cirugía compleja, UCI)</td></tr><tr><td>11</td><td>5.500</td><td>5.500 / 4.000</td><td><b>1,375</b></td><td>Un 37,5 % <b>más</b> que la media (diálisis, trasplante)</td></tr></tbody></table></div>
+<h3>Cómo leer el peso</h3><ul><li><b>Peso = 1:</b> consume lo mismo que un episodio de coste medio.</li><li><b>Peso &lt; 1:</b> consume menos recursos que la media.</li><li><b>Peso &gt; 1:</b> consume más recursos que la media.</li></ul>
+<h2 id="dudas">Dudas que conviene aclarar con la profesora <a class="anchor" href="#dudas" aria-label="Enlace a la sección: Dudas que conviene aclarar con la profesora">#</a></h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Dudas abiertas (desplazable)"><table class="table table--compact"><caption>Dudas abiertas</caption><thead><tr><th scope="col">Duda</th><th scope="col">Qué se ha hecho</th><th scope="col">Efecto</th></tr></thead><tbody><tr><td><b>n o n − 1</b></td><td>Práctica 1 con n (el enunciado dice «parámetros poblacionales» y los límites 22,55 y 33,37 solo cuadran así). El resto con n − 1, como indican los apuntes.</td><td>Con n − 1 en la Práctica 1: σ = 2,76 y límites 22,44 y 33,48. Las proporciones (24 % y 16 %) no cambian.</td></tr><tr><td><b>El 48,1</b></td><td>Se ha supuesto que es una errata de <b>38,1</b>.</td><td>Con 38,1: 16 recién nacidos en riesgo. Con 48,1: los 25.</td></tr></tbody></table></div>
+<h2 id="excel">El Excel de la solución <a class="anchor" href="#excel" aria-label="Enlace a la sección: El Excel de la solución">#</a></h2>
+<p>Elige una hoja (Resumen y una por práctica). Pulsa una celda con fórmula para leer qué hace; las celdas de datos en azul se pueden editar y todo se recalcula, incluidas la tabla de frecuencias y el histograma de la Práctica 0. También puedes <a href="../assets/excel/Solucion_cuaderno_estadistica_sanitaria.xlsx" download>descargar el .xlsx</a>.</p>
+<div class="widget widget--wide" data-widget="sheet" data-book="cuaderno"><div class="widget__head"><h3 class="widget__title">Hoja de cálculo</h3><p class="widget__sub">Cuaderno de prácticas 0 a 4 (resuelto). Hojas: Resumen, P0 Estatura, P1 IMC, P2 Normalidad, P3 Pretérmino, P4 GRD.</p></div><noscript><p class="noscript-note">Solución completa del cuaderno con las fórmulas de Excel. Activa JavaScript para editar las celdas y ver las fórmulas explicadas; mientras tanto, <a href="../assets/excel/Solucion_cuaderno_estadistica_sanitaria.xlsx" download>descarga el .xlsx</a>.</p></noscript></div>
+<div class="callout callout--tip" data-icon="💡"><p class="callout__title">Siguiente paso</p><p>Cuando lo tengas claro, prueba el <a href="../recursos/simulacro-practico.html">simulador de examen práctico</a>: mismos ejercicios con datos nuevos y corrección paso a paso. Para las fórmulas a mano tienes el <a href="../recursos/formulas.html">formulario</a> y la <a href="../recursos/tabla-z.html">tabla de la normal</a>.</p></div>
+<nav class="pager" aria-label="Navegación entre páginas"><a href="../recursos/simulacro-practico.html" rel="prev"><small>← Anterior</small><strong>Simulador de examen práctico</strong></a></nav>
+    </div>
+  </main>
+  <aside class="toc" aria-labelledby="toc-h"><h2 id="toc-h">En esta página</h2><ol><li><a href="#descargas">Descargas</a></li><li><a href="#resumen">Resumen rápido</a></li><li><a href="#p0">Práctica 0 · Estatura</a></li><li><a href="#p1">Práctica 1 · IMC</a></li><li><a href="#p2">Práctica 2 · Normalidad</a></li><li><a href="#p3">Práctica 3 · Pretérmino</a></li><li><a href="#p4">Práctica 4 · GRD</a></li><li><a href="#dudas">Dudas con la profesora</a></li><li><a href="#excel">El Excel de la solución</a></li></ol></aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><h2>HISdata Wiki</h2><p>Conocimiento, análisis y gestión de la información sanitaria.</p><p>Autora: <strong>Sara Lopez Figueredo Sainz</strong></p></div>
+    <div><h2>Explora</h2><ul><li><a href="../descriptiva/index.html">Estadística descriptiva</a></li><li><a href="../probabilidad/introduccion.html">Probabilidad y distribuciones</a></li><li><a href="../sis/sistemas-informacion.html">Sistemas de información sanitaria</a></li><li><a href="../practicas/index.html">Prácticas y casos</a></li><li><a href="../recursos/hojas-de-calculo.html">Hojas de cálculo</a></li></ul></div>
+    <div><h2>Ayuda</h2><ul><li><a href="../recursos/accesibilidad.html">Accesibilidad y lector</a></li><li><a href="../recursos/glosario.html">Glosario</a></li><li><a href="../recursos/acerca.html">Acerca de HISdata</a></li></ul></div>
+  </div>
+  <p class="copyright">© 2026 Sara Lopez Figueredo Sainz · HISdata Wiki es una marca de <a href="https://diginosia.com" rel="noopener">Diginosia.com</a>. Todos los derechos reservados.</p>
+</footer>
+<script src="../assets/js/his.core.js" defer></script>
+<script src="../assets/data/workbooks.js" defer></script>
+<script src="../assets/js/services/numfmt.js" defer></script>
+<script src="../assets/js/services/formula-explain.js" defer></script>
+<script src="../assets/js/ui/sheet-charts.js" defer></script>
+<script src="../assets/js/services/formula.js" defer></script>
+<script src="../assets/js/widgets/sheet.js" defer></script>
+<script src="../assets/js/his.math.js" defer></script>
+<script src="../assets/js/ai/ai.providers.js" defer></script>
+<script src="../assets/js/ai/ai.gateway.js" defer></script>
+<script src="../assets/js/ai/ai.center.js" defer></script>
+<script src="../assets/js/voice/voice.numbers.js" defer></script>
+<script src="../assets/js/voice/voice.offline.js" defer></script>
+<script src="../assets/js/voice/voice.js" defer></script>
+<script src="../assets/js/his.nav.js" defer></script>
+<script src="../assets/js/his.assistant.js" defer></script>
+<script src="../assets/js/his.sw.js" defer></script>
+</body>
+</html>

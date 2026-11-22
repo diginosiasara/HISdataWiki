@@ -48,6 +48,9 @@
     STDEVP: { es: 'DESVEST.P', sig: 'STDEVP(rango)', desc: 'Desviación estándar de toda la población (divide entre n).' },
     VAR: { es: 'VAR.S', sig: 'VAR(rango)', desc: 'Varianza de una muestra (divide entre n − 1).' },
     VARP: { es: 'VAR.P', sig: 'VARP(rango)', desc: 'Varianza de toda la población (divide entre n).' },
+    MEDIAN: { es: 'MEDIANA', sig: 'MEDIAN(rango)', desc: 'Valor central de los datos ordenados; con n par, la media de los dos centrales.' },
+    MODE: { es: 'MODA', sig: 'MODE(rango)', desc: 'El valor que más se repite en el rango.' },
+    DEVSQ: { es: 'DESVIA2', sig: 'DEVSQ(rango)', desc: 'Suma de los cuadrados de las diferencias respecto a la media: Σ(xᵢ − x̄)².' },
     COUNTIF: { es: 'CONTAR.SI', sig: 'COUNTIF(rango; criterio)', desc: 'Cuenta las celdas del rango que cumplen el criterio.' },
     COUNTIFS: { es: 'CONTAR.SI.CONJUNTO', sig: 'COUNTIFS(rango1; criterio1; …)', desc: 'Cuenta las filas que cumplen a la vez todos los criterios indicados (cada criterio sobre su rango).' },
     IF: { es: 'SI', sig: 'IF(condición; si_cierto; si_falso)', desc: 'Si la condición se cumple devuelve el primer valor; si no, el segundo.' },
@@ -254,6 +257,9 @@
       case 'STDEVP': return pre + 'la desviación estándar poblacional de ' + p[0];
       case 'VAR': return pre + 'la varianza muestral de ' + p[0];
       case 'VARP': return pre + 'la varianza poblacional de ' + p[0];
+      case 'MEDIAN': return pre + 'la mediana de ' + p[0];
+      case 'MODE': return pre + 'la moda (valor más repetido) de ' + p[0];
+      case 'DEVSQ': return pre + 'la suma de cuadrados de las desviaciones respecto a la media de ' + p[0];
       case 'COUNTIF': return pre + 'cuántas celdas de ' + p[0] + ' cumplen el criterio ' + p[1];
       case 'COUNTIFS': return pre + 'cuántas filas cumplen a la vez todos los criterios (' + p.join(', ') + ')';
       case 'NORMSDIST': return pre + 'la probabilidad de que una normal estándar N(0, 1) valga como máximo ' + p[0];
